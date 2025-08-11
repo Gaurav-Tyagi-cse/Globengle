@@ -1,254 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Card</title>
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <style>
-    body {
-      background: #f4f4f4;
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      min-height: 100vh;
-    }    .gt-travel-card {
-      width: 300px;
-      background: #fff;
-      border: 1px solid #ccc;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-      text-align: center;
-      padding: 8px; /* outer white space */
-      
-     
-    }
-
-    .gt-travel-card img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      border: 4px solid white; /* white border like your image */
-      box-sizing: border-box;
-    }
-
-    .gt-travel-content {
-      padding: 10px 5px 5px 5px;
-    }
-
-    .gt-travel-content h3 {
-      font-size: 16px;
-      font-weight: bold;
-      margin: 8px 0 5px 0;
-      color: #000;
-    }
-
-    .gt-travel-content p {
-      font-size: 14px;
-      color: #333;
-      margin: 7px 0; 
-    }
-
-    .gt-travel-price {
-      font-size: 15px;
-      font-weight: bold;
-      color: #000;
-      margin-top: 20px;
-    }    .gt-travel-price span {
-      font-weight: normal;
-    }    /* Swiper styles */
-    .gt-swiper {
-      width: 100%;
-      padding-top: 20px;
-      padding-bottom: 50px;
-    }
-
-    .gt-swiper-slide {
-      display: flex;
-      justify-content: center;
-    }
-
-    .gt-swiper-pagination {
-      bottom: 0 !important;
-    }
-    
-    /* Adjust swiper pagination dots position */
-    .swiper-pagination {
-      position: relative;
-      margin-top: 30px;
-      bottom: auto !important;
-    }
-
-    /* Tag corner */
-    .gt-trip-tag-corner {
-      position: absolute;
-      top: 15px;
-      left: 0;
-      background: rgba(0,0,0,0.7);
-      color: white;
-      padding: 6px 12px;
-      font-size: 14px;
-      font-weight: 500;
-      z-index: 10;
-    }
-
-    .gt-travel-card {
-      position: relative;
-    }
-    
-    /* Container for all content */
-    .gt-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-    
-    .gt-section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    
-    .gt-section-title h2 {
-      font-size: 28px;
-      color: #333;
-    }
-    
-    .gt-section-title p {
-      color: #666;
-      font-size: 16px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hover Sections</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  .panel {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: flex 0.5s ease;
+    cursor: pointer;
+  }
+  /* Overlay */
+  .panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(220, 120, 80, 0.85); /* Overlay color */
+    transition: background 0.4s ease;
+  }
+  /* Text */
+  .panel h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    z-index: 1;
+    margin: 0;
+  }
+  /* Hover effect */
+  .panel:hover::before {
+    background: rgba(0,0,0,0); /* Remove overlay */
+  }
+  .panel:hover {
+    flex: 1.5; /* Enlarge hovered panel */
+  }
+</style>
 </head>
 <body>
 
-<div class="gt-container">
-  <div class="gt-section-title">
-    <h2><span>Handcrafted</span> Group Departures</h2>
-    <p>Explore curated group itineraries with seamless planning, trusted guides, and value-packed pricing.</p>
+<div class="container">
+  <div class="panel" style="background-image: url('growth.jpg');">
+    <h2>GROWTH OPPORTUNITY</h2>
   </div>
-  
-  <!-- Swiper -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <div class="gt-trip-tag-corner">Timeless Europe</div>
-          <img src="./images/banner.webp" alt="Timeless Europe Journey">
-          <div class="gt-travel-content">
-            <h3>TIMELESS EUROPE JOURNEY</h3>
-            <p>9 Days | 3 Countries | 4 Cities</p>
-            <p>Departures- Oct | Nov | Dec</p>
-            <div class="gt-travel-price">INR 1,19,000/- <span>(Per Person)</span></div>
-          </div>
-        </div>
-      </div>
-        <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <div class="gt-trip-tag-corner">Amazing Dubai</div>
-          <img src="./images/trip1.jpeg" alt="Amazing Dubai">
-          <div class="gt-travel-content">
-            <h3>AMAZING DUBAI</h3>
-            <p>7 Days | 1 Country | 3 Cities</p>
-            <p>Departures- Sep | Oct | Nov</p>
-            <div class="gt-travel-price">INR 89,000/- <span>(Per Person)</span></div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <div class="gt-trip-tag-corner">Bali Paradise</div>
-          <img src="./images/trip2.avif" alt="Bali Paradise">
-          <div class="gt-travel-content">
-            <h3>BALI PARADISE</h3>
-            <p>8 Days | 1 Country | 4 Cities</p>
-            <p>Departures- Oct | Dec | Jan</p>
-            <div class="gt-travel-price">INR 95,000/- <span>(Per Person)</span></div>
-          </div>
-        </div>
-      </div>
-        <!-- Slide 4 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <div class="gt-trip-tag-corner">Asian Explorer</div>
-          <img src="./images/banner.webp" alt="Asian Explorer">
-          <div class="gt-travel-content">
-            <h3>ASIAN EXPLORER</h3>
-            <p>12 Days | 3 Countries | 6 Cities</p>
-            <p>Departures- Sep | Oct | Nov</p>
-            <div class="gt-travel-price">INR 1,45,000/- <span>(Per Person)</span></div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Slide 5 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <div class="gt-trip-tag-corner">Majestic Turkey</div>
-          <img src="./images/trip1.jpeg" alt="Majestic Turkey">
-          <div class="gt-travel-content">
-            <h3>MAJESTIC TURKEY</h3>
-            <p>10 Days | 1 Country | 5 Cities</p>
-            <p>Departures- Sep | Oct | Nov</p>
-            <div class="gt-travel-price">INR 1,05,000/- <span>(Per Person)</span></div>
-          </div>
-        </div>
-      </div>
-        <!-- Slide 6 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <div class="gt-trip-tag-corner">Egypt Wonder</div>
-          <img src="./images/trip2.avif" alt="Egypt Wonder">
-          <div class="gt-travel-content">
-            <h3>EGYPT WONDER</h3>
-            <p>9 Days | 1 Country | 4 Cities</p>
-            <p>Departures- Oct | Nov | Dec</p>
-            <div class="gt-travel-price">INR 1,25,000/- <span>(Per Person)</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="swiper-pagination"></div>  </div>
+  <div class="panel" style="background-image: url('demographics.jpg');">
+    <h2>DIVERSE DEMOGRAPHICS</h2>
+  </div>
+  <div class="panel" style="background-image: url('aspiring.jpg');">
+    <h2>THE ASPIRING INDIAN</h2>
+  </div>
+  <div class="panel" style="background-image: url('tech.jpg');">
+    <h2>TECH SAVVY</h2>
+  </div>
+  <div class="panel" style="background-image: url('india.jpg');">
+    <h2>THE INDIA STORY</h2>
+  </div>
 </div>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Initialize Swiper -->
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-  });
-</script>
 
 </body>
 </html>
