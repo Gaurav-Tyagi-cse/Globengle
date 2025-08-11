@@ -306,40 +306,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Store the default background
     const defaultBg = window.getComputedStyle(servicesContainer).backgroundImage;
     
-    // Function to check if mobile view
-    function isMobileView() {
-        return window.innerWidth <= 768;
-    }
-    
-    // Set initial background images based on viewport
-    function setInitialBackgrounds() {
-        if (isMobileView()) {
-            // For mobile: Set individual backgrounds for each card
-            serviceItems.forEach((item, index) => {
-                const bgNum = item.getAttribute('data-bg');
-                let bgImage = 'bm1.webp'; // default
-                
-                if (bgNum === '1') bgImage = 'bm1.webp';
-                else if (bgNum === '2') bgImage = 'bm2.webp';
-                else if (bgNum === '3') bgImage = 'bm3.webp';
-                else if (bgNum === '4') bgImage = 'bm1.webp';
-                else if (bgNum === '5') bgImage = 'bm2.webp';
-                
-                item.style.backgroundImage = `url('./images/${bgImage}')`;
-            });
-        } else {
-            // For desktop: Set container background
+    serviceItems.forEach((serviceItem, index) => {
+        // Set default background image for the first service
+        if (index === 0) {
             servicesContainer.style.backgroundImage = `url('./images/bm1.webp')`;
         }
-    }
-    
-    // Initialize backgrounds
-    setInitialBackgrounds();
-    
-    // Handle window resize to adjust backgrounds
-    window.addEventListener('resize', setInitialBackgrounds);
-    
-    serviceItems.forEach((serviceItem, index) => {
+        
         serviceItem.addEventListener('mouseenter', function() {
             const bgNum = this.getAttribute('data-bg');
             // Store reference to current element
@@ -348,83 +320,20 @@ document.addEventListener('DOMContentLoaded', function() {
             // Apply immediate color change to ALL sections
             serviceItems.forEach(s => s.classList.add('glob-active'));
             
-            // Only change container background on desktop view
-            if (!isMobileView()) {
-                // Delay background image change for smooth transition
-                setTimeout(() => {
-                    if (bgNum === '1') {
-                        servicesContainer.style.backgroundImage = 'url("./images/bm1.webp")';
-                    } else if (bgNum === '2') {
-                        servicesContainer.style.backgroundImage = 'url("./images/bm2.webp")';
-                    } else if (bgNum === '3') {
-                        servicesContainer.style.backgroundImage = 'url("./images/bm3.webp")';
-                    } else if (bgNum === '4') {
-                        servicesContainer.style.backgroundImage = 'url("./images/bm1.webp")';
-                    } else if (bgNum === '5') {
-                        servicesContainer.style.backgroundImage = 'url("./images/bm2.webp")';
-                    }
-                }, 200); // 200ms delay for smooth transition
-            }
-        });
-        
-        // Add touch event for mobile
-        serviceItem.addEventListener('touchstart', function() {
-            serviceItems.forEach(s => s.classList.add('glob-active'));
-        });
-    });
-    
-    // Handle mobile card interactions
-    const mobileCards = document.querySelectorAll('.glob-service-mobile-card');
-    
-    mobileCards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Reset other cards
-            mobileCards.forEach(otherCard => {
-                if (otherCard !== this) {
-                    otherCard.classList.remove('tapped');
-                    otherCard.style.height = '200px';
+            // Delay background image change for smooth transition
+            setTimeout(() => {
+                if (bgNum === '1') {
+                    servicesContainer.style.backgroundImage = 'url("./images/bm1.webp")';
+                } else if (bgNum === '2') {
+                    servicesContainer.style.backgroundImage = 'url("./images/bm2.webp")';
+                } else if (bgNum === '3') {
+                    servicesContainer.style.backgroundImage = 'url("./images/bm3.webp")';
+                } else if (bgNum === '4') {
+                    servicesContainer.style.backgroundImage = 'url("./images/bm1.webp")';
+                } else if (bgNum === '5') {
+                    servicesContainer.style.backgroundImage = 'url("./images/bm2.webp")';
                 }
-            });
-            
-            // Toggle tapped state for current card
-            this.classList.toggle('tapped');
-            
-            // Adjust card height based on content
-            if (this.classList.contains('tapped')) {
-                const description = this.querySelector('.glob-service-description');
-                const textHeight = this.querySelector('.glob-service-text').offsetHeight;
-                const descHeight = description.scrollHeight;
-                
-                // Set a min height to ensure there's space for the content
-                const newHeight = Math.max(250, textHeight + descHeight + 60);
-                this.style.height = `${newHeight}px`;
-                
-                // Make description visible with a slight delay
-                setTimeout(() => {
-                    description.style.opacity = '1';
-                    description.style.maxHeight = '200px';
-                    description.style.transform = 'translateY(0)';
-                }, 100);
-            } else {
-                this.style.height = '200px';
-                
-                // Hide description
-                const description = this.querySelector('.glob-service-description');
-                description.style.opacity = '0';
-                description.style.maxHeight = '0';
-                description.style.transform = 'translateY(20px)';
-            }
-        });
-        
-        // Add touch event listener for better mobile experience
-        card.addEventListener('touchstart', function() {
-            this.classList.add('touch-active');
-        });
-        
-        card.addEventListener('touchend', function() {
-            this.classList.remove('touch-active');
+            }, 200); // 200ms delay for smooth transition
         });
     });
     
