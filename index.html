@@ -30,14 +30,14 @@
         height: 100vh;
         position: relative;
         overflow: hidden;
-    }
-
-    .glob-service-item {
+    }    .glob-service-item {
         flex: 1;
         position: relative;
         border-right: 1px solid rgba(255,255,255,0.3);
         display: flex;
-        align-items: flex-end;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
         padding: 20px;
         z-index: 2;
         transition: all 0.3s ease;
@@ -49,15 +49,16 @@
         .glob-services-container {
             display: none; /* Hide the desktop version */
         }
-        
-        .glob-service-mobile-card {
+          .glob-service-mobile-card {
             height: 200px;
             border-radius: 12px;
             background-size: cover;
             background-position: center;
             position: relative;
             display: flex;
-            align-items: flex-end;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
             padding: 20px;
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
             overflow: hidden;
@@ -108,16 +109,48 @@
             height: 100%;
             background-color: rgba(72, 109, 149, 0.4);
             z-index: 1;
-        }
-        
-        .glob-service-mobile-card .glob-service-text {
+        }        .glob-service-mobile-card .glob-service-text {
             position: relative;
             z-index: 2;
+            transition: transform 0.3s ease;
+            width: 100%;
         }
-          .glob-service-mobile-card:active,
+        
+        .glob-service-mobile-card .glob-service-description {
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 0.4s ease, max-height 0.4s ease, transform 0.4s ease;
+            transform: translateY(20px);
+            color: white;
+            font-size: 14px;
+            line-height: 1.4;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+            padding-top: 10px;
+            width: 100%;
+        }
+        
+        .glob-service-mobile-card.tapped .glob-service-text {
+            transform: translateY(-10px);
+        }
+        
+        .glob-service-mobile-card.tapped .glob-service-description {
+            opacity: 1;
+            max-height: 200px;
+            transform: translateY(0);
+        }          .glob-service-mobile-card:active,
         .glob-service-mobile-card.tapped {
             transform: scale(0.98);
             box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+            height: auto;
+            min-height: 250px;
+            background-position: top center;
+        }
+        
+        .glob-service-mobile-card.touch-active {
+            transform: scale(0.97);
         }
     }
     
@@ -149,8 +182,7 @@
         background-color: rgba(233, 142, 111, 0.5); 
     } */
 
-    /* Text style */
-    .glob-service-text {
+    /* Text style */    .glob-service-text {
         color: white;
         font-size: 18px;
         font-weight: bold;
@@ -159,11 +191,35 @@
         z-index: 2;
         position: relative;
         text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, height 0.3s ease;
         letter-spacing: 1px;
         padding-bottom: 10px;
     }
+    
     .glob-service-item:hover .glob-service-text { transform: translateY(-10px); }
+    
+    .glob-service-description {
+        color: white;
+        font-size: 14px;
+        line-height: 1.4;
+        z-index: 2;
+        position: relative;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.4s ease, max-height 0.4s ease, transform 0.4s ease;
+        transform: translateY(20px);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+        padding-top: 5px;
+    }
+    
+    .glob-service-item:hover .glob-service-description,
+    .glob-service-mobile-card:active .glob-service-description,
+    .glob-service-mobile-card.tapped .glob-service-description {
+        opacity: 1;
+        max-height: 150px;
+        transform: translateY(0);
+    }
     
     /* Plus icon */
     .glob-plus-icon {
@@ -349,51 +405,59 @@
       <p class="heading_font_family">These destinations are topping the charts for a reason — let’s take you there.</p>
     </div>
     <div class="glob-services-container">
-        <div class="glob-services" style="display: flex; width: 100%; height: 100vh; position: relative; background-image: url('./images/bm1.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; transition: background-image 0.5s ease; background-attachment: scroll;">
-            <div class="glob-service-item" data-bg="1">
+        <div class="glob-services" style="display: flex; width: 100%; height: 100vh; position: relative; background-image: url('./images/bm1.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; transition: background-image 0.5s ease; background-attachment: scroll;">            <div class="glob-service-item" data-bg="1">
                 <div class="glob-service-text">GROWTH<br>OPPORTUNITY</div>
+                <div class="glob-service-description">Tap into India's economic momentum with 6-7% annual growth. Strategic market entry for lasting business expansion.</div>
             </div>
             <div class="glob-service-item" data-bg="2">
                 <div class="glob-service-text">DIVERSE<br>DEMOGRAPHICS</div>
+                <div class="glob-service-description">Access 1.4 billion potential customers across multiple segments. From urban professionals to rural markets.</div>
             </div>
             <div class="glob-service-item" data-bg="3">
                 <div class="glob-service-text">THE<br>ASPIRING<br>INDIAN</div>
+                <div class="glob-service-description">Connect with a young, ambitious population eager for quality goods and services. Rising middle class with increasing disposable income.</div>
             </div>
             <div class="glob-service-item" data-bg="4">
                 <div class="glob-service-text">TECH<br>SAVVY</div>
+                <div class="glob-service-description">Leverage India's digital transformation with 800M+ internet users. Mobile-first market with rapid e-commerce growth.</div>
             </div>
             <div class="glob-service-item" data-bg="5">
                 <div class="glob-service-text">THE<br>INDIA<br>STORY<br><span class="glob-plus-icon">+</span></div>
+                <div class="glob-service-description">Partner with local expertise to navigate complex market dynamics. Custom solutions for successful market entry and expansion.</div>
             </div>
         </div>
     </div>
     
     <!-- Mobile version (only visible on small screens) -->
     <div class="container d-md-none py-3">
-        <div class="row glob-mobile-services">
-            <div class="col-12 mb-4">
+        <div class="row glob-mobile-services">            <div class="col-12 mb-4">
                 <div class="glob-service-mobile-card" style="background-image: url('./images/bm1.webp');" data-bg="1">
                     <div class="glob-service-text">GROWTH<br>OPPORTUNITY</div>
+                    <div class="glob-service-description">Tap into India's economic momentum with 6-7% annual growth. Strategic market entry for lasting business expansion.</div>
                 </div>
             </div>
             <div class="col-12 mb-4">
                 <div class="glob-service-mobile-card" style="background-image: url('./images/bm2.webp');" data-bg="2">
                     <div class="glob-service-text">DIVERSE<br>DEMOGRAPHICS</div>
+                    <div class="glob-service-description">Access 1.4 billion potential customers across multiple segments. From urban professionals to rural markets.</div>
                 </div>
             </div>
             <div class="col-12 mb-4">
                 <div class="glob-service-mobile-card" style="background-image: url('./images/bm3.webp');" data-bg="3">
                     <div class="glob-service-text">THE<br>ASPIRING<br>INDIAN</div>
+                    <div class="glob-service-description">Connect with a young, ambitious population eager for quality goods and services. Rising middle class with increasing disposable income.</div>
                 </div>
             </div>
             <div class="col-12 mb-4">
                 <div class="glob-service-mobile-card" style="background-image: url('./images/bm1.webp');" data-bg="4">
                     <div class="glob-service-text">TECH<br>SAVVY</div>
+                    <div class="glob-service-description">Leverage India's digital transformation with 800M+ internet users. Mobile-first market with rapid e-commerce growth.</div>
                 </div>
             </div>
             <div class="col-12 mb-4">
                 <div class="glob-service-mobile-card" style="background-image: url('./images/bm2.webp');" data-bg="5">
                     <div class="glob-service-text">THE<br>INDIA<br>STORY<br><span class="glob-plus-icon">+</span></div>
+                    <div class="glob-service-description">Partner with local expertise to navigate complex market dynamics. Custom solutions for successful market entry and expansion.</div>
                 </div>
             </div>
         </div>
@@ -1014,18 +1078,58 @@ document.addEventListener('DOMContentLoaded', function() {
         serviceItem.addEventListener('touchstart', function() {
             serviceItems.forEach(s => s.classList.add('glob-active'));
         });
-    });
-    
-    // Handle mobile card interactions
+    });    // Handle mobile card interactions
     const mobileCards = document.querySelectorAll('.glob-service-mobile-card');
     
     mobileCards.forEach(card => {
-        card.addEventListener('click', function() {
-            // Add visual feedback for tap
-            this.classList.add('tapped');
-            setTimeout(() => {
-                this.classList.remove('tapped');
-            }, 300);
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Reset other cards
+            mobileCards.forEach(otherCard => {
+                if (otherCard !== this) {
+                    otherCard.classList.remove('tapped');
+                    otherCard.style.height = '200px';
+                }
+            });
+            
+            // Toggle tapped state for current card
+            this.classList.toggle('tapped');
+            
+            // Adjust card height based on content
+            if (this.classList.contains('tapped')) {
+                const description = this.querySelector('.glob-service-description');
+                const textHeight = this.querySelector('.glob-service-text').offsetHeight;
+                const descHeight = description.scrollHeight;
+                
+                // Set a min height to ensure there's space for the content
+                const newHeight = Math.max(250, textHeight + descHeight + 60);
+                this.style.height = `${newHeight}px`;
+                
+                // Make description visible with a slight delay
+                setTimeout(() => {
+                    description.style.opacity = '1';
+                    description.style.maxHeight = '200px';
+                    description.style.transform = 'translateY(0)';
+                }, 100);
+            } else {
+                this.style.height = '200px';
+                
+                // Hide description
+                const description = this.querySelector('.glob-service-description');
+                description.style.opacity = '0';
+                description.style.maxHeight = '0';
+                description.style.transform = 'translateY(20px)';
+            }
+        });
+        
+        // Add touch event listener for better mobile experience
+        card.addEventListener('touchstart', function() {
+            this.classList.add('touch-active');
+        });
+        
+        card.addEventListener('touchend', function() {
+            this.classList.remove('touch-active');
         });
     });
     

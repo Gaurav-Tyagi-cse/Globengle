@@ -17,7 +17,9 @@
         position: relative;
         border-right: 1px solid rgba(255,255,255,0.3);
         display: flex;
-        align-items: flex-end;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
         padding: 20px;
         z-index: 2;
         transition: all 0.3s ease;
@@ -53,11 +55,33 @@
         z-index: 2;
         position: relative;
         text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, height 0.3s ease;
         letter-spacing: 1px;
         padding-bottom: 10px;
     }
-    .glob-service-item:hover .glob-service-text { transform: translateY(-10px); }    /* Plus icon */
+    
+    .glob-service-item:hover .glob-service-text { transform: translateY(-10px); }
+    
+    .glob-service-description {
+        color: white;
+        font-size: 14px;
+        line-height: 1.4;
+        z-index: 2;
+        position: relative;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.4s ease, max-height 0.4s ease, transform 0.4s ease;
+        transform: translateY(20px);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+        padding-top: 5px;
+    }
+    
+    .glob-service-item:hover .glob-service-description {
+        opacity: 1;
+        max-height: 150px;
+        transform: translateY(0);
+    }/* Plus icon */
     .glob-plus-icon {
         font-size: 30px;
         font-weight: bold;
@@ -86,21 +110,24 @@
 <body>
 
 <div class="glob-services-container">
-    <div class="glob-services" style="display: flex; width: 100%; height: 100vh; position: relative; background-image: url('./images/bm1.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; transition: background-image 0.5s ease; background-attachment: scroll;">
-        <div class="glob-service-item" data-bg="1">
+    <div class="glob-services" style="display: flex; width: 100%; height: 100vh; position: relative; background-image: url('./images/bm1.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; transition: background-image 0.5s ease; background-attachment: scroll;">        <div class="glob-service-item" data-bg="1">
             <div class="glob-service-text">GROWTH<br>OPPORTUNITY</div>
+            <div class="glob-service-description">Tap into India's economic momentum with 6-7% annual growth. Strategic market entry for lasting business expansion.</div>
         </div>
         <div class="glob-service-item" data-bg="2">
             <div class="glob-service-text">DIVERSE<br>DEMOGRAPHICS</div>
+            <div class="glob-service-description">Access 1.4 billion potential customers across multiple segments. From urban professionals to rural markets.</div>
         </div>
         <div class="glob-service-item" data-bg="3">
             <div class="glob-service-text">THE<br>ASPIRING<br>INDIAN</div>
+            <div class="glob-service-description">Connect with a young, ambitious population eager for quality goods and services. Rising middle class with increasing disposable income.</div>
         </div>
         <div class="glob-service-item" data-bg="4">
             <div class="glob-service-text">TECH<br>SAVVY</div>
-        </div>
-        <div class="glob-service-item" data-bg="5">
+            <div class="glob-service-description">Leverage India's digital transformation with 800M+ internet users. Mobile-first market with rapid e-commerce growth.</div>
+        </div>        <div class="glob-service-item" data-bg="5">
             <div class="glob-service-text">THE<br>INDIA<br>STORY<br><span class="glob-plus-icon">+</span></div>
+            <div class="glob-service-description">Partner with local expertise to navigate complex market dynamics. Custom solutions for successful market entry and expansion.</div>
         </div>
     </div>
 </div>
