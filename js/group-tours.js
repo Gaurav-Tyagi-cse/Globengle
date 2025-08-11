@@ -7,18 +7,17 @@ document.addEventListener('DOMContentLoaded', function() {
       el: ".swiper-pagination",
       clickable: true,
     },
-    breakpoints: {
-      640: {
+    breakpoints: {      640: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 15,
       },
       768: {
         slidesPerView: 2,
-        spaceBetween: 30,
+        spaceBetween: 15,
       },
       1024: {
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 15,
       },
     },
     navigation: {
