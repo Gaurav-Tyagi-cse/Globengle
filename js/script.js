@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Partner Slider
 
 
-  const swiper = new Swiper(".logoSwiper", {
+  const partnerSwiper = new Swiper(".logoSwiper", {
     slidesPerView: 3,
     spaceBetween: 50,
     loop: true,
