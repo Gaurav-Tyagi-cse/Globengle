@@ -500,7 +500,8 @@
       border: 1px solid #ccc;
       box-shadow: 0 0 5px rgba(0,0,0,0.1);
       text-align: center;
-      padding: 8px; /* outer white space */
+      /* padding: 8px;  */
+      /* outer white space */
       
      
     }
@@ -509,7 +510,8 @@
       width: 100%;
       height: 260px;
       object-fit: cover;
-      border: 4px solid white; /* white border like your image */
+      /* border: 4px solid white; */
+       /* white border like your image */
       box-sizing: border-box;
     }
 
