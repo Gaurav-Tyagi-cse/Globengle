@@ -1,18 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>5 Services Layout</title>
+<!-- Five Services Layout Section -->
+<section class="section-services">
+    <div class="glob-services-container">
+        <div class="glob-services" style="display: flex; width: 100%; height: 100vh; position: relative; background-image: url('./images/bm1.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; transition: background-image 0.5s ease; background-attachment: scroll;">
+            <div class="glob-service-item" data-bg="1">
+                <div class="glob-service-text">GROWTH<br>OPPORTUNITY</div>
+            </div>
+            <div class="glob-service-item" data-bg="2">
+                <div class="glob-service-text">DIVERSE<br>DEMOGRAPHICS</div>
+            </div>
+            <div class="glob-service-item" data-bg="3">
+                <div class="glob-service-text">THE<br>ASPIRING<br>INDIAN</div>
+            </div>
+            <div class="glob-service-item" data-bg="4">
+                <div class="glob-service-text">TECH<br>SAVVY</div>
+            </div>
+            <div class="glob-service-item" data-bg="5">
+                <div class="glob-service-text">THE<br>INDIA<br>STORY<br><span class="glob-plus-icon">+</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- CSS for Services Section -->
 <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; background: #000; }
     .glob-services-container {
         width: 100%;
         height: 100vh;
         position: relative;
         overflow: hidden;
-    }    .glob-service-item {
+    }
+
+    .glob-service-item {
         flex: 1;
         position: relative;
         border-right: 1px solid rgba(255,255,255,0.3);
@@ -24,7 +44,8 @@
         overflow: hidden;
     }
     .glob-service-item:last-child { border-right: none; }
-      /* Color overlays for each section - matching the image */
+    
+    /* Color overlays for each section - matching the image */
     .glob-service-item:nth-child(1) {
         background-color: rgba(233, 142, 111, 0.5); /* Light orange */
     }
@@ -43,7 +64,9 @@
     
     .glob-service-item:nth-child(5) {
         background-color: rgba(233, 142, 111, 0.5); /* Light orange */
-    }    /* Text style */
+    }
+
+    /* Text style */
     .glob-service-text {
         color: white;
         font-size: 18px;
@@ -57,7 +80,9 @@
         letter-spacing: 1px;
         padding-bottom: 10px;
     }
-    .glob-service-item:hover .glob-service-text { transform: translateY(-10px); }    /* Plus icon */
+    .glob-service-item:hover .glob-service-text { transform: translateY(-10px); }
+    
+    /* Plus icon */
     .glob-plus-icon {
         font-size: 30px;
         font-weight: bold;
@@ -82,29 +107,8 @@
         background-color: rgba(0, 0, 0, 0.3);
     }
 </style>
-</head>
-<body>
 
-<div class="glob-services-container">
-    <div class="glob-services" style="display: flex; width: 100%; height: 100vh; position: relative; background-image: url('./images/bm1.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; transition: background-image 0.5s ease; background-attachment: scroll;">
-        <div class="glob-service-item" data-bg="1">
-            <div class="glob-service-text">GROWTH<br>OPPORTUNITY</div>
-        </div>
-        <div class="glob-service-item" data-bg="2">
-            <div class="glob-service-text">DIVERSE<br>DEMOGRAPHICS</div>
-        </div>
-        <div class="glob-service-item" data-bg="3">
-            <div class="glob-service-text">THE<br>ASPIRING<br>INDIAN</div>
-        </div>
-        <div class="glob-service-item" data-bg="4">
-            <div class="glob-service-text">TECH<br>SAVVY</div>
-        </div>
-        <div class="glob-service-item" data-bg="5">
-            <div class="glob-service-text">THE<br>INDIA<br>STORY<br><span class="glob-plus-icon">+</span></div>
-        </div>
-    </div>
-</div>
-
+<!-- JavaScript for Services Section -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const serviceItems = document.querySelectorAll('.glob-service-item');
@@ -154,6 +158,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-
-</body>
-</html>

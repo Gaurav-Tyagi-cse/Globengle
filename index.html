@@ -24,6 +24,175 @@
      background: url('../images/banner.webp') no-repeat center center/cover;
    }
  </style>
+ <!-- CSS for Services Section -->
+<style>    .glob-services-container {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .glob-service-item {
+        flex: 1;
+        position: relative;
+        border-right: 1px solid rgba(255,255,255,0.3);
+        display: flex;
+        align-items: flex-end;
+        padding: 20px;
+        z-index: 2;
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+    .glob-service-item:last-child { border-right: none; }
+      /* Mobile styles for services section */
+    @media (max-width: 768px) {
+        .glob-services-container {
+            display: none; /* Hide the desktop version */
+        }
+        
+        .glob-service-mobile-card {
+            height: 200px;
+            border-radius: 12px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .glob-service-mobile-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 60%);
+            z-index: 1;
+        }
+        
+        .glob-service-mobile-card[data-bg="1"]::after,
+        .glob-service-mobile-card[data-bg="2"]::after,
+        .glob-service-mobile-card[data-bg="5"]::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(233, 142, 111, 0.4);
+            z-index: 1;
+        }
+        
+        .glob-service-mobile-card[data-bg="3"]::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(140, 85, 69, 0.5);
+            z-index: 1;
+        }
+        
+        .glob-service-mobile-card[data-bg="4"]::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(72, 109, 149, 0.4);
+            z-index: 1;
+        }
+        
+        .glob-service-mobile-card .glob-service-text {
+            position: relative;
+            z-index: 2;
+        }
+          .glob-service-mobile-card:active,
+        .glob-service-mobile-card.tapped {
+            transform: scale(0.98);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+    }
+    
+    /* Hide mobile cards on desktop */
+    @media (min-width: 769px) {
+        .glob-mobile-services {
+            display: none;
+        }
+    }
+    
+    /* Color overlays for each section - matching the image */
+    /* .glob-service-item:nth-child(1) {
+        background-color: rgba(233, 142, 111, 0.5); 
+    }
+    
+    .glob-service-item:nth-child(2) {
+        background-color: rgba(233, 142, 111, 0.5); 
+    }
+    
+    .glob-service-item:nth-child(3) {
+        background-color: rgba(140, 85, 69, 0.6); 
+    }
+    
+    .glob-service-item:nth-child(4) {
+        background-color: rgba(72, 109, 149, 0.4); 
+    }
+    
+    .glob-service-item:nth-child(5) {
+        background-color: rgba(233, 142, 111, 0.5); 
+    } */
+
+    /* Text style */
+    .glob-service-text {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.3;
+        z-index: 2;
+        position: relative;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+        transition: transform 0.3s ease;
+        letter-spacing: 1px;
+        padding-bottom: 10px;
+    }
+    .glob-service-item:hover .glob-service-text { transform: translateY(-10px); }
+    
+    /* Plus icon */
+    .glob-plus-icon {
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 10px;
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Hover effects for sections */
+    .glob-service-item {
+        position: relative;
+        transition: background-color 0.3s ease;
+    }
+    
+    .glob-services:hover .glob-service-item {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Service with active class */
+    .glob-service-item.glob-active {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .section-services{
+      background-color: #FFF6F3;
+    }
+</style>
 </head>
 <body>
 
@@ -90,17 +259,17 @@
 <!-- feature Destination -->
 
         <!-- Trending Section Start -->
-<section class="trending-destinations">
+<!-- <section class="trending-destinations">
   <div class="container">
-    <!-- Section Heading -->
+   
     <div class="section-header text-center">
       <h3><span class="silver-South-family">Loved</span> by travellers, <span class="silver-South-family">Backed</span> by experts</h3>
       <p class="heading_font_family">These destinations are topping the charts for a reason — let’s take you there.</p>
     </div>
 
-    <!-- Grid -->
+  
     <div class="trending-grid">
-      <!-- Row 1 -->
+      
       <div class="destination-card large">
         <img src="./images/pic_txt.jpg" alt="Manila City">
         <div class="destination-info">
@@ -123,7 +292,7 @@
         </div>
       </div>
 
-      <!-- Row 2 -->
+     
       <div class="destination-card small">
         <img src="./images/pic4.jpeg" alt="Vietnam">
         <div class="destination-info">
@@ -146,7 +315,7 @@
         </div>
       </div>
 
-      <!-- Row 3 -->
+     
       <div class="destination-card small">
         <img src="./images/pic3.jpg" alt="Bali">
         <div class="destination-info">
@@ -170,6 +339,65 @@
       </div>
     </div>
   </div>
+</section> -->
+
+<!-- Five Services Layout Section -->
+<section class="section-services pt-5">
+      <!-- Section Heading -->
+    <div class="section-header text-center">
+      <h3><span class="silver-South-family">Loved</span> by travellers, <span class="silver-South-family">Backed</span> by experts</h3>
+      <p class="heading_font_family">These destinations are topping the charts for a reason — let’s take you there.</p>
+    </div>
+    <div class="glob-services-container">
+        <div class="glob-services" style="display: flex; width: 100%; height: 100vh; position: relative; background-image: url('./images/bm1.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; transition: background-image 0.5s ease; background-attachment: scroll;">
+            <div class="glob-service-item" data-bg="1">
+                <div class="glob-service-text">GROWTH<br>OPPORTUNITY</div>
+            </div>
+            <div class="glob-service-item" data-bg="2">
+                <div class="glob-service-text">DIVERSE<br>DEMOGRAPHICS</div>
+            </div>
+            <div class="glob-service-item" data-bg="3">
+                <div class="glob-service-text">THE<br>ASPIRING<br>INDIAN</div>
+            </div>
+            <div class="glob-service-item" data-bg="4">
+                <div class="glob-service-text">TECH<br>SAVVY</div>
+            </div>
+            <div class="glob-service-item" data-bg="5">
+                <div class="glob-service-text">THE<br>INDIA<br>STORY<br><span class="glob-plus-icon">+</span></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mobile version (only visible on small screens) -->
+    <div class="container d-md-none py-3">
+        <div class="row glob-mobile-services">
+            <div class="col-12 mb-4">
+                <div class="glob-service-mobile-card" style="background-image: url('./images/bm1.webp');" data-bg="1">
+                    <div class="glob-service-text">GROWTH<br>OPPORTUNITY</div>
+                </div>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="glob-service-mobile-card" style="background-image: url('./images/bm2.webp');" data-bg="2">
+                    <div class="glob-service-text">DIVERSE<br>DEMOGRAPHICS</div>
+                </div>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="glob-service-mobile-card" style="background-image: url('./images/bm3.webp');" data-bg="3">
+                    <div class="glob-service-text">THE<br>ASPIRING<br>INDIAN</div>
+                </div>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="glob-service-mobile-card" style="background-image: url('./images/bm1.webp');" data-bg="4">
+                    <div class="glob-service-text">TECH<br>SAVVY</div>
+                </div>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="glob-service-mobile-card" style="background-image: url('./images/bm2.webp');" data-bg="5">
+                    <div class="glob-service-text">THE<br>INDIA<br>STORY<br><span class="glob-plus-icon">+</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Why Travel -->
@@ -709,9 +937,109 @@ DISCOVER.</h2>
 
 
 <!-- JS -->
+ <!-- JavaScript for Services Section -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceItems = document.querySelectorAll('.glob-service-item');
+    const servicesContainer = document.querySelector('.glob-services');
+    
+    // Set the first service as active by default
+    serviceItems[0].classList.add('glob-active');
+    
+    // Store the default background
+    const defaultBg = window.getComputedStyle(servicesContainer).backgroundImage;
+    
+    // Function to check if mobile view
+    function isMobileView() {
+        return window.innerWidth <= 768;
+    }
+    
+    // Set initial background images based on viewport
+    function setInitialBackgrounds() {
+        if (isMobileView()) {
+            // For mobile: Set individual backgrounds for each card
+            serviceItems.forEach((item, index) => {
+                const bgNum = item.getAttribute('data-bg');
+                let bgImage = 'bm1.webp'; // default
+                
+                if (bgNum === '1') bgImage = 'bm1.webp';
+                else if (bgNum === '2') bgImage = 'bm2.webp';
+                else if (bgNum === '3') bgImage = 'bm3.webp';
+                else if (bgNum === '4') bgImage = 'bm1.webp';
+                else if (bgNum === '5') bgImage = 'bm2.webp';
+                
+                item.style.backgroundImage = `url('./images/${bgImage}')`;
+            });
+        } else {
+            // For desktop: Set container background
+            servicesContainer.style.backgroundImage = `url('./images/bm1.webp')`;
+        }
+    }
+    
+    // Initialize backgrounds
+    setInitialBackgrounds();
+    
+    // Handle window resize to adjust backgrounds
+    window.addEventListener('resize', setInitialBackgrounds);
+    
+    serviceItems.forEach((serviceItem, index) => {
+        serviceItem.addEventListener('mouseenter', function() {
+            const bgNum = this.getAttribute('data-bg');
+            // Store reference to current element
+            const currentElement = this;
+            
+            // Apply immediate color change to ALL sections
+            serviceItems.forEach(s => s.classList.add('glob-active'));
+            
+            // Only change container background on desktop view
+            if (!isMobileView()) {
+                // Delay background image change for smooth transition
+                setTimeout(() => {
+                    if (bgNum === '1') {
+                        servicesContainer.style.backgroundImage = 'url("./images/bm1.webp")';
+                    } else if (bgNum === '2') {
+                        servicesContainer.style.backgroundImage = 'url("./images/bm2.webp")';
+                    } else if (bgNum === '3') {
+                        servicesContainer.style.backgroundImage = 'url("./images/bm3.webp")';
+                    } else if (bgNum === '4') {
+                        servicesContainer.style.backgroundImage = 'url("./images/bm1.webp")';
+                    } else if (bgNum === '5') {
+                        servicesContainer.style.backgroundImage = 'url("./images/bm2.webp")';
+                    }
+                }, 200); // 200ms delay for smooth transition
+            }
+        });
+        
+    // Add touch event for mobile
+        serviceItem.addEventListener('touchstart', function() {
+            serviceItems.forEach(s => s.classList.add('glob-active'));
+        });
+    });
+    
+    // Handle mobile card interactions
+    const mobileCards = document.querySelectorAll('.glob-service-mobile-card');
+    
+    mobileCards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Add visual feedback for tap
+            this.classList.add('tapped');
+            setTimeout(() => {
+                this.classList.remove('tapped');
+            }, 300);
+        });
+    });
+    
+    // Add event listener for mouseleave on the entire services container
+    servicesContainer.addEventListener('mouseleave', function() {
+        // Remove active class from all services when mouse leaves the entire container
+        serviceItems.forEach(s => s.classList.remove('glob-active'));
+    });
+});
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./js/script.js"></script>
 <script src="./js/group-tours.js"></script>
+
 
 <!-- Swiper initialization is in script.js -->
 
