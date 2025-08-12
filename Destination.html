@@ -18,11 +18,689 @@
 <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
  <link rel="stylesheet" href="./CSS/style.css">
- <style>
-     .hero-section {
-         background: url('../images/banner.webp') no-repeat center center/cover;
-     }
- </style>
+ 
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', Arial, sans-serif; }
+.hero {
+    position: relative;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: url('images/banner.webp') no-repeat center center/cover;
+}
+.hero-overlay {
+    background: rgba(0,0,0,0.35);
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 1;
+}
+.hero-content {
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.hero p.subheading {
+    font-size: 1.2rem;
+    margin: 10px 0 24px;
+    font-weight: 500;
+}
+.btn {
+    padding: 12px 28px;
+    border-radius: 25px;
+    border: none;
+    margin: 5px 10px 20px 0;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: inherit;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.btn-primary {
+    background: linear-gradient(90deg, #a259ff 0%, #8a2be2 100%);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 2px 12px rgba(138,43,226,0.18);
+    border: none;
+}
+.btn-primary:hover {
+    background: linear-gradient(90deg, #8a2be2 0%, #a259ff 100%);
+    color: #fff;
+}
+.btn-outline {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-weight: 500;
+}
+.btn-outline:hover {
+    background: #fff;
+    color: #8a2be2;
+}
+.experience {
+    font-family: 'Pacifico', 'Brush Script MT', cursive;
+    font-size: 2.5rem;
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.experience span {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-left: 10px;
+}
+.hero-content > p:not(.subheading):not(.experience) {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+.info-bar {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 18px 0 18px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+    z-index: 2;
+    gap: 0;
+    background: none !important;
+}
+.info-col {
+    text-align: left;
+    min-width: 120px;
+    padding: 0px 104px 0px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-left: 2px solid rgb(183, 176, 176);
+}
+.info-col::after {
+    content: none;
+}
+.info-bar strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.98em;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0.85;
+}
+.info-value {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.05em;
+    margin-top: 2px;
+}
+.bar-sep {
+    border-left: 1.5px solid black;
+    margin: 0;
+    height: 100%;
+    align-self: stretch;
+}
+.map-outline {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+    max-height: 320px;
+    z-index: 2;
+}
+@media (max-width: 900px) {
+    .hero h1 { font-size: 2.2rem; }
+    .experience, .experience span { font-size: 1.5rem; }
+    .map-outline { right: 10px; max-height: 180px; }
+    .info-bar { 
+        font-size: 0.9rem; 
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 15px 10px;
+    }
+    .info-col {
+        min-width: 100px;
+        padding: 0px 15px 0px 15px;
+        border-left: 1px solid rgb(183, 176, 176);
+    }
+    .bar-sep {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .hero-content { padding: 10px; }
+    .info-bar { 
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5px;
+        padding: 12px 5px;
+        flex-wrap: wrap;
+    }
+    .info-col {
+        min-width: 90px;
+        padding: 8px 5px;
+        text-align: center;
+        border-left: none;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+        margin-bottom: 5px;
+        flex: 1;
+        max-width: 45%;
+    }
+    .info-col:nth-child(odd) {
+        border-right: 1px solid rgba(255,255,255,0.3);
+    }
+    .map-outline { display: none; }
+    .bar-sep { display: none; }
+    .info-bar strong {
+        font-size: 0.85em;
+        margin-bottom: 2px;
+    }
+    .info-value {
+        font-size: 0.9em;
+    }
+}
+
+/* Secondary Menu Styles */
+.secondary-menu-section {
+    background-color: rgba(128, 128, 128, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.secondary-menu-section.fixed {
+    position: fixed;
+    top: 71px; /* Adjust based on your main navbar height */
+    left: 0;
+    right: 0;
+    background-color: rgba(128, 128, 128, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-menu {
+    padding: 0;
+}
+
+.secondary-nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+.secondary-nav li {
+    position: relative;
+}
+
+.secondary-nav li a {
+    display: block;
+    padding: 15px 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.secondary-nav li:last-child a {
+    border-right: none;
+}
+
+.secondary-nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.secondary-nav li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .secondary-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .secondary-nav li a {
+        padding: 12px 15px;
+        font-size: 12px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        min-width: 120px;
+        text-align: center;
+    }
+    
+    .secondary-nav li:nth-child(3n) a {
+        border-right: none;
+    }
+    
+    .secondary-menu-section.fixed {
+        top: 70px; /* Adjust for mobile navbar height */
+        position: static !important;
+        top: auto !important;
+        box-shadow: none !important;
+        background-color: rgba(128, 128, 128, 0.9) !important;
+        backdrop-filter: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .secondary-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .secondary-nav li {
+        width: 100%;
+    }
+    
+    .secondary-nav li a {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 12px 20px;
+    }
+    
+    .secondary-nav li:last-child a {
+        border-bottom: none;
+    }
+}
+.japan-features-section {
+  background: #FEF7F3;
+  padding-bottom: 30px;
+}
+.japan-features-row {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 30px auto 0 auto;
+  padding: 0 15px 30px 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  gap: 0;
+}
+.japan-feature-box {
+  flex: 1;
+  min-width: 140px;
+  padding: 0 10px;
+}
+.japan-feature-box img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 14px;
+  opacity: 0.6;
+  filter: grayscale(10%);
+}
+.japan-feature-box h4 {
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin-bottom: 6px;
+  margin-top: 0;
+  color: #898383;
+  letter-spacing: 0.01em;
+}
+.japan-feature-box p {
+  font-size: 13px;
+  color: #888;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 38px;
+  font-family: 'Montserrat', sans-serif;
+}
+.japan-overview-flex {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 15px 0 15px;
+  gap: 40px;
+  align-items: flex-start;
+}
+.japan-overview-text {
+  flex: 1.2;
+  padding-right: 10px;
+}
+.japan-overview-text h3 {
+  font-size: 27px;
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  margin-bottom: 18px;
+  margin-top: 0;
+  color: #898383;
+  letter-spacing: 0.01em;
+}
+.japan-overview-text p {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #444;
+  margin-bottom: 0;
+  white-space: pre-line;
+  font-family: 'Montserrat', sans-serif;
+}
+.japan-overview-image {
+  flex: 1;
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  height: 458px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.japan-overview-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.japan-image-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 20px 20px 20px;
+  background: linear-gradient(to top,rgba(0,0,0,0.6) 70%,rgba(0,0,0,0));
+  color: #fff;
+  text-align: center;
+}
+.japan-image-text h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.japan-image-text a {
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  background: #d4af37;
+  padding: 7px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  margin-top: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+  transition: background 0.2s;
+}
+.japan-image-text a:hover {
+  background: #bfa133;
+}
+@media (max-width: 900px) {
+  .japan-overview-flex {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .japan-overview-image {
+    width: 100%;
+    height: 260px;
+  }
+}
+@media (max-width: 600px) {
+  .japan-features-row {
+    flex-direction: column;
+    gap: 18px;
+    border-bottom: none;
+  }
+  .japan-feature-box {
+    padding: 0;
+  }
+  .japan-overview-flex {
+    padding: 25px 8px 0 8px;
+  }
+  .japan-overview-image {
+    height: 180px;
+  }
+  .japan-overview-text h3 {
+    font-size: 22px;
+  }
+}
+</style>
+<style>
+ 
+
+   .cj-section {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+        background: #ffffff;
+        margin: 0;
+        color: #333;
+        line-height: 1.4;
+    }
+
+    .cj-section {
+        padding: 50px 20px;
+        background: #ffffff;
+        text-align: center;
+    }
+
+    .cj-title {
+        font-size: 28px;
+        font-weight: 400;
+        margin-bottom: 35px;
+        color: #888;
+        font-style: italic;
+        font-family: 'Segoe Script', cursive;
+    }
+
+    .cj-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .cj-card {
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 310px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #e0e0e0;
+        text-align: left;
+    }
+
+    .cj-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .cj-card-content {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .cj-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 6px;
+        gap: 8px;
+    }
+
+    .cj-card-content h3 {
+        font-size: 14px;
+        font-weight: 700;
+        margin: 0;
+        color: #333;
+        line-height: 1.2;
+        flex: 1;
+    }
+
+    .cj-days {
+        background: #e6f2ff;
+        color: #0066cc;
+        font-size: 11px;
+        font-weight: 600;
+        padding: 3px 6px;
+        border-radius: 4px;
+        white-space: nowrap;
+    }
+
+    .cj-subtitle {
+        font-size: 12px;
+        color: #666;
+        margin-bottom: 12px;
+        font-weight: 400;
+    }
+
+    .cj-features-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4px 12px;
+        margin-bottom: 10px;
+    }
+
+    .cj-features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 11px;
+    }
+
+    .cj-features li {
+        margin-bottom: 2px;
+        color: #666;
+        position: relative;
+        padding-left: 8px;
+        font-weight: 400;
+        line-height: 1.3;
+    }
+
+    .cj-features li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #999;
+        font-size: 10px;
+    }
+
+    .cj-features-checked {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 12px 0;
+        font-size: 11px;
+    }
+
+    .cj-features-checked li {
+        margin-bottom: 2px;
+        color: #22c55e;
+        position: relative;
+        padding-left: 8px;
+        font-weight: 500;
+        line-height: 1.3;
+    }
+
+    .cj-features-checked li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #22c55e;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .cj-price-box {
+        margin-top: auto;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+    }
+
+    .cj-price-left {
+        margin-bottom: 8px;
+    }
+
+    .cj-price-left p {
+        font-size: 11px;
+        color: #666;
+        margin: 0;
+        line-height: 1.3;
+    }
+
+    .cj-emi {
+        font-weight: 600;
+        color: #333;
+    }
+
+    .cj-note {
+        color: #e53e3e;
+        font-weight: 500;
+        font-size: 11px;
+    }
+
+    .cj-price-right {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .cj-price {
+        font-size: 18px;
+        font-weight: 700;
+        color: #333;
+        margin: 0;
+    }
+
+    .cj-price-details {
+        text-align: right;
+        font-size: 10px;
+        color: #999;
+        line-height: 1.2;
+    }
+
+    @media (max-width: 768px) {
+        .cj-container {
+            gap: 16px;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .cj-card {
+            width: 100%;
+            max-width: 320px;
+        }
+    }
+</style>
 </head>
 <body>
 
@@ -75,867 +753,251 @@
 <div class="overlay"></div>
 
 <!-- Hero Section -->
-<section class="hero-section">
-  <div class="hero-content">
-    <h1 class="hero-title heading_font_family" style="font-size:38px;" >DREAM. EXPLORE. DISCOVER.</h1>
-    <p class="hero-subtitle silver-South-family" style="font-size: 38px;">Begin your journey</p>
-    <div class="search-box">
-      <input type="text" placeholder="Search by destinations, travel theme">
-      <i class="fa fa-search"></i>
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Travel to Japan</h1>
+        <p class="subheading">Whatever you want, our experts can make it happen.</p>
+        <button class="btn btn-primary">Craft your trip</button>
+        <button class="btn btn-outline">How it works</button>
+        <p class="experience">Experience <span>Japan</span></p>
+        <p>Where every step is a story, and every moment is art.</p>
     </div>
-  </div>
+    <div class="info-bar">
+        <div class="info-col">
+            <strong>Best time to visit</strong>
+            <span class="info-value">March to May</span>
+        </div>
+        <div class="bar-sep"></div>
+        <div class="info-col">
+            <strong>Capital</strong>
+            <span class="info-value">Tokyo</span>
+        </div>
+        <div class="bar-sep"></div>
+        <div class="info-col">
+            <strong>Currency</strong>
+            <span class="info-value">Japanese Yen</span>
+        </div>
+        <div class="bar-sep"></div>        <div class="info-col">
+            <strong>Time zone</strong>
+            <span class="info-value">+3.5 Hours from IST</span>
+        </div>
+        <div class="bar-sep"></div>
+        <div class="info-col">
+            <strong>Visa</strong>
+            <span class="info-value">Required</span>
+        </div>
+    </div>    <img src="./images/japan-map-removebg-preview.png" alt="Japan Map" class="map-outline">
 </section>
 
-<!-- feature Destination -->
-
-        <!-- Trending Section Start -->
-<section class="trending-destinations">
-  <div class="container">
-    <!-- Section Heading -->
-    <div class="section-header text-center">
-      <h3><span class="silver-South-family">Loved</span> by travellers, <span class="silver-South-family">Backed</span> by experts</h3>
-      <p class="heading_font_family">These destinations are topping the charts for a reason — let’s take you there.</p>
+<!-- Secondary Menu Section -->
+<section class="secondary-menu-section" id="secondaryMenu">
+    <div class="container-fluid">
+        <nav class="secondary-menu">
+            <ul class="secondary-nav">
+                <li><a href="#overview">OVERVIEW</a></li>
+                <li><a href="#itinerary">ITINERARY</a></li>
+                <li><a href="#accommodation">ACCOMMODATION</a></li>
+                <li><a href="#experiences">EXPERIENCES</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#reviews">REVIEWS</a></li>
+                <li><a href="#pricing">PRICING</a></li>
+            </ul>
+        </nav>
     </div>
-
-    <!-- Grid -->
-    <div class="trending-grid">
-      <!-- Row 1 -->
-      <div class="destination-card large">
-        <img src="./images/pic_txt.jpg" alt="Manila City">
-        <div class="destination-info">
-          <h3>Manila City</h3>
-          <p>30 Place</p>
-        </div>
-      </div>
-      <div class="destination-card small">
-        <img src="./images/pic2.jpeg" alt="Turkey">
-        <div class="destination-info">
-          <h3>Turkey</h3>
-          <p>10 Place</p>
-        </div>
-      </div>
-      <div class="destination-card small">
-        <img src="./images/pic3.jpg" alt="Los Angeles">
-        <div class="destination-info">
-          <h3>Los Angeles</h3>
-          <p>14 Place</p>
-        </div>
-      </div>
-
-      <!-- Row 2 -->
-      <div class="destination-card small">
-        <img src="./images/pic4.jpeg" alt="Vietnam">
-        <div class="destination-info">
-          <h3>Vietnam</h3>
-          <p>10 Place</p>
-        </div>
-      </div>
-      <div class="destination-card large">
-        <img src="./images/pic5.jpeg" alt="China Tours">
-        <div class="destination-info">
-          <h3>China Tours</h3>
-          <p>30 Place</p>
-        </div>
-      </div>
-      <div class="destination-card small">
-        <img src="./images/pic6.jpeg" alt="Germany">
-        <div class="destination-info">
-          <h3>Germany</h3>
-          <p>10 Place</p>
-        </div>
-      </div>
-
-      <!-- Row 3 -->
-      <div class="destination-card small">
-        <img src="./images/pic3.jpg" alt="Bali">
-        <div class="destination-info">
-          <h3>Bali</h3>
-          <p>20 Place</p>
-        </div>
-      </div>
-      <div class="destination-card small">
-        <img src="./images/pic2.jpeg" alt="Paris">
-        <div class="destination-info">
-          <h3>Paris</h3>
-          <p>18 Place</p>
-        </div>
-      </div>
-      <div class="destination-card large">
-        <img src="./images/pic_txt.jpg" alt="Santorini">
-        <div class="destination-info">
-          <h3>Santorini</h3>
-          <p>15 Place</p>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
-
-
-<section class="why-travel">
-  <div class="container text-center">
-    <!-- Section Heading -->
-    <h2 class="why-heading">
-      <span class="silver-South-family">Why</span> travel with GLOBENGEL?
-    </h2>
-
-    <!-- Features Grid -->
-    <div class="row justify-content-center mt-5 heading_font_family">
-      <!-- 1 -->
-      <div class="col-12 col-md-6 col-lg-3 mb-5 why-item">
-        <div class="why-card">
-          <img src="./images/bw1.jpeg" class="why-icon" alt="Thoughtful Curation">
-          <h4 class="why-title">Thoughtful Curation</h4>
-          <p class="why-text">
-            We don’t just plan trips — we curate journeys that match your dreams,
-            personality, and pace. Every itinerary is handpicked and fine-tuned
-            to reflect your unique travel style.
-          </p>
-        </div>
-      </div>
-
-      <!-- 2 -->
-      <div class="col-12 col-md-6 col-lg-3 mb-5 why-item">
-        <div class="why-card">
-          <img src="./images/pw2.jpeg" class="why-icon" alt="Global Connect">
-          <h4 class="why-title">Global Connect, Local Expertise</h4>
-          <p class="why-text">
-            With deep-rooted partnerships across the globe, we combine world-class
-            standards with local insight — offering you the best of both worlds,
-            wherever you go.
-          </p>
-        </div>
-      </div>
-
-      <!-- 3 -->
-      <div class="col-12 col-md-6 col-lg-3 mb-5 why-item">
-        <div class="why-card">
-          <img src="./images/pw3.png" class="why-icon" alt="Trust & Transparency">
-          <h4 class="why-title">Trust & Transparency</h4>
-          <p class="why-text">
-            We don’t just build trips — we build trust with transparent pricing,
-            honest recommendations, and no hidden surprises. What you see is what you get.
-          </p>
-        </div>
-      </div>
-
-      <!-- 4 -->
-      <div class="col-12 col-md-6 col-lg-3 mb-5 why-item">
-        <div class="why-card">
-          <img src="./images/pw4.jpeg" class="why-icon" alt="End-to-End Care">
-          <h4 class="why-title">End-to-End Care</h4>
-          <p class="why-text">
-            From pre-trip planning to on-ground concierge support, we handle every
-            detail so you can simply enjoy the journey.
-          </p>
-        </div>
-      </div>
+<!-- Overview Features Section -->
+<section class="japan-features-section">
+  <div class="japan-features-row">
+    <div class="japan-feature-box">
+      <img src="./images/ov1.jpeg" alt="Mount Fuji">
+      <h4>Mount Fuji Majesty</h4>
+      <p>Japan’s most iconic natural landmark: scenic, powerful, unforgettable.</p>
+    </div>
+    <div class="japan-feature-box">
+      <img src="./images/ov2.jpeg" alt="Temples">
+      <h4>Timeless Temples & Shrines</h4>
+      <p>Walk through history under ancient gates and temple roofs.</p>
+    </div>
+    <div class="japan-feature-box">
+      <img src="./images/ov4.jpeg" alt="Cuisine">
+      <h4>Culinary Adventures</h4>
+      <p>Savour flavours shaped by tradition Savour flavours shaped by tradition.</p>
+    </div>
+    <div class="japan-feature-box">
+      <img src="./images/ov3.jpeg" alt="Festivals">
+      <h4>Festivals & Cherry Blossoms</h4>
+      <p>Celebrate life in full bloom with cultural pride and pink petals.</p>
+    </div>
+    <div class="japan-feature-box">
+      <img src="./images/ov5.jpeg" alt="Cities">
+      <h4>Futuristic Cities</h4>
+      <p>Neon lights, bullet trains & innovation meets modern marvels.</p>
     </div>
   </div>
-</section>
 
-
-
-
-<section class="group-departures py-5">
-  <div class="container">
-
-    <!-- Section Heading -->
-    <div class="text-center mb-5">
-      <h2 class="group-heading">
-        <span>Handcrafted</span> Group Departures – 
-        <small>High on experience, light on cost</small>
-      </h2>
-      <p class="group-subtitle">
-        Explore curated group itineraries with seamless planning, trusted guides, and value-packed pricing.
+  <div class="japan-overview-flex">
+    <div class="japan-overview-text">
+      <h3>Overview</h3>
+      <p>
+Japan is a dream destination for Indian travellers seeking a mix of culture, cuisine, traditions, and modern experiences. It blends centuries-old traditions with cutting-edge innovation where ancient temples and castles nestle in towns, and bullet trains glide past scenic backdrops.
+</p>
+<p>
+For families and first-time explorers, Japan offers a seamless experience with world-class hospitality, spotless cities, and excellent public transport. From Hokkaido’s snowy fields to Okinawa’s tropical beaches, the landscape is as varied as the friendly faces you’ll meet.
+</p>
+<p>
+Spring brings cherry blossoms, autumn glows with fiery maple leaves, and summer festivals abound. Discover snow-covered fairytale Hokkaido, Kyoto’s religious spirit, Tokyo’s futuristic skyline, and the white sands of Okinawa — Japan caters to all.
+</p>
+<p>
+It’s also one of the safest countries in the world, with polite locals, reliable transport, and a familiar safe order — making it ideal for solo travellers, couples, and families alike.
       </p>
     </div>
-
-    <!-- Cards Grid -->
-    <div class="row g-4">
-
-      <!-- Card 1 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="trip-card">
-          <!-- <div class="trip-tag-corner">POPULAR</div> -->
-          <img src="./images/trip2.avif" class="trip-img" alt="Spectacular Krabi & Phuket Getaway">
-          
-          <div class="trip-body">
-            <h5 class="trip-title">Spectacular Krabi & Phuket Getaway</h5>
-            <div class="row g-0 trip-details">
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-calendar"></i> 5 Nights / 6 Days</li>
-                  <li><i class="fa fa-map-marker-alt"></i> 2 Cities Covered</li>
-                  <li><i class="fa fa-plane-arrival"></i> Airport Transfers</li>
-                  <li><i class="fa fa-utensils"></i> Daily Breakfast</li>
-                  <li><i class="fa fa-car"></i> Private Local Tour</li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-hotel"></i> 4 Star Hotels</li>
-                  <li><i class="fa fa-check-circle"></i> All Transfers</li>
-                  <li><i class="fa fa-binoculars"></i> Sightseeing</li>
-                  <li><i class="fa fa-umbrella-beach"></i> Beach Access</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="trip-footer">
-            <div class="price-section">
-              <div class="price-row">
-                <span class="trip-savings">You Save ₹15,000 per couple</span>
-              </div>
-              <div class="price-row">
-                <span class="trip-original">₹70,751</span>
-                <span class="trip-price">₹55,751</span>
-                <span class="trip-tag">per person</span>
-              </div>
-              <div class="price-row">
-                <span class="starting-from">*Starting from ₹27,875/person</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="trip-card">
-          <!-- <div class="trip-tag-corner">BEST SELLER</div> -->
-          <img src="./images/trip1.jpeg" class="trip-img" alt="Couples Choice - Seoul Deal">
-          
-          <div class="trip-body">
-            <h5 class="trip-title">Couples Choice - Seoul Deal</h5>
-            <div class="row g-0 trip-details">
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-calendar"></i> 4 Nights / 5 Days</li>
-                  <li><i class="fa fa-map-marker-alt"></i> 1 City Covered</li>
-                  <li><i class="fa fa-plane-arrival"></i> Airport Transfers</li>
-                  <li><i class="fa fa-utensils"></i> All Meals</li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-hotel"></i> 5 Star Hotels</li>
-                  <li><i class="fa fa-check-circle"></i> All Transfers</li>
-                  <li><i class="fa fa-binoculars"></i> Guided Tours</li>
-                  <li><i class="fa fa-ticket-alt"></i> Attraction Passes</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="trip-footer">
-            <div class="price-section">
-              <div class="price-row">
-                <span class="trip-savings">You Save ₹20,000 per couple</span>
-              </div>
-              <div class="price-row">
-                <span class="trip-original">₹110,644</span>
-                <span class="trip-price">₹95,644</span>
-                <span class="trip-tag">per person</span>
-              </div>
-              <div class="price-row">
-                <span class="starting-from">*Starting from ₹47,822/person</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="trip-card">
-          <!-- <div class="trip-tag-corner">POPULAR</div> -->
-          <img src="./images/trip2.avif" class="trip-img" alt="Spectacular Krabi & Phuket Getaway">
-          
-          <div class="trip-body">
-            <h5 class="trip-title">Spectacular Krabi & Phuket Getaway</h5>
-            <div class="row g-0 trip-details">
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-calendar"></i> 5 Nights / 6 Days</li>
-                  <li><i class="fa fa-map-marker-alt"></i> 2 Cities Covered</li>
-                  <li><i class="fa fa-plane-arrival"></i> Airport Transfers</li>
-                  <li><i class="fa fa-utensils"></i> Daily Breakfast</li>
-                  <li><i class="fa fa-car"></i> Private Local Tour</li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-hotel"></i> 4 Star Hotels</li>
-                  <li><i class="fa fa-check-circle"></i> All Transfers</li>
-                  <li><i class="fa fa-binoculars"></i> Sightseeing</li>
-                  <li><i class="fa fa-umbrella-beach"></i> Beach Access</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="trip-footer">
-            <div class="price-section">
-              <div class="price-row">
-                <span class="trip-savings">You Save ₹15,000 per couple</span>
-              </div>
-              <div class="price-row">
-                <span class="trip-original">₹70,751</span>
-                <span class="trip-price">₹55,751</span>
-                <span class="trip-tag">per person</span>
-              </div>
-              <div class="price-row">
-                <span class="starting-from">*Starting from ₹27,875/person</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-       <!-- Card 1 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="trip-card">
-          <!-- <div class="trip-tag-corner">POPULAR</div> -->
-          <img src="./images/trip2.avif" class="trip-img" alt="Spectacular Krabi & Phuket Getaway">
-          
-          <div class="trip-body">
-            <h5 class="trip-title">Spectacular Krabi & Phuket Getaway</h5>
-            <div class="row g-0 trip-details">
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-calendar"></i> 5 Nights / 6 Days</li>
-                  <li><i class="fa fa-map-marker-alt"></i> 2 Cities Covered</li>
-                  <li><i class="fa fa-plane-arrival"></i> Airport Transfers</li>
-                  <li><i class="fa fa-utensils"></i> Daily Breakfast</li>
-                  <li><i class="fa fa-car"></i> Private Local Tour</li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-hotel"></i> 4 Star Hotels</li>
-                  <li><i class="fa fa-check-circle"></i> All Transfers</li>
-                  <li><i class="fa fa-binoculars"></i> Sightseeing</li>
-                  <li><i class="fa fa-umbrella-beach"></i> Beach Access</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="trip-footer">
-            <div class="price-section">
-              <div class="price-row">
-                <span class="trip-savings">You Save ₹15,000 per couple</span>
-              </div>
-              <div class="price-row">
-                <span class="trip-original">₹70,751</span>
-                <span class="trip-price">₹55,751</span>
-                <span class="trip-tag">per person</span>
-              </div>
-              <div class="price-row">
-                <span class="starting-from">*Starting from ₹27,875/person</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="trip-card">
-          <!-- <div class="trip-tag-corner">BEST SELLER</div> -->
-          <img src="./images/trip1.jpeg" class="trip-img" alt="Couples Choice - Seoul Deal">
-          
-          <div class="trip-body">
-            <h5 class="trip-title">Couples Choice - Seoul Deal</h5>
-            <div class="row g-0 trip-details">
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-calendar"></i> 4 Nights / 5 Days</li>
-                  <li><i class="fa fa-map-marker-alt"></i> 1 City Covered</li>
-                  <li><i class="fa fa-plane-arrival"></i> Airport Transfers</li>
-                  <li><i class="fa fa-utensils"></i> All Meals</li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-hotel"></i> 5 Star Hotels</li>
-                  <li><i class="fa fa-check-circle"></i> All Transfers</li>
-                  <li><i class="fa fa-binoculars"></i> Guided Tours</li>
-                  <li><i class="fa fa-ticket-alt"></i> Attraction Passes</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="trip-footer">
-            <div class="price-section">
-              <div class="price-row">
-                <span class="trip-savings">You Save ₹20,000 per couple</span>
-              </div>
-              <div class="price-row">
-                <span class="trip-original">₹110,644</span>
-                <span class="trip-price">₹95,644</span>
-                <span class="trip-tag">per person</span>
-              </div>
-              <div class="price-row">
-                <span class="starting-from">*Starting from ₹47,822/person</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="trip-card">
-          <!-- <div class="trip-tag-corner">POPULAR</div> -->
-          <img src="./images/trip2.avif" class="trip-img" alt="Spectacular Krabi & Phuket Getaway">
-          
-          <div class="trip-body">
-            <h5 class="trip-title">Spectacular Krabi & Phuket Getaway</h5>
-            <div class="row g-0 trip-details">
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-calendar"></i> 5 Nights / 6 Days</li>
-                  <li><i class="fa fa-map-marker-alt"></i> 2 Cities Covered</li>
-                  <li><i class="fa fa-plane-arrival"></i> Airport Transfers</li>
-                  <li><i class="fa fa-utensils"></i> Daily Breakfast</li>
-                  <li><i class="fa fa-car"></i> Private Local Tour</li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-hotel"></i> 4 Star Hotels</li>
-                  <li><i class="fa fa-check-circle"></i> All Transfers</li>
-                  <li><i class="fa fa-binoculars"></i> Sightseeing</li>
-                  <li><i class="fa fa-umbrella-beach"></i> Beach Access</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="trip-footer">
-            <div class="price-section">
-              <div class="price-row">
-                <span class="trip-savings">You Save ₹15,000 per couple</span>
-              </div>
-              <div class="price-row">
-                <span class="trip-original">₹70,751</span>
-                <span class="trip-price">₹55,751</span>
-                <span class="trip-tag">per person</span>
-              </div>
-              <div class="price-row">
-                <span class="starting-from">*Starting from ₹27,875/person</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-       <!-- Card 1 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="trip-card">
-          <!-- <div class="trip-tag-corner">POPULAR</div> -->
-          <img src="./images/trip2.avif" class="trip-img" alt="Spectacular Krabi & Phuket Getaway">
-          
-          <div class="trip-body">
-            <h5 class="trip-title">Spectacular Krabi & Phuket Getaway</h5>
-            <div class="row g-0 trip-details">
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-calendar"></i> 5 Nights / 6 Days</li>
-                  <li><i class="fa fa-map-marker-alt"></i> 2 Cities Covered</li>
-                  <li><i class="fa fa-plane-arrival"></i> Airport Transfers</li>
-                  <li><i class="fa fa-utensils"></i> Daily Breakfast</li>
-                  <li><i class="fa fa-car"></i> Private Local Tour</li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-hotel"></i> 4 Star Hotels</li>
-                  <li><i class="fa fa-check-circle"></i> All Transfers</li>
-                  <li><i class="fa fa-binoculars"></i> Sightseeing</li>
-                  <li><i class="fa fa-umbrella-beach"></i> Beach Access</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="trip-footer">
-            <div class="price-section">
-              <div class="price-row">
-                <span class="trip-savings">You Save ₹15,000 per couple</span>
-              </div>
-              <div class="price-row">
-                <span class="trip-original">₹70,751</span>
-                <span class="trip-price">₹55,751</span>
-                <span class="trip-tag">per person</span>
-              </div>
-              <div class="price-row">
-                <span class="starting-from">*Starting from ₹27,875/person</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="trip-card">
-          <!-- <div class="trip-tag-corner">BEST SELLER</div> -->
-          <img src="./images/trip1.jpeg" class="trip-img" alt="Couples Choice - Seoul Deal">
-          
-          <div class="trip-body">
-            <h5 class="trip-title">Couples Choice - Seoul Deal</h5>
-            <div class="row g-0 trip-details">
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-calendar"></i> 4 Nights / 5 Days</li>
-                  <li><i class="fa fa-map-marker-alt"></i> 1 City Covered</li>
-                  <li><i class="fa fa-plane-arrival"></i> Airport Transfers</li>
-                  <li><i class="fa fa-utensils"></i> All Meals</li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-hotel"></i> 5 Star Hotels</li>
-                  <li><i class="fa fa-check-circle"></i> All Transfers</li>
-                  <li><i class="fa fa-binoculars"></i> Guided Tours</li>
-                  <li><i class="fa fa-ticket-alt"></i> Attraction Passes</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="trip-footer">
-            <div class="price-section">
-              <div class="price-row">
-                <span class="trip-savings">You Save ₹20,000 per couple</span>
-              </div>
-              <div class="price-row">
-                <span class="trip-original">₹110,644</span>
-                <span class="trip-price">₹95,644</span>
-                <span class="trip-tag">per person</span>
-              </div>
-              <div class="price-row">
-                <span class="starting-from">*Starting from ₹47,822/person</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="trip-card">
-          <!-- <div class="trip-tag-corner">POPULAR</div> -->
-          <img src="./images/trip2.avif" class="trip-img" alt="Spectacular Krabi & Phuket Getaway">
-          
-          <div class="trip-body">
-            <h5 class="trip-title">Spectacular Krabi & Phuket Getaway</h5>
-            <div class="row g-0 trip-details">
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-calendar"></i> 5 Nights / 6 Days</li>
-                  <li><i class="fa fa-map-marker-alt"></i> 2 Cities Covered</li>
-                  <li><i class="fa fa-plane-arrival"></i> Airport Transfers</li>
-                  <li><i class="fa fa-utensils"></i> Daily Breakfast</li>
-                  <li><i class="fa fa-car"></i> Private Local Tour</li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul class="trip-list">
-                  <li><i class="fa fa-hotel"></i> 4 Star Hotels</li>
-                  <li><i class="fa fa-check-circle"></i> All Transfers</li>
-                  <li><i class="fa fa-binoculars"></i> Sightseeing</li>
-                  <li><i class="fa fa-umbrella-beach"></i> Beach Access</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="trip-footer">
-            <div class="price-section">
-              <div class="price-row">
-                <span class="trip-savings">You Save ₹15,000 per couple</span>
-              </div>
-              <div class="price-row">
-                <span class="trip-original">₹70,751</span>
-                <span class="trip-price">₹55,751</span>
-                <span class="trip-tag">per person</span>
-              </div>
-              <div class="price-row">
-                <span class="starting-from">*Starting from ₹27,875/person</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Beyoned Section -->
-
-<section class="beyond-leisure py-5">
-  <div class="container text-center">
-    <!-- Section Heading -->
-    <h2 class="beyond-heading">
-      <span>Beyond</span> Leisure
-    </h2>
-    <p class="beyond-subtitle">
-      Not all journeys are for leisure. Some build futures, close deals, or mark life’s milestones. 
-      At GLOBENGEL, we understand the difference — and deliver experiences crafted for every purpose.
-    </p>
-
-    <!-- Cards -->
-    <div class="row g-4 mt-4 justify-content-center">
-      <!-- Card 1 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="beyond-card">
-          <img src="./images/bm1.webp" alt="Corporate Travel" class="beyond-img">
-          <div class="beyond-overlay">
-            <h4>The Best Places to Visit in 2025</h4>
-            <p>Corporate Travel</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="beyond-card">
-          <img src="./images/bm2.webp" alt="Education Travel" class="beyond-img">
-          <div class="beyond-overlay">
-            <h4>19 Top Luxury Hotels Worldwide for Stargazing</h4>
-            <p>Education Travel</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="beyond-card">
-          <img src="./images/bm3.webp" alt="Celebrations" class="beyond-img">
-          <div class="beyond-overlay">
-            <h4>The 9 Best Wellness Retreats Destinations</h4>
-            <p>Celebrations</p>
-          </div>
-        </div>
+    <div class="japan-overview-image">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Japan">
+      <div class="japan-image-text">
+        <h4>When is the Best Time to Visit Japan?</h4>
+        <a href="#">Read more</a>
       </div>
     </div>
   </div>
 </section>
 
-<!--  -->
+<!-- Curated Journeys Section -->
+<section class="cj-section">
+    <h2 class="cj-title">Curated Journeys</h2>
+    <div class="cj-container">
 
-<!-- Get inspired -->
-<section class="get-inspired">
-  <div class="inspired-header">
-    <h2>Get inspired</h2>
-    <p>
-      Let your imagination take flight and dream of incredible destinations,
-      meaningful experiences and the memories you'll make. The world is waiting.
-    </p>
-  </div>
-
-  <div class="inspired-slider">
-    <button class="inspired-btn prev-btn" onclick="slideInspired(-1)">&#10094;</button>
-    
-    <div class="inspired-track" id="inspiredTrack">
-      
-      <!-- Card 1 -->
-      <div class="inspired-card">
-        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600" alt="Hot Air Balloon">
-        <div class="card-content">
-          <h3>The 7 Best National Parks in Tanzania</h3>
-          <a href="#">Read more</a>
+        <!-- Card 1 -->
+        <div class="cj-card">
+            <img src="./images/bm1.webp" alt="Krabi & Phuket">
+            <div class="cj-card-content">
+                <div class="cj-card-header">
+                    <h3>Spectacular Krabi & Phuket Getaway ...</h3>
+                    <span class="cj-days">5N/6D</span>
+                </div>
+                <p class="cj-subtitle">2N Krabi • 3N Phuket</p>
+                
+                <div class="cj-features-grid">
+                    <ul class="cj-features">
+                        <li>Round Trip Flights</li>
+                        <li>Airport Transfers</li>
+                        <li>Selected Meals</li>
+                    </ul>
+                    <ul class="cj-features">
+                        <li>4 Star Hotels</li>
+                        <li>5 Activities</li>
+                    </ul>
+                </div>
+                
+                <ul class="cj-features-checked">
+                    <li>7 Islands Sunset Tour</li>
+                    <li>Ferry Transfer</li>
+                    <li>Phi Phi Island Tour</li>
+                </ul>
+                
+                <div class="cj-price-box">
+                    <div class="cj-price-left">
+                        <p>No Cost EMI at <span class="cj-emi">₹17,887/month</span></p>
+                    </div>
+                    <div class="cj-price-right">
+                        <p class="cj-price">₹55,751</p>
+                        <div class="cj-price-details">
+                            <div>/Person</div>
+                            <div>Total Price ₹1,11,502</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <!-- Card 2 -->
-      <div class="inspired-card">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600" alt="Zambia Safari">
-        <div class="card-content">
-          <h3>A Guide to Zambia Walking Safaris</h3>
-          <a href="#">Read more</a>
+        <!-- Card 2 -->
+        <div class="cj-card">
+            <img src="./images/bm2.webp" alt="Couples Choice">
+            <div class="cj-card-content">
+                <div class="cj-card-header">
+                    <h3>Couples Choice - Seal Deal</h3>
+                    <span class="cj-days">6N/7D</span>
+                </div>
+                <p class="cj-subtitle">2N Krabi • 1N Phi Phi Island • 3N Phuket</p>
+                
+                <div class="cj-features-grid">
+                    <ul class="cj-features">
+                        <li>Round Trip Flights</li>
+                        <li>Airport Transfers</li>
+                        <li>Selected Meals</li>
+                    </ul>
+                    <ul class="cj-features">
+                        <li>4 Star Hotels</li>
+                        <li>7 Activities</li>
+                    </ul>
+                </div>
+                
+                <ul class="cj-features-checked">
+                    <li>Honeymoon Hamper</li>
+                    <li>7 Islands Sunset Tour</li>
+                    <li>Ferry Transfer</li>
+                </ul>
+                
+                <div class="cj-price-box">
+                    <div class="cj-price-left">
+                        <p class="cj-note">This price is lower than the average price in September</p>
+                    </div>
+                    <div class="cj-price-right">
+                        <p class="cj-price">₹59,664</p>
+                        <div class="cj-price-details">
+                            <div>/Person</div>
+                            <div>Total Price ₹1,19,328</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <!-- Card 3 -->
-      <div class="inspired-card">
-        <img src="https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?w=600" alt="Oman Boat">
-        <div class="card-content">
-          <h3>Family Things to Do in Oman</h3>
-          <a href="#">Read more</a>
+        <!-- Card 3 -->
+        <div class="cj-card">
+            <img src="./images/bw1.jpeg" alt="Krabi & Phuket">
+            <div class="cj-card-content">
+                <div class="cj-card-header">
+                    <h3>Spectacular Krabi & Phuket Getaway ...</h3>
+                    <span class="cj-days">5N/6D</span>
+                </div>
+                <p class="cj-subtitle">2N Krabi • 3N Phuket</p>
+                
+                <div class="cj-features-grid">
+                    <ul class="cj-features">
+                        <li>Round Trip Flights</li>
+                        <li>Airport Transfers</li>
+                        <li>Selected Meals</li>
+                    </ul>
+                    <ul class="cj-features">
+                        <li>4 Star Hotels</li>
+                        <li>5 Activities</li>
+                    </ul>
+                </div>
+                
+                <ul class="cj-features-checked">
+                    <li>7 Islands Sunset Tour</li>
+                    <li>Ferry Transfer</li>
+                    <li>Phi Phi Island Tour</li>
+                </ul>
+                
+                <div class="cj-price-box">
+                    <div class="cj-price-left">
+                        <p>No Cost EMI at <span class="cj-emi">₹17,887/month</span></p>
+                    </div>
+                    <div class="cj-price-right">
+                        <p class="cj-price">₹55,751</p>
+                        <div class="cj-price-details">
+                            <div>/Person</div>
+                            <div>Total Price ₹1,11,502</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="inspired-card">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600" alt="Maldives">
-        <div class="card-content">
-          <h3>The Best Honeymoon Spots in Maldives</h3>
-          <a href="#">Read more</a>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="inspired-card">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" alt="Safari Jeep">
-        <div class="card-content">
-          <h3>Ultimate Safari Adventures in Africa</h3>
-          <a href="#">Read more</a>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="inspired-card">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" alt="Luxury Resort">
-        <div class="card-content">
-          <h3>Top 10 Luxury Resorts Around the World</h3>
-          <a href="#">Read more</a>
-        </div>
-      </div>
-
-      <!-- Card 7 -->
-      <div class="inspired-card">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600" alt="Mountain Trek">
-        <div class="card-content">
-          <h3>Exciting Mountain Treks for Adventurers</h3>
-          <a href="#">Read more</a>
-        </div>
-      </div>
-
-      <!-- Card 8 -->
-      <div class="inspired-card">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600" alt="Cultural Tour">
-        <div class="card-content">
-          <h3>Explore the World’s Most Vibrant Cultures</h3>
-          <a href="#">Read more</a>
-        </div>
-      </div>
 
     </div>
-
-    <button class="inspired-btn next-btn" onclick="slideInspired(1)">&#10095;</button>
-  </div>
-</section>
-
-<!-- Testimonial Section  -->
-<!-- Testimonial Section -->
-<section class="custom-testimonial-section py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="testimonial-heading">
-        <span>Trusted</span> by travellers like you
-      </h2>
-      <p class="testimonial-subtitle">
-        From seamless honeymoons to global conferences — see why our clients keep coming back.
-      </p>
-    </div>
-
-    <div class="swiper testimonialSwiper">
-      <div class="swiper-wrapper">
-        <!-- First slide - group of 3 cards -->
-        <div class="swiper-slide">
-          <div class="row">
-            <!-- Card 1 -->
-            <div class="col-md-4">
-              <div class="testimonial-card">
-                <div class="quote-icon">❝</div>
-                <div class="testimonial-avatar">
-                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dina Jems">
-                </div>
-                <h3 class="testimonial-name">Dina Jems</h3>
-                <div class="testimonial-role">Traveller</div>
-                <p class="testimonial-text">Fusce aliquam luctus est, eget tincidunt velit scelerisque rhoncus. Aliquam lacinia ipsum ornare, porttitor risus nec, mattis mauris.</p>
-              </div>
-            </div>
-            
-            <!-- Card 2 -->
-            <div class="col-md-4">
-              <div class="testimonial-card">
-                <div class="quote-icon">❝</div>
-                <div class="testimonial-avatar">
-                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Jahid Hassan">
-                </div>
-                <h3 class="testimonial-name">Jahid Hassan</h3>
-                <div class="testimonial-role">Traveller</div>
-                <p class="testimonial-text">Fusce aliquam luctus est, eget tincidunt velit scelerisque rhoncus. Aliquam lacinia ipsum ornare, porttitor risus nec, mattis mauris.</p>
-              </div>
-            </div>
-            
-            <!-- Card 3 -->
-            <div class="col-md-4">
-              <div class="testimonial-card">
-                <div class="quote-icon">❝</div>
-                <div class="testimonial-avatar">
-                  <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Shwan Pull">
-                </div>
-                <h3 class="testimonial-name">Shwan Pull</h3>
-                <div class="testimonial-role">Traveller</div>
-                <p class="testimonial-text">Fusce aliquam luctus est, eget tincidunt velit scelerisque rhoncus. Aliquam lacinia ipsum ornare, porttitor risus nec, mattis mauris.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Second slide - group of 3 cards -->
-        <div class="swiper-slide">
-          <div class="row">
-            <!-- Card 4 -->
-            <div class="col-md-4">
-              <div class="testimonial-card">
-                <div class="quote-icon">❝</div>
-                <div class="testimonial-avatar">
-                  <img src="https://randomuser.me/api/portraits/women/51.jpg" alt="Maria Lee">
-                </div>
-                <h3 class="testimonial-name">Maria Lee</h3>
-                <div class="testimonial-role">Traveller</div>
-                <p class="testimonial-text">Curabitur tincidunt ipsum vel eros posuere, sed feugiat justo viverra. Pellentesque ut arcu magna.</p>
-              </div>
-            </div>
-            
-            <!-- Card 5 -->
-            <div class="col-md-4">
-              <div class="testimonial-card">
-                <div class="quote-icon">❝</div>
-                <div class="testimonial-avatar">
-                  <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="David Smith">
-                </div>
-                <h3 class="testimonial-name">David Smith</h3>
-                <div class="testimonial-role">Traveller</div>
-                <p class="testimonial-text">Aenean posuere purus vel ex mattis, sed dapibus justo porta. Donec commodo diam sed dolor.</p>
-              </div>
-            </div>
-            
-            <!-- Card 6 -->
-            <div class="col-md-4">
-              <div class="testimonial-card">
-                <div class="quote-icon">❝</div>
-                <div class="testimonial-avatar">
-                  <img src="https://randomuser.me/api/portraits/women/11.jpg" alt="Anna Roy">
-                </div>
-                <h3 class="testimonial-name">Anna Roy</h3>
-                <div class="testimonial-role">Traveller</div>
-                <p class="testimonial-text">Morbi varius dui nec augue fermentum. Aliquam erat volutpat. Aenean id feugiat mi.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Pagination dots -->
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
 </section>
 
 <!-- let -->
@@ -1063,6 +1125,50 @@ DISCOVER.</h2>
  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./js/script.js"></script>
+<script>
+// Secondary Menu Sticky Functionality
+window.addEventListener('scroll', function() {
+    const secondaryMenu = document.getElementById('secondaryMenu');
+    const scrollPosition = window.scrollY;
+    const heroHeight = document.querySelector('.hero').offsetHeight;
+    
+    if (scrollPosition >= heroHeight - 80) {
+        secondaryMenu.classList.add('fixed');
+    } else {
+        secondaryMenu.classList.remove('fixed');
+    }
+});
+
+// Active menu item on scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.secondary-nav a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all links
+            navLinks.forEach(nav => nav.classList.remove('active'));
+            
+            // Add active class to clicked link
+            this.classList.add('active');
+            
+            // Optional: Smooth scroll to section
+            const targetId = this.getAttribute('href');
+            if (targetId.startsWith('#')) {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+});
+</script>
+
 
 </body>
 </html>
