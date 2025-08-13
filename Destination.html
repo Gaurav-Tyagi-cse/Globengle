@@ -169,6 +169,12 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     max-height: 320px;
     z-index: 2;
 }
+@media (min-width: 1200px) {
+    .travel-image{
+      margin-top: 250px !important;
+    }
+}
+
 @media (max-width: 900px) {
     .hero h1 { font-size: 2.2rem; }
     .experience, .experience span { font-size: 1.5rem; }
@@ -187,6 +193,57 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     .bar-sep {
         display: none;
     }
+  #travel-tips > div {
+    flex-direction: column !important;
+    gap: 18px !important;
+    padding: 0 4px !important;
+    align-items: stretch !important;
+  }
+  #travel-tips > div > div:first-child {
+    max-width: 100% !important;
+    margin: 0 0 18px 0 !important;
+    flex: none !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    order: 1 !important; /* Image below tips by default */
+  }
+  #travel-tips img {
+    margin-top: 0 !important;
+    max-width: 220px !important;
+    width: 100% !important;
+    border-radius: 10px !important;
+    display: block;
+  }
+  #travel-tips h2 {
+    font-size: 1.3rem !important;
+    margin-bottom: 18px !important;
+    text-align: center !important;
+  }
+  #travel-tips ul {
+    gap: 12px !important;
+  }
+  #travel-tips li {
+    margin-left: 0 !important;
+    padding: 8px 4px !important;
+    border-radius: 8px !important;
+    
+    box-shadow: 0 1px 4px rgba(191,161,106,0.04) !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+  #travel-tips li span img {
+    height: 32px !important;
+    width: 24px !important;
+  }
+  #travel-tips li div span[style*="font-size:1.04rem"] {
+    font-size: 0.98rem !important;
+  }
+  /* Move Travel Tips content above image */
+  #travel-tips > div > div:last-child {
+    order: 0 !important;
+  }
 }
 @media (max-width: 600px) {
     .hero-content { padding: 10px; }
@@ -228,6 +285,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
     z-index: 999;
+    
 }
 
 .secondary-menu-section.fixed {
@@ -247,11 +305,12 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
 .secondary-nav {
     list-style: none;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     margin: 0;
     padding: 0;
     gap: 0;
+    margin-left: 20px;
 }
 
 .secondary-nav li {
@@ -292,6 +351,9 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
         flex-wrap: wrap;
         justify-content: center;
     }
+    .secondary-menu-section {
+    display: none !important;
+  }
     
     .secondary-nav li a {
         padding: 12px 15px;
@@ -755,14 +817,14 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
 <!-- Hero Section -->
 <section class="hero">
     <div class="hero-overlay"></div>
-    <div class="hero-content">
+    <!-- <div class="hero-content">
         <h1>Travel to Japan</h1>
         <p class="subheading">Whatever you want, our experts can make it happen.</p>
         <button class="btn btn-primary">Craft your trip</button>
         <button class="btn btn-outline">How it works</button>
         <p class="experience">Experience <span>Japan</span></p>
         <p>Where every step is a story, and every moment is art.</p>
-    </div>
+    </div> -->
     <div class="info-bar">
         <div class="info-col">
             <strong>Best time to visit</strong>
@@ -1260,7 +1322,7 @@ It’s also one of the safest countries in the world, with polite locals, reliab
   <div style="max-width:1050px; margin:0 auto; display:flex; gap:48px; align-items:flex-start; font-family:'Montserrat', Arial, sans-serif; color:#4a3d36;">
     <!-- Left: Image -->
     <div style="flex:0 0 340px; max-width:340px;">
-      <img src="./images/travels-removebg-preview.png" alt="Traveling" style="width:100%; max-width:340px; border-radius:10px; margin-top: 280px !important;">
+      <img class="travel-image" src="./images/travels-removebg-preview.png" alt="Traveling" style="width:100%; max-width:340px; border-radius:10px; ">
     </div>
     <!-- Right: Tips -->
     <div style="flex:1;">
@@ -1268,14 +1330,14 @@ It’s also one of the safest countries in the world, with polite locals, reliab
         <span style="font-family:'Shadows Into Light', cursive; font-size:2.1rem; font-weight:400;">Travel</span> Tips
       </h2>
       <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:22px;">
-        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -10rem;">
+        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -14rem;">
           <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
             <span style="font-weight:700; color:#222;">Visa</span><br>
             <span style="font-size:1.04rem;">Japan offers an e-Visa for Indian passport holders (for short-term tourism). Ensure hotel bookings and return tickets are in place for smoother approval. GLOBENGEL assists with documentation.</span>
           </div>
         </li>
-        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -7rem;">
+        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -9rem;">
           <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
 
           <div>
@@ -1283,35 +1345,35 @@ It’s also one of the safest countries in the world, with polite locals, reliab
             <span style="font-size:1.04rem;">March to May (for cherry blossoms) and October to November (for autumn colours). Winters (Dec–Feb) offer snow experiences in Hokkaido and onsens.</span>
           </div>
         </li>
-        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -5rem;">
+        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -3rem;">
                 <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
             <span style="font-weight:700; color:#222;">Currency</span><br>
             <span style="font-size:1.04rem;">Japanese Yen (JPY). Currency exchange available at airports, city kiosks, and post offices. Cards are accepted in most hotels and stores, but cash is still widely used, especially in rural areas.</span>
           </div>
         </li>
-        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -2rem;">
+        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: 2rem;">
               <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
             <span style="font-weight:700; color:#222;">Language</span><br>
             <span style="font-size:1.04rem;">Japanese is spoken widely; English signage is available in major cities and tourist hubs. Learning basic greetings helps!</span>
           </div>
         </li>
-        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -5rem;">
+        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -3rem;">
                 <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
             <span style="font-weight:700; color:#222;">Food options</span><br>
             <span style="font-size:1.04rem;">Indian restaurants are common in Tokyo, Kyoto, and Osaka. Vegetarians can find options like rice bowls, vegetable tempura, miso soup, udon, and tofu-based dishes.</span>
           </div>
         </li>
-        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -7rem;">
+        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -9rem;">
               <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
             <span style="font-weight:700; color:#222;">Connectivity</span><br>
             <span style="font-size:1.04rem;">Tourist SIMs or pocket Wi-Fi routers are easily available at airports.</span>
           </div>
         </li>
-        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -10rem;">
+        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -14rem;">
               <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
             <span style="font-weight:700; color:#222;">Cultural Etiquette</span><br>
@@ -1555,9 +1617,9 @@ var map = L.map('things-map', {
     maxZoom: 10
 }).setView([36.2048, 138.2529], 5);
 
-// Add OpenStreetMap tiles
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
+// Use CartoDB Positron (light, English, clean look)
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap contributors & CartoDB'
 }).addTo(map);
 
 // Limit map to Japan's bounding box
@@ -1583,5 +1645,43 @@ L.marker([33.8416, 132.7654]).addTo(map)
     .bindPopup(popupContent)
     .openPopup();
 </script>
+<style>
+/* Map container style for same look */
+#things-map {
+    width: 100%;
+    height: 420px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    margin: 40px 0 30px 0;
+    border: 1.5px solid #e5e5e5;
+    overflow: hidden;
+}
+
+/* Popup card style for same design */
+.leaflet-popup-content-wrapper {
+    border-radius: 12px !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10) !important;
+    background: #fff !important;
+    border: 1px solid #eee !important;
+}
+.leaflet-popup-content {
+    margin: 8px 8px 8px 8px !important;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #444;
+    font-size: 14px;
+}
+.popup-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    max-width: 220px;
+    display: block;
+}
+.popup-card p {
+    margin: 0;
+    font-size: 13px;
+    color: #333;
+}
+</style>
 </body>
 </html>
