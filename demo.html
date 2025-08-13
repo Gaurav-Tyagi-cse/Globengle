@@ -1,360 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curated Journeys</title>
-<style>
- 
-
-   .cj-section {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-        background: #ffffff;
-        margin: 0;
-        color: #333;
-        line-height: 1.4;
-    }
-
-    .cj-section {
-        padding: 50px 20px;
-        background: #ffffff;
-        text-align: center;
-    }
-
-    .cj-title {
-        font-size: 28px;
-        font-weight: 400;
-        margin-bottom: 35px;
-        color: #888;
-        font-style: italic;
-        font-family: 'Segoe Script', cursive;
-    }
-
-    .cj-container {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-        max-width: 1000px;
-        margin: 0 auto;
-    }
-
-    .cj-card {
-        background: #ffffff;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        width: 310px;
-        display: flex;
-        flex-direction: column;
-        border: 1px solid #e0e0e0;
-        text-align: left;
-    }
-
-    .cj-card img {
-        width: 100%;
-        height: 160px;
-        object-fit: cover;
-        display: block;
-    }
-
-    .cj-card-content {
-        padding: 16px;
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-    }
-
-    .cj-card-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 6px;
-        gap: 8px;
-    }
-
-    .cj-card-content h3 {
-        font-size: 14px;
-        font-weight: 700;
-        margin: 0;
-        color: #333;
-        line-height: 1.2;
-        flex: 1;
-    }
-
-    .cj-days {
-        background: #e6f2ff;
-        color: #0066cc;
-        font-size: 11px;
-        font-weight: 600;
-        padding: 3px 6px;
-        border-radius: 4px;
-        white-space: nowrap;
-    }
-
-    .cj-subtitle {
-        font-size: 12px;
-        color: #666;
-        margin-bottom: 12px;
-        font-weight: 400;
-    }
-
-    .cj-features-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4px 12px;
-        margin-bottom: 10px;
-    }
-
-    .cj-features {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        font-size: 11px;
-    }
-
-    .cj-features li {
-        margin-bottom: 2px;
-        color: #666;
-        position: relative;
-        padding-left: 8px;
-        font-weight: 400;
-        line-height: 1.3;
-    }
-
-    .cj-features li::before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: #999;
-        font-size: 10px;
-    }
-
-    .cj-features-checked {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 12px 0;
-        font-size: 11px;
-    }
-
-    .cj-features-checked li {
-        margin-bottom: 2px;
-        color: #22c55e;
-        position: relative;
-        padding-left: 8px;
-        font-weight: 500;
-        line-height: 1.3;
-    }
-
-    .cj-features-checked li::before {
-        content: "✓";
-        position: absolute;
-        left: 0;
-        color: #22c55e;
-        font-size: 10px;
-        font-weight: bold;
-    }
-
-    .cj-price-box {
-        margin-top: auto;
-        border-top: 1px solid #eee;
-        padding-top: 10px;
-    }
-
-    .cj-price-left {
-        margin-bottom: 8px;
-    }
-
-    .cj-price-left p {
-        font-size: 11px;
-        color: #666;
-        margin: 0;
-        line-height: 1.3;
-    }
-
-    .cj-emi {
-        font-weight: 600;
-        color: #333;
-    }
-
-    .cj-note {
-        color: #e53e3e;
-        font-weight: 500;
-        font-size: 11px;
-    }
-
-    .cj-price-right {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-
-    .cj-price {
-        font-size: 18px;
-        font-weight: 700;
-        color: #333;
-        margin: 0;
-    }
-
-    .cj-price-details {
-        text-align: right;
-        font-size: 10px;
-        color: #999;
-        line-height: 1.2;
-    }
-
-    @media (max-width: 768px) {
-        .cj-container {
-            gap: 16px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Tips & FAQ - Japan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fcfaf7;
+            color: #3a2d1a;
+            margin: 0;
+            padding: 0;
+        }
+        .main-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 2px 24px 0 rgba(0,0,0,0.04);
+            border-radius: 18px;
+            padding: 40px 32px 32px 32px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+        .travel-title {
+            font-family: 'Dancing Script', cursive, sans-serif;
+            font-size: 2.2rem;
+            text-align: center;
+            color: #7b6b4c;
+            margin-bottom: 32px;
+            letter-spacing: 1px;
+        }
+        .tips-flex {
+            display: flex;
+            gap: 36px;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .suitcase-art {
+            flex: 1;
+            min-width: 180px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            margin-top: 18px;
+        }
+        .suitcase-svg {
+            width: 170px;
+            height: 140px;
+            display: block;
+        }
+        .tips-list {
+            flex: 2;
+            display: flex;
             flex-direction: column;
-            align-items: center;
+            gap: 0;
         }
-        
-        .cj-card {
-            width: 100%;
-            max-width: 320px;
+        .tip-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 18px;
         }
-    }
-</style>
-
+        .tip-row .tip-icon {
+            font-size: 1.2rem;
+            margin-top: 3px;
+            width: 28px;
+            text-align: center;
+            color: #bfa16a;
+            flex-shrink: 0;
+        }
+        .tip-row .tip-content {
+            flex: 1;
+        }
+        .tip-row .tip-title {
+            font-weight: bold;
+            font-size: 1.01rem;
+            color: #7b6b4c;
+            margin-bottom: 2px;
+            font-family: 'Segoe UI Semibold', 'Segoe UI', Arial, sans-serif;
+        }
+        .tip-row .tip-desc {
+            font-size: 0.97rem;
+            color: #3a2d1a;
+            line-height: 1.5;
+        }
+        .tip-row:not(:last-child) {
+            border-bottom: 1px dashed #f0e6d2;
+            padding-bottom: 10px;
+        }
+        @media (max-width: 700px) {
+            .main-wrap {
+                padding: 18px 4vw 18px 4vw;
+            }
+            .tips-flex {
+                flex-direction: column;
+                gap: 18px;
+            }
+            .suitcase-art {
+                justify-content: flex-start;
+                margin-bottom: 12px;
+            }
+        }
+        @media (max-width: 480px) {
+            .main-wrap {
+                padding: 8px 2vw 8px 2vw;
+            }
+            .faq-section {
+                padding: 18px 6px 12px 6px;
+            }
+        }
+        .faq-section {
+            background: #fcf7f0;
+            border-radius: 16px;
+            margin-top: 48px;
+            padding: 36px 24px 28px 24px;
+            box-shadow: 0 2px 12px 0 rgba(0,0,0,0.03);
+        }
+        .faq-title {
+            font-family: 'Dancing Script', cursive, sans-serif;
+            font-size: 1.7rem;
+            color: #7b6b4c;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .faq-list {
+            margin-top: 12px;
+        }
+        .faq-q {
+            font-weight: bold;
+            font-size: 1.01rem;
+            margin-bottom: 2px;
+            color: #3a2d1a;
+        }
+        .faq-a {
+            font-size: 0.98rem;
+            margin-bottom: 16px;
+            color: #5d4b2c;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<section class="cj-section">
-    <h2 class="cj-title">Curated Journeys</h2>
-    <div class="cj-container">
-
-        <!-- Card 1 -->
-        <div class="cj-card">
-            <img src="./images/bm1.webp" alt="Krabi & Phuket">
-            <div class="cj-card-content">
-                <div class="cj-card-header">
-                    <h3>Spectacular Krabi & Phuket Getaway ...</h3>
-                    <span class="cj-days">5N/6D</span>
-                </div>
-                <p class="cj-subtitle">2N Krabi • 3N Phuket</p>
-                
-                <div class="cj-features-grid">
-                    <ul class="cj-features">
-                        <li>Round Trip Flights</li>
-                        <li>Airport Transfers</li>
-                        <li>Selected Meals</li>
-                    </ul>
-                    <ul class="cj-features">
-                        <li>4 Star Hotels</li>
-                        <li>5 Activities</li>
-                    </ul>
-                </div>
-                
-                <ul class="cj-features-checked">
-                    <li>7 Islands Sunset Tour</li>
-                    <li>Ferry Transfer</li>
-                    <li>Phi Phi Island Tour</li>
-                </ul>
-                
-                <div class="cj-price-box">
-                    <div class="cj-price-left">
-                        <p>No Cost EMI at <span class="cj-emi">₹17,887/month</span></p>
+    <div class="main-wrap">
+        <div class="travel-title">Travel Tips</div>
+        <div class="tips-flex">
+            <div class="tips-list">
+                <div class="tip-row">
+                    <div class="tip-icon">🛂</div>
+                    <div class="tip-content">
+                        <div class="tip-title">Visa</div>
+                        <div class="tip-desc">
+                            Japan offers an eVisa for Indian passport holders (for short-term tourism). Ensure hotel bookings and return tickets are in place for smoother approval. GLOBENGEL assists with documentation.
+                        </div>
                     </div>
-                    <div class="cj-price-right">
-                        <p class="cj-price">₹55,751</p>
-                        <div class="cj-price-details">
-                            <div>/Person</div>
-                            <div>Total Price ₹1,11,502</div>
+                </div>
+                <div class="tip-row">
+                    <div class="tip-icon">🌸</div>
+                    <div class="tip-content">
+                        <div class="tip-title">Best time to visit</div>
+                        <div class="tip-desc">
+                            March to May (for cherry blossoms) and October to November (for autumn colours). Winters (Dec-Feb) offer snow experiences in Hokkaido and mountains.
+                        </div>
+                    </div>
+                </div>
+                <div class="tip-row">
+                    <div class="tip-icon">💴</div>
+                    <div class="tip-content">
+                        <div class="tip-title">Currency</div>
+                        <div class="tip-desc">
+                            Japanese Yen (JPY). Currency exchange available at airports, city kiosks, and post offices. Cards are accepted in most hotels and stores, but cash is still widely used, especially in rural areas.
+                        </div>
+                    </div>
+                </div>
+                <div class="tip-row">
+                    <div class="tip-icon">🗣️</div>
+                    <div class="tip-content">
+                        <div class="tip-title">Language</div>
+                        <div class="tip-desc">
+                            Japanese is spoken widely. English signage is available in major cities and tourist hubs. Learning basic greetings helps!
+                        </div>
+                    </div>
+                </div>
+                <div class="tip-row">
+                    <div class="tip-icon">🍱</div>
+                    <div class="tip-content">
+                        <div class="tip-title">Food options</div>
+                        <div class="tip-desc">
+                            Indian restaurants are common in Tokyo, Kyoto, and Osaka. Vegetarians can find options like rice bowls, vegetable tempura, miso soup, udon, and tofu-based dishes.
+                        </div>
+                    </div>
+                </div>
+                <div class="tip-row">
+                    <div class="tip-icon">📶</div>
+                    <div class="tip-content">
+                        <div class="tip-title">Connectivity</div>
+                        <div class="tip-desc">
+                            Tourist SIMs or pocket Wi-Fi routers are easily available at airports.
+                        </div>
+                    </div>
+                </div>
+                <div class="tip-row">
+                    <div class="tip-icon">🙏</div>
+                    <div class="tip-content">
+                        <div class="tip-title">Cultural Etiquette</div>
+                        <div class="tip-desc">
+                            Bowing is customary. Always remove shoes when entering homes or traditional stays.<br>
+                            Avoid loud conversations on public transport.
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="cj-card">
-            <img src="./images/bm2.webp" alt="Couples Choice">
-            <div class="cj-card-content">
-                <div class="cj-card-header">
-                    <h3>Couples Choice - Seal Deal</h3>
-                    <span class="cj-days">6N/7D</span>
-                </div>
-                <p class="cj-subtitle">2N Krabi • 1N Phi Phi Island • 3N Phuket</p>
-                
-                <div class="cj-features-grid">
-                    <ul class="cj-features">
-                        <li>Round Trip Flights</li>
-                        <li>Airport Transfers</li>
-                        <li>Selected Meals</li>
-                    </ul>
-                    <ul class="cj-features">
-                        <li>4 Star Hotels</li>
-                        <li>7 Activities</li>
-                    </ul>
-                </div>
-                
-                <ul class="cj-features-checked">
-                    <li>Honeymoon Hamper</li>
-                    <li>7 Islands Sunset Tour</li>
-                    <li>Ferry Transfer</li>
-                </ul>
-                
-                <div class="cj-price-box">
-                    <div class="cj-price-left">
-                        <p class="cj-note">This price is lower than the average price in September</p>
-                    </div>
-                    <div class="cj-price-right">
-                        <p class="cj-price">₹59,664</p>
-                        <div class="cj-price-details">
-                            <div>/Person</div>
-                            <div>Total Price ₹1,19,328</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="suitcase-art">
+                <!-- Hand-drawn suitcase SVG illustration -->
+                <svg class="suitcase-svg" viewBox="0 0 170 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="18" y="38" width="134" height="80" rx="14" fill="#fffbe9" stroke="#bfa16a" stroke-width="2.5"/>
+                    <rect x="38" y="18" width="94" height="28" rx="8" fill="#fffbe9" stroke="#bfa16a" stroke-width="2"/>
+                    <rect x="60" y="10" width="50" height="12" rx="6" fill="#fffbe9" stroke="#bfa16a" stroke-width="2"/>
+                    <rect x="38" y="18" width="94" height="10" rx="5" fill="#f7e6c2" stroke="#bfa16a" stroke-width="1"/>
+                    <rect x="38" y="36" width="94" height="10" rx="5" fill="#f7e6c2" stroke="#bfa16a" stroke-width="1"/>
+                    <rect x="30" y="60" width="40" height="18" rx="4" fill="#fff" stroke="#bfa16a" stroke-width="1.2"/>
+                    <text x="34" y="73" font-size="10" fill="#bfa16a" font-family="monospace" font-weight="bold" transform="rotate(-8 34 73)">Travels JPN</text>
+                    <rect x="110" y="90" width="28" height="14" rx="3" fill="#fff" stroke="#bfa16a" stroke-width="1.2"/>
+                    <text x="114" y="101" font-size="9" fill="#bfa16a" font-family="monospace" font-weight="bold" transform="rotate(8 114 101)">タグ</text>
+                </svg>
             </div>
         </div>
-
-        <!-- Card 3 -->
-        <div class="cj-card">
-            <img src="./images/bw1.jpeg" alt="Krabi & Phuket">
-            <div class="cj-card-content">
-                <div class="cj-card-header">
-                    <h3>Spectacular Krabi & Phuket Getaway ...</h3>
-                    <span class="cj-days">5N/6D</span>
-                </div>
-                <p class="cj-subtitle">2N Krabi • 3N Phuket</p>
-                
-                <div class="cj-features-grid">
-                    <ul class="cj-features">
-                        <li>Round Trip Flights</li>
-                        <li>Airport Transfers</li>
-                        <li>Selected Meals</li>
-                    </ul>
-                    <ul class="cj-features">
-                        <li>4 Star Hotels</li>
-                        <li>5 Activities</li>
-                    </ul>
-                </div>
-                
-                <ul class="cj-features-checked">
-                    <li>7 Islands Sunset Tour</li>
-                    <li>Ferry Transfer</li>
-                    <li>Phi Phi Island Tour</li>
-                </ul>
-                
-                <div class="cj-price-box">
-                    <div class="cj-price-left">
-                        <p>No Cost EMI at <span class="cj-emi">₹17,887/month</span></p>
-                    </div>
-                    <div class="cj-price-right">
-                        <p class="cj-price">₹55,751</p>
-                        <div class="cj-price-details">
-                            <div>/Person</div>
-                            <div>Total Price ₹1,11,502</div>
-                        </div>
-                    </div>
-                </div>
+        <div class="faq-section">
+            <div class="faq-title">Frequently Asked <span style="font-family:inherit;font-style:italic;">Questions</span></div>
+            <div class="faq-list">
+                <div class="faq-q">Question 1: Do Indian travellers need a visa for Japan?</div>
+                <div class="faq-a"><b>Answer:</b> Yes. Indian passport holders require an eVisa for tourism. GLOBENGEL provides full assistance for the application process.</div>
+                <div class="faq-q">Question 2: Is Japan vegetarian-friendly for Indian travellers?</div>
+                <div class="faq-a"><b>Answer:</b> While Japan is largely a seafood- and meat-heavy cuisine, major cities offer vegetarian and Indian food. You'll also find local dishes like vegetable sushi, tempura and udon.</div>
+                <div class="faq-q">Question 3: What's the ideal trip duration to explore Japan?</div>
+                <div class="faq-a"><b>Answer:</b> 7 to 10 days is ideal to cover Tokyo, Mt. Fuji, Kyoto, and Osaka. You can add Hiroshima or Hokkaido for extended trips.</div>
+                <div class="faq-q">Question 4: Is Japan safe for solo or female travellers?</div>
+                <div class="faq-a"><b>Answer:</b> Yes. Japan is one of the safest countries for solo and female travellers. Clean cities, courteous locals, and efficient public transport make navigation easy.</div>
+                <div class="faq-q">Question 5: What should I pack for a Japan trip?</div>
+                <div class="faq-a"><b>Answer:</b> Comfortable shoes (lots of walking!), a light jacket, power adapters (Type A/B plugs), and socks (shoes are often removed indoors).</div>
+                <div class="faq-q">Question 6: Are public transport and Intercity travel easy?</div>
+                <div class="faq-a"><b>Answer:</b> Extremely! The Japan Rail Pass is popular for foreign tourists and allows unlimited access to high-speed trains (Shinkansen).</div>
+                <div class="faq-q">Question 7: When is cherry blossom season in Japan?</div>
+                <div class="faq-a"><b>Answer:</b> Late March to early April in most parts of Japan, but it can vary by region.</div>
+                <div class="faq-q">Question 8: Is tipping common in Japan?</div>
+                <div class="faq-a"><b>Answer:</b> No. Tipping is not expected and can even be considered rude. Exceptional service is already built into their culture.</div>
             </div>
         </div>
-
     </div>
-</section>
-
 </body>
 </html>

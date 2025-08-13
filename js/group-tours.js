@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
-    },
-    breakpoints: {      640: {
+    },    breakpoints: {
+      640: {
         slidesPerView: 2,
         spaceBetween: 15,
       },

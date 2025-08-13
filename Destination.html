@@ -18,7 +18,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
  <link rel="stylesheet" href="./CSS/style.css">
+ <link rel="stylesheet" href="./CSS/group-cards.css">
  
+ <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -490,8 +492,6 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
 }
 </style>
 <style>
- 
-
    .cj-section {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
         background: #ffffff;
@@ -538,7 +538,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
 
     .cj-card img {
         width: 100%;
-        height: 160px;
+        height: 250px;
         object-fit: cover;
         display: block;
     }
@@ -708,7 +708,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <ul class="navbar-nav d-none d-lg-flex">
-      <li class="nav-item"><a class="nav-link" href="#">DESTINATIONS</a></li>
+      <li class="nav-item"><a class="nav-link" href="Destination.html">DESTINATIONS</a></li>
       <li class="nav-item"><a class="nav-link" href="#">LUXURY</a></li>
       <li class="nav-item"><a class="nav-link" href="#">GROUP TOURS</a></li>
       <li class="nav-item"><a class="nav-link" href="#">VOYAGES</a></li>
@@ -743,7 +743,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     </a>
     <div class="close-btn">&times;</div>
   </div>
-  <a class="nav-link" href="#">DESTINATIONS</a>
+  <a class="nav-link" href="Destination.html">DESTINATIONS</a>
   <a class="nav-link" href="#">LUXURY</a>
   <a class="nav-link" href="#">GROUP TOURS</a>
   <a class="nav-link" href="#">VOYAGES</a>
@@ -795,20 +795,20 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     <div class="container-fluid">
         <nav class="secondary-menu">
             <ul class="secondary-nav">
-                <li><a href="#overview">OVERVIEW</a></li>
-                <li><a href="#itinerary">ITINERARY</a></li>
-                <li><a href="#accommodation">ACCOMMODATION</a></li>
-                <li><a href="#experiences">EXPERIENCES</a></li>
-                <li><a href="#gallery">GALLERY</a></li>
-                <li><a href="#reviews">REVIEWS</a></li>
-                <li><a href="#pricing">PRICING</a></li>
+              <li><a href="#overview">OVERVIEW</a></li>
+              <li><a href="#curated-journeys">CURATED JOURNEYS</a></li>
+              <li><a href="#group-tours">GROUP TOURS</a></li>
+              <li><a href="#get-inspired">GET INSPIRED</a></li>
+              <li><a href="#travel-tips">TRAVEL TIPS</a></li>
+              <li><a href="#faqs">FAQS</a></li>
+               
             </ul>
         </nav>
     </div>
 </section>
 
 <!-- Overview Features Section -->
-<section class="japan-features-section">
+<section class="japan-features-section" id="overview">
   <div class="japan-features-row">
     <div class="japan-feature-box">
       <img src="./images/ov1.jpeg" alt="Mount Fuji">
@@ -864,7 +864,7 @@ It’s also one of the safest countries in the world, with polite locals, reliab
 </section>
 
 <!-- Curated Journeys Section -->
-<section class="cj-section">
+<section class="cj-section" id="curated-journeys">
     <h2 class="cj-title">Curated Journeys</h2>
     <div class="cj-container">
 
@@ -890,11 +890,11 @@ It’s also one of the safest countries in the world, with polite locals, reliab
                     </ul>
                 </div>
                 
-                <ul class="cj-features-checked">
+                <!-- <ul class="cj-features-checked">
                     <li>7 Islands Sunset Tour</li>
                     <li>Ferry Transfer</li>
                     <li>Phi Phi Island Tour</li>
-                </ul>
+                </ul> -->
                 
                 <div class="cj-price-box">
                     <div class="cj-price-left">
@@ -933,11 +933,11 @@ It’s also one of the safest countries in the world, with polite locals, reliab
                     </ul>
                 </div>
                 
-                <ul class="cj-features-checked">
+                <!-- <ul class="cj-features-checked">
                     <li>Honeymoon Hamper</li>
                     <li>7 Islands Sunset Tour</li>
                     <li>Ferry Transfer</li>
-                </ul>
+                </ul> -->
                 
                 <div class="cj-price-box">
                     <div class="cj-price-left">
@@ -976,11 +976,126 @@ It’s also one of the safest countries in the world, with polite locals, reliab
                     </ul>
                 </div>
                 
-                <ul class="cj-features-checked">
+                <!-- <ul class="cj-features-checked">
                     <li>7 Islands Sunset Tour</li>
                     <li>Ferry Transfer</li>
                     <li>Phi Phi Island Tour</li>
-                </ul>
+                </ul> -->
+                
+                <div class="cj-price-box">
+                    <div class="cj-price-left">
+                        <p>No Cost EMI at <span class="cj-emi">₹17,887/month</span></p>
+                    </div>
+                    <div class="cj-price-right">
+                        <p class="cj-price">₹55,751</p>
+                        <div class="cj-price-details">
+                            <div>/Person</div>
+                            <div>Total Price ₹1,11,502</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <!-- Card 1 -->
+        <div class="cj-card">
+            <img src="./images/bm1.webp" alt="Krabi & Phuket">
+            <div class="cj-card-content">
+                <div class="cj-card-header">
+                    <h3>Spectacular Krabi & Phuket Getaway ...</h3>
+                    <span class="cj-days">5N/6D</span>
+                </div>
+                <p class="cj-subtitle">2N Krabi • 3N Phuket</p>
+                
+                <div class="cj-features-grid">
+                    <ul class="cj-features">
+                        <li>Round Trip Flights</li>
+                        <li>Airport Transfers</li>
+                        <li>Selected Meals</li>
+                    </ul>
+                    <ul class="cj-features">
+                        <li>4 Star Hotels</li>
+                        <li>5 Activities</li>
+                    </ul>
+                </div>
+                
+               
+                
+                <div class="cj-price-box">
+                    <div class="cj-price-left">
+                        <p>No Cost EMI at <span class="cj-emi">₹17,887/month</span></p>
+                    </div>
+                    <div class="cj-price-right">
+                        <p class="cj-price">₹55,751</p>
+                        <div class="cj-price-details">
+                            <div>/Person</div>
+                            <div>Total Price ₹1,11,502</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="cj-card">
+            <img src="./images/bm2.webp" alt="Couples Choice">
+            <div class="cj-card-content">
+                <div class="cj-card-header">
+                    <h3>Couples Choice - Seal Deal</h3>
+                    <span class="cj-days">6N/7D</span>
+                </div>
+                <p class="cj-subtitle">2N Krabi • 1N Phi Phi Island • 3N Phuket</p>
+                
+                <div class="cj-features-grid">
+                    <ul class="cj-features">
+                        <li>Round Trip Flights</li>
+                        <li>Airport Transfers</li>
+                        <li>Selected Meals</li>
+                    </ul>
+                    <ul class="cj-features">
+                        <li>4 Star Hotels</li>
+                        <li>7 Activities</li>
+                    </ul>
+                </div>
+                 
+                <div class="cj-price-box">
+                    <div class="cj-price-left">
+                        <p class="cj-note">This price is lower than the average price in September</p>
+                    </div>
+                    <div class="cj-price-right">
+                        <p class="cj-price">₹59,664</p>
+                        <div class="cj-price-details">
+                            <div>/Person</div>
+                            <div>Total Price ₹1,19,328</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="cj-card">
+            <img src="./images/bw1.jpeg" alt="Krabi & Phuket">
+            <div class="cj-card-content">
+                <div class="cj-card-header">
+                    <h3>Spectacular Krabi & Phuket Getaway ...</h3>
+                    <span class="cj-days">5N/6D</span>
+                </div>
+                <p class="cj-subtitle">2N Krabi • 3N Phuket</p>
+                
+                <div class="cj-features-grid">
+                    <ul class="cj-features">
+                        <li>Round Trip Flights</li>
+                        <li>Airport Transfers</li>
+                        <li>Selected Meals</li>
+                    </ul>
+                    <ul class="cj-features">
+                        <li>4 Star Hotels</li>
+                        <li>5 Activities</li>
+                    </ul>
+                </div>
+                
+                
                 
                 <div class="cj-price-box">
                     <div class="cj-price-left">
@@ -999,6 +1114,267 @@ It’s also one of the safest countries in the world, with polite locals, reliab
 
     </div>
 </section>
+
+<!-- Grouup Departures -->
+<section class="group-departures py-5" id="group-tours" style="background-color: #f9ebe9;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title"><span class="silver-South-family">Group</span> Tours</h2>
+      <!-- <p class="section-subtitle">Explore curated group itineraries with seamless planning, trusted guides, and value-packed pricing.</p> -->
+    </div>
+      <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="gt-travel-card">
+          <!-- <div class="gt-trip-tag-corner">Timeless Europe</div> -->
+          <img src="./images/banner.webp" alt="Timeless Europe Journey">
+          <div class="gt-travel-content">
+            <h3>TIMELESS EUROPE JOURNEY</h3>
+            <p>9 Days | 3 Countries | 4 Cities</p>
+            <p>Departures- Oct | Nov | Dec</p>
+            <div class="gt-travel-price">INR 1,19,000/- <span>(Per Person)</span></div>
+          </div>
+        </div>
+      </div>
+        <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="gt-travel-card">
+          <!-- <div class="gt-trip-tag-corner">Amazing Dubai</div> -->
+          <img src="./images/trip1.jpeg" alt="Amazing Dubai">
+          <div class="gt-travel-content">
+            <h3>AMAZING DUBAI</h3>
+            <p>7 Days | 1 Country | 3 Cities</p>
+            <p>Departures- Sep | Oct | Nov</p>
+            <div class="gt-travel-price">INR 89,000/- <span>(Per Person)</span></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <div class="gt-travel-card">
+          <!-- <div class="gt-trip-tag-corner">Bali Paradise</div> -->
+          <img src="./images/trip2.avif" alt="Bali Paradise">
+          <div class="gt-travel-content">
+            <h3>BALI PARADISE</h3>
+            <p>8 Days | 1 Country | 4 Cities</p>
+            <p>Departures- Oct | Dec | Jan</p>
+            <div class="gt-travel-price">INR 95,000/- <span>(Per Person)</span></div>
+          </div>
+        </div>
+      </div>
+        <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <div class="gt-travel-card">
+          <!-- <div class="gt-trip-tag-corner">Asian Explorer</div> -->
+          <img src="./images/banner.webp" alt="Asian Explorer">
+          <div class="gt-travel-content">
+            <h3>ASIAN EXPLORER</h3>
+            <p>12 Days | 3 Countries | 6 Cities</p>
+            <p>Departures- Sep | Oct | Nov</p>
+            <div class="gt-travel-price">INR 1,45,000/- <span>(Per Person)</span></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slide 5 -->
+      <div class="swiper-slide">
+        <div class="gt-travel-card">
+          <!-- <div class="gt-trip-tag-corner">Majestic Turkey</div> -->
+          <img src="./images/trip1.jpeg" alt="Majestic Turkey">
+          <div class="gt-travel-content">
+            <h3>MAJESTIC TURKEY</h3>
+            <p>10 Days | 1 Country | 5 Cities</p>
+            <p>Departures- Sep | Oct | Nov</p>
+            <div class="gt-travel-price">INR 1,05,000/- <span>(Per Person)</span></div>
+          </div>
+        </div>
+      </div>        <!-- Slide 6 -->
+      <div class="swiper-slide">
+        <div class="gt-travel-card">
+          <!-- <div class="gt-trip-tag-corner">Egypt Wonder</div> -->
+          <img src="./images/trip2.avif" alt="Egypt Wonder">
+          <div class="gt-travel-content">
+            <h3>EGYPT WONDER</h3>
+            <p>9 Days | 1 Country | 4 Cities</p>
+            <p>Departures- Oct | Nov | Dec</p>
+            <div class="gt-travel-price">INR 1,25,000/- <span>(Per Person)</span></div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Get Inspired -->
+<section class="inspired-section" id="get-inspired">
+    <h2 class="inspired-title">Get <span>Inspired</span></h2>
+    
+    <!-- Row 1 -->
+    <div class="inspired-row inspired-row-1">
+        <div class="inspired-card">
+            <img src="./images/bm1.webp" alt="Cherry Blossoms">
+            <div class="inspired-overlay">
+                Cherry blossoms, inspiring Japanese cities in pastel colours every spring
+            </div>
+        </div>
+        <div class="inspired-card">
+            <img src="./images/bm2.webp" alt="Nara Heritage">
+            <div class="inspired-overlay">
+                World Heritage-listed wonders in Nara, the ancient capital of Japan
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="inspired-row inspired-row-2">
+        <div class="inspired-card">
+            <img src="./images/bm3.webp" alt="Mount Fuji">
+            <div class="inspired-overlay">
+                Mount Fuji, eternity, the country's tallest peak
+            </div>
+        </div>
+        <div class="inspired-card">
+            <img src="./images/bm1.webp" alt="Tokyo Nightlife">
+            <div class="inspired-overlay">
+                Towering, neon-lit streets packed with bars in Tokyo, Japan's space-age capital
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Map -->
+<section class="things-section">
+    <!-- <h2 class="things-title">Top things to do</h2> -->
+    <div id="things-map"></div>
+</section>
+
+<!-- Travel Tips Section -->
+<section style="background:#f1e6e4; padding:48px 0;" id="travel-tips">
+  <div style="max-width:1050px; margin:0 auto; display:flex; gap:48px; align-items:flex-start; font-family:'Montserrat', Arial, sans-serif; color:#4a3d36;">
+    <!-- Left: Image -->
+    <div style="flex:0 0 340px; max-width:340px;">
+      <img src="./images/travels-removebg-preview.png" alt="Traveling" style="width:100%; max-width:340px; border-radius:10px; margin-top: 280px !important;">
+    </div>
+    <!-- Right: Tips -->
+    <div style="flex:1;">
+      <h2 style="font-family:'Pacifico', cursive; font-size:2rem; color:#444; margin-bottom:30px; letter-spacing:1px;">
+        <span style="font-family:'Shadows Into Light', cursive; font-size:2.1rem; font-weight:400;">Travel</span> Tips
+      </h2>
+      <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:22px;">
+        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -10rem;">
+          <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
+          <div>
+            <span style="font-weight:700; color:#222;">Visa</span><br>
+            <span style="font-size:1.04rem;">Japan offers an e-Visa for Indian passport holders (for short-term tourism). Ensure hotel bookings and return tickets are in place for smoother approval. GLOBENGEL assists with documentation.</span>
+          </div>
+        </li>
+        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -7rem;">
+          <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
+
+          <div>
+            <span style="font-weight:700; color:#222;">Best time to visit</span><br>
+            <span style="font-size:1.04rem;">March to May (for cherry blossoms) and October to November (for autumn colours). Winters (Dec–Feb) offer snow experiences in Hokkaido and onsens.</span>
+          </div>
+        </li>
+        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -5rem;">
+                <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
+          <div>
+            <span style="font-weight:700; color:#222;">Currency</span><br>
+            <span style="font-size:1.04rem;">Japanese Yen (JPY). Currency exchange available at airports, city kiosks, and post offices. Cards are accepted in most hotels and stores, but cash is still widely used, especially in rural areas.</span>
+          </div>
+        </li>
+        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -2rem;">
+              <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
+          <div>
+            <span style="font-weight:700; color:#222;">Language</span><br>
+            <span style="font-size:1.04rem;">Japanese is spoken widely; English signage is available in major cities and tourist hubs. Learning basic greetings helps!</span>
+          </div>
+        </li>
+        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -5rem;">
+                <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
+          <div>
+            <span style="font-weight:700; color:#222;">Food options</span><br>
+            <span style="font-size:1.04rem;">Indian restaurants are common in Tokyo, Kyoto, and Osaka. Vegetarians can find options like rice bowls, vegetable tempura, miso soup, udon, and tofu-based dishes.</span>
+          </div>
+        </li>
+        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -7rem;">
+              <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
+          <div>
+            <span style="font-weight:700; color:#222;">Connectivity</span><br>
+            <span style="font-size:1.04rem;">Tourist SIMs or pocket Wi-Fi routers are easily available at airports.</span>
+          </div>
+        </li>
+        <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -10rem;">
+              <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
+          <div>
+            <span style="font-weight:700; color:#222;">Cultural Etiquette</span><br>
+            <span style="font-size:1.04rem;">Bowing is customary. Always remove shoes when entering homes or traditional stays. Avoid loud conversations on public transport.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section: EXACTLY as per your image design -->
+<section style="background:#fff; padding:40px 0;" id="faqs">
+  <div style="max-width:900px; margin:0 auto; font-family:'Montserrat', Arial, sans-serif; color:#333;">
+    <h2 style="text-align:center; font-family:'Pacifico', cursive; font-size:2rem; color:#444; margin-bottom:32px; letter-spacing:1px;">
+      Frequently Asked <span style="font-family:'Shadows Into Light', cursive; font-size:2.1rem; font-weight:400;">Questions</span>
+    </h2>
+    <div style="display:flex; flex-direction:column; gap:18px;">
+      <!-- FAQ 1 -->
+      <div style="font-size:1.04rem;">
+        <span style="font-weight:700; color:#222;">Question 1: Do Indian travellers need a visa for Japan?</span><br>
+        <span style="font-weight:600; color:#a2595a;">Answer:</span> Yes. Indian passport holders require an e-Visa for tourism. GLOBENGEL provides full assistance for the application process.
+      </div>
+      <!-- FAQ 2 -->
+      <div style="font-size:1.04rem;">
+        <span style="font-weight:700; color:#222;">Question 2: Is Japan vegetarian-friendly for Indian travellers?</span><br>
+        <span style="font-weight:600; color:#a2595a;">Answer:</span> While Japan is largely a seafood- and meat-heavy cuisine, major cities offer vegetarian and Indian food. You’ll also find local dishes like vegetable sushi, tempura and udon.
+      </div>
+      <!-- FAQ 3 -->
+      <div style="font-size:1.04rem;">
+        <span style="font-weight:700; color:#222;">Question 3: What’s the ideal trip duration to explore Japan?</span><br>
+        <span style="font-weight:600; color:#a2595a;">Answer:</span> 7 to 10 days is ideal to cover Tokyo, Mt. Fuji, Kyoto, and Osaka. You can add Hiroshima or Hokkaido for extended trips.
+      </div>
+      <!-- FAQ 4 -->
+      <div style="font-size:1.04rem;">
+        <span style="font-weight:700; color:#222;">Question 4: Is Japan safe for solo or female Indian travellers?</span><br>
+        <span style="font-weight:600; color:#a2595a;">Answer:</span> Yes, Japan is one of the safest countries for solo and female travellers. Clean cities, courteous locals, and efficient public transport make navigation easy.
+      </div>
+      <!-- FAQ 5 -->
+      <div style="font-size:1.04rem;">
+        <span style="font-weight:700; color:#222;">Question 5: What should I pack for a Japan trip?</span><br>
+        <span style="font-weight:600; color:#a2595a;">Answer:</span> Comfortable shoes (lots of walking!), a light jacket, power adapters (Type A/B plugs), and socks (shoes are often removed indoors).
+      </div>
+      <!-- FAQ 6 -->
+      <div style="font-size:1.04rem;">
+        <span style="font-weight:700; color:#222;">Question 6: Are public transport and intercity travel easy?</span><br>
+        <span style="font-weight:600; color:#a2595a;">Answer:</span> Extremely! The Japan Rail Pass is popular for foreign tourists and allows unlimited access to high-speed trains (Shinkansen).
+      </div>
+      <!-- FAQ 7 -->
+      <div style="font-size:1.04rem;">
+        <span style="font-weight:700; color:#222;">Question 7: When is cherry blossom season in Japan?</span><br>
+        <span style="font-weight:600; color:#a2595a;">Answer:</span> Late March to early April in most parts of Japan, but it can vary by region.
+      </div>
+      <!-- FAQ 8 -->
+      <div style="font-size:1.04rem;">
+        <span style="font-weight:700; color:#222;">Question 8: Is tipping common in Japan?</span><br>
+        <span style="font-weight:600; color:#a2595a;">Answer:</span> No. Tipping is not expected and can even be considered rude. Exceptional service is already built into their culture.
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <!-- let -->
  <section class="curate-trip-section">
@@ -1118,13 +1494,16 @@ DISCOVER.</h2>
       <p>Copyright 2019-2025 GLOBENGEL</p>
     </div>
 </footer>
-
-
-
 <!-- JS -->
- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
 <script src="./js/script.js"></script>
+<script src="./js/group-tours.js"></script>
+
+
 <script>
 // Secondary Menu Sticky Functionality
 window.addEventListener('scroll', function() {
@@ -1169,6 +1548,40 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<script>
+// Center map on Japan
+var map = L.map('things-map', {
+    minZoom: 4,
+    maxZoom: 10
+}).setView([36.2048, 138.2529], 5);
 
+// Add OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+// Limit map to Japan's bounding box
+var japanBounds = [
+    [20.4253, 122.9346], // Southwest corner
+    [45.5515, 153.9867]  // Northeast corner
+];
+map.setMaxBounds(japanBounds);
+map.on('drag', function() {
+    map.panInsideBounds(japanBounds, { animate: false });
+});
+
+// Popup card content
+var popupContent = `
+<div class="popup-card">
+    <img src="./images/bm1.webp" alt="Dogo Onsen">
+    <p>Soak in an onsen (hot spring) – Historic Dogo Onsen in Matsuyama is a top place to plunge</p>
+</div>
+`;
+
+// Add marker for Dogo Onsen
+L.marker([33.8416, 132.7654]).addTo(map)
+    .bindPopup(popupContent)
+    .openPopup();
+</script>
 </body>
 </html>
