@@ -21,7 +21,7 @@
  <link rel="stylesheet" href="./CSS/group-cards.css">
  <style>
    .hero-section {
-     background: url('../images/page.png') no-repeat center center/cover;
+     background: url('../images/itieneary.jpg') no-repeat center center/cover;
    }
  </style>
  <!-- CSS for Services Section -->
@@ -84,6 +84,8 @@
   </div>
 </section>
 
+
+
 <!-- Existing Code -->
 
 <!-- ...existing code... -->
@@ -91,24 +93,33 @@
 
 <section class="tour-wrapper">
   <!-- Header -->
-  <h1 class="tour-title">Best of New Zealand</h1>
-  <p class="tour-meta">10 Days / 9 Nights &nbsp;|&nbsp; 1 Country &nbsp;|&nbsp; 9 Cities</p>
-  <p class="tour-route">
-    New Zealand Auckland (2N) ➔ Waitomo Caves & Rotorua (1N) ➔ Queenstown (3N) ➔ Milford Sound ➔
-    Wanaka ➔ Franz Josef (1N) ➔ Arthur’s Pass ➔ Christchurch (1N)
-  </p>
+  <h1 class="tour-title pb-2">Best of New Zealand</h1>
+  <div class="tour-meta-row">
+    <span><img src="./iocon/calendar.png" class="icon-inline" alt="" /> 10 Days / 9 Nights</span>
+    
+    <span><img src="./iocon/world.png" class="icon-inline" alt="" /> 1 Country</span>
+    
+    <span><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" class="icon-inline" alt="" /> 9 Cities</span>
+  </div>
+  <div class="tour-route">
+    New Zealand Auckland (2N) <span class="arrow">→</span> Waitomo Caves <span class="arrow">→</span> Rotorua (1N) <span class="arrow">→</span> Queenstown (3N) <span class="arrow">→</span> Milford Sound <span class="arrow">→</span> Wanaka <span class="arrow">→</span> Franz Josef (1N) <span class="arrow">→</span> Arthur’s Pass <span class="arrow">→</span> Christchurch (1N)
+  </div>
 
   <!-- Inclusions -->
+   <div class="highlights">
+   <h3 class="tour-title">Tour Inclusions :</h3>
+   </div>
   <div class="inclusions">
-    <div><img src="icons/hotel.svg" alt=""><span>Hotels</span></div>
-    <div><img src="icons/meals.svg" alt=""><span>Meals</span></div>
-    <div><img src="icons/sightseeing.svg" alt=""><span>Sightseeing</span></div>
-    <div><img src="icons/breakfast.svg" alt=""><span>Breakfast</span></div>
-    <div><img src="icons/transfer.svg" alt=""><span>Private Transfers</span></div>
-    <div><img src="icons/coach.svg" alt=""><span>Coach Transfer</span></div>
-    <div><img src="icons/ferry.svg" alt=""><span>Ferry</span></div>
-    <div><img src="icons/flights.svg" alt=""><span>Flights</span></div>
-    <div><img src="icons/train.svg" alt=""><span>Train</span></div>
+    
+    <div><img src="./iocon/hotel.png" alt="Hotels"><span>Hotels</span></div>
+    <div><img src="./iocon/iftar.png" alt="Meals"><span>Meals</span></div>
+    <div><img src="./iocon/binoculars.png" alt="Sightseeing"><span>Sightseeing</span></div>
+    <div><img src="./iocon/english-breakfast.png" alt="Breakfast"><span>Breakfast</span></div>
+    <div><img src="./iocon/car.png" alt="Private Transfers"><span>Private Transfers</span></div>
+    <div><img src="./iocon/bus.png" alt="Coach Transfer"><span>Coach Transfer</span></div>
+    <div><img src="./iocon/cruise.png" alt="Ferry"><span>Ferry</span></div>
+    <div><img src="./iocon/airplane.png" alt="Flights"><span>Flights</span></div>
+    <div><img src="./iocon/train.png" alt="Train"><span>Train</span></div>
   </div>
 
   <!-- Highlights -->
@@ -121,8 +132,8 @@
       <li>Skyline Gondola Ride</li>
       <li>Bob Peak</li>
       <li>Lake Tekapo and Lake Pukaki</li>
-      <li>Shark Show</li>
-      <li>Wai-O-Tapu Thermal Reserve</li>
+      <li>Maori Show</li>
+      <li>Wai-O-Tapu or Te Puia Thermal Reserve</li>
       <li>Waitomo Glowworm Caves</li>
       <li>Auckland Sky Tower Observatory Deck</li>
     </ul>
@@ -130,71 +141,777 @@
 
   <!-- Actions -->
   <div class="actions">
-    <button class="wishlist">♡ Wishlist</button>
-    <button class="download">⬇ Download</button>
-    <button class="email">✉ Email</button>
-    <button class="share">🔗 Share</button>
+    <button class="wishlist"><img src="./iocon/wishlist.png" width="16" /> Wishlist</button>
+    <button class="download"><img src="./iocon/download (1).png" width="16" /> Download</button>
+    <button class="email"><img src="./iocon/letter.png" width="16" /> Email</button>
+    <button class="share"><img src="./iocon/whatsapp.png" width="16" /> Share</button>
   </div>
+</section>
 
-  <!-- Main Grid -->
-  <div class="main-grid">
-    <!-- Left: Dates -->
-    <div class="dates-card">
+<section class="luxury-dates-section">
+  <div class="luxury-dates-grid">
+    <!-- Left: Departure City & Dates -->
+    <div class="luxury-dates-card">
       <h4>1. SELECT DEPARTURE CITY & DATE</h4>
-      <div class="city-buttons">
-        <button class="active">All departures</button>
-        <button>Delhi</button>
-        <button>Mumbai</button>
-        <button>Bangalore</button>
+      <div class="luxury-city-buttons">
+        <button>All departures</button>
+        <button>Chennai</button>
+        <button>Hyderabad</button>
         <button>Kolkata</button>
+        <button>Ahmedabad</button>
+        <button>Nagpur</button>
+        <button>Goa</button>
+        <button>Indore</button>
+        <button class="active">New Delhi</button>
+        <button>Bangalore</button>
+        <button>Cochn</button>
+        <button>Mumbai</button>
+        <button>Joining / Leaving</button>
       </div>
-      <p class="note">All New Delhi dates (click to see great prices today)</p>
-      <div class="date-list">
-        <div class="date-box green">
+      <p class="luxury-date-note">All New Delhi dates (10)<br><span style="color:#1a8c5b;">All inclusive fares, lock in this great price today.</span></p>
+      <div class="luxury-date-list">
+        <div class="luxury-date-box green">
           <div class="date-top">
-            <span class="day">17</span>
-            <span class="month">Oct</span>
+            <span class="day">TUE</span>
+            <span class="date">17</span>
+            <span class="month">SEP</span>
           </div>
-          <div class="price">₹ 3,80,000</div>
-          <div class="seats">Lowest Price</div>
+          <div class="price">₹1,19,000</div>
+          <div class="seats">Available</div>
         </div>
-        <div class="date-box red">
+        <div class="luxury-date-box green">
           <div class="date-top">
-            <span class="day">28</span>
-            <span class="month">Oct</span>
+            <span class="day">FRI</span>
+            <span class="date">20</span>
+            <span class="month">SEP</span>
           </div>
-          <div class="price">₹ 3,82,000</div>
-          <div class="seats">Price High</div>
+          <div class="price">₹1,19,000</div>
+          <div class="seats">Available</div>
         </div>
-        <div class="date-box">
+        <div class="luxury-date-box red">
           <div class="date-top">
-            <span class="day">11</span>
-            <span class="month">Nov</span>
+            <span class="day">TUE</span>
+            <span class="date">28</span>
+            <span class="month">OCT</span>
           </div>
-          <div class="price">₹ 3,83,000</div>
-          <div class="seats">1.4k seats left</div>
+          <div class="price">₹1,22,000</div>
+          <div class="seats">Last 2</div>
         </div>
+        <div class="luxury-date-box">
+          <div class="date-top">
+            <span class="day">TUE</span>
+            <span class="date">11</span>
+            <span class="month">NOV</span>
+          </div>
+          <div class="price">₹1,25,000</div>
+        </div>
+        <div class="luxury-date-box">
+          <div class="date-top">
+            <span class="day">TUE</span>
+            <span class="date">25</span>
+            <span class="month">NOV</span>
+          </div>
+          <div class="price">₹1,25,000</div>
+        </div>
+        <div class="luxury-date-box red">
+          <div class="date-top">
+            <span class="day">SUN</span>
+            <span class="date">14</span>
+            <span class="month">DEC</span>
+          </div>
+          <div class="price">₹1,26,000</div>
+          <div class="seats">Sold Out</div>
+        </div>
+        <div class="luxury-date-box gray">
+          <div class="date-top">
+            <span class="day">SUN</span>
+            <span class="date">21</span>
+            <span class="month">DEC</span>
+          </div>
+          <div class="price">₹1,28,000</div>
+        </div>
+        <div class="luxury-date-box gray">
+          <div class="date-top">
+            <span class="day">SUN</span>
+            <span class="date">28</span>
+            <span class="month">DEC</span>
+          </div>
+          <div class="price">₹1,28,000</div>
+        </div>
+      </div>
+      <div class="luxury-date-terms">
+        <small>
+          * Terms and Conditions apply. • 5% GST is applicable on given tour price. • Mentioned tour prices are Per Person for Indian Nationals only.<br>
+          * TCS at 5% (if PAN is available) or 10% (if not) is applicable as per Govt. of India on amounts above ₹7L. TCS will apply on the GST inclusive price, valid as of April 2025.
+        </small>
       </div>
     </div>
-
-    <!-- Right: Summary -->
-    <div class="summary-card">
+    <!-- Right: Booking Summary -->
+    <div class="luxury-summary-card">
       <h4>BOOKING SUMMARY</h4>
-      <p><strong>Dep:</strong> New Delhi</p>
-      <p><strong>Dates:</strong> 04 Oct 2025 ➔ 13 Oct 2025</p>
-      <p><strong>Nights:</strong> 9 Nights / 10 Days</p>
-      <p><strong>Rooms:</strong> 1 Room</p>
-
-      <div class="price-section">
-        <p class="basic">Basic Price: ₹ 3,80,000</p>
-        <p class="total">Total Amount: ₹ 12,84,841</p>
+      <div class="luxury-summary-row"><span>Dept. city:</span> <b>New Delhi</b></div>
+      <div class="luxury-summary-row"><span>Dept. date:</span> <b>10 Oct 2025 → 19 Oct 2025</b></div>
+      <div class="luxury-summary-row"><span>Travelers:</span> <b>0 Adults | 0 Child | 0 Infant</b></div>
+      <div class="luxury-summary-row"><span>Rooms:</span> <b>0 Room</b></div>
+      <div class="luxury-summary-prices">
+        <div class="luxury-summary-row"><span>Basic Price</span> <b style="color:#1a8c5b;">₹3,80,000</b></div>
+        <div class="luxury-summary-row"><span>EMI Available</span> <b style="color:#444;">₹12,814/month</b></div>
       </div>
-
-      <button class="btn-enquire">Enquire Now</button>
-      <button class="btn-guests">Add Guests & Room</button>
+      <div class="luxury-summary-links">
+        <a href="#" class="luxury-link">View Price Table</a> •
+        <a href="#" class="luxury-link">Cancellation Policy</a> •
+        <a href="#" class="luxury-link">Check eligibility</a>
+      </div>
+      <div class="luxury-summary-contact">
+        <a href="tel:18003135555" class="luxury-link luxury-phone">1800 313 5555</a> •
+        <a href="#" class="luxury-link">Locate nearest Vento World</a>
+      </div>
+      <div class="luxury-summary-actions">
+        <button class="luxury-enquire">Enquire Now</button>
+        <button class="luxury-guests">Add Guests & Room</button>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- Second Nav Bar (Sticky on scroll, Desktop only) -->
+<nav class="luxury-secondary-navbar" id="luxurySecondaryNavbar">
+  <ul>
+    <li><a href="#itinerary">ITINERARY</a></li>
+    <li><a href="#hotels">HOTELS</a></li>
+    <li><a href="#tourinfo">TOUR INFORMATION</a></li>
+    <li><a href="#terms">TERMS & CONDITIONS</a></li>
+  </ul>
+</nav>
+
+<style>
+.luxury-secondary-navbar {
+  width: 100%;
+  background: #6b6b6b;
+  padding: 0;
+  margin: 0 0 18px 0;
+  border-bottom: 3px solid #fff;
+  z-index: 1002;
+  position: relative;
+}
+.luxury-secondary-navbar ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 18px;
+  height: 56px;
+  align-items: center;
+  margin-left: 20px;
+}
+.luxury-secondary-navbar li {
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+.luxury-secondary-navbar a {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: background 0.2s, color 0.2s;
+}
+.luxury-secondary-navbar a:hover,
+.luxury-secondary-navbar a.active {
+  background: #595959;
+  color: #ffd900;
+}
+@media (max-width: 991px) {
+  .luxury-secondary-navbar {
+    display: none !important;
+  }
+}
+.luxury-secondary-navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  z-index: 1030;
+}
+body.sticky-secondary-navbar-active {
+  padding-top: 56px; /* Height of your secondary navbar */
+}
+@media (max-width: 991px) {
+  .luxury-secondary-navbar {
+    display: none !important;
+  }
+  body.sticky-secondary-navbar-active {
+    padding-top: 0 !important;
+  }
+}
+</style>
+
+
+<section class="itinerary-section" id="itinerary">
+  <div class="itinerary-header">
+    <h2>Itinerary <span class="itinerary-daywise">(Day Wise)</span></h2>
+    <a href="#" class="itinerary-viewall">View all days</a>
+    <div class="itinerary-mapbox">
+      <img src="./images/mapview.png" alt="Map View" />
+      <a href="#" class="mapview-btn"><i class="fa fa-map"></i> Map View</a>
+      <div class="mapview-link">
+        <a href="#">Click here</a> to find the road distance
+      </div>
+    </div>
+  </div>
+  <div class="itinerary-main">
+    <div class="itinerary-list" id="itineraryList">
+      <!-- Days will be rendered by JS -->
+    </div>
+    <div class="itinerary-side">
+      <div class="itinerary-mapbox sticky">
+        <img src="./images/mapview.png" alt="Map View" />
+        <a href="#" class="mapview-btn"><i class="fa fa-map"></i> Map View</a>
+        <div class="mapview-link">
+          <a href="#">Click here</a> to find the road distance
+        </div>
+      </div>
+      <div class="itinerary-actions">
+        <a href="#" class="itinerary-action"><i class="fa fa-paper-plane"></i> Send Itinerary</a>
+        <a href="#" class="itinerary-action"><i class="fa fa-print"></i> Print Itinerary</a>
+        <a href="#" class="itinerary-action"><i class="fa fa-envelope"></i> Email Itinerary</a>
+        <a href="#" class="itinerary-action"><i class="fa fa-balance-scale"></i> Compare Tour</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Sample data for 10 days
+const itineraryData = [
+  {
+    day: 1,
+    date: "10 Oct, 25",
+    title: "Auckland – Waitomo – Rotorua (1 Night)",
+    expanded: false,
+    blue: true,
+    details: null
+  },
+  {
+    day: 2,
+    date: "11 Oct, 25",
+    title: "Rotorua – Auckland (2 Nights)",
+    expanded: false,
+    blue: false,
+    details: null
+  },
+  {
+    day: 3,
+    date: "12 Oct, 25",
+    title: "Auckland",
+    expanded: true,
+    blue: false,
+    details: `
+      <p>
+        Today we explore Auckland city: Harbour Bridge, Westhaven Marina, Queen Street, Auckland Waterfront. Later visit Auckland Sky Tower Observatory Deck and enjoy All Blacks Experience.
+      </p>
+      <div class="itinerary-sightseeing">
+        <div class="sightseeing-title"><i class="fa fa-eye"></i> Today's Sightseeing</div>
+        <ul>
+          <li><span class="dot-green"></span> Auckland Sky Tower Observatory Deck</li>
+          <li><span class="dot-green"></span> All Blacks Experience</li>
+        </ul>
+      </div>
+      <div class="itinerary-night">
+        <i class="fa fa-bed"></i> Night stay in Auckland
+      </div>
+      <div class="itinerary-meals">
+        <i class="fa fa-utensils"></i> Breakfast, Lunch & Dinner
+      </div>
+      <div class="itinerary-special">
+        <i class="fa fa-coffee"></i> Tea/coffee during Auckland City tour
+      </div>
+    `
+  },
+  {
+    day: 4,
+    date: "13 Oct, 25",
+    title: "Auckland – Queenstown (3 Nights)",
+    expanded: false,
+    blue: false,
+    details: `<p>Flight to Queenstown. Free time for leisure and exploring the city.</p>`
+  },
+  {
+    day: 5,
+    date: "14 Oct, 25",
+    title: "Queenstown – Milford Sound – Queenstown",
+    expanded: false,
+    blue: false,
+    details: `<p>Day trip to Milford Sound with scenic cruise and return to Queenstown.</p>`
+  },
+  {
+    day: 6,
+    date: "15 Oct, 25",
+    title: "Queenstown",
+    expanded: false,
+    blue: false,
+    details: `<p>Skyline Gondola Ride, Bob Peak, and optional adventure activities.</p>`
+  },
+  {
+    day: 7,
+    date: "16 Oct, 25",
+    title: "Queenstown – Wanaka – Fox/Franz Joseph Glacier (1 Night)",
+    expanded: false,
+    blue: false,
+    details: `<p>Drive to Wanaka, visit Lake Tekapo and Lake Pukaki, continue to Glacier region.</p>`
+  },
+  {
+    day: 8,
+    date: "17 Oct, 25",
+    title: "Fox/Franz Joseph Glacier – Arthur’s Pass – Christchurch (2 Nights)",
+    expanded: false,
+    blue: false,
+    details: `<p>Glacier walk, then scenic drive to Christchurch via Arthur’s Pass.</p>`
+  },
+  {
+    day: 9,
+    date: "18 Oct, 25",
+    title: "Christchurch",
+    expanded: false,
+    blue: false,
+    details: `<p>International Antarctic Centre, Maori Show, city sightseeing.</p>`
+  },
+  {
+    day: 10,
+    date: "19 Oct, 25",
+    title: "Christchurch – Departure",
+    expanded: false,
+    blue: false,
+    details: `<p>Check out and transfer to airport for departure.</p>`
+  }
+];
+
+function renderItinerary() {
+  const list = document.getElementById('itineraryList');
+  list.innerHTML = '';
+  itineraryData.forEach((item, idx) => {
+    const isActive = idx === 0;
+    const isExpanded = item.expanded;
+    const blueClass = item.blue ? 'blue' : '';
+    const toggleBtn = item.details
+      ? `<button class="itinerary-toggle ${isExpanded ? 'minus' : 'plus'}" data-idx="${idx}">${isExpanded ? '−' : '+'}</button>`
+      : '';
+    list.innerHTML += `
+      <div class="itinerary-day${isActive ? ' active' : ''}${isExpanded ? ' expanded' : ''}">
+        <div class="itinerary-daybar">
+          <span class="itinerary-daynum">Day ${item.day} / ${item.date}</span>
+          <span class="itinerary-dot"></span>
+          <span class="itinerary-title ${blueClass}">${item.title}</span>
+          ${toggleBtn}
+        </div>
+        ${isExpanded && item.details ? `<div class="itinerary-details">${item.details}</div>` : ''}
+      </div>
+    `;
+  });
+  // Add event listeners for +/-
+  document.querySelectorAll('.itinerary-toggle').forEach(btn => {
+    btn.onclick = function() {
+      const idx = +this.getAttribute('data-idx');
+      // Only one expanded at a time
+      itineraryData.forEach((d, i) => d.expanded = (i === idx ? !d.expanded : false));
+      renderItinerary();
+    };
+  });
+}
+document.addEventListener('DOMContentLoaded', renderItinerary);
+</script>
+
+<style>
+/* ...existing itinerary-section CSS... */
+.itinerary-toggle {
+  margin-left: auto;
+  background: #f8f6f2;
+  border: 1.5px solid #bfa16a;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #bfa16a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  outline: none;
+}
+.itinerary-toggle.plus:hover,
+.itinerary-toggle.minus:hover {
+  background: #ffd900;
+  color: #222;
+}
+.itinerary-daybar {
+  cursor: pointer;
+}
+.itinerary-daybar .itinerary-title.blue {
+  color: #1a8c5b;
+}
+.itinerary-day.active .itinerary-dot,
+.itinerary-day.expanded .itinerary-dot {
+  background: #bfa16a;
+}
+.itinerary-day.expanded {
+  background: #faf9f7;
+  border-radius: 8px;
+}
+.itinerary-details {
+  background: #f8f6f2;
+  border-radius: 10px;
+  margin: 12px 0 0 0;
+  padding: 18px 18px 12px 18px;
+  font-size: 14px;
+  color: #444;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.itinerary-sightseeing {
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 14px 0 10px 0;
+  box-shadow: 0 1px 4px rgba(191,161,106,0.04);
+}
+.sightseeing-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a8c5b;
+  margin-bottom: 6px;
+}
+.itinerary-sightseeing ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.itinerary-sightseeing li {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.dot-green {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #1a8c5b;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+.itinerary-night,
+.itinerary-meals,
+.itinerary-special {
+  font-size: 13px;
+  color: #444;
+  margin: 6px 0 0 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.itinerary-night i,
+.itinerary-meals i,
+.itinerary-special i {
+  color: #bfa16a;
+  font-size: 15px;
+}
+</style>
+
+<style>
+.itinerary-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(191,161,106,0.06);
+  padding: 32px 24px 24px 24px;
+  margin: 32px auto 0 auto;
+  max-width: 1200px;
+}
+.itinerary-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+  position: relative;
+}
+.itinerary-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+.itinerary-daywise {
+  font-size: 14px;
+  color: #888;
+  font-weight: 400;
+  margin-left: 8px;
+}
+.itinerary-viewall {
+  font-size: 14px;
+  color: #1a8c5b;
+  text-decoration: underline;
+  margin-left: 24px;
+  margin-top: 4px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.itinerary-mapbox {
+  background: #f8f6f2;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  padding: 10px 12px 8px 12px;
+  min-width: 210px;
+  max-width: 230px;
+  text-align: center;
+  margin-left: auto;
+}
+.itinerary-mapbox img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+.mapview-btn {
+  display: inline-block;
+  background: #fff;
+  color: #444;
+  border: 1px solid #bfa16a;
+  border-radius: 6px;
+  padding: 3px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  margin-top: 2px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.mapview-btn:hover {
+  background: #ffd900;
+  color: #222;
+}
+.mapview-link {
+  font-size: 12px;
+  color: #1a8c5b;
+  margin-top: 2px;
+}
+.itinerary-main {
+  display: flex;
+  gap: 32px;
+}
+.itinerary-list {
+  flex: 1.7;
+  border-left: 3px dashed #e0e0e0;
+  padding-left: 24px;
+  position: relative;
+}
+.itinerary-day {
+  position: relative;
+  margin-bottom: 12px;
+}
+.itinerary-daybar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+.itinerary-daynum {
+  font-size: 13px;
+  color: #bfa16a;
+  font-weight: 600;
+  min-width: 110px;
+  letter-spacing: 0.5px;
+}
+.itinerary-dot {
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 3px solid #bfa16a;
+  border-radius: 50%;
+  margin-right: 6px;
+  margin-left: 2px;
+  position: relative;
+  z-index: 2;
+}
+.itinerary-day.active .itinerary-dot,
+.itinerary-day.expanded .itinerary-dot {
+  background: #bfa16a;
+}
+.itinerary-title {
+  font-size: 15px;
+  color: #222;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+.itinerary-title.blue {
+  color: #1a8c5b;
+}
+.itinerary-toggle {
+  margin-left: auto;
+  background: #f8f6f2;
+  border: 1.5px solid #bfa16a;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #bfa16a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+.itinerary-toggle.plus:hover,
+.itinerary-toggle.minus:hover {
+  background: #ffd900;
+  color: #222;
+}
+.itinerary-details {
+  background: #f8f6f2;
+  border-radius: 10px;
+  margin: 12px 0 0 0;
+  padding: 18px 18px 12px 18px;
+  font-size: 14px;
+  color: #444;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.itinerary-sightseeing {
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 14px 0 10px 0;
+  box-shadow: 0 1px 4px rgba(191,161,106,0.04);
+}
+.sightseeing-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a8c5b;
+  margin-bottom: 6px;
+}
+.itinerary-sightseeing ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.itinerary-sightseeing li {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.dot-green {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #1a8c5b;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+.itinerary-night,
+.itinerary-meals,
+.itinerary-special {
+  font-size: 13px;
+  color: #444;
+  margin: 6px 0 0 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.itinerary-night i,
+.itinerary-meals i,
+.itinerary-special i {
+  color: #bfa16a;
+  font-size: 15px;
+}
+.itinerary-side {
+  flex: 1;
+  min-width: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.itinerary-mapbox.sticky {
+  position: sticky;
+  top: 90px;
+}
+.itinerary-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 18px;
+}
+.itinerary-action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #bfa16a;
+  border-radius: 6px;
+  color: #1a8c5b;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 12px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.itinerary-action:hover {
+  background: #ffd900;
+  color: #222;
+}
+@media (max-width: 1100px) {
+  .itinerary-main {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .itinerary-side {
+    min-width: 0;
+    flex-direction: row;
+    gap: 18px;
+  }
+  .itinerary-mapbox.sticky {
+    position: static;
+    top: unset;
+  }
+}
+@media (max-width: 700px) {
+  .itinerary-section {
+    padding: 12px 2vw 12px 2vw;
+    border-radius: 8px;
+  }
+  .itinerary-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .itinerary-main {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .itinerary-list {
+    padding-left: 10px;
+  }
+  .itinerary-side {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .itinerary-mapbox {
+    min-width: 0;
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+</style>
 
 <style>
     body {
@@ -205,174 +922,437 @@
 }
 
 .tour-wrapper {
+  /* background: #fdf6f3; */
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(191,161,106,0.06);
+  padding: 32px 24px 24px 24px;
+  margin: 32px auto 0 auto;
   max-width: 1200px;
-  margin: auto;
-  padding: 20px;
 }
 
 .tour-title {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 700;
+  color: #222;
+  margin-bottom: 2px;
 }
 
-.tour-meta {
-  font-size: 14px;
-  color: #555;
+.tour-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: #8c8c8c;
+  margin-bottom: 5px;
+  flex-wrap: wrap;
+}
+
+.tour-meta-row .icon-inline {
+  width: 16px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.tour-meta-row .dot {
+  color: #bfa16a;
+  font-size: 18px;
+  margin: 0 6px;
 }
 
 .tour-route {
   font-size: 13px;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+}
+
+.tour-route .arrow {
+  color: #bfa16a;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0 2px;
 }
 
 .inclusions {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 32px;
   margin-bottom: 20px;
+  /* background: #fff; */
+  border-radius: 12px;
+  padding: 18px 10px 10px 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  justify-content: flex-start;
 }
 .inclusions div {
   text-align: center;
   font-size: 12px;
   color: #444;
+  width: 90px;
 }
 .inclusions img {
   display: block;
-  margin: 0 auto 5px;
+  margin: 0 auto 5px auto;
+  width: 38px;
+  height: 38px;
+  opacity: 0.85;
 }
 
+.highlights {
+  margin-bottom: 18px;
+}
 .highlights h3 {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  color: #424140;
+  font-size: 18px;
+  font-weight: 600;
 }
 .highlights ul {
-  padding-left: 18px;
+  padding-left: 20px;
   font-size: 13px;
-  color: #555;
+  color: #0b0a0a;
+  margin-bottom: 0;
 }
 
 .actions {
-  margin: 15px 0;
+  margin: 15px 0 0 0;
+  display: flex;
+  gap: 24px;
+  justify-content: end;
 }
 .actions button {
   border: none;
   background: none;
-  font-size: 13px;
-  color: #d9534f;
-  margin-right: 15px;
+  color: #bfa16a;
   cursor: pointer;
-}
-
-.main-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
-}
-
-.dates-card, .summary-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 15px;
-  border-radius: 6px;
-}
-
-.city-buttons {
+  font-size: 15px;
+  font-weight: 500;
   display: flex;
-  gap: 8px;
-  margin: 10px 0;
+  align-items: center;
+  padding: 0 6px;
+  transition: color 0.2s;
 }
-.city-buttons button {
-  border: 1px solid #ccc;
+.actions button img {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.actions button:hover {
+  color: #ff7043;
+}
+
+@media (max-width: 900px) {
+  .tour-wrapper {
+    padding: 14px 4vw 14px 4vw;
+    border-radius: 8px;
+  }
+  .inclusions {
+    gap: 12px;
+    padding: 10px 2px 6px 2px;
+  }
+  .inclusions div {
+    width: 70px;
+  }
+  .inclusions img {
+    width: 28px;
+    height: 28px;
+  }
+  .actions {
+    gap: 12px;
+    font-size: 13px;
+  }
+}
+
+.luxury-dates-section {
+  background: #fdf6f3;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(191,161,106,0.06);
+  padding: 32px 18px 24px 18px;
+  margin: 32px auto 0 auto;
+  max-width: 1200px;
+}
+.luxury-dates-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr;
+  gap: 32px;
+}
+.luxury-dates-card {
   background: #fff;
-  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  padding: 22px 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.luxury-dates-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+.luxury-city-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.luxury-city-buttons button {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 4px 12px;
   font-size: 12px;
   border-radius: 20px;
   cursor: pointer;
+  transition: background 0.2s, border 0.2s;
+  color: #444;
 }
-.city-buttons .active {
-  background: #007bff;
-  color: white;
-  border-color: #007bff;
+.luxury-city-buttons button.active,
+.luxury-city-buttons button:focus {
+  background: #e6e1d9;
+  border-color: #bfa16a;
+  color: #222;
 }
-
-.note {
+.luxury-date-note {
   font-size: 12px;
-  color: green;
+  color: #1a8c5b;
+  margin-bottom: 8px;
 }
-
-.date-list {
+.luxury-date-list {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
 }
-.date-box {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 8px;
+.luxury-date-box {
+  border: 1.5px solid #e0e0e0;
+  background: #f8f6f2;
+  border-radius: 8px;
+  width: 70px;
   text-align: center;
-  flex: 1;
-}
-.date-box.green {
-  border-color: #28a745;
-  background: #e6f4ea;
-}
-.date-box.red {
-  border-color: #dc3545;
-  background: #fceaea;
-}
-.date-top .day {
-  font-size: 18px;
-  font-weight: bold;
-  display: block;
-}
-.date-top .month {
   font-size: 12px;
-  color: #666;
+  padding: 8px 0 6px 0;
+  position: relative;
+  margin-bottom: 6px;
+  min-width: 70px;
 }
-.price {
+.luxury-date-box.green {
+  border: 1.5px solid #1a8c5b;
+  background: #eaf7ed;
+}
+.luxury-date-box.red {
+  border: 1.5px solid #e74c3c;
+  background: #fff0f0;
+}
+.luxury-date-box.gray {
+  border: 1.5px solid #bbb;
+  background: #f5f5f5;
+  color: #aaa;
+}
+.luxury-date-box .date-top {
+  margin-bottom: 2px;
+}
+.luxury-date-box .day {
   font-size: 11px;
-  margin: 3px 0;
+  color: #888;
+  font-weight: 600;
+  display: block;
+  letter-spacing: 1px;
 }
-.seats {
+.luxury-date-box .date {
+  font-size: 18px;
+  font-weight: 700;
+  display: block;
+  color: #222;
+  margin-bottom: 0;
+}
+.luxury-date-box .month {
+  font-size: 11px;
+  color: #888;
+  display: block;
+  letter-spacing: 1px;
+}
+.luxury-date-box .price {
+  font-size: 12px;
+  color: #222;
+  font-weight: 600;
+  margin: 2px 0 0 0;
+}
+.luxury-date-box.green .price { color: #1a8c5b; }
+.luxury-date-box.red .price { color: #e74c3c; }
+.luxury-date-box.red .seats { color: #e74c3c; }
+.luxury-date-box.green .seats { color: #1a8c5b; }
+.luxury-date-box .seats {
+  font-size: 11px;
+  margin-top: 2px;
+}
+.luxury-date-terms {
   font-size: 10px;
-  color: #777;
+  color: #888;
+  margin-top: 10px;
+  line-height: 1.5;
 }
-
-.summary-card h4 {
-  margin-bottom: 8px;
+.luxury-summary-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  padding: 22px 18px 18px 18px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-.price-section {
-  margin: 12px 0;
-}
-.basic {
-  font-size: 14px;
-  font-weight: bold;
-}
-.total {
+.luxury-summary-card h4 {
   font-size: 15px;
-  font-weight: bold;
-  color: green;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
 }
-.btn-enquire {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 8px;
-  width: 100%;
+.luxury-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 2px;
+}
+.luxury-summary-row span {
+  color: #888;
+}
+.luxury-summary-prices {
+  margin: 10px 0 6px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.luxury-summary-links {
+  font-size: 12px;
+  color: #1a8c5b;
+  margin-bottom: 4px;
+}
+.luxury-summary-links .luxury-link {
+  color: #1a8c5b;
+  text-decoration: underline;
+  margin: 0 2px;
+}
+.luxury-summary-contact {
+  font-size: 12px;
+  color: #1a8c5b;
   margin-bottom: 8px;
-  cursor: pointer;
 }
-.btn-guests {
-  background: #ffc107;
+.luxury-summary-contact .luxury-link {
+  color: #1a8c5b;
+  text-decoration: underline;
+  margin: 0 2px;
+}
+.luxury-summary-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+.luxury-enquire {
+  background: #222;
+  color: #fff;
   border: none;
-  padding: 8px;
-  width: 100%;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
   cursor: pointer;
+  flex: 1;
+  transition: background 0.2s;
 }
-
+.luxury-enquire:hover {
+  background: #1a8c5b;
+}
+.luxury-guests {
+  background: #ffd900;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  color: #222;
+  font-size: 14px;
+  cursor: pointer;
+  flex: 1;
+  transition: background 0.2s;
+}
+.luxury-guests:hover {
+  background: #ffe066;
+}
+@media (max-width: 900px) {
+  .luxury-dates-section {
+    padding: 10px 2vw 10px 2vw;
+    border-radius: 8px;
+  }
+  .luxury-dates-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .luxury-dates-card,
+  .luxury-summary-card {
+    padding: 12px 6px 12px 6px;
+    border-radius: 8px;
+  }
+  .luxury-date-list {
+    gap: 6px;
+  }
+  .luxury-date-box {
+    width: 60px;
+    min-width: 60px;
+    font-size: 11px;
+    padding: 6px 0 4px 0;
+  }
+  .luxury-date-box .date {
+    font-size: 15px;
+  }
+  .luxury-date-box .day,
+  .luxury-date-box .month {
+    font-size: 9px;
+  }
+  .luxury-date-box .price {
+    font-size: 11px;
+  }
+  .luxury-date-box .seats {
+    font-size: 10px;
+  }
+  .luxury-summary-actions {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
 </style>
 
-<!-- ...existing code... -->
+
+<script>
+// Sticky secondary navbar on scroll (desktop only)
+document.addEventListener('DOMContentLoaded', function() {
+  var navbar = document.getElementById('luxurySecondaryNavbar');
+  var mainNavbar = document.querySelector('.navbar');
+  var stickyOffset = navbar.offsetTop;
+  function onScroll() {
+    if (window.innerWidth > 991) {
+      if (window.pageYOffset > stickyOffset) {
+        navbar.classList.add('sticky');
+        document.body.classList.add('sticky-secondary-navbar-active');
+        // Set top to main navbar height so it sits just below
+        navbar.style.top = mainNavbar.offsetHeight + 'px';
+      } else {
+        navbar.classList.remove('sticky');
+        document.body.classList.remove('sticky-secondary-navbar-active');
+        navbar.style.top = '';
+      }
+    } else {
+      navbar.classList.remove('sticky');
+      document.body.classList.remove('sticky-secondary-navbar-active');
+      navbar.style.top = '';
+    }
+  }
+  window.addEventListener('scroll', onScroll);
+  window.addEventListener('resize', onScroll);
+  onScroll();
+});
+</script>
 
 <!-- let -->
  <section class="curate-trip-section">
