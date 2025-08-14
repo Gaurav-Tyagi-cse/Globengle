@@ -88,9 +88,6 @@
 
 <!-- Existing Code -->
 
-<!-- ...existing code... -->
-
-
 <section class="tour-wrapper">
   <!-- Header -->
   <h1 class="tour-title pb-2">Best of New Zealand</h1>
@@ -355,25 +352,29 @@ body.sticky-secondary-navbar-active {
 
 
 <section class="itinerary-section" id="itinerary">
-  <div class="itinerary-header">
+  <!-- <div class="itinerary-header">
     <h2>Itinerary <span class="itinerary-daywise">(Day Wise)</span></h2>
     <a href="#" class="itinerary-viewall">View all days</a>
     <div class="itinerary-mapbox">
-      <img src="./images/mapview.png" alt="Map View" />
-      <a href="#" class="mapview-btn"><i class="fa fa-map"></i> Map View</a>
+      <div class="mapview-visual">
+        <img src="./images/mapview.png" alt="Map View" />
+        <a href="#" class="mapview-btn-abs"><i class="fa fa-map"></i> Map View</a>
+      </div>
       <div class="mapview-link">
         <a href="#">Click here</a> to find the road distance
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="itinerary-main">
     <div class="itinerary-list" id="itineraryList">
       <!-- Days will be rendered by JS -->
     </div>
     <div class="itinerary-side">
       <div class="itinerary-mapbox sticky">
-        <img src="./images/mapview.png" alt="Map View" />
-        <a href="#" class="mapview-btn"><i class="fa fa-map"></i> Map View</a>
+        <div class="mapview-visual">
+          <img src="./images/mapview.png" alt="Map View" />
+          <a href="#" class="mapview-btn-abs"><i class="fa fa-map"></i> Map View</a>
+        </div>
         <div class="mapview-link">
           <a href="#">Click here</a> to find the road distance
         </div>
@@ -519,8 +520,7 @@ function renderItinerary() {
   document.querySelectorAll('.itinerary-toggle').forEach(btn => {
     btn.onclick = function() {
       const idx = +this.getAttribute('data-idx');
-      // Only one expanded at a time
-      itineraryData.forEach((d, i) => d.expanded = (i === idx ? !d.expanded : false));
+      itineraryData[idx].expanded = !itineraryData[idx].expanded;
       renderItinerary();
     };
   });
@@ -628,6 +628,70 @@ document.addEventListener('DOMContentLoaded', renderItinerary);
 </style>
 
 <style>
+/* Add or update these styles for the map view */
+.itinerary-mapbox {
+  background: #f8f6f2;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  padding: 0 0 10px 0;
+  min-width: 210px;
+  max-width: 230px;
+  text-align: center;
+  margin-left: auto;
+  position: relative;
+}
+.mapview-visual {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  background: #e5e5e5;
+  margin-bottom: 8px;
+}
+.mapview-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  display: block;
+}
+.mapview-btn-abs {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #444;
+  border: 1.5px solid #bfa16a;
+  border-radius: 6px;
+  padding: 4px 18px 4px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(191,161,106,0.08);
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  z-index: 2;
+}
+.mapview-btn-abs i {
+  color: #bfa16a;
+  font-size: 16px;
+}
+.mapview-btn-abs:hover {
+  background: #ffd900;
+  color: #222;
+}
+.mapview-link {
+  font-size: 12px;
+  color: #1a8c5b;
+  margin-top: 2px;
+}
+</style>
+
+<style>
 .itinerary-section {
   background: #fff;
   border-radius: 12px;
@@ -670,32 +734,54 @@ document.addEventListener('DOMContentLoaded', renderItinerary);
   background: #f8f6f2;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-  padding: 10px 12px 8px 12px;
+  padding: 0 0 10px 0;
   min-width: 210px;
   max-width: 230px;
   text-align: center;
   margin-left: auto;
+  position: relative;
 }
-.itinerary-mapbox img {
+.mapview-visual {
+  position: relative;
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 6px;
+  height: 140px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  background: #e5e5e5;
+  margin-bottom: 8px;
 }
-.mapview-btn {
-  display: inline-block;
+.mapview-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  display: block;
+}
+.mapview-btn-abs {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
   background: #fff;
   color: #444;
-  border: 1px solid #bfa16a;
+  border: 1.5px solid #bfa16a;
   border-radius: 6px;
-  padding: 3px 12px;
-  font-size: 13px;
-  font-weight: 500;
-  margin-bottom: 4px;
-  margin-top: 2px;
+  padding: 4px 18px 4px 14px;
+  font-size: 14px;
+  font-weight: 600;
   text-decoration: none;
+  box-shadow: 0 2px 8px rgba(191,161,106,0.08);
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  z-index: 2;
 }
-.mapview-btn:hover {
+.mapview-btn-abs i {
+  color: #bfa16a;
+  font-size: 16px;
+}
+.mapview-btn-abs:hover {
   background: #ffd900;
   color: #222;
 }
@@ -1383,96 +1469,6 @@ document.addEventListener('DOMContentLoaded', function() {
           <img src="./images/par4.jpeg" alt="eden reforestation" />
         </div>
         <div class="swiper-slide">
-          <img src="./images/par5.jpeg" alt="ally travel council" />
-        </div>
-        <!-- Repeat if needed -->
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer Section -->
- <!-- footer 2 -->
-<footer class="site-footer">
-    <div class="footer-top">
-
-      <!-- Newsletter -->
-      <div class="footer-newsletter">
-        <h4>LET'S BUILD EXPERIENCES TOGETHER</h4>
-        <form class="heading_font_family">
-          <input type="text" placeholder="First Name*" required>
-          <input type="text" placeholder="Last Name*" required>
-          <input type="email" placeholder="Email*" required>
-          <label class="checkbox heading_font_family">
-            <input type="checkbox">
-            I am happy to receive emails from Globengel, including upcoming events and information.*
-          </label>
-          <button type="submit" class="signup-btn">Sign Up</button>
-        </form>
-      </div>
-
-      <!-- Award Badge -->
-      <div class="footer-badge">
-        <img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="Award 2025">
-      </div>
-
-
-      <!-- Destinations -->
-      <div class="footer-destinations">
-        <h4 class="heading_font_family" style="font-size: 18px;">Home</h4>
-        <ul class="heading_font_family">
-
-          <li><a href="ourstory.html">Destinations</a></li>
-          <li><a href="group-tours.html">Group Tours</a></li>
-          <li><a href="voyages.html">Voyages</a></li>
-          <li><a href="beyond-leisure.html">Beyond Leisure</a></li>
-          <li><a href="inspiration.html">Inspiration</a></li>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html"></a>Contact Us</li>
-
-          
-        </ul>
-      </div>
-
-      <!-- Contact -->
-      <div class="footer-contact">
-        <h4 class="heading_font_family">Get in Touch</h4>
-        <p><a href="tel:+919910405255">+919910405255</a></p>
-        <p class="heading_font_family"><a href="mailto:info@globengel.com">info@globengel.com</a></p>
-
-        <h4 class="heading_font_family">Find us on</h4>
-        <!-- Social Media Icons -->
-<div class="footer-social">
-  <a href="#" class="social-icon-box"><i class="fab fa-facebook-f"></i></a>
-  <a href="#" class="social-icon-box"><i class="fab fa-youtube"></i></a>
-  <a href="#" class="social-icon-box"><i class="fab fa-vimeo-v"></i></a>
-  <a href="#" class="social-icon-box"><i class="fab fa-instagram"></i></a>
-</div>
-
-        <div class="footer-tagline">
-          <h2 class="heading_font_family">DREAM.
-EXPLORE.
-DISCOVER.</h2>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <div class="footer-logo">
-        <img src="./GLOBENGEL/GLOBENGEL Logo.png" style="width: 130px;" alt="MITÉRA Goddess Logo">
-      </div>
-      <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-      </div>
-      <p>Copyright 2019-2025 GLOBENGEL</p>
-    </div>
-</footer>
-
-
 
 <!-- JS -->
 
