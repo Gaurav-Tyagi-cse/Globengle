@@ -23,6 +23,9 @@
    .hero-section {
      background: url('../images/itieneary.jpg') no-repeat center center/cover;
    }
+   .cj-card{
+    width: 345px!important;
+   }
  </style>
  <!-- CSS for Services Section -->
 
@@ -280,7 +283,7 @@
     <li><a href="#terms">TERMS & CONDITIONS</a></li>
   </ul>
 </nav>
-
+<!-- second navbar -->
 <style>
 .luxury-secondary-navbar {
   width: 100%;
@@ -350,25 +353,15 @@ body.sticky-secondary-navbar-active {
 }
 </style>
 
-
-<section class="itinerary-section" id="itinerary">
-  <!-- <div class="itinerary-header">
+<!--  -->
+  <section class="itinerary-section" id="itinerary">
+  <div class="itinerary-header">
     <h2>Itinerary <span class="itinerary-daywise">(Day Wise)</span></h2>
     <a href="#" class="itinerary-viewall">View all days</a>
-    <div class="itinerary-mapbox">
-      <div class="mapview-visual">
-        <img src="./images/mapview.png" alt="Map View" />
-        <a href="#" class="mapview-btn-abs"><i class="fa fa-map"></i> Map View</a>
-      </div>
-      <div class="mapview-link">
-        <a href="#">Click here</a> to find the road distance
-      </div>
-    </div>
-  </div> -->
+    
+  </div>
   <div class="itinerary-main">
-    <div class="itinerary-list" id="itineraryList">
-      <!-- Days will be rendered by JS -->
-    </div>
+    <div class="itinerary-list" id="itineraryList"></div>
     <div class="itinerary-side">
       <div class="itinerary-mapbox sticky">
         <div class="mapview-visual">
@@ -387,16 +380,130 @@ body.sticky-secondary-navbar-active {
       </div>
     </div>
   </div>
+
+  <!-- Hotels Section -->
+  <div class="hotel-section" id="hotels">
+    <h3 class="hotel-title">Hotels:</h3>
+    <div class="hotel-table">
+      <div class="hotel-row hotel-head">
+        <div class="hotel-cell hotel-city">City - Country</div>
+        <div class="hotel-cell hotel-name">Hotel</div>
+      </div>
+      <div class="hotel-row">
+        <div class="hotel-cell hotel-city">
+          Rotorua -<br>New Zealand
+        </div>
+        <div class="hotel-cell hotel-name">
+          Arawa Park Hotel Rotorua/ Sudima Lake Rotorua/ Distinction Hotel Rotorua<br>
+          <span class="hotel-similar">/or similar</span>
+        </div>
+      </div>
+      <div class="hotel-row hotel-alt">
+        <div class="hotel-cell hotel-city">
+          Auckland -<br>New Zealand
+        </div>
+        <div class="hotel-cell hotel-name">
+          Naumi Auckland Airport/ Holiday Inn Express Auckland C/ TBA 1<br>
+          <span class="hotel-similar">/or similar</span>
+        </div>
+      </div>
+      <div class="hotel-row">
+        <div class="hotel-cell hotel-city">
+          Christchurch -<br>New Zealand
+        </div>
+        <div class="hotel-cell hotel-name">
+          Quality Hotel Elms/ Wyndham Garden Christchurch Ci/ TBA - Christchurch<br>
+          <span class="hotel-similar">/or similar</span>
+        </div>
+      </div>
+      <div class="hotel-row hotel-alt">
+        <div class="hotel-cell hotel-city">
+          Franz Josef -<br>New Zealand
+        </div>
+        <div class="hotel-cell hotel-name">
+          Heartland Hotel Fox Glacier/ TBA/ TBA-1<br>
+          <span class="hotel-similar">/or similar</span>
+        </div>
+      </div>
+      <div class="hotel-row">
+        <div class="hotel-cell hotel-city">
+          Queenstown -<br>New Zealand
+        </div>
+        <div class="hotel-cell hotel-name">
+          HOLIDAY INN REMARKABLES/ Holiday Inn Express & Suites Q/ TBA - Queenstown<br>
+          <span class="hotel-similar">/or similar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tour Information Tabs -->
+  <div class="tourinfo-section" id="tourinfo">
+    <div class="tourinfo-tabs">
+      <button class="tourinfo-tab active">Tour Information</button>
+      <button class="tourinfo-tab">Tour Cost</button>
+    </div>
+    <div class="tourinfo-content">
+      <ul class="tourinfo-list">
+        <li>Tour price is calculated for minimum 2 adults sharing a room.</li>
+        <li>Child with bed: 6 to 11 years. Child without bed: 2 to 5 years.</li>
+        <li>Infant: below 2 years. Age is calculated as per the date of return to India.</li>
+        <li>Tour cost is based on current airfare, taxes, and exchange rates. Any increase will be charged extra.</li>
+        <li>Hotels, flights, and itinerary are subject to change as per availability.</li>
+        <li>Any increase in taxes or fuel surcharge will be charged extra.</li>
+        <li>Visa fees, insurance, and other charges are not included unless specified.</li>
+        <li>For detailed terms & conditions, please refer to our website.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Terms Tabs Section -->
+  <div class="terms-tabs-section" id="terms">
+    <div class="terms-tabs">
+      <button class="terms-tab active" data-tab="payment">Payment terms</button>
+      <button class="terms-tab" data-tab="cancellation">Cancellation Policy</button>
+      <button class="terms-tab" data-tab="general">Terms & Conditions</button>
+    </div>
+    <div class="terms-tabs-content">
+      <div class="terms-pane active" data-pane="payment">
+        <p>
+          All payments towards the tour cost shall be made by the client to the company in accordance with the procedure and time frame mentioned herein below. The contracted, a minimum deposit as given in the table below is to be paid by you to the Company. Such deposit shall hold the booking on confirmation basis and such deposit is non-refundable (forfeited) interest free, subject to the cancellation policy as mentioned hereinabove. The balance amount shall be paid as per the amounts and the percentages as detailed in the table hereinbelow. In the event of billing errors, the Company reserves the right to re-invoice. You shall pay a sum of Rs.500/- for each instrument in case the cheque dishonoured by the bank. Further, the Company reserves the right to take necessary legal action in respect of the dishonoured cheques, as may be advised.<br><br>
+          The tariff of the tour quotation is calculated as per the rates prevailing at the time of quoting it. Total tour tariff should be paid within 30days before tour departure or due date mentioned in the invoice, whichever is earlier. Interest @ the rate of 12% p.a. on daily basis will be charged on such delayed payment. The Company reserves the right to change the tariff in the event of modification / alteration / change / variation in the said rates before the date of departure. Any such increase in the tour tariff accordingly, must be paid in full by the client before tour departure. Any increase in tour tariff during the tour must be paid in fully by the client on tour. All tour tariffs are exclusive of all taxes applicable from time to time. Clients hereby unconditionally accept that the prices, set of services and inclusions may vary on product to product or departure to departure, and the same shall not be considered for any kind of comparison universally. Further, the clients acknowledge and accept that the tour tariff are at the time of publication and are subject to change.<br><br>
+          All payments made within 10 days prior to the tour departure date shall have to be paid via Bank Transfer / Demand Draft (no cheques will be accepted) in favour of the Company. For payments exceeding a sum of Rs. 50,000/- (Rupees Fifty Thousand Only) or in the event the value of file exceeds a sum of Rs. 2,00,000/- (Rupees Two Lacs Only) or a sum equivalent to the Foreign currency, a copy of the PAN Card is
+        </p>
+      </div>
+      <div class="terms-pane" data-pane="cancellation">
+        <p>
+          <!-- Sample content, replace with your actual cancellation policy -->
+          In case of cancellation, the following charges will apply:<br>
+          - 30 days or more before departure: 10% of tour cost<br>
+          - 15-29 days before departure: 25% of tour cost<br>
+          - 7-14 days before departure: 50% of tour cost<br>
+          - Less than 7 days: 100% of tour cost<br>
+          Refunds will be processed as per company policy.
+        </p>
+      </div>
+      <div class="terms-pane" data-pane="general">
+        <p>
+          <!-- Sample content, replace with your actual terms & conditions -->
+          All information is correct at the time of publication and is subject to change without notice. Please read all terms and conditions carefully before booking. For the latest updates, visit our website or contact our team.
+        </p>
+      </div>
+    </div>
+  </div>
+
 </section>
 
+<!-- Font Awesome CDN for icons (if not already included) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
 <script>
-// Sample data for 10 days
+// Itinerary Data
 const itineraryData = [
   {
     day: 1,
     date: "10 Oct, 25",
     title: "Auckland – Waitomo – Rotorua (1 Night)",
-    expanded: false,
     blue: true,
     details: null
   },
@@ -404,7 +511,6 @@ const itineraryData = [
     day: 2,
     date: "11 Oct, 25",
     title: "Rotorua – Auckland (2 Nights)",
-    expanded: false,
     blue: false,
     details: null
   },
@@ -412,7 +518,6 @@ const itineraryData = [
     day: 3,
     date: "12 Oct, 25",
     title: "Auckland",
-    expanded: true,
     blue: false,
     details: `
       <p>
@@ -440,7 +545,6 @@ const itineraryData = [
     day: 4,
     date: "13 Oct, 25",
     title: "Auckland – Queenstown (3 Nights)",
-    expanded: false,
     blue: false,
     details: `<p>Flight to Queenstown. Free time for leisure and exploring the city.</p>`
   },
@@ -448,7 +552,6 @@ const itineraryData = [
     day: 5,
     date: "14 Oct, 25",
     title: "Queenstown – Milford Sound – Queenstown",
-    expanded: false,
     blue: false,
     details: `<p>Day trip to Milford Sound with scenic cruise and return to Queenstown.</p>`
   },
@@ -456,7 +559,6 @@ const itineraryData = [
     day: 6,
     date: "15 Oct, 25",
     title: "Queenstown",
-    expanded: false,
     blue: false,
     details: `<p>Skyline Gondola Ride, Bob Peak, and optional adventure activities.</p>`
   },
@@ -464,7 +566,6 @@ const itineraryData = [
     day: 7,
     date: "16 Oct, 25",
     title: "Queenstown – Wanaka – Fox/Franz Joseph Glacier (1 Night)",
-    expanded: false,
     blue: false,
     details: `<p>Drive to Wanaka, visit Lake Tekapo and Lake Pukaki, continue to Glacier region.</p>`
   },
@@ -472,7 +573,6 @@ const itineraryData = [
     day: 8,
     date: "17 Oct, 25",
     title: "Fox/Franz Joseph Glacier – Arthur’s Pass – Christchurch (2 Nights)",
-    expanded: false,
     blue: false,
     details: `<p>Glacier walk, then scenic drive to Christchurch via Arthur’s Pass.</p>`
   },
@@ -480,7 +580,6 @@ const itineraryData = [
     day: 9,
     date: "18 Oct, 25",
     title: "Christchurch",
-    expanded: false,
     blue: false,
     details: `<p>International Antarctic Centre, Maori Show, city sightseeing.</p>`
   },
@@ -488,7 +587,6 @@ const itineraryData = [
     day: 10,
     date: "19 Oct, 25",
     title: "Christchurch – Departure",
-    expanded: false,
     blue: false,
     details: `<p>Check out and transfer to airport for departure.</p>`
   }
@@ -498,27 +596,28 @@ function renderItinerary() {
   const list = document.getElementById('itineraryList');
   list.innerHTML = '';
   itineraryData.forEach((item, idx) => {
-    const isActive = idx === 0;
-    const isExpanded = item.expanded;
     const blueClass = item.blue ? 'blue' : '';
-    const toggleBtn = item.details
+    const hasDetails = !!item.details;
+    const isExpanded = !!item.expanded;
+    const toggleBtn = hasDetails
       ? `<button class="itinerary-toggle ${isExpanded ? 'minus' : 'plus'}" data-idx="${idx}">${isExpanded ? '−' : '+'}</button>`
       : '';
     list.innerHTML += `
-      <div class="itinerary-day${isActive ? ' active' : ''}${isExpanded ? ' expanded' : ''}">
+      <div class="itinerary-day${isExpanded ? ' expanded' : ''}">
         <div class="itinerary-daybar">
           <span class="itinerary-daynum">Day ${item.day} / ${item.date}</span>
           <span class="itinerary-dot"></span>
           <span class="itinerary-title ${blueClass}">${item.title}</span>
           ${toggleBtn}
         </div>
-        ${isExpanded && item.details ? `<div class="itinerary-details">${item.details}</div>` : ''}
+        ${isExpanded && hasDetails ? `<div class="itinerary-details">${item.details}</div>` : ''}
       </div>
     `;
   });
   // Add event listeners for +/-
   document.querySelectorAll('.itinerary-toggle').forEach(btn => {
-    btn.onclick = function() {
+    btn.onclick = function(e) {
+      e.stopPropagation();
       const idx = +this.getAttribute('data-idx');
       itineraryData[idx].expanded = !itineraryData[idx].expanded;
       renderItinerary();
@@ -526,170 +625,42 @@ function renderItinerary() {
   });
 }
 document.addEventListener('DOMContentLoaded', renderItinerary);
+
+document.querySelectorAll('.tourinfo-tab').forEach((tab, idx) => {
+  tab.onclick = function() {
+    document.querySelectorAll('.tourinfo-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    document.querySelector('.tourinfo-content').innerHTML = idx === 0
+      ? `<ul class="tourinfo-list">
+        <li>Tour price is calculated for minimum 2 adults sharing a room.</li>
+        <li>Child with bed: 6 to 11 years. Child without bed: 2 to 5 years.</li>
+        <li>Infant: below 2 years. Age is calculated as per the date of return to India.</li>
+        <li>Tour cost is based on current airfare, taxes, and exchange rates. Any increase will be charged extra.</li>
+        <li>Hotels, flights, and itinerary are subject to change as per availability.</li>
+        <li>Any increase in taxes or fuel surcharge will be charged extra.</li>
+        <li>Visa fees, insurance, and other charges are not included unless specified.</li>
+        <li>For detailed terms & conditions, please refer to our website.</li>
+      </ul>`
+      : `<ul class="tourinfo-list">
+        <li>Tour cost includes accommodation, meals, sightseeing, and transfers as per itinerary.</li>
+        <li>Airfare and taxes are included unless mentioned otherwise.</li>
+        <li>Personal expenses, tips, and optional tours are not included.</li>
+        <li>For a detailed cost breakdown, please contact our team.</li>
+      </ul>`;
+  }
+});
+
+document.querySelectorAll('.terms-tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.terms-tab').forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
+    const tabName = this.getAttribute('data-tab');
+    document.querySelectorAll('.terms-pane').forEach(pane => {
+      pane.classList.toggle('active', pane.getAttribute('data-pane') === tabName);
+    });
+  });
+});
 </script>
-
-<style>
-/* ...existing itinerary-section CSS... */
-.itinerary-toggle {
-  margin-left: auto;
-  background: #f8f6f2;
-  border: 1.5px solid #bfa16a;
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  font-size: 18px;
-  font-weight: 700;
-  color: #bfa16a;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s, color 0.2s;
-  outline: none;
-}
-.itinerary-toggle.plus:hover,
-.itinerary-toggle.minus:hover {
-  background: #ffd900;
-  color: #222;
-}
-.itinerary-daybar {
-  cursor: pointer;
-}
-.itinerary-daybar .itinerary-title.blue {
-  color: #1a8c5b;
-}
-.itinerary-day.active .itinerary-dot,
-.itinerary-day.expanded .itinerary-dot {
-  background: #bfa16a;
-}
-.itinerary-day.expanded {
-  background: #faf9f7;
-  border-radius: 8px;
-}
-.itinerary-details {
-  background: #f8f6f2;
-  border-radius: 10px;
-  margin: 12px 0 0 0;
-  padding: 18px 18px 12px 18px;
-  font-size: 14px;
-  color: #444;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-}
-.itinerary-sightseeing {
-  background: #fff;
-  border-radius: 8px;
-  padding: 10px 14px;
-  margin: 14px 0 10px 0;
-  box-shadow: 0 1px 4px rgba(191,161,106,0.04);
-}
-.sightseeing-title {
-  font-size: 14px;
-  font-weight: 600;
-  color: #1a8c5b;
-  margin-bottom: 6px;
-}
-.itinerary-sightseeing ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.itinerary-sightseeing li {
-  font-size: 13px;
-  color: #444;
-  margin-bottom: 2px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.dot-green {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background: #1a8c5b;
-  border-radius: 50%;
-  margin-right: 4px;
-}
-.itinerary-night,
-.itinerary-meals,
-.itinerary-special {
-  font-size: 13px;
-  color: #444;
-  margin: 6px 0 0 0;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.itinerary-night i,
-.itinerary-meals i,
-.itinerary-special i {
-  color: #bfa16a;
-  font-size: 15px;
-}
-</style>
-
-<style>
-/* Add or update these styles for the map view */
-.itinerary-mapbox {
-  background: #f8f6f2;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-  padding: 0 0 10px 0;
-  min-width: 210px;
-  max-width: 230px;
-  text-align: center;
-  margin-left: auto;
-  position: relative;
-}
-.mapview-visual {
-  position: relative;
-  width: 100%;
-  height: 140px;
-  border-radius: 10px 10px 0 0;
-  overflow: hidden;
-  background: #e5e5e5;
-  margin-bottom: 8px;
-}
-.mapview-visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px 10px 0 0;
-  display: block;
-}
-.mapview-btn-abs {
-  position: absolute;
-  left: 50%;
-  bottom: 14px;
-  transform: translateX(-50%);
-  background: #fff;
-  color: #444;
-  border: 1.5px solid #bfa16a;
-  border-radius: 6px;
-  padding: 4px 18px 4px 14px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 2px 8px rgba(191,161,106,0.08);
-  transition: background 0.2s, color 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  z-index: 2;
-}
-.mapview-btn-abs i {
-  color: #bfa16a;
-  font-size: 16px;
-}
-.mapview-btn-abs:hover {
-  background: #ffd900;
-  color: #222;
-}
-.mapview-link {
-  font-size: 12px;
-  color: #1a8c5b;
-  margin-top: 2px;
-}
-</style>
 
 <style>
 .itinerary-section {
@@ -828,7 +799,6 @@ document.addEventListener('DOMContentLoaded', renderItinerary);
   position: relative;
   z-index: 2;
 }
-.itinerary-day.active .itinerary-dot,
 .itinerary-day.expanded .itinerary-dot {
   background: #bfa16a;
 }
@@ -856,11 +826,16 @@ document.addEventListener('DOMContentLoaded', renderItinerary);
   align-items: center;
   justify-content: center;
   transition: background 0.2s, color 0.2s;
+  outline: none;
 }
 .itinerary-toggle.plus:hover,
 .itinerary-toggle.minus:hover {
   background: #ffd900;
   color: #222;
+}
+.itinerary-day.expanded {
+  background: #faf9f7;
+  border-radius: 8px;
 }
 .itinerary-details {
   background: #f8f6f2;
@@ -956,6 +931,210 @@ document.addEventListener('DOMContentLoaded', renderItinerary);
   background: #ffd900;
   color: #222;
 }
+
+/* Hotel Section */
+.hotel-section {
+  /* margin: 38px auto 0 auto; */
+  max-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(191,161,106,0.06);
+  padding: 32px 24px 24px 24px;
+}
+.hotel-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #424140;
+  margin-bottom: 18px;
+}
+.hotel-table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.hotel-row {
+  display: flex;
+  border-radius: 8px;
+  background: #fff;
+  align-items: flex-start;
+  font-size: 15px;
+  color: #222;
+  margin-bottom: 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+.hotel-row:last-child {
+  border-bottom: none;
+}
+.hotel-head {
+  font-size: 15px;
+  font-weight: 600;
+  color: #888;
+  background: none;
+  border-bottom: 2px solid #eaeaea;
+  margin-bottom: 0;
+}
+.hotel-cell {
+  padding: 18px 18px 18px 0;
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
+  line-height: 1.5;
+  background: none;
+  border-radius: 0;
+  font-size: 15px;
+}
+.hotel-city {
+  flex: 0.7;
+  color: #444;
+  font-weight: 500;
+  min-width: 120px;
+  max-width: 180px;
+}
+.hotel-name {
+  flex: 2;
+  color: #222;
+  font-weight: 400;
+}
+.hotel-alt {
+  background: #f8f8f8;
+}
+.hotel-similar {
+  color: #888;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Tour Info Tabs */
+.tourinfo-section {
+  /* margin: 38px auto 0 auto; */
+  max-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(191,161,106,0.06);
+  padding: 32px 24px 24px 24px;
+}
+.tourinfo-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid #eaeaea;
+  margin-bottom: 18px;
+}
+.tourinfo-tab {
+  background: #f8f8f8;
+  border: none;
+  outline: none;
+  padding: 10px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a8c5b;
+  border-radius: 8px 8px 0 0;
+  margin-right: 2px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.tourinfo-tab.active {
+  background: #fff;
+  color: #222;
+  border-bottom: 2px solid #1a8c5b;
+}
+.tourinfo-content {
+  padding: 0 0 0 0;
+}
+.tourinfo-list {
+  margin: 0;
+  padding: 0 0 0 18px;
+  color: #444;
+  font-size: 15px;
+}
+.tourinfo-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* Terms Tabs Section */
+.terms-tabs-section {
+  max-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(191,161,106,0.06);
+  padding: 0;
+  /* margin: 38px auto 0 auto; */
+  overflow: hidden;
+}
+.terms-tabs {
+  display: flex;
+  border-bottom: 1.5px solid #e0e0e0;
+  background: #f8f8f8;
+}
+.terms-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 18px 0 14px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a8c5b;
+  cursor: pointer;
+  border-bottom: 2.5px solid transparent;
+  transition: color 0.2s, border-bottom 0.2s, background 0.2s;
+}
+.terms-tab.active {
+  color: #222;
+  border-bottom: 2.5px solid #1a8c5b;
+  background: #fff;
+}
+.terms-tabs-content {
+  background: #fff;
+  min-height: 180px;
+  padding: 24px 24px 24px 24px;
+  font-size: 15px;
+  color: #444;
+}
+.terms-pane {
+  display: none;
+}
+.terms-pane.active {
+  display: block;
+}
+@media (max-width: 700px) {
+  .terms-tabs-section {
+    padding: 0;
+    border-radius: 8px;
+  }
+  .terms-tabs-content {
+    padding: 12px 8px 12px 8px;
+    font-size: 14px;
+  }
+  .terms-tab {
+    font-size: 13px;
+    padding: 10px 0 8px 0;
+  }
+}
+
+/* Terms Section */
+.terms-section {
+  /* margin: 38px auto 0 auto; */
+  max-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(191,161,106,0.06);
+  padding: 32px 24px 24px 24px;
+}
+.terms-section h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 12px;
+}
+.terms-section p {
+  font-size: 15px;
+  color: #444;
+  margin: 0;
+  line-height: 1.7;
+}
+
 @media (max-width: 1100px) {
   .itinerary-main {
     flex-direction: column;
@@ -972,8 +1151,11 @@ document.addEventListener('DOMContentLoaded', renderItinerary);
   }
 }
 @media (max-width: 700px) {
-  .itinerary-section {
-    padding: 12px 2vw 12px 2vw;
+  .itinerary-section,
+  .hotel-section,
+  .tourinfo-section,
+  .terms-section {
+    padding: 14px 2vw 14px 2vw;
     border-radius: 8px;
   }
   .itinerary-header {
@@ -996,8 +1178,331 @@ document.addEventListener('DOMContentLoaded', renderItinerary);
     max-width: 100%;
     margin-left: 0;
   }
+  .hotel-row, .hotel-head {
+    flex-direction: column;
+    gap: 0;
+  }
+  .hotel-cell {
+    padding: 10px 0 0 0;
+    font-size: 14px;
+  }
+  .hotel-city {
+    font-size: 14px;
+    min-width: 0;
+    max-width: 100%;
+  }
 }
 </style>
+<!--  -->
+
+<!-- Curated Journeys Section with left logo and reduced gap -->
+<section class="cj-section"  style="background-color: #f6ddda;">
+  <h2 class="cj-title">Curated Journeys</h2>
+  <div class="cj-carousel-flex">
+    <!-- Left: Logo/Image -->
+    <div class="cj-carousel-logo">
+      <img src="./GLOBENGEL/GLOBENGEL_Pinpoint_Logo-removebg-preview.png" alt="Logo" style="max-width:90px; width:100%; display:block; margin:0 auto;" />
+    </div>
+    <!-- Right: Carousel Box -->
+    <div class="cj-carousel-box">
+      <div class="swiper cjSwiper">
+        <div class="swiper-wrapper">
+          <!-- Card 1 -->
+          <div class="swiper-slide">
+            <div class="cj-card">
+              <img src="./images/bm1.webp" alt="Krabi & Phuket">
+              <div class="cj-card-content">
+                <div class="cj-card-header">
+                  <h3>Spectacular Krabi & Phuket Getaway ...</h3>
+                  <span class="cj-days">5N/6D</span>
+                </div>
+                <p class="cj-subtitle">2N Krabi • 3N Phuket</p>
+                <div class="cj-features-grid">
+                  <ul class="cj-features">
+                    <li>Round Trip Flights</li>
+                    <li>Airport Transfers</li>
+                    <li>Selected Meals</li>
+                  </ul>
+                  <ul class="cj-features">
+                    <li>4 Star Hotels</li>
+                    <li>5 Activities</li>
+                  </ul>
+                </div>
+                <div class="cj-price-box">
+                  <div class="cj-price-left">
+                    <p>No Cost EMI at <span class="cj-emi">₹17,887/month</span></p>
+                  </div>
+                  <div class="cj-price-right">
+                    <p class="cj-price">₹55,751</p>
+                    <div class="cj-price-details">
+                      <div>/Person</div>
+                      <div>Total Price ₹1,11,502</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="swiper-slide">
+            <div class="cj-card" >
+              <img src="./images/bm2.webp" alt="Couples Choice">
+              <div class="cj-card-content">
+                <div class="cj-card-header">
+                  <h3>Couples Choice - Seal Deal</h3>
+                  <span class="cj-days">6N/7D</span>
+                </div>
+                <p class="cj-subtitle">2N Krabi • 1N Phi Phi Island • 3N Phuket</p>
+                <div class="cj-features-grid">
+                  <ul class="cj-features">
+                    <li>Round Trip Flights</li>
+                    <li>Airport Transfers</li>
+                    <li>Selected Meals</li>
+                  </ul>
+                  <ul class="cj-features">
+                    <li>4 Star Hotels</li>
+                    <li>7 Activities</li>
+                  </ul>
+                </div>
+                <div class="cj-price-box">
+                  <div class="cj-price-left">
+                    <p class="cj-note">This price is lower than the average price in September</p>
+                  </div>
+                  <div class="cj-price-right">
+                    <p class="cj-price">₹59,664</p>
+                    <div class="cj-price-details">
+                      <div>/Person</div>
+                      <div>Total Price ₹1,19,328</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="swiper-slide">
+            <div class="cj-card">
+              <img src="./images/bw1.jpeg" alt="Krabi & Phuket">
+              <div class="cj-card-content">
+                <div class="cj-card-header">
+                  <h3>Spectacular Krabi & Phuket Getaway ...</h3>
+                  <span class="cj-days">5N/6D</span>
+                </div>
+                <p class="cj-subtitle">2N Krabi • 3N Phuket</p>
+                <div class="cj-features-grid">
+                  <ul class="cj-features">
+                    <li>Round Trip Flights</li>
+                    <li>Airport Transfers</li>
+                    <li>Selected Meals</li>
+                  </ul>
+                  <ul class="cj-features">
+                    <li>4 Star Hotels</li>
+                    <li>5 Activities</li>
+                  </ul>
+                </div>
+                <div class="cj-price-box">
+                  <div class="cj-price-left">
+                    <p>No Cost EMI at <span class="cj-emi">₹17,887/month</span></p>
+                  </div>
+                  <div class="cj-price-right">
+                    <p class="cj-price">₹55,751</p>
+                    <div class="cj-price-details">
+                      <div>/Person</div>
+                      <div>Total Price ₹1,11,502</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 1 -->
+          <div class="swiper-slide">
+            <div class="cj-card">
+              <img src="./images/bm1.webp" alt="Krabi & Phuket">
+              <div class="cj-card-content">
+                <div class="cj-card-header">
+                  <h3>Spectacular Krabi & Phuket Getaway ...</h3>
+                  <span class="cj-days">5N/6D</span>
+                </div>
+                <p class="cj-subtitle">2N Krabi • 3N Phuket</p>
+                <div class="cj-features-grid">
+                  <ul class="cj-features">
+                    <li>Round Trip Flights</li>
+                    <li>Airport Transfers</li>
+                    <li>Selected Meals</li>
+                  </ul>
+                  <ul class="cj-features">
+                    <li>4 Star Hotels</li>
+                    <li>5 Activities</li>
+                  </ul>
+                </div>
+                <div class="cj-price-box">
+                  <div class="cj-price-left">
+                    <p>No Cost EMI at <span class="cj-emi">₹17,887/month</span></p>
+                  </div>
+                  <div class="cj-price-right">
+                    <p class="cj-price">₹55,751</p>
+                    <div class="cj-price-details">
+                      <div>/Person</div>
+                      <div>Total Price ₹1,11,502</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="swiper-slide">
+            <div class="cj-card" >
+              <img src="./images/bm2.webp" alt="Couples Choice">
+              <div class="cj-card-content">
+                <div class="cj-card-header">
+                  <h3>Couples Choice - Seal Deal</h3>
+                  <span class="cj-days">6N/7D</span>
+                </div>
+                <p class="cj-subtitle">2N Krabi • 1N Phi Phi Island • 3N Phuket</p>
+                <div class="cj-features-grid">
+                  <ul class="cj-features">
+                    <li>Round Trip Flights</li>
+                    <li>Airport Transfers</li>
+                    <li>Selected Meals</li>
+                  </ul>
+                  <ul class="cj-features">
+                    <li>4 Star Hotels</li>
+                    <li>7 Activities</li>
+                  </ul>
+                </div>
+                <div class="cj-price-box">
+                  <div class="cj-price-left">
+                    <p class="cj-note">This price is lower than the average price in September</p>
+                  </div>
+                  <div class="cj-price-right">
+                    <p class="cj-price">₹59,664</p>
+                    <div class="cj-price-details">
+                      <div>/Person</div>
+                      <div>Total Price ₹1,19,328</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="swiper-slide">
+            <div class="cj-card">
+              <img src="./images/bw1.jpeg" alt="Krabi & Phuket">
+              <div class="cj-card-content">
+                <div class="cj-card-header">
+                  <h3>Spectacular Krabi & Phuket Getaway ...</h3>
+                  <span class="cj-days">5N/6D</span>
+                </div>
+                <p class="cj-subtitle">2N Krabi • 3N Phuket</p>
+                <div class="cj-features-grid">
+                  <ul class="cj-features">
+                    <li>Round Trip Flights</li>
+                    <li>Airport Transfers</li>
+                    <li>Selected Meals</li>
+                  </ul>
+                  <ul class="cj-features">
+                    <li>4 Star Hotels</li>
+                    <li>5 Activities</li>
+                  </ul>
+                </div>
+                <div class="cj-price-box">
+                  <div class="cj-price-left">
+                    <p>No Cost EMI at <span class="cj-emi">₹17,887/month</span></p>
+                  </div>
+                  <div class="cj-price-right">
+                    <p class="cj-price">₹55,751</p>
+                    <div class="cj-price-details">
+                      <div>/Person</div>
+                      <div>Total Price ₹1,11,502</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add more swiper-slide cards as needed -->
+        </div>
+        <!-- Swiper navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.cj-carousel-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 58px; /* Reduced gap */
+  margin-top: 18px;
+}
+.cj-carousel-logo {
+  flex: 0 0 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  max-width: 110px;
+  /* background: #fff; */
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(191,161,106,0.06);
+  height: 100%;
+  padding: 18px 0;
+}
+.cj-carousel-box {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.cjSwiper {
+  width: 100%;
+  padding-bottom: 40px;
+}
+@media (max-width: 900px) {
+  .cj-carousel-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .cj-carousel-logo {
+    margin-bottom: 10px;
+    padding: 10px 0;
+    max-width: 80px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.cjSwiper', {
+    slidesPerView: 2,
+    spaceBetween: 24,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    breakpoints: {
+      900: { slidesPerView: 3 },
+      600: { slidesPerView: 2 },
+      0: { slidesPerView: 1 }
+    }
+  });
+});
+</script>
+
+<!-- Iconns -->
 
 <style>
     body {
@@ -1441,14 +1946,14 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!-- let -->
- <section class="curate-trip-section">
+ <!-- <section class="curate-trip-section">
   <div class="curate-content">
     <h2>
       Let’s <span class="script-text">Curate</span> your trip
     </h2>
     <a href="#" class="curate-btn">CONTACT US</a>
   </div>
-</section>
+</section> -->
 
 <!-- Partner Section -->
 

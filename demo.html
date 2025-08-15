@@ -1,296 +1,757 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Best of New Zealand</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-
-<section class="tour-wrapper">
-  <!-- Header -->
-  <h1 class="tour-title">Best of New Zealand</h1>
-  <p class="tour-meta">10 Days / 9 Nights &nbsp;|&nbsp; 1 Country &nbsp;|&nbsp; 9 Cities</p>
-  <p class="tour-route">
-    New Zealand Auckland (2N) ➔ Waitomo Caves & Rotorua (1N) ➔ Queenstown (3N) ➔ Milford Sound ➔
-    Wanaka ➔ Franz Josef (1N) ➔ Arthur’s Pass ➔ Christchurch (1N)
-  </p>
-
-  <!-- Inclusions -->
-  <div class="inclusions">
-    <div><img src="icons/hotel.svg" alt=""><span>Hotels</span></div>
-    <div><img src="icons/meals.svg" alt=""><span>Meals</span></div>
-    <div><img src="icons/sightseeing.svg" alt=""><span>Sightseeing</span></div>
-    <div><img src="icons/breakfast.svg" alt=""><span>Breakfast</span></div>
-    <div><img src="icons/transfer.svg" alt=""><span>Private Transfers</span></div>
-    <div><img src="icons/coach.svg" alt=""><span>Coach Transfer</span></div>
-    <div><img src="icons/ferry.svg" alt=""><span>Ferry</span></div>
-    <div><img src="icons/flights.svg" alt=""><span>Flights</span></div>
-    <div><img src="icons/train.svg" alt=""><span>Train</span></div>
-  </div>
-
-  <!-- Highlights -->
-  <div class="highlights">
-    <h3>Tour Highlights</h3>
-    <ul>
-      <li>International Antarctic Centre</li>
-      <li>Helicopter ride over Glacier</li>
-      <li>Milford Sound Cruise</li>
-      <li>Skyline Gondola Ride</li>
-      <li>Bob Peak</li>
-      <li>Lake Tekapo and Lake Pukaki</li>
-      <li>Shark Show</li>
-      <li>Wai-O-Tapu Thermal Reserve</li>
-      <li>Waitomo Glowworm Caves</li>
-      <li>Auckland Sky Tower Observatory Deck</li>
-    </ul>
-  </div>
-
-  <!-- Actions -->
-  <div class="actions">
-    <button class="wishlist">♡ Wishlist</button>
-    <button class="download">⬇ Download</button>
-    <button class="email">✉ Email</button>
-    <button class="share">🔗 Share</button>
-  </div>
-
-  <!-- Main Grid -->
-  <div class="main-grid">
-    <!-- Left: Dates -->
-    <div class="dates-card">
-      <h4>1. SELECT DEPARTURE CITY & DATE</h4>
-      <div class="city-buttons">
-        <button class="active">All departures</button>
-        <button>Delhi</button>
-        <button>Mumbai</button>
-        <button>Bangalore</button>
-        <button>Kolkata</button>
+  <section class="itinerary-section" id="itinerary">
+  <div class="itinerary-header">
+    <h2>Itinerary <span class="itinerary-daywise">(Day Wise)</span></h2>
+    <a href="#" class="itinerary-viewall">View all days</a>
+    <div class="itinerary-mapbox">
+      <div class="mapview-visual">
+        <img src="./images/mapview.png" alt="Map View" />
+        <a href="#" class="mapview-btn-abs"><i class="fa fa-map"></i> Map View</a>
       </div>
-      <p class="note">All New Delhi dates (click to see great prices today)</p>
-      <div class="date-list">
-        <div class="date-box green">
-          <div class="date-top">
-            <span class="day">17</span>
-            <span class="month">Oct</span>
-          </div>
-          <div class="price">₹ 3,80,000</div>
-          <div class="seats">Lowest Price</div>
+      <div class="mapview-link">
+        <a href="#">Click here</a> to find the road distance
+      </div>
+    </div>
+  </div>
+  <div class="itinerary-main">
+    <div class="itinerary-list" id="itineraryList"></div>
+    <div class="itinerary-side">
+      <div class="itinerary-mapbox sticky">
+        <div class="mapview-visual">
+          <img src="./images/mapview.png" alt="Map View" />
+          <a href="#" class="mapview-btn-abs"><i class="fa fa-map"></i> Map View</a>
         </div>
-        <div class="date-box red">
-          <div class="date-top">
-            <span class="day">28</span>
-            <span class="month">Oct</span>
-          </div>
-          <div class="price">₹ 3,82,000</div>
-          <div class="seats">Price High</div>
+        <div class="mapview-link">
+          <a href="#">Click here</a> to find the road distance
         </div>
-        <div class="date-box">
-          <div class="date-top">
-            <span class="day">11</span>
-            <span class="month">Nov</span>
-          </div>
-          <div class="price">₹ 3,83,000</div>
-          <div class="seats">1.4k seats left</div>
+      </div>
+      <div class="itinerary-actions">
+        <a href="#" class="itinerary-action"><i class="fa fa-paper-plane"></i> Send Itinerary</a>
+        <a href="#" class="itinerary-action"><i class="fa fa-print"></i> Print Itinerary</a>
+        <a href="#" class="itinerary-action"><i class="fa fa-envelope"></i> Email Itinerary</a>
+        <a href="#" class="itinerary-action"><i class="fa fa-balance-scale"></i> Compare Tour</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hotels Section -->
+  <div class="hotel-section" id="hotels">
+    <h3 class="hotel-title">Hotels:</h3>
+    <div class="hotel-table">
+      <div class="hotel-row hotel-head">
+        <div class="hotel-cell hotel-city">City - Country</div>
+        <div class="hotel-cell hotel-name">Hotel</div>
+      </div>
+      <div class="hotel-row">
+        <div class="hotel-cell hotel-city">
+          Rotorua -<br>New Zealand
+        </div>
+        <div class="hotel-cell hotel-name">
+          Arawa Park Hotel Rotorua/ Sudima Lake Rotorua/ Distinction Hotel Rotorua<br>
+          <span class="hotel-similar">/or similar</span>
+        </div>
+      </div>
+      <div class="hotel-row hotel-alt">
+        <div class="hotel-cell hotel-city">
+          Auckland -<br>New Zealand
+        </div>
+        <div class="hotel-cell hotel-name">
+          Naumi Auckland Airport/ Holiday Inn Express Auckland C/ TBA 1<br>
+          <span class="hotel-similar">/or similar</span>
+        </div>
+      </div>
+      <div class="hotel-row">
+        <div class="hotel-cell hotel-city">
+          Christchurch -<br>New Zealand
+        </div>
+        <div class="hotel-cell hotel-name">
+          Quality Hotel Elms/ Wyndham Garden Christchurch Ci/ TBA - Christchurch<br>
+          <span class="hotel-similar">/or similar</span>
+        </div>
+      </div>
+      <div class="hotel-row hotel-alt">
+        <div class="hotel-cell hotel-city">
+          Franz Josef -<br>New Zealand
+        </div>
+        <div class="hotel-cell hotel-name">
+          Heartland Hotel Fox Glacier/ TBA/ TBA-1<br>
+          <span class="hotel-similar">/or similar</span>
+        </div>
+      </div>
+      <div class="hotel-row">
+        <div class="hotel-cell hotel-city">
+          Queenstown -<br>New Zealand
+        </div>
+        <div class="hotel-cell hotel-name">
+          HOLIDAY INN REMARKABLES/ Holiday Inn Express & Suites Q/ TBA - Queenstown<br>
+          <span class="hotel-similar">/or similar</span>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Right: Summary -->
-    <div class="summary-card">
-      <h4>BOOKING SUMMARY</h4>
-      <p><strong>Dep:</strong> New Delhi</p>
-      <p><strong>Dates:</strong> 04 Oct 2025 ➔ 13 Oct 2025</p>
-      <p><strong>Nights:</strong> 9 Nights / 10 Days</p>
-      <p><strong>Rooms:</strong> 1 Room</p>
-
-      <div class="price-section">
-        <p class="basic">Basic Price: ₹ 3,80,000</p>
-        <p class="total">Total Amount: ₹ 12,84,841</p>
-      </div>
-
-      <button class="btn-enquire">Enquire Now</button>
-      <button class="btn-guests">Add Guests & Room</button>
+  <!-- Tour Information Tabs -->
+  <div class="tourinfo-section">
+    <div class="tourinfo-tabs">
+      <button class="tourinfo-tab active">Tour Information</button>
+      <button class="tourinfo-tab">Tour Cost</button>
     </div>
+    <div class="tourinfo-content">
+      <ul class="tourinfo-list">
+        <li>Tour price is calculated for minimum 2 adults sharing a room.</li>
+        <li>Child with bed: 6 to 11 years. Child without bed: 2 to 5 years.</li>
+        <li>Infant: below 2 years. Age is calculated as per the date of return to India.</li>
+        <li>Tour cost is based on current airfare, taxes, and exchange rates. Any increase will be charged extra.</li>
+        <li>Hotels, flights, and itinerary are subject to change as per availability.</li>
+        <li>Any increase in taxes or fuel surcharge will be charged extra.</li>
+        <li>Visa fees, insurance, and other charges are not included unless specified.</li>
+        <li>For detailed terms & conditions, please refer to our website.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Terms & Conditions -->
+  <div class="terms-section">
+    <h4>Terms & Conditions</h4>
+    <p>
+      All information is correct at the time of publication and is subject to change without notice. Please read all terms and conditions carefully before booking. For the latest updates, visit our website or contact our team.
+    </p>
   </div>
 </section>
 
-</body>
-</html>
+<!-- Font Awesome CDN for icons (if not already included) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+<script>
+// Itinerary Data
+const itineraryData = [
+  {
+    day: 1,
+    date: "10 Oct, 25",
+    title: "Auckland – Waitomo – Rotorua (1 Night)",
+    blue: true,
+    details: null
+  },
+  {
+    day: 2,
+    date: "11 Oct, 25",
+    title: "Rotorua – Auckland (2 Nights)",
+    blue: false,
+    details: null
+  },
+  {
+    day: 3,
+    date: "12 Oct, 25",
+    title: "Auckland",
+    blue: false,
+    details: `
+      <p>
+        Today we explore Auckland city: Harbour Bridge, Westhaven Marina, Queen Street, Auckland Waterfront. Later visit Auckland Sky Tower Observatory Deck and enjoy All Blacks Experience.
+      </p>
+      <div class="itinerary-sightseeing">
+        <div class="sightseeing-title"><i class="fa fa-eye"></i> Today's Sightseeing</div>
+        <ul>
+          <li><span class="dot-green"></span> Auckland Sky Tower Observatory Deck</li>
+          <li><span class="dot-green"></span> All Blacks Experience</li>
+        </ul>
+      </div>
+      <div class="itinerary-night">
+        <i class="fa fa-bed"></i> Night stay in Auckland
+      </div>
+      <div class="itinerary-meals">
+        <i class="fa fa-utensils"></i> Breakfast, Lunch & Dinner
+      </div>
+      <div class="itinerary-special">
+        <i class="fa fa-coffee"></i> Tea/coffee during Auckland City tour
+      </div>
+    `
+  },
+  {
+    day: 4,
+    date: "13 Oct, 25",
+    title: "Auckland – Queenstown (3 Nights)",
+    blue: false,
+    details: `<p>Flight to Queenstown. Free time for leisure and exploring the city.</p>`
+  },
+  {
+    day: 5,
+    date: "14 Oct, 25",
+    title: "Queenstown – Milford Sound – Queenstown",
+    blue: false,
+    details: `<p>Day trip to Milford Sound with scenic cruise and return to Queenstown.</p>`
+  },
+  {
+    day: 6,
+    date: "15 Oct, 25",
+    title: "Queenstown",
+    blue: false,
+    details: `<p>Skyline Gondola Ride, Bob Peak, and optional adventure activities.</p>`
+  },
+  {
+    day: 7,
+    date: "16 Oct, 25",
+    title: "Queenstown – Wanaka – Fox/Franz Joseph Glacier (1 Night)",
+    blue: false,
+    details: `<p>Drive to Wanaka, visit Lake Tekapo and Lake Pukaki, continue to Glacier region.</p>`
+  },
+  {
+    day: 8,
+    date: "17 Oct, 25",
+    title: "Fox/Franz Joseph Glacier – Arthur’s Pass – Christchurch (2 Nights)",
+    blue: false,
+    details: `<p>Glacier walk, then scenic drive to Christchurch via Arthur’s Pass.</p>`
+  },
+  {
+    day: 9,
+    date: "18 Oct, 25",
+    title: "Christchurch",
+    blue: false,
+    details: `<p>International Antarctic Centre, Maori Show, city sightseeing.</p>`
+  },
+  {
+    day: 10,
+    date: "19 Oct, 25",
+    title: "Christchurch – Departure",
+    blue: false,
+    details: `<p>Check out and transfer to airport for departure.</p>`
+  }
+];
+
+function renderItinerary() {
+  const list = document.getElementById('itineraryList');
+  list.innerHTML = '';
+  itineraryData.forEach((item, idx) => {
+    const blueClass = item.blue ? 'blue' : '';
+    const hasDetails = !!item.details;
+    const isExpanded = !!item.expanded;
+    const toggleBtn = hasDetails
+      ? `<button class="itinerary-toggle ${isExpanded ? 'minus' : 'plus'}" data-idx="${idx}">${isExpanded ? '−' : '+'}</button>`
+      : '';
+    list.innerHTML += `
+      <div class="itinerary-day${isExpanded ? ' expanded' : ''}">
+        <div class="itinerary-daybar">
+          <span class="itinerary-daynum">Day ${item.day} / ${item.date}</span>
+          <span class="itinerary-dot"></span>
+          <span class="itinerary-title ${blueClass}">${item.title}</span>
+          ${toggleBtn}
+        </div>
+        ${isExpanded && hasDetails ? `<div class="itinerary-details">${item.details}</div>` : ''}
+      </div>
+    `;
+  });
+  // Add event listeners for +/-
+  document.querySelectorAll('.itinerary-toggle').forEach(btn => {
+    btn.onclick = function(e) {
+      e.stopPropagation();
+      const idx = +this.getAttribute('data-idx');
+      itineraryData[idx].expanded = !itineraryData[idx].expanded;
+      renderItinerary();
+    };
+  });
+}
+document.addEventListener('DOMContentLoaded', renderItinerary);
+
+document.querySelectorAll('.tourinfo-tab').forEach((tab, idx) => {
+  tab.onclick = function() {
+    document.querySelectorAll('.tourinfo-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    document.querySelector('.tourinfo-content').innerHTML = idx === 0
+      ? `<ul class="tourinfo-list">
+        <li>Tour price is calculated for minimum 2 adults sharing a room.</li>
+        <li>Child with bed: 6 to 11 years. Child without bed: 2 to 5 years.</li>
+        <li>Infant: below 2 years. Age is calculated as per the date of return to India.</li>
+        <li>Tour cost is based on current airfare, taxes, and exchange rates. Any increase will be charged extra.</li>
+        <li>Hotels, flights, and itinerary are subject to change as per availability.</li>
+        <li>Any increase in taxes or fuel surcharge will be charged extra.</li>
+        <li>Visa fees, insurance, and other charges are not included unless specified.</li>
+        <li>For detailed terms & conditions, please refer to our website.</li>
+      </ul>`
+      : `<ul class="tourinfo-list">
+        <li>Tour cost includes accommodation, meals, sightseeing, and transfers as per itinerary.</li>
+        <li>Airfare and taxes are included unless mentioned otherwise.</li>
+        <li>Personal expenses, tips, and optional tours are not included.</li>
+        <li>For a detailed cost breakdown, please contact our team.</li>
+      </ul>`;
+  }
+});
+</script>
 
 <style>
-    body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
+.itinerary-section {
   background: #fff;
-  color: #333;
-}
-
-.tour-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(191,161,106,0.06);
+  padding: 32px 24px 24px 24px;
+  margin: 32px auto 0 auto;
   max-width: 1200px;
-  margin: auto;
-  padding: 20px;
 }
-
-.tour-title {
-  font-size: 26px;
+.itinerary-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+  position: relative;
+}
+.itinerary-header h2 {
+  font-size: 22px;
   font-weight: 700;
+  color: #222;
+  margin: 0;
+  letter-spacing: 0.5px;
 }
-
-.tour-meta {
+.itinerary-daywise {
   font-size: 14px;
-  color: #555;
+  color: #888;
+  font-weight: 400;
+  margin-left: 8px;
 }
-
-.tour-route {
-  font-size: 13px;
-  color: #666;
-  margin-bottom: 20px;
+.itinerary-viewall {
+  font-size: 14px;
+  color: #1a8c5b;
+  text-decoration: underline;
+  margin-left: 24px;
+  margin-top: 4px;
+  font-weight: 500;
+  white-space: nowrap;
 }
-
-.inclusions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin-bottom: 20px;
-}
-.inclusions div {
+.itinerary-mapbox {
+  background: #f8f6f2;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  padding: 0 0 10px 0;
+  min-width: 210px;
+  max-width: 230px;
   text-align: center;
-  font-size: 12px;
+  margin-left: auto;
+  position: relative;
+}
+.mapview-visual {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  background: #e5e5e5;
+  margin-bottom: 8px;
+}
+.mapview-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  display: block;
+}
+.mapview-btn-abs {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  background: #fff;
   color: #444;
-}
-.inclusions img {
-  display: block;
-  margin: 0 auto 5px;
-}
-
-.highlights h3 {
-  margin-bottom: 8px;
-}
-.highlights ul {
-  padding-left: 18px;
-  font-size: 13px;
-  color: #555;
-}
-
-.actions {
-  margin: 15px 0;
-}
-.actions button {
-  border: none;
-  background: none;
-  font-size: 13px;
-  color: #d9534f;
-  margin-right: 15px;
-  cursor: pointer;
-}
-
-.main-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
-}
-
-.dates-card, .summary-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 15px;
+  border: 1.5px solid #bfa16a;
   border-radius: 6px;
-}
-
-.city-buttons {
-  display: flex;
-  gap: 8px;
-  margin: 10px 0;
-}
-.city-buttons button {
-  border: 1px solid #ccc;
-  background: #fff;
-  padding: 5px 10px;
-  font-size: 12px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-.city-buttons .active {
-  background: #007bff;
-  color: white;
-  border-color: #007bff;
-}
-
-.note {
-  font-size: 12px;
-  color: green;
-}
-
-.date-list {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-.date-box {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 8px;
-  text-align: center;
-  flex: 1;
-}
-.date-box.green {
-  border-color: #28a745;
-  background: #e6f4ea;
-}
-.date-box.red {
-  border-color: #dc3545;
-  background: #fceaea;
-}
-.date-top .day {
-  font-size: 18px;
-  font-weight: bold;
-  display: block;
-}
-.date-top .month {
-  font-size: 12px;
-  color: #666;
-}
-.price {
-  font-size: 11px;
-  margin: 3px 0;
-}
-.seats {
-  font-size: 10px;
-  color: #777;
-}
-
-.summary-card h4 {
-  margin-bottom: 8px;
-}
-.price-section {
-  margin: 12px 0;
-}
-.basic {
+  padding: 4px 18px 4px 14px;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(191,161,106,0.08);
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  z-index: 2;
 }
-.total {
+.mapview-btn-abs i {
+  color: #bfa16a;
+  font-size: 16px;
+}
+.mapview-btn-abs:hover {
+  background: #ffd900;
+  color: #222;
+}
+.mapview-link {
+  font-size: 12px;
+  color: #1a8c5b;
+  margin-top: 2px;
+}
+.itinerary-main {
+  display: flex;
+  gap: 32px;
+}
+.itinerary-list {
+  flex: 1.7;
+  border-left: 3px dashed #e0e0e0;
+  padding-left: 24px;
+  position: relative;
+}
+.itinerary-day {
+  position: relative;
+  margin-bottom: 12px;
+}
+.itinerary-daybar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+.itinerary-daynum {
+  font-size: 13px;
+  color: #bfa16a;
+  font-weight: 600;
+  min-width: 110px;
+  letter-spacing: 0.5px;
+}
+.itinerary-dot {
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 3px solid #bfa16a;
+  border-radius: 50%;
+  margin-right: 6px;
+  margin-left: 2px;
+  position: relative;
+  z-index: 2;
+}
+.itinerary-day.expanded .itinerary-dot {
+  background: #bfa16a;
+}
+.itinerary-title {
   font-size: 15px;
-  font-weight: bold;
-  color: green;
+  color: #222;
+  font-weight: 500;
+  letter-spacing: 0.2px;
 }
-.btn-enquire {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 8px;
-  width: 100%;
-  margin-bottom: 8px;
-  cursor: pointer;
+.itinerary-title.blue {
+  color: #1a8c5b;
 }
-.btn-guests {
-  background: #ffc107;
-  border: none;
-  padding: 8px;
-  width: 100%;
+.itinerary-toggle {
+  margin-left: auto;
+  background: #f8f6f2;
+  border: 1.5px solid #bfa16a;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #bfa16a;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  outline: none;
+}
+.itinerary-toggle.plus:hover,
+.itinerary-toggle.minus:hover {
+  background: #ffd900;
+  color: #222;
+}
+.itinerary-day.expanded {
+  background: #faf9f7;
+  border-radius: 8px;
+}
+.itinerary-details {
+  background: #f8f6f2;
+  border-radius: 10px;
+  margin: 12px 0 0 0;
+  padding: 18px 18px 12px 18px;
+  font-size: 14px;
+  color: #444;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.itinerary-sightseeing {
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 14px 0 10px 0;
+  box-shadow: 0 1px 4px rgba(191,161,106,0.04);
+}
+.sightseeing-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a8c5b;
+  margin-bottom: 6px;
+}
+.itinerary-sightseeing ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.itinerary-sightseeing li {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.dot-green {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #1a8c5b;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+.itinerary-night,
+.itinerary-meals,
+.itinerary-special {
+  font-size: 13px;
+  color: #444;
+  margin: 6px 0 0 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.itinerary-night i,
+.itinerary-meals i,
+.itinerary-special i {
+  color: #bfa16a;
+  font-size: 15px;
+}
+.itinerary-side {
+  flex: 1;
+  min-width: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.itinerary-mapbox.sticky {
+  position: sticky;
+  top: 90px;
+}
+.itinerary-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 18px;
+}
+.itinerary-action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #bfa16a;
+  border-radius: 6px;
+  color: #1a8c5b;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 12px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.itinerary-action:hover {
+  background: #ffd900;
+  color: #222;
 }
 
+/* Hotel Section */
+.hotel-section {
+  margin: 38px auto 0 auto;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(191,161,106,0.06);
+  padding: 32px 24px 24px 24px;
+}
+.hotel-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #424140;
+  margin-bottom: 18px;
+}
+.hotel-table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.hotel-row {
+  display: flex;
+  border-radius: 8px;
+  background: #fff;
+  align-items: flex-start;
+  font-size: 15px;
+  color: #222;
+  margin-bottom: 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+.hotel-row:last-child {
+  border-bottom: none;
+}
+.hotel-head {
+  font-size: 15px;
+  font-weight: 600;
+  color: #888;
+  background: none;
+  border-bottom: 2px solid #eaeaea;
+  margin-bottom: 0;
+}
+.hotel-cell {
+  padding: 18px 18px 18px 0;
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
+  line-height: 1.5;
+  background: none;
+  border-radius: 0;
+  font-size: 15px;
+}
+.hotel-city {
+  flex: 0.7;
+  color: #444;
+  font-weight: 500;
+  min-width: 120px;
+  max-width: 180px;
+}
+.hotel-name {
+  flex: 2;
+  color: #222;
+  font-weight: 400;
+}
+.hotel-alt {
+  background: #f8f8f8;
+}
+.hotel-similar {
+  color: #888;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Tour Info Tabs */
+.tourinfo-section {
+  margin: 38px auto 0 auto;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(191,161,106,0.06);
+  padding: 32px 24px 24px 24px;
+}
+.tourinfo-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid #eaeaea;
+  margin-bottom: 18px;
+}
+.tourinfo-tab {
+  background: #f8f8f8;
+  border: none;
+  outline: none;
+  padding: 10px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a8c5b;
+  border-radius: 8px 8px 0 0;
+  margin-right: 2px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.tourinfo-tab.active {
+  background: #fff;
+  color: #222;
+  border-bottom: 2px solid #1a8c5b;
+}
+.tourinfo-content {
+  padding: 0 0 0 0;
+}
+.tourinfo-list {
+  margin: 0;
+  padding: 0 0 0 18px;
+  color: #444;
+  font-size: 15px;
+}
+.tourinfo-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* Terms Section */
+.terms-section {
+  margin: 38px auto 0 auto;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(191,161,106,0.06);
+  padding: 32px 24px 24px 24px;
+}
+.terms-section h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 12px;
+}
+.terms-section p {
+  font-size: 15px;
+  color: #444;
+  margin: 0;
+  line-height: 1.7;
+}
+
+@media (max-width: 1100px) {
+  .itinerary-main {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .itinerary-side {
+    min-width: 0;
+    flex-direction: row;
+    gap: 18px;
+  }
+  .itinerary-mapbox.sticky {
+    position: static;
+    top: unset;
+  }
+}
+@media (max-width: 700px) {
+  .itinerary-section,
+  .hotel-section,
+  .tourinfo-section,
+  .terms-section {
+    padding: 14px 2vw 14px 2vw;
+    border-radius: 8px;
+  }
+  .itinerary-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .itinerary-main {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .itinerary-list {
+    padding-left: 10px;
+  }
+  .itinerary-side {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .itinerary-mapbox {
+    min-width: 0;
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .hotel-row, .hotel-head {
+    flex-direction: column;
+    gap: 0;
+  }
+  .hotel-cell {
+    padding: 10px 0 0 0;
+    font-size: 14px;
+  }
+  .hotel-city {
+    font-size: 14px;
+    min-width: 0;
+    max-width: 100%;
+  }
+}
 </style>
+</body>
+</html>
