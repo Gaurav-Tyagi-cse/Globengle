@@ -24,7 +24,8 @@
 /* Card styles */
 .gt-travel-card {
   width: 100%;
-  max-width: 380px; /* Increased width */
+  /* max-width: 380p; */
+   /* Increased width */
   background: #fff;
   border-radius: 8px;
   overflow: hidden;

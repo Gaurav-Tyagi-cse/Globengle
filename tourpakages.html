@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Globengel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="./CSS/style.css">
+ <link rel="stylesheet" href="./CSS/group-cards.css">
+ <style>
+   .hero-section {
+     background: url('../images/banner.webp') no-repeat center center/cover;
+   }
+ </style>
+ <!-- CSS for Services Section -->
+<style> 
+   .glob-services-container {
+        width: 100%;
+        height: 520px; /* Further reduced height for better fit */
+        position: relative;
+        overflow: hidden;
+    }    .glob-services {
+        height: 480px !important; /* Match container height */
+        display: flex;
+        width: 100%;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 0.5s ease;
+        background-attachment: scroll;
+    }
+    .glob-service-item {
+        flex: 1;
+        position: relative;
+        border-right: 1px solid rgba(255,255,255,0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 20px 14px 24px 14px; /* More bottom padding for text */
+        z-index: 2;
+        transition: all 0.3s ease;
+        overflow: visible; /* Allow text to expand */
+        min-width: 0;
+    }
+    .glob-service-item:last-child { border-right: none; }
+      /* Mobile styles for services section */
+    @media (max-width: 768px) {
+        .glob-services-container {
+            display: none; /* Hide the desktop version */
+        }
+          .glob-service-mobile-card {
+            height: 200px;
+            border-radius: 12px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            padding: 20px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .glob-service-mobile-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 60%);
+            z-index: 1;
+        }
+        
+        .glob-service-mobile-card[data-bg="1"]::after,
+        .glob-service-mobile-card[data-bg="2"]::after,
+        .glob-service-mobile-card[data-bg="5"]::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(233, 142, 111, 0.4);
+            z-index: 1;
+        }
+        
+        .glob-service-mobile-card[data-bg="3"]::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(140, 85, 69, 0.5);
+            z-index: 1;
+        }
+        
+        .glob-service-mobile-card[data-bg="4"]::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(72, 109, 149, 0.4);
+            z-index: 1;
+        }        .glob-service-mobile-card .glob-service-text {
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+        
+        .glob-service-mobile-card .glob-service-description {
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 0.4s ease, max-height 0.4s ease, transform 0.4s ease;
+            transform: translateY(20px);
+            color: white;
+            font-size: 14px;
+            line-height: 1.4;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+            padding-top: 10px;
+            width: 100%;
+        }
+        
+        .glob-service-mobile-card.tapped .glob-service-text {
+            transform: translateY(-10px);
+        }
+        
+        .glob-service-mobile-card.tapped .glob-service-description {
+            opacity: 1;
+            max-height: 200px;
+            transform: translateY(0);
+        }          .glob-service-mobile-card:active,
+        .glob-service-mobile-card.tapped {
+            transform: scale(0.98);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+            height: auto;
+            min-height: 250px;
+            background-position: top center;
+        }
+    }
+    
+    /* Hide mobile cards on desktop */
+    @media (min-width: 769px) {
+        .glob-mobile-services {
+            display: none;
+        }
+    }
+    
+    /* Color overlays for each section - matching the image */
+    /* .glob-service-item:nth-child(1) {
+        background-color: rgba(233, 142, 111, 0.5); 
+    }
+    
+    .glob-service-item:nth-child(2) {
+        background-color: rgba(233, 142, 111, 0.5); 
+    }
+    
+    .glob-service-item:nth-child(3) {
+        background-color: rgba(140, 85, 69, 0.6); 
+    }
+    
+    .glob-service-item:nth-child(4) {
+        background-color: rgba(72, 109, 149, 0.4); 
+    }
+    
+    .glob-service-item:nth-child(5) {
+        background-color: rgba(233, 142, 111, 0.5); 
+    } */
+
+    /* Text style */    .glob-service-text {
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.3;
+        z-index: 2;
+        position: relative;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+        transition: transform 0.3s ease, height 0.3s ease;
+        letter-spacing: 1px;
+        padding-bottom: 8px;
+        word-break: break-word;
+    }
+    
+    .glob-service-item:hover .glob-service-text { transform: translateY(-10px); }
+    
+    .glob-service-description {
+        color: white;
+        font-size: 13px;
+        line-height: 1.4;
+        z-index: 2;
+        position: relative;
+        opacity: 0;
+        max-height: 0;
+        overflow: visible;
+        transition: opacity 0.4s ease, max-height 0.4s ease, transform 0.4s ease;
+        transform: translateY(20px);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+        padding-top: 2px;
+        margin-bottom: 0;
+        background: none;
+    }
+    
+    .glob-service-item:hover .glob-service-description,
+    .glob-service-mobile-card:active .glob-service-description,
+    .glob-service-mobile-card.tapped .glob-service-description {
+        opacity: 1;
+        max-height: 120px;
+        transform: translateY(0);
+    }
+    
+    /* Plus icon */
+    .glob-plus-icon {
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 10px;
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Hover effects for sections */
+    .glob-service-item {
+        position: relative;
+        transition: background-color 0.3s ease;
+    }
+    
+    .glob-services:hover .glob-service-item {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Service with active class */
+    .glob-service-item.glob-active {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .section-services{
+      background-color: #FFF6F3;
+    }
+    /* Flip animation styles */
+.glob-service-item {
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.glob-service-item.flip {
+    transform: rotateY(180deg);
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <ul class="navbar-nav d-none d-lg-flex">
+      <li class="nav-item"><a class="nav-link" href="Destination.html">DESTINATIONS</a></li>
+      <li class="nav-item"><a class="nav-link" href="Luxury.html">LUXURY</a></li>
+      <li class="nav-item"><a class="nav-link" href="GroupTours.html">GROUP TOURS</a></li>
+      <li class="nav-item"><a class="nav-link" href="Voyages.html">VOYAGES</a></li>
+      <li class="nav-item"><a class="nav-link" href="BeyondLeisure.html">BEYOND LEISURE</a></li>
+    </ul>
+
+    <a class="navbar-brand mx-auto" href="index.html">
+      <img src="./GLOBENGEL/GLOBENGEL Logo.png" style="width: 200px;"  alt="Globengel Logo" class="logo">
+      
+    </a>
+
+    <div class="d-flex align-items-center">
+      <div class="contact-info d-none d-lg-block me-3">
+        CALL US AT:<br>
+        <a href="tel:+919793405883">+91 97934-05883</a>
+      </div>
+      <span class="signin d-none d-lg-block">Sign In</span>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler ms-2" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Sliding Mobile Menu -->
+<div class="mobile-menu">
+  <div class="menu-header">
+    <a class="menu-logo" href="index.html">
+      <img src="./GLOBENGEL/GLOBENGEL Logo.png" style="width: 136px;"  alt="Globengel Logo" class="logo">
+    </a>
+    <div class="close-btn">&times;</div>
+  </div>
+  <a class="nav-link" href="Destination.html">DESTINATIONS</a>
+  <a class="nav-link" href="Luxury.html">LUXURY</a>
+  <a class="nav-link" href="GroupTours.html">GROUP TOURS</a>
+  <a class="nav-link" href="#">VOYAGES</a>
+  <a class="nav-link" href="#">BEYOND LEISURE</a>
+  <a class="nav-link mt-3" href="#">Sign In</a>
+</div>
+<div class="overlay"></div>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title heading_font_family" style="font-size:38px;" >DREAM. EXPLORE. DISCOVER.</h1>
+    <p class="hero-subtitle silver-South-family" style="font-size: 38px;">Begin your journey</p>
+    <div class="search-box">
+      <input type="text" placeholder="Search by destinations, travel theme">
+      <i class="fa fa-search"></i>
+    </div>
+  </div>
+</section>
+
+<!-- Five Services Layout Section -->
+<section class="section-services pt-5">
+      <!-- Section Heading -->
+    <div class="section-header text-center">
+      <h3><span class="silver-South-family">Loved</span> by travellers, <span class="silver-South-family">Backed</span> by experts</h3>
+      <p class="heading_font_family">These destinations are topping the charts for a reason — let’s take you there.</p>
+    </div>
+    <div class="glob-services-container">
+        <div class="glob-services" style="display: flex; width: 100%; height: 100vh; position: relative; background-image: url('./images/bm1.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; transition: background-image 0.5s ease; background-attachment: scroll;">            <div class="glob-service-item" data-bg="1">
+                <div class="glob-service-text">Vietnam
+</div>
+                <div class="glob-service-description">
+                  <!-- Tap into India's economic momentum with 6-7% annual growth. Strategic market entry for lasting business expansion. -->
+                </div>
+            </div>
+            <div class="glob-service-item" data-bg="2">
+                <div class="glob-service-text">Japan</div>
+                <div class="glob-service-description">
+                  <!-- Access 1.4 billion potential customers across multiple segments. From urban professionals to rural markets. -->
+                </div>
+            </div>
+            <div class="glob-service-item" data-bg="3">
+                <div class="glob-service-text">Finland</div>
+                <div class="glob-service-description">
+                  <!-- Connect with a young, ambitious population eager for quality goods and services. Rising middle class with increasing disposable income. -->
+                </div>
+            </div>
+            <div class="glob-service-item" data-bg="4">
+                <div class="glob-service-text">Australia</div>
+                <div class="glob-service-description">
+                  <!-- Leverage India's digital transformation with 800M+ internet users. Mobile-first market with rapid e-commerce growth. -->
+                </div>
+            </div>
+            <div class="glob-service-item" data-bg="5">
+                <div class="glob-service-text">New Zealand
+                  <!-- <span class="glob-plus-icon"></span> -->
+                </div>
+                <div class="glob-service-description">
+                  <!-- Partner with local expertise to navigate complex market dynamics. Custom solutions for successful market entry and expansion. -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mobile version (only visible on small screens) -->
+    <div class="container d-md-none py-3">
+        <div class="row glob-mobile-services">            <div class="col-12 mb-4">
+                <div class="glob-service-mobile-card" style="background-image: url('./images/Vietnam.jpg');" data-bg="1">
+                    <div class="glob-service-text">Vietnam</div>
+                    <div class="glob-service-description">
+                      <!-- Tap into India's economic momentum with 6-7% annual growth. Strategic market entry for lasting business expansion. -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="glob-service-mobile-card" style="background-image: url('./images/Japan.jpg');" data-bg="2">
+                    <div class="glob-service-text">Japan</div>
+                    <div class="glob-service-description">
+                      <!-- Access 1.4 billion potential customers across multiple segments. From urban professionals to rural markets. -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="glob-service-mobile-card" style="background-image: url('./images/Finland.jpg');" data-bg="3">
+                    <div class="glob-service-text">Finland</div>
+                    <div class="glob-service-description">
+                      <!-- Connect with a young, ambitious population eager for quality goods and services. Rising middle class with increasing disposable income. -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="glob-service-mobile-card" style="background-image: url('./images/Australia.jpg');" data-bg="4">
+                    <div class="glob-service-text">Australia</div>
+                    <div class="glob-service-description">
+                      <!-- Leverage Australia's digital transformation with 800M+ internet users. Mobile-first market with rapid e-commerce growth. -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="glob-service-mobile-card" style="background-image: url('./images/New Zealand.jpg');" data-bg="5">
+                    <div class="glob-service-text">New Zealand<span class="glob-plus-icon"></span></div>
+                    <div class="glob-service-description">
+                      <!-- Partner with local expertise to navigate complex market dynamics. Custom solutions for successful market entry and expansion. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Travel -->
+
+<section class="why-travel">
+  <div class="container text-center">
+    <!-- Section Heading -->
+    <h2 class="why-heading">
+      <span class="silver-South-family">Why</span> travel with GLOBENGEL?
+    </h2>
+
+    <!-- Features Grid -->
+    <div class="row justify-content-center mt-5 heading_font_family">
+      <!-- 1 -->
+      <div class="col-12 col-md-6 col-lg-3 mb-5 why-item">
+        <div class="why-card">
+          <img src="./images/bw1.jpeg" class="why-icon" alt="Thoughtful Curation">
+          <h4 class="why-title">Thoughtful Curation</h4>
+          <p class="why-text">
+            We don’t just plan trips — we curate journeys that match your dreams,
+            personality, and pace. Every itinerary is handpicked and fine-tuned
+            to reflect your unique travel style.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="col-12 col-md-6 col-lg-3 mb-5 why-item">
+        <div class="why-card">
+          <img src="./images/pw2.jpeg" class="why-icon" alt="Global Connect">
+          <h4 class="why-title">Global Connect, Local Expertise</h4>
+          <p class="why-text">
+            With deep-rooted partnerships across the globe, we combine world-class
+            standards with local insight — offering you the best of both worlds,
+            wherever you go.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="col-12 col-md-6 col-lg-3 mb-5 why-item">
+        <div class="why-card">
+          <img src="./images/pw3.png" class="why-icon" alt="Trust & Transparency">
+          <h4 class="why-title">Trust & Transparency</h4>
+          <p class="why-text">
+            We don’t just build trips — we build trust with transparent pricing,
+            honest recommendations, and no hidden surprises. What you see is what you get.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="col-12 col-md-6 col-lg-3 mb-5 why-item">
+        <div class="why-card">
+          <img src="./images/pw4.jpeg" class="why-icon" alt="End-to-End Care">
+          <h4 class="why-title">End-to-End Care</h4>
+          <p class="why-text">
+            From pre-trip planning to on-ground concierge support, we handle every
+            detail so you can simply enjoy the journey.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Group-departures  -->
+
+<section class="group-departures py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title"><span class="silver-South-family">Handcrafted</span> Group Departures</h2>
+      <p class="section-subtitle">Explore curated group itineraries with seamless planning, trusted guides, and value-packed pricing.</p>
+    </div>
+      <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="gt-travel-card">
+          <!-- <div class="gt-trip-tag-corner">Timeless Europe</div> -->
+          <img src="./images/banner.webp" alt="Timeless Europe Journey">
+          <div class="gt-travel-content">
+            <h3>TIMELESS EUROPE JOURNEY</h3>
+            <p>9 Days | 3 Countries | 4 Cities</p>
+            <p>Departures- Oct | Nov | Dec</p>
+            <div class="gt-travel-price">INR 1,19,000/- <span>(Per Person)</span></div>
+          </div>
+        </div>
+      </div>
+        <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="gt-travel-card">
+          <!-- <div class="gt-trip-tag-corner">Amazing Dubai</div> -->
+          <img src="./images/trip1.jpeg" alt="Amazing Dubai">
+          <div class="gt-travel-content">
+            <h3>AMAZING DUBAI</h3>
+            <p>7 Days | 1 Country | 3 Cities</p>
+            <p>Departures- Sep | Oct | Nov</p>
+            <div class="gt-travel-price">INR 89,000/- <span>(Per Person)</span></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <div class="gt-travel-card">
+          <!-- <div class="gt-trip-tag-corner">Bali Paradise</div> -->
+          <img src="./images/trip2.avif" alt="Bali Paradise">
+          <div class="gt-travel-content">
+            <h3>BALI PARADISE</h3>
+            <p>8 Days | 1 Country | 4 Cities</p>
+            <p>Departures- Oct | Dec | Jan</p>
+            <div class="gt-travel-price">INR 95,000/- <span>(Per Person)</span></div>
+          </div>
+        </div>
+      </div>
+        <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <div class="gt-travel-card">
+          <!-- <div class="gt-trip-tag-corner">Asian Explorer</div> -->
+          <img src="./images/banner.webp" alt="Asian Explorer">
+          <div class="gt-travel-content">
+            <h3>ASIAN EXPLORER</h3>
+            <p>12 Days | 3 Countries | 6 Cities</p>
+            <p>Departures- Sep | Oct | Nov</p>
+            <div class="gt-travel-price">INR 1,45,000/- <span>(Per Person)</span></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slide 5 -->
+      <div class="swiper-slide">
+        <div class="gt-travel-card">
+          <!-- <div class="gt-trip-tag-corner">Majestic Turkey</div> -->
+          <img src="./images/trip1.jpeg" alt="Majestic Turkey">
+          <div class="gt-travel-content">
+            <h3>MAJESTIC TURKEY</h3>
+            <p>10 Days | 1 Country | 5 Cities</p>
+            <p>Departures- Sep | Oct | Nov</p>
+            <div class="gt-travel-price">INR 1,05,000/- <span>(Per Person)</span></div>
+          </div>
+        </div>
+      </div>
+        <!-- Slide 6 -->
+      <div class="swiper-slide">
+        <div class="gt-travel-card">
+          <!-- <div class="gt-trip-tag-corner">Egypt Wonder</div> -->
+          <img src="./images/trip2.avif" alt="Egypt Wonder">
+          <div class="gt-travel-content">
+            <h3>EGYPT WONDER</h3>
+            <p>9 Days | 1 Country | 4 Cities</p>
+            <p>Departures- Oct | Nov | Dec</p>
+            <div class="gt-travel-price">INR 1,25,000/- <span>(Per Person)</span></div>
+          </div>
+        </div>      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Beyoned Section -->
+
+<section class="beyond-leisure py-5">
+  <div class="container text-center">
+    <!-- Section Heading -->
+    <h2 class="beyond-heading">
+      <span>Beyond</span> Leisure
+    </h2>
+    <p class="beyond-subtitle">
+      Not all journeys are for leisure. Some build futures, close deals, or mark life’s milestones. 
+      At GLOBENGEL, we understand the difference — and deliver experiences crafted for every purpose.
+    </p>
+
+    <!-- Cards -->
+    <div class="row g-4 mt-4 justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="beyond-card">
+          <img src="./images/bm1.webp" alt="Corporate Travel" class="beyond-img">
+          <div class="beyond-overlay">
+            <h4>The Best Places to Visit in 2025</h4>
+            <p>Corporate Travel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="beyond-card">
+          <img src="./images/bm2.webp" alt="Education Travel" class="beyond-img">
+          <div class="beyond-overlay">
+            <h4>19 Top Luxury Hotels Worldwide for Stargazing</h4>
+            <p>Education Travel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="beyond-card">
+          <img src="./images/bm3.webp" alt="Celebrations" class="beyond-img">
+          <div class="beyond-overlay">
+            <h4>The 9 Best Wellness Retreats Destinations</h4>
+            <p>Celebrations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--  -->
+
+<!-- Get inspired -->
+<section class="get-inspired">
+  <div class="inspired-header">
+    <h2>Get inspired</h2>
+    <p>
+      Let your imagination take flight and dream of incredible destinations,
+      meaningful experiences and the memories you'll make. The world is waiting.
+    </p>
+  </div>
+
+  <div class="inspired-slider">
+    <button class="inspired-btn prev-btn" onclick="slideInspired(-1)">&#10094;</button>
+    
+    <div class="inspired-track" id="inspiredTrack">
+      
+      
+      <!-- Card 1 -->
+      <div class="inspired-card">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600" alt="Hot Air Balloon">
+        <div class="card-content">
+          <h3>Bhutan</h3>
+          <a href="#">Read more</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="inspired-card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600" alt="Zambia Safari">
+        <div class="card-content">
+          <h3>Mauritius</h3>
+          <a href="#">Read more</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="inspired-card">
+        <img src="https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?w=600" alt="Oman Boat">
+        <div class="card-content">
+          <h3>Sri Lanka</h3>
+          <a href="#">Read more</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="inspired-card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600" alt="Maldives">
+        <div class="card-content">
+          <h3>Malaysia</h3>
+          <a href="#">Read more</a>
+        </div>
+      </div>
+
+     <!-- Card 5 -->
+      <div class="inspired-card">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600" alt="Hot Air Balloon">
+        <div class="card-content">
+          <h3>Bhutan</h3>
+          <a href="#">Read more</a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="inspired-card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600" alt="Zambia Safari">
+        <div class="card-content">
+          <h3>Mauritius</h3>
+          <a href="#">Read more</a>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="inspired-card">
+        <img src="https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?w=600" alt="Oman Boat">
+        <div class="card-content">
+          <h3>Sri Lanka</h3>
+          <a href="#">Read more</a>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="inspired-card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600" alt="Maldives">
+        <div class="card-content">
+          <h3>Malaysia</h3>
+          <a href="#">Read more</a>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="inspired-btn next-btn" onclick="slideInspired(1)">&#10095;</button>
+  </div>
+</section>
+
+<!-- Testimonial Section  -->
+<!-- Testimonial Section -->
+<section class="custom-testimonial-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="testimonial-heading">
+        <span>Trusted</span> by travellers like you
+      </h2>
+      <p class="testimonial-subtitle">
+        From seamless honeymoons to global conferences — see why our clients keep coming back.
+      </p>
+    </div>
+
+    <div class="swiper testimonialSwiper">
+      <div class="swiper-wrapper">
+        <!-- First slide - group of 3 cards -->
+        <div class="swiper-slide">
+          <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <div class="testimonial-avatar">
+                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dina Jems">
+                </div>
+                <h3 class="testimonial-name">Dina Jems</h3>
+                <div class="testimonial-role">Traveller</div>
+                <p class="testimonial-text">Fusce aliquam luctus est, eget tincidunt velit scelerisque rhoncus. Aliquam lacinia ipsum ornare, porttitor risus nec, mattis mauris.</p>
+              </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="col-md-4">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <div class="testimonial-avatar">
+                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Jahid Hassan">
+                </div>
+                <h3 class="testimonial-name">Jahid Hassan</h3>
+                <div class="testimonial-role">Traveller</div>
+                <p class="testimonial-text">Fusce aliquam luctus est, eget tincidunt velit scelerisque rhoncus. Aliquam lacinia ipsum ornare, porttitor risus nec, mattis mauris.</p>
+              </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="col-md-4">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <div class="testimonial-avatar">
+                  <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Shwan Pull">
+                </div>
+                <h3 class="testimonial-name">Shwan Pull</h3>
+                <div class="testimonial-role">Traveller</div>
+                <p class="testimonial-text">Fusce aliquam luctus est, eget tincidunt velit scelerisque rhoncus. Aliquam lacinia ipsum ornare, porttitor risus nec, mattis mauris.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second slide - group of 3 cards -->
+        <div class="swiper-slide">
+          <div class="row">
+            <!-- Card 4 -->
+            <div class="col-md-4">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <div class="testimonial-avatar">
+                  <img src="https://randomuser.me/api/portraits/women/51.jpg" alt="Maria Lee">
+                </div>
+                <h3 class="testimonial-name">Maria Lee</h3>
+                <div class="testimonial-role">Traveller</div>
+                <p class="testimonial-text">Curabitur tincidunt ipsum vel eros posuere, sed feugiat justo viverra. Pellentesque ut arcu magna.</p>
+              </div>
+            </div>
+            
+            <!-- Card 5 -->
+            <div class="col-md-4">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <div class="testimonial-avatar">
+                  <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="David Smith">
+                </div>
+                <h3 class="testimonial-name">David Smith</h3>
+                <div class="testimonial-role">Traveller</div>
+                <p class="testimonial-text">Aenean posuere purus vel ex mattis, sed dapibus justo porta. Donec commodo diam sed dolor.</p>
+              </div>
+            </div>
+            
+            <!-- Card 6 -->
+            <div class="col-md-4">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <div class="testimonial-avatar">
+                  <img src="https://randomuser.me/api/portraits/women/11.jpg" alt="Anna Roy">
+                </div>
+                <h3 class="testimonial-name">Anna Roy</h3>
+                <div class="testimonial-role">Traveller</div>
+                <p class="testimonial-text">Morbi varius dui nec augue fermentum. Aliquam erat volutpat. Aenean id feugiat mi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Pagination dots -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- let -->
+ <section class="curate-trip-section">
+  <div class="curate-content">
+    <h2>
+      Let’s <span class="script-text">Curate</span> your trip
+    </h2>
+    <a href="#" class="curate-btn">CONTACT US</a>
+  </div>
+</section>
+
+
+<!-- Partner Section -->
+
+<section class="logo-slider-section">
+  <div class="container">
+    <div class="swiper logoSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/par1.jpeg" alt="wanderwell logo" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/par2.jpeg" alt="plasticbank logo" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/par3.jpeg" alt="climate neutral now" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/par4.jpeg" alt="eden reforestation" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/par5.jpeg" alt="ally travel council" />
+        </div>
+        <!-- Repeat if needed -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+ <!-- footer 2 -->
+<footer class="site-footer">
+    <div class="footer-top">
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h4>LET'S BUILD EXPERIENCES TOGETHER</h4>
+        <form class="heading_font_family">
+          <input type="text" placeholder="First Name*" required>
+          <input type="text" placeholder="Last Name*" required>
+          <input type="email" placeholder="Email*" required>
+          <label class="checkbox heading_font_family">
+            <input type="checkbox">
+            I am happy to receive emails from Globengel, including upcoming events and information.*
+          </label>
+          <button type="submit" class="signup-btn">Sign Up</button>
+        </form>
+      </div>
+
+      <!-- Award Badge -->
+      <div class="footer-badge">
+        <img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="Award 2025">
+      </div>
+
+
+      <!-- Destinations -->
+      <div class="footer-destinations">
+        <h4 class="heading_font_family" style="font-size: 18px;">Home</h4>
+        <ul class="heading_font_family">
+
+          <li><a href="ourstory.html">Destinations</a></li>
+          <li><a href="group-tours.html">Group Tours</a></li>
+          <li><a href="voyages.html">Voyages</a></li>
+          <li><a href="beyond-leisure.html">Beyond Leisure</a></li>
+          <li><a href="inspiration.html">Inspiration</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html"></a>Contact Us</li>
+
+          
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-contact">
+        <h4 class="heading_font_family">Get in Touch</h4>
+        <p><a href="tel:+919910405255">+919910405255</a></p>
+        <p class="heading_font_family"><a href="mailto:info@globengel.com">info@globengel.com</a></p>
+
+        <h4 class="heading_font_family">Find us on</h4>
+        <!-- Social Media Icons -->
+<div class="footer-social">
+  <a href="#" class="social-icon-box"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" class="social-icon-box"><i class="fab fa-youtube"></i></a>
+  <a href="#" class="social-icon-box"><i class="fab fa-vimeo-v"></i></a>
+  <a href="#" class="social-icon-box"><i class="fab fa-instagram"></i></a>
+</div>
+
+        <div class="footer-tagline">
+          <h2 class="heading_font_family">DREAM.
+EXPLORE.
+DISCOVER.</h2>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="footer-logo">
+        <img src="./GLOBENGEL/GLOBENGEL Logo.png" style="width: 130px;" alt="MITÉRA Goddess Logo">
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+      <p>Copyright 2019-2025 GLOBENGEL</p>
+    </div>
+</footer>
+
+
+
+<!-- JS -->
+ <!-- JavaScript for Services Section -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceItems = document.querySelectorAll('.glob-service-item');
+    const servicesContainer = document.querySelector('.glob-services');
+    
+    // Set the first service as active by default
+    serviceItems[0].classList.add('glob-active');
+    
+    // Store the default background
+    const defaultBg = window.getComputedStyle(servicesContainer).backgroundImage;
+    
+    // Function to check if mobile view
+    function isMobileView() {
+        return window.innerWidth <= 768;
+    }
+    
+    // Set initial background images based on viewport
+    function setInitialBackgrounds() {
+        if (isMobileView()) {
+            // For mobile: Set individual backgrounds for each card
+            serviceItems.forEach((item, index) => {
+                const bgNum = item.getAttribute('data-bg');
+                let bgImage = '/images/Vietnam.jpg'; // default
+                
+                if (bgNum === '1') bgImage = './images/Vietnam.jpg';
+                else if (bgNum === '2') bgImage = './images/Japan.jpg';
+                else if (bgNum === '3') bgImage = './images/Finland.jpg';
+                else if (bgNum === '4') bgImage = './images/Australia.jpg';
+                else if (bgNum === '5') bgImage = './images/New Zealand.jpg';
+                
+                item.style.backgroundImage = `url('./images/${bgImage}')`;
+            });
+        } else {
+            // For desktop: Set container background
+            servicesContainer.style.backgroundImage = `url('./images/Vietnam.jpg')`;
+        }
+    }
+    
+    // Initialize backgrounds
+    setInitialBackgrounds();
+    
+    // Handle window resize to adjust backgrounds
+    window.addEventListener('resize', setInitialBackgrounds);
+    
+    serviceItems.forEach((serviceItem, index) => {
+        serviceItem.addEventListener('mouseenter', function() {
+            const bgNum = this.getAttribute('data-bg');
+            // Store reference to current element
+            const currentElement = this;
+            
+            // Apply immediate color change to ALL sections
+            serviceItems.forEach(s => s.classList.add('glob-active'));
+            
+            // Only change container background on desktop view
+            if (!isMobileView()) {
+                // Delay background image change for smooth transition
+                setTimeout(() => {
+                    if (bgNum === '1') {
+                        servicesContainer.style.backgroundImage = 'url("./images/Vietnam.jpg")';
+                    } else if (bgNum === '2') {
+                        servicesContainer.style.backgroundImage = 'url("./images/Japan.jpg")';
+                    } else if (bgNum === '3') {
+                        servicesContainer.style.backgroundImage = 'url("./images/Finland.jpg")';
+                    } else if (bgNum === '4') {
+                        servicesContainer.style.backgroundImage = 'url("./images/Australia.jpg")';
+                    } else if (bgNum === '5') {
+                        servicesContainer.style.backgroundImage = 'url("./images/New Zealand.jpg")';
+                    }
+                }, 200); // 200ms delay for smooth transition
+            }
+        });
+        
+    // Add touch event for mobile
+        serviceItem.addEventListener('touchstart', function() {
+            serviceItems.forEach(s => s.classList.add('glob-active'));
+        });
+    });    // Handle mobile card interactions
+    const mobileCards = document.querySelectorAll('.glob-service-mobile-card');
+    
+    mobileCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Reset other cards
+            mobileCards.forEach(otherCard => {
+                if (otherCard !== this) {
+                    otherCard.classList.remove('tapped');
+                    otherCard.style.height = '200px';
+                }
+            });
+            
+            // Toggle tapped state for current card
+            this.classList.toggle('tapped');
+            
+            // Adjust card height based on content
+            if (this.classList.contains('tapped')) {
+                const description = this.querySelector('.glob-service-description');
+                const textHeight = this.querySelector('.glob-service-text').offsetHeight;
+                const descHeight = description.scrollHeight;
+                
+                // Set a min height to ensure there's space for the content
+                const newHeight = Math.max(250, textHeight + descHeight + 60);
+                this.style.height = `${newHeight}px`;
+                
+                // Make description visible with a slight delay
+                setTimeout(() => {
+                    description.style.opacity = '1';
+                    description.style.maxHeight = '200px';
+                    description.style.transform = 'translateY(0)';
+                }, 100);
+            } else {
+                this.style.height = '200px';
+                
+                // Hide description
+                const description = this.querySelector('.glob-service-description');
+                description.style.opacity = '0';
+                description.style.maxHeight = '0';
+                description.style.transform = 'translateY(20px)';
+            }
+        });
+        
+        // Add touch event listener for better mobile experience
+        card.addEventListener('touchstart', function() {
+            this.classList.add('touch-active');
+        });
+        
+        card.addEventListener('touchend', function() {
+            this.classList.remove('touch-active');
+        });
+    });
+    
+    // Add event listener for mouseleave on the entire services container
+    servicesContainer.addEventListener('mouseleave', function() {
+        // Remove active class from all services when mouse leaves the entire container
+        serviceItems.forEach(s => s.classList.remove('glob-active'));
+    });
+});
+
+// Add this in your existing DOMContentLoaded function after defining serviceItems
+serviceItems.forEach((item, index) => {
+    setTimeout(() => {
+        // Add flip class to start animation
+        item.classList.add('flip');
+
+        // Remove flip after 3 seconds
+        setTimeout(() => {
+            item.classList.remove('flip');
+        }, 3000);
+
+    }, index * 300); // delay each box animation slightly for a wave effect
+});
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/group-tours.js"></script>
+
+
+<!-- Swiper initialization is in script.js -->
+
+</body>
+</html>
