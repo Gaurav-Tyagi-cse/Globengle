@@ -636,7 +636,7 @@
 
 /* Card Styles */
 .why-card {
-  background: #fff;
+  /* background: #fff; */
   height: 380px;              /* Fixed height */
   width: 100%;
   max-width: 300px;           /* Fixed width */
@@ -2438,7 +2438,7 @@
   width: 100%;
   padding-bottom: 40px;
 }
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .cj-carousel-flex {
     flex-direction: column;
     gap: 10px;
@@ -2449,19 +2449,19 @@
     max-width: 80px;
   }
   .cj-card {
-    width: 95vw !important;
+    width: 100% !important;
     min-width: 0 !important;
     max-width: 98vw !important;
     margin: 0 auto;
   }
   .cj-card img {
-    height: 120px !important;
+    height: 220px !important;
     object-fit: cover;
   }
-}
+} */
 @media (max-width: 600px) {
   .cj-card {
-    width: 98vw !important;
+    width: 100%!important;
     min-width: 0 !important;
     max-width: 99vw !important;
     margin: 0 auto;

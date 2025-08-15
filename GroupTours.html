@@ -278,6 +278,180 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
         font-size: 0.9em;
     }
 }
+.signature-experiences-section {
+  width: 100%;
+  background: #fdf6f3;
+  padding: 0;
+  margin: 0;
+}
+.signature-experiences-wrapper {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 0 32px 0;
+  gap: 0;
+}
+.signature-left {
+  flex: 0 0 80px;
+  min-width: 220px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-center;
+  padding-top: 30px;
+  padding-right: 18px;
+}
+.signature-script {
+  font-family: 'Shadows Into Light', 'Pacifico', cursive;
+  font-size: 38px;
+  color: #888;
+  font-weight: 600;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.signature-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #888;
+  margin-top: 10px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.signature-grid {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.signature-grid-row {
+  display: flex;
+  gap: 12px;
+}
+.signature-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 220px;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 2px 16px rgba(191,161,106,0.10);
+}
+.signature-card-lg {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 240px;
+}
+.signature-card-md {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 180px;
+}
+.signature-card-content {
+  background: linear-gradient(0deg,rgba(0,0,0,0.45) 80%,rgba(0,0,0,0.01) 100%);
+  color: #fff;
+  padding: 22px 18px 18px 18px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.signature-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.signature-card-desc {
+  font-size: 14px;
+  font-weight: 400;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+@media (max-width: 1100px) {
+  .signature-experiences-wrapper {
+    flex-direction: column;
+    gap: 18px;
+    padding: 32px 0 18px 0;
+  }
+  .signature-left {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 0;
+    max-width: 100vw;
+    padding: 0 0 0 0;
+    margin-bottom: 18px;
+  }
+  .signature-title {
+    font-size: 20px;
+    margin-top: 0;
+    margin-left: 16px;
+    text-align: left;
+  }
+  .signature-script {
+    font-size: 24px;
+  }
+}
+@media (max-width: 700px) {
+  .signature-experiences-wrapper {
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px 0 10px 0;
+  }
+ .signature-left {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 0;
+    max-width: 100vw;
+    margin-bottom: 10px;
+    padding: 0 0 0 80px;
+  } 
+  .signature-title {
+    font-size: 15px;
+    margin-top: 0;
+    margin-left: 8px;
+    text-align: left;
+  }
+  .signature-script {
+    font-size: 14px;
+  }
+  .signature-grid {
+    gap: 10px !important;
+    width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+.signature-grid-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+  .signature-card-lg,
+  .signature-card-md {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 180px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+  }
+  .signature-card-content {
+    padding: 12px 8px 10px 8px;
+  }
+  .signature-card-title {
+    font-size: 13px;
+  }
+  .signature-card-desc {
+    font-size: 11px;
+  }
+}
 </style>
 </head>
 <body>
@@ -340,11 +514,373 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
    
 </section>
 
+<!-- Signature Luxury Experiences Section -->
+<section class="signature-experiences-section" style="background: #fdf6f3;">
+  <div class="signature-experiences-wrapper">
+    <!-- Left: Title -->
+    <div class="signature-left">
+      <div class="signature-script">Signature</div>
+      <div class="signature-title">Luxury Experiences</div>
+    </div>
+    <!-- Right: Grid -->
+    <div class="signature-grid">
+      <!-- Top Row -->
+      <div class="signature-grid-row">
+        <div class="signature-card signature-card-lg" style="background-image:url('./images/banner.webp');">
+          <div class="signature-card-content">
+            <div class="signature-card-title">Luxury Wellness in the Snow</div>
+            <div class="signature-card-desc">Unwind in hot spring spas, igloos, experience designer saunas at Finland’s resort Arctic TreeHouse Hotel or Kakslauttanen</div>
+          </div>
+        </div>
+        <div class="signature-card signature-card-lg" style="background-image:url('./images/Australia.jpg');">
+          <div class="signature-card-content">
+            <div class="signature-card-title">Stay in a Glass Igloo in Lapland</div>
+            <div class="signature-card-desc">Sleep under a starry Arctic sky in your own thermal glass dome — ideal for honeymooners and dreamers alike</div>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Row -->
+      <div class="signature-grid-row">
+        <div class="signature-card signature-card-md" style="background-image:url('./images/Finland.jpg');">
+          <div class="signature-card-content">
+            <div class="signature-card-title">Chartered Adventures</div>
+            <div class="signature-card-desc">Enjoy helicopter rides, fly-fishing in crystal-clear lakes, or ski tours in untouched wilderness — all privately guided</div>
+          </div>
+        </div>
+        <div class="signature-card signature-card-md" style="background-image:url('./images/itieneary.jpg');">
+          <div class="signature-card-content">
+            <div class="signature-card-title">Fine Dining at the Edge of the Arctic Circle</div>
+            <div class="signature-card-desc">Dine on fresh king crab, cloudberries, and reindeer in curated tasting menus, surrounded by candlelight and snowy silence</div>
+          </div>
+        </div>
+        <div class="signature-card signature-card-md" style="background-image:url('./images/Japan.jpg');">
+          <div class="signature-card-content">
+            <div class="signature-card-title">Aurora Borealis by Private Sleigh</div>
+            <div class="signature-card-desc">Avoid the crowds — chase the Northern Lights with a local expert on your personal snowmobile or reindeer sled</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- Handpicked Luxury Resorts Section -->
+<section class="handpicked-resorts-section" style="background: #fff;">
+  <div class="handpicked-resorts-wrapper">
+    <!-- Left: Resort Grid -->
+    <div class="handpicked-resorts-grid">
+      <!-- Top Left Large Card -->
+      <div class="resort-card resort-card-lg" style="background-image:url('./images/Australia.jpg');">
+        <div class="resort-card-content">
+          <div class="resort-card-title">Arctic TreeHouse Hotel</div>
+          <div class="resort-card-desc">Lapland’s Iconic Hideaway</div>
+        </div>
+      </div>
+      <!-- Top Right Two Small Cards -->
+      <div class="resort-card resort-card-sm resort-card-sm-1" style="background-image:url('./images/itieneary.jpg');">
+        <div class="resort-card-content">
+          <div class="resort-card-title">Levi Spirit Villas</div>
+          <div class="resort-card-desc">Private Villas with Concierge</div>
+        </div>
+      </div>
+      <div class="resort-card resort-card-sm resort-card-sm-2" style="background-image:url('./images/Japan.jpg');">
+        <div class="resort-card-content">
+          <div class="resort-card-title">Hotel Haven, Helsinki</div>
+          <div class="resort-card-desc">Urban Luxe by the Harbour</div>
+        </div>
+      </div>
+      <!-- Bottom Left Large Card -->
+      <div class="resort-card resort-card-lg resort-card-lg-2" style="background-image:url('./images/Finland.jpg');">
+        <div class="resort-card-content">
+          <div class="resort-card-title">Kakslauttanen Arctic Resort</div>
+          <div class="resort-card-desc">Glass Igloos & Chalets</div>
+        </div>
+      </div>
+      <!-- Bottom Right Large Card -->
+      <div class="resort-card resort-card-lg resort-card-lg-3" style="background-image:url('./images/Australia.jpg');">
+        <div class="resort-card-content">
+          <div class="resort-card-title">Javri Lodge</div>
+          <div class="resort-card-desc">Adults-Only Boutique Lodge with Spa</div>
+        </div>
+      </div>
+    </div>
+    <!-- Right: Title -->
+    <div class="handpicked-resorts-title">
+      <div class="handpicked-script">Handpicked</div>
+      <div class="handpicked-main-title">Luxury Resorts</div>
+    </div>
+  </div>
+</section>
+
+<style>
+.handpicked-resorts-section {
+  width: 100%;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+}
+.handpicked-resorts-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 0 32px 0;
+  gap: 0;
+}
+.handpicked-resorts-grid {
+  position: relative;
+  width: 650px;
+  min-width: 320px;
+  height: 480px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.resort-card {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  display: flex;
+  align-items: flex-end;
+}
+.resort-card-lg {
+  width: 220px;
+  height: 220px;
+}
+.resort-card-sm {
+  width: 200px;
+  height: 265px;
+}
+.resort-card-lg {
+  left: 0;
+  top: 0;
+}
+.resort-card-sm-1 {
+  left: 240px;
+  top: 0;
+}
+.resort-card-sm-2 {
+  left: 460px;
+  top: 0;
+}
+.resort-card-lg-2 {
+  left: 0;
+  top: 240px;
+}
+.resort-card-lg-3 {
+  left: 240px;
+  top: 280px;
+  width: 420px;
+  height: 220px;
+}
+.resort-card-content {
+  background: linear-gradient(0deg,rgba(0,0,0,0.55) 80%,rgba(0,0,0,0.01) 100%);
+  color: #fff;
+  padding: 18px 14px 14px 14px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.resort-card-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.resort-card-desc {
+  font-size: 13px;
+  font-weight: 400;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.handpicked-resorts-title {
+  flex: 0 0 320px;
+  min-width: 220px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 48px;
+}
+.handpicked-script {
+  font-family: 'Shadows Into Light', 'Pacifico', cursive;
+  font-size: 38px;
+  color: #888;
+  font-weight: 600;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.handpicked-main-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #888;
+  margin-top: 10px;
+  text-align: left;
+  letter-spacing: 0.5px;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+@media (max-width: 1100px) {
+  .handpicked-resorts-wrapper {
+    flex-direction: column-reverse;
+    gap: 18px;
+    padding: 32px 0 18px 0;
+  }
+  .handpicked-resorts-title {
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-bottom: 18px;
+  }
+  .handpicked-main-title {
+    font-size: 20px;
+    margin-top: 0;
+    margin-left: 0;
+    text-align: center;
+  }
+  .handpicked-script {
+    font-size: 24px;
+    text-align: center;
+  }
+  .handpicked-resorts-grid {
+    width: 98vw;
+    min-width: 0;
+    height: 420px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 700px) {
+  .handpicked-resorts-wrapper {
+    flex-direction: column-reverse;
+    gap: 10px;
+    padding: 18px 0 10px 0;
+  }
+  .handpicked-resorts-title {
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+  .handpicked-main-title {
+    font-size: 15px;
+    margin-top: 0;
+    margin-left: 0;
+    text-align: center;
+  }
+  .handpicked-script {
+    font-size: 14px;
+    text-align: center;
+  }
+  .handpicked-resorts-grid {
+    position: static;
+    width: 100vw;
+    min-width: 0;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .resort-card,
+  .resort-card-lg,
+  .resort-card-sm,
+  .resort-card-lg-2,
+  .resort-card-lg-3,
+  .resort-card-sm-1,
+  .resort-card-sm-2 {
+    position: static !important;
+    width: 92vw !important;
+    min-width: 0 !important;
+    height: 180px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+  }
+  .resort-card-content {
+    padding: 12px 8px 10px 8px;
+  }
+  .resort-card-title {
+    font-size: 15px;
+  }
+  .resort-card-desc {
+    font-size: 11px;
+  }
+}
+</style>
+
+
+<!-- Why Travel -->
+
+<section class="why-travel" style="background-color: #FDF6F3;">
+  <div class="container text-center">
+    <!-- Section Heading -->
+    <h2 class="why-heading">
+      <span class="silver-South-family">Why</span> travel with GLOBENGEL?
+    </h2>
+
+    <!-- Features Grid -->
+    <div class="row justify-content-center mt-5 heading_font_family">
+      <!-- 1 -->
+      <div class="col-12 col-md-6 col-lg-3 mb-5 why-item">
+        <div class="why-card">
+          <img src="./images/bw1.jpeg" class="why-icon" alt="Thoughtful Curation">
+          <h4 class="why-title">Thoughtful Curation</h4>
+          <p class="why-text">
+            We don’t just plan trips — we curate journeys that match your dreams,
+            personality, and pace. Every itinerary is handpicked and fine-tuned
+            to reflect your unique travel style.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="col-12 col-md-6 col-lg-3 mb-5 why-item">
+        <div class="why-card">
+          <img src="./images/pw2.jpeg" class="why-icon" alt="Global Connect">
+          <h4 class="why-title">Global Connect, Local Expertise</h4>
+          <p class="why-text">
+            With deep-rooted partnerships across the globe, we combine world-class
+            standards with local insight — offering you the best of both worlds,
+            wherever you go.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="col-12 col-md-6 col-lg-3 mb-5 why-item">
+        <div class="why-card">
+          <img src="./images/pw3.png" class="why-icon" alt="Trust & Transparency">
+          <h4 class="why-title">Trust & Transparency</h4>
+          <p class="why-text">
+            We don’t just build trips — we build trust with transparent pricing,
+            honest recommendations, and no hidden surprises. What you see is what you get.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="col-12 col-md-6 col-lg-3 mb-5 why-item">
+        <div class="why-card">
+          <img src="./images/pw4.jpeg" class="why-icon" alt="End-to-End Care">
+          <h4 class="why-title">End-to-End Care</h4>
+          <p class="why-text">
+            From pre-trip planning to on-ground concierge support, we handle every
+            detail so you can simply enjoy the journey.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Curated Journeys Section -->
 <section class="cj-section" id="curated-journeys">
-    <h2 class="cj-title">Curated Journeys</h2>
+    <h2 class="cj-title">Trip Inspiration</h2>
     <div class="cj-container">
 
         <!-- Card 1 -->
@@ -476,218 +1012,12 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
             </div>
         </div>
 
-                <!-- Card 1 -->
-        <div class="cj-card">
-            <img src="./images/bm1.webp" alt="Krabi & Phuket">
-            <div class="cj-card-content">
-                <div class="cj-card-header">
-                    <h3>Spectacular Krabi & Phuket Getaway ...</h3>
-                    <span class="cj-days">5N/6D</span>
-                </div>
-                <p class="cj-subtitle">2N Krabi • 3N Phuket</p>
-                
-                <div class="cj-features-grid">
-                    <ul class="cj-features">
-                        <li>Round Trip Flights</li>
-                        <li>Airport Transfers</li>
-                        <li>Selected Meals</li>
-                    </ul>
-                    <ul class="cj-features">
-                        <li>4 Star Hotels</li>
-                        <li>5 Activities</li>
-                    </ul>
-                </div>
-                
-               
-                
-                <div class="cj-price-box">
-                    <div class="cj-price-left">
-                        <p>No Cost EMI at <span class="cj-emi">₹17,887/month</span></p>
-                    </div>
-                    <div class="cj-price-right">
-                        <p class="cj-price">₹55,751</p>
-                        <div class="cj-price-details">
-                            <div>/Person</div>
-                            <div>Total Price ₹1,11,502</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="cj-card">
-            <img src="./images/bm2.webp" alt="Couples Choice">
-            <div class="cj-card-content">
-                <div class="cj-card-header">
-                    <h3>Couples Choice - Seal Deal</h3>
-                    <span class="cj-days">6N/7D</span>
-                </div>
-                <p class="cj-subtitle">2N Krabi • 1N Phi Phi Island • 3N Phuket</p>
-                
-                <div class="cj-features-grid">
-                    <ul class="cj-features">
-                        <li>Round Trip Flights</li>
-                        <li>Airport Transfers</li>
-                        <li>Selected Meals</li>
-                    </ul>
-                    <ul class="cj-features">
-                        <li>4 Star Hotels</li>
-                        <li>7 Activities</li>
-                    </ul>
-                </div>
-                 
-                <div class="cj-price-box">
-                    <div class="cj-price-left">
-                        <p class="cj-note">This price is lower than the average price in September</p>
-                    </div>
-                    <div class="cj-price-right">
-                        <p class="cj-price">₹59,664</p>
-                        <div class="cj-price-details">
-                            <div>/Person</div>
-                            <div>Total Price ₹1,19,328</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="cj-card">
-            <img src="./images/bw1.jpeg" alt="Krabi & Phuket">
-            <div class="cj-card-content">
-                <div class="cj-card-header">
-                    <h3>Spectacular Krabi & Phuket Getaway ...</h3>
-                    <span class="cj-days">5N/6D</span>
-                </div>
-                <p class="cj-subtitle">2N Krabi • 3N Phuket</p>
-                
-                <div class="cj-features-grid">
-                    <ul class="cj-features">
-                        <li>Round Trip Flights</li>
-                        <li>Airport Transfers</li>
-                        <li>Selected Meals</li>
-                    </ul>
-                    <ul class="cj-features">
-                        <li>4 Star Hotels</li>
-                        <li>5 Activities</li>
-                    </ul>
-                </div>
-                
-                
-                
-                <div class="cj-price-box">
-                    <div class="cj-price-left">
-                        <p>No Cost EMI at <span class="cj-emi">₹17,887/month</span></p>
-                    </div>
-                    <div class="cj-price-right">
-                        <p class="cj-price">₹55,751</p>
-                        <div class="cj-price-details">
-                            <div>/Person</div>
-                            <div>Total Price ₹1,11,502</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
 
     </div>
 </section>
 
-<!-- Grouup Departures -->
-<section class="group-departures py-5" id="group-tours" style="background-color: #f9ebe9;">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="section-title"><span class="silver-South-family">Group</span> Tours</h2>
-      <!-- <p class="section-subtitle">Explore curated group itineraries with seamless planning, trusted guides, and value-packed pricing.</p> -->
-    </div>
-      <!-- Swiper -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <!-- <div class="gt-trip-tag-corner">Timeless Europe</div> -->
-          <img src="./images/banner.webp" alt="Timeless Europe Journey">
-          <div class="gt-travel-content">
-            <h3>TIMELESS EUROPE JOURNEY</h3>
-            <p>9 Days | 3 Countries | 4 Cities</p>
-            <p>Departures- Oct | Nov | Dec</p>
-            <div class="gt-travel-price">INR 1,19,000/- <span>(Per Person)</span></div>
-          </div>
-        </div>
-      </div>
-        <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <!-- <div class="gt-trip-tag-corner">Amazing Dubai</div> -->
-          <img src="./images/trip1.jpeg" alt="Amazing Dubai">
-          <div class="gt-travel-content">
-            <h3>AMAZING DUBAI</h3>
-            <p>7 Days | 1 Country | 3 Cities</p>
-            <p>Departures- Sep | Oct | Nov</p>
-            <div class="gt-travel-price">INR 89,000/- <span>(Per Person)</span></div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <!-- <div class="gt-trip-tag-corner">Bali Paradise</div> -->
-          <img src="./images/trip2.avif" alt="Bali Paradise">
-          <div class="gt-travel-content">
-            <h3>BALI PARADISE</h3>
-            <p>8 Days | 1 Country | 4 Cities</p>
-            <p>Departures- Oct | Dec | Jan</p>
-            <div class="gt-travel-price">INR 95,000/- <span>(Per Person)</span></div>
-          </div>
-        </div>
-      </div>
-        <!-- Slide 4 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <!-- <div class="gt-trip-tag-corner">Asian Explorer</div> -->
-          <img src="./images/banner.webp" alt="Asian Explorer">
-          <div class="gt-travel-content">
-            <h3>ASIAN EXPLORER</h3>
-            <p>12 Days | 3 Countries | 6 Cities</p>
-            <p>Departures- Sep | Oct | Nov</p>
-            <div class="gt-travel-price">INR 1,45,000/- <span>(Per Person)</span></div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Slide 5 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <!-- <div class="gt-trip-tag-corner">Majestic Turkey</div> -->
-          <img src="./images/trip1.jpeg" alt="Majestic Turkey">
-          <div class="gt-travel-content">
-            <h3>MAJESTIC TURKEY</h3>
-            <p>10 Days | 1 Country | 5 Cities</p>
-            <p>Departures- Sep | Oct | Nov</p>
-            <div class="gt-travel-price">INR 1,05,000/- <span>(Per Person)</span></div>
-          </div>
-        </div>
-      </div>        <!-- Slide 6 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <!-- <div class="gt-trip-tag-corner">Egypt Wonder</div> -->
-          <img src="./images/trip2.avif" alt="Egypt Wonder">
-          <div class="gt-travel-content">
-            <h3>EGYPT WONDER</h3>
-            <p>9 Days | 1 Country | 4 Cities</p>
-            <p>Departures- Oct | Nov | Dec</p>
-            <div class="gt-travel-price">INR 1,25,000/- <span>(Per Person)</span></div>
-          </div>
-        </div>
-      </div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-</section>
+
 
 
 
@@ -698,6 +1028,207 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     <div id="things-map"></div>
 </section>
 
+<!-- Best Time to Visit Section -->
+<section class="best-time-section" style="background: #fdf6f3;">
+  <div class="best-time-wrapper">
+    <!-- Left: Info List -->
+    <div class="best-time-left">
+      <div class="best-time-title">
+        <span class="best-script">Best</span> time to visit
+      </div>
+      <div class="best-time-list">
+        <div class="best-time-row">
+          <div class="best-time-icon">
+            <img src="./images/icon-snow.svg" alt="Snow Icon" />
+          </div>
+          <div class="best-time-info">
+            <div class="best-time-main">Snow, Northern Lights, Glass Igloos</div>
+            <div class="best-time-sub">November - March</div>
+          </div>
+        </div>
+        <div class="best-time-row">
+          <div class="best-time-icon">
+            <img src="./images/icon-spring.svg" alt="Spring Icon" />
+          </div>
+          <div class="best-time-info">
+            <div class="best-time-main">Fewer Crowds, Spring Wilderness</div>
+            <div class="best-time-sub">April - June</div>
+          </div>
+        </div>
+        <div class="best-time-row">
+          <div class="best-time-icon">
+            <img src="./images/icon-lake.svg" alt="Lake Icon" />
+          </div>
+          <div class="best-time-info">
+            <div class="best-time-main">Lakeside Luxury, Summer Forests</div>
+            <div class="best-time-sub">July - September</div>
+          </div>
+        </div>
+        <div class="best-time-row">
+          <div class="best-time-icon">
+            <img src="./images/icon-autumn.svg" alt="Autumn Icon" />
+          </div>
+          <div class="best-time-info">
+            <div class="best-time-main">Autumn Foliage & Early Auroras</div>
+            <div class="best-time-sub">October - November</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right: Image -->
+    <div class="best-time-right">
+      <img src="./images/right.jpg" alt="Best Time" />
+    </div>
+  </div>
+</section>
+
+<style>
+.best-time-section {
+  width: 100%;
+  background: #fdf6f3;
+  padding: 0;
+  margin: 0;
+}
+.best-time-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 0 32px 0;
+  gap: 0;
+}
+.best-time-left {
+  flex: 1 1 0;
+  min-width: 260px;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 40px;
+}
+.best-time-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 32px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.best-script {
+  font-family: 'Shadows Into Light', 'Pacifico', cursive;
+  font-size: 2.1rem;
+  color: #888;
+  font-weight: 600;
+  margin-right: 8px;
+  letter-spacing: 1px;
+}
+.best-time-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.best-time-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  border-bottom: 2px solid #bcbcbc;
+  padding-bottom: 18px;
+  margin-bottom: 0;
+}
+.best-time-row:last-child {
+  border-bottom: none;
+}
+.best-time-icon img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  display: block;
+  margin-top: 2px;
+}
+.best-time-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.best-time-main {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #444;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.best-time-sub {
+  font-size: 1rem;
+  color: #888;
+  font-weight: 500;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.best-time-right {
+  flex: 0 0 370px;
+  max-width: 370px;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.best-time-right img {
+  width: 100%;
+  max-width: 370px;
+  aspect-ratio: 1/1;
+  border-radius: 0;
+  object-fit: cover;
+  box-shadow: 0 2px 16px rgba(191,161,106,0.10);
+  background: #eee;
+}
+@media (max-width: 900px) {
+  .best-time-wrapper {
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 0 18px 0;
+    align-items: stretch;
+  }
+  .best-time-left {
+    padding-right: 0;
+    max-width: 100vw;
+    margin-bottom: 18px;
+  }
+  .best-time-title {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+  }
+  .best-script {
+    font-size: 1.3rem;
+  }
+  .best-time-right {
+    max-width: 98vw;
+    margin: 0 auto;
+    justify-content: flex-start;
+  }
+  .best-time-right img {
+    max-width: 98vw;
+    aspect-ratio: 1/1;
+  }
+  .best-time-list {
+    gap: 18px;
+  }
+  .best-time-row {
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+  .best-time-icon img {
+    width: 28px;
+    height: 28px;
+  }
+  .best-time-main {
+    font-size: 0.98rem;
+  }
+  .best-time-sub {
+    font-size: 0.92rem;
+  }
+}
+</style>
 
 <!-- let -->
  <section class="curate-trip-section">
