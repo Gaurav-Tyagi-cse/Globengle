@@ -278,6 +278,111 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
         font-size: 0.9em;
     }
 }
+.overview-section {
+  width: 100%;
+  background: #fdf6f3;
+  padding: 0;
+  margin: 0;
+}
+.overview-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 0 32px 0;
+  gap: 0;
+}
+.overview-left {
+  flex: 1 1 0;
+  min-width: 260px;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 40px;
+}
+.overview-title {
+  font-family: 'Shadows Into Light', 'Pacifico', cursive;
+  font-size: 2rem;
+  color: #444;
+  font-weight: 600;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+.overview-desc {
+  font-size: 1.08rem;
+  color: #444;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.overview-desc strong {
+  font-size: 1.08rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 12px;
+}
+.overview-desc ul {
+  margin-top: 12px;
+  margin-bottom: 0;
+  padding-left: 18px;
+}
+.overview-desc li {
+  font-size: 1.08rem;
+  margin-bottom: 8px;
+  color: #444;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.overview-right {
+  flex: 0 0 370px;
+  max-width: 370px;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overview-right img {
+  width: 100%;
+  max-width: 370px;
+  aspect-ratio: 1/1;
+  border-radius: 0;
+  object-fit: cover;
+  box-shadow: 0 2px 16px rgba(191,161,106,0.10);
+  background: #eee;
+}
+@media (max-width: 900px) {
+  .overview-wrapper {
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 0 18px 0;
+    align-items: stretch;
+  }
+  .overview-left {
+    padding-right: 0;
+    max-width: 100vw;
+    margin-bottom: 18px;
+  }
+  .overview-title {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+  }
+  .overview-right {
+    max-width: 98vw;
+    margin: 0 auto;
+    justify-content: flex-start;
+  }
+  .overview-right img {
+    max-width: 98vw;
+    aspect-ratio: 1/1;
+  }
+  .overview-desc ul {
+    margin-top: 8px;
+    padding-left: 14px;
+  }
+  .overview-desc li {
+    font-size: 0.98rem;
+    margin-bottom: 6px;
+  }
+}
 </style>
 </head>
 <body>
@@ -355,7 +460,35 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     </div>
 </section>
 
-<!-- Overview Section -->
+<!-- Overview Section: Screenshot Style -->
+<section class="overview-section" style="background: #fdf6f3;">
+  <div class="overview-wrapper">
+    <!-- Left: Text Content -->
+    <div class="overview-left">
+      <h2 class="overview-title">Overview</h2>
+      <div class="overview-desc">
+        <strong>Step into a world where you don’t adjust to schedules — the schedule adjusts to you.</strong>
+        <p>
+          GLOBENGEL Charters redefine private and group air travel with curated options across the globe.
+        </p>
+        <p>
+          Whether you're planning a luxurious getaway or an urgent medical evacuation, our charter experiences are driven by comfort, confidentiality, and class.
+        </p>
+        <p><b>What we offer:</b></p>
+        <ul>
+          <li>Global & Domestic Private Jets</li>
+          <li>Group Charters for Leisure or Business</li>
+          <li>Custom Routing & Airport Access</li>
+          <li>End-to-End Ground & Inflight Services</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Right: Image -->
+    <div class="overview-right">
+      <img src="./images/overview.jpg" alt="Private Jet Dining" />
+    </div>
+  </div>
+</section>
 
 <!-- let -->
  <section class="curate-trip-section">
