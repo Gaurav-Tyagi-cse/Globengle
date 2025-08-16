@@ -212,7 +212,15 @@ body.sticky-secondary-navbar-active {
   </div>
 </section>
 
-
+<!-- Second Nav Bar: Move above "Best of New Zealand" and show only on scroll -->
+<nav class="luxury-secondary-navbar" id="luxurySecondaryNavbar" style="display:none;">
+  <ul>
+    <li><a href="#itinerary">ITINERARY</a></li>
+    <li><a href="#hotels">HOTELS</a></li>
+    <li><a href="#tourinfo">TOUR INFORMATION</a></li>
+    <li><a href="#terms">TERMS & CONDITIONS</a></li>
+  </ul>
+</nav>
 
 <!-- Existing Code -->
 
@@ -247,22 +255,89 @@ body.sticky-secondary-navbar-active {
     <div><img src="./iocon/train.png" alt="Train"><span>Train</span></div>
   </div>
 
-  <!-- Highlights -->
-  <div class="highlights">
-    <h3>Tour Highlights</h3>
-    <ul>
-      <li>International Antarctic Centre</li>
-      <li>Helicopter ride over Glacier</li>
-      <li>Milford Sound Cruise</li>
-      <li>Skyline Gondola Ride</li>
-      <li>Bob Peak</li>
-      <li>Lake Tekapo and Lake Pukaki</li>
-      <li>Maori Show</li>
-      <li>Wai-O-Tapu or Te Puia Thermal Reserve</li>
-      <li>Waitomo Glowworm Caves</li>
-      <li>Auckland Sky Tower Observatory Deck</li>
-    </ul>
+  <!-- Highlights & Map Side by Side -->
+  <div class="highlights-map-row" style="display: flex; gap: 40px; align-items: flex-start; justify-content: center; margin-bottom: 32px;">
+    <!-- Tour Highlights (Left) -->
+    <div class="highlights" style="flex: 1 1 0; min-width: 320px; max-width: 540px;">
+      <h3>Tour Highlights</h3>
+      <ul>
+        <li>International Antarctic Centre</li>
+        <li>Helicopter ride over Glacier</li>
+        <li>Milford Sound Cruise</li>
+        <li>Skyline Gondola Ride</li>
+        <li>Bob Peak</li>
+        <li>Lake Tekapo and Lake Pukaki</li>
+        <li>Maori Show</li>
+        <li>Wai-O-Tapu or Te Puia Thermal Reserve</li>
+        <li>Waitomo Glowworm Caves</li>
+        <li>Auckland Sky Tower Observatory Deck</li>
+      </ul>
+    </div>
+    <!-- Map View (Right) -->
+    <div class="itinerary-mapbox" style="flex: 1 1 0; min-width: 320px; max-width: 540px;">
+      <div class="mapview-visual">
+        <img src="./images/mapview.png" alt="Map View" style="width:100%; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.07);" />
+        <a href="#" class="mapview-btn-abs" style="position:absolute; bottom:18px; right:18px; background:#234a97; color:#fff; padding:8px 18px; border-radius:6px; text-decoration:none; font-weight:600;"><i class="fa fa-map"></i> Map View</a>
+      </div>
+      <div class="mapview-link" style="margin-top:12px;">
+        <a href="#">Click here</a> to find the road distance
+      </div>
+    </div>
   </div>
+
+  <style>
+  .highlights-map-row {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .itinerary-mapbox {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 0;
+    min-width: 320px;
+    max-width: 540px;
+  }
+  .mapview-visual {
+    position: relative;
+    width: 100%;
+  }
+  .mapview-btn-abs {
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    background: #234a97;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(35,74,151,0.08);
+  }
+  .mapview-link {
+    margin-top: 12px;
+    font-size: 1rem;
+    color: #234a97;
+  }
+  @media (max-width: 900px) {
+    .highlights-map-row {
+      flex-direction: column;
+      gap: 24px;
+      align-items: stretch;
+    }
+    .itinerary-mapbox {
+      width: 98vw;
+      min-width: 0;
+      max-width: 100vw;
+      margin: 0 auto;
+    }
+  }
+  </style>
 
   <!-- Actions -->
   <div class="actions">
@@ -399,29 +474,20 @@ body.sticky-secondary-navbar-active {
   </div>
 </section>
 
-<!-- Second Nav Bar (Sticky on scroll, Desktop only) -->
-<nav class="luxury-secondary-navbar" id="luxurySecondaryNavbar">
-  <ul>
-    <li><a href="#itinerary">ITINERARY</a></li>
-    <li><a href="#hotels">HOTELS</a></li>
-    <li><a href="#tourinfo">TOUR INFORMATION</a></li>
-    <li><a href="#terms">TERMS & CONDITIONS</a></li>
-  </ul>
-</nav>
-<!-- second navbar -->
-
-
 <!--  -->
   <section class="itinerary-section" id="itinerary">
-  <div class="itinerary-header">
+
+  
+
+ <div class="itinerary-header">
     <h2>Itinerary <span class="itinerary-daywise">(Day Wise)</span></h2>
-    <a href="#" class="itinerary-viewall">View all days</a>
+    <!-- <a href="#" class="itinerary-viewall">View all days</a> -->
     
   </div>
   <div class="itinerary-main">
     <div class="itinerary-list" id="itineraryList"></div>
     <div class="itinerary-side">
-      <div class="itinerary-mapbox sticky">
+      <!-- <div class="itinerary-mapbox sticky">
         <div class="mapview-visual">
           <img src="./images/mapview.png" alt="Map View" />
           <a href="#" class="mapview-btn-abs"><i class="fa fa-map"></i> Map View</a>
@@ -429,15 +495,16 @@ body.sticky-secondary-navbar-active {
         <div class="mapview-link">
           <a href="#">Click here</a> to find the road distance
         </div>
-      </div>
-      <div class="itinerary-actions">
+      </div> -->
+      <!-- <div class="itinerary-actions">
         <a href="#" class="itinerary-action"><i class="fa fa-paper-plane"></i> Send Itinerary</a>
         <a href="#" class="itinerary-action"><i class="fa fa-print"></i> Print Itinerary</a>
         <a href="#" class="itinerary-action"><i class="fa fa-envelope"></i> Email Itinerary</a>
         <a href="#" class="itinerary-action"><i class="fa fa-balance-scale"></i> Compare Tour</a>
-      </div>
+      </div> -->
     </div>
   </div>
+
 
   <!-- Hotels Section -->
   <div class="hotel-section" id="hotels">
@@ -591,8 +658,8 @@ body.sticky-secondary-navbar-active {
   overflow: hidden;
 }
 .hotel-table-header {
-  background: #234a97;
-  color: #fff;
+  background: #FDF6F3;
+  color: rgb(125, 122, 122);
   font-weight: 700;
   display: flex;
   justify-content: space-between;
@@ -609,9 +676,9 @@ body.sticky-secondary-navbar-active {
   color: #222;
   border-top: 1px solid #e5e7eb;
 }
-.hotel-table-row div {
+/* .hotel-table-row div {
   flex: 1 1 0;
-}
+} */
 @media (max-width: 900px) {
   .hotel-enquiry-row {
     flex-direction: column;
@@ -1281,6 +1348,30 @@ document.querySelectorAll('.terms-tab').forEach(tab => {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./js/script.js"></script>
 <!-- Swiper initialization is in script.js -->
+
+<script>
+// Show secondary navbar only on scroll past "Best of New Zealand"
+document.addEventListener('DOMContentLoaded', function() {
+  var navbar = document.getElementById('luxurySecondaryNavbar');
+  var tourTitle = document.querySelector('.tour-title');
+  var showOnScroll = function() {
+    if (window.innerWidth > 551) {
+      var scrollY = window.scrollY || window.pageYOffset;
+      var trigger = tourTitle.getBoundingClientRect().top + window.scrollY;
+      if (scrollY > trigger) {
+        navbar.style.display = 'block';
+      } else {
+        navbar.style.display = 'none';
+      }
+    } else {
+      navbar.style.display = 'none';
+    }
+  };
+  window.addEventListener('scroll', showOnScroll);
+  window.addEventListener('resize', showOnScroll);
+  showOnScroll();
+});
+</script>
 
 </body>
 </html>
