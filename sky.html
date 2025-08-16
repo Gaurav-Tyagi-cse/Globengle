@@ -285,12 +285,12 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <ul class="navbar-nav d-none d-lg-flex">
+   <ul class="navbar-nav d-none d-lg-flex">
       <li class="nav-item"><a class="nav-link" href="Destination.html">DESTINATIONS</a></li>
       <li class="nav-item"><a class="nav-link" href="Luxury.html">LUXURY</a></li>
       <li class="nav-item"><a class="nav-link" href="GroupTours.html">GROUP TOURS</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">VOYAGES</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">BEYOND LEISURE</a></li>
+      <li class="nav-item"><a class="nav-link" href="Voyages.html">VOYAGES</a></li>
+      <li class="nav-item"><a class="nav-link" href="BeyondLeisure.html">BEYOND LEISURE</a></li>
     </ul>
 
     <a class="navbar-brand mx-auto" href="index.html">
@@ -354,6 +354,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     </div>
 </section>
 
+<!-- Overview Section -->
 
 <!-- let -->
  <section class="curate-trip-section">
@@ -527,78 +528,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<script>
-// Center map on Japan
-var map = L.map('things-map', {
-    minZoom: 4,
-    maxZoom: 10
-}).setView([36.2048, 138.2529], 5);
 
-// Use CartoDB Positron (light, English, clean look)
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap contributors & CartoDB'
-}).addTo(map);
-
-// Limit map to Japan's bounding box
-var japanBounds = [
-    [20.4253, 122.9346], // Southwest corner
-    [45.5515, 153.9867]  // Northeast corner
-];
-map.setMaxBounds(japanBounds);
-map.on('drag', function() {
-    map.panInsideBounds(japanBounds, { animate: false });
-});
-
-// Popup card content
-var popupContent = `
-<div class="popup-card">
-    <img src="./images/bm1.webp" alt="Dogo Onsen">
-    <p>Soak in an onsen (hot spring) – Historic Dogo Onsen in Matsuyama is a top place to plunge</p>
-</div>
-`;
-
-// Add marker for Dogo Onsen
-L.marker([33.8416, 132.7654]).addTo(map)
-    .bindPopup(popupContent)
-    .openPopup();
-</script>
-<style>
-/* Map container style for same look */
-#things-map {
-    width: 100%;
-    height: 420px;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    margin: 40px 0 30px 0;
-    border: 1.5px solid #e5e5e5;
-    overflow: hidden;
-}
-
-/* Popup card style for same design */
-.leaflet-popup-content-wrapper {
-    border-radius: 12px !important;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.10) !important;
-    background: #fff !important;
-    border: 1px solid #eee !important;
-}
-.leaflet-popup-content {
-    margin: 8px 8px 8px 8px !important;
-    font-family: 'Montserrat', Arial, sans-serif;
-    color: #444;
-    font-size: 14px;
-}
-.popup-card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    max-width: 220px;
-    display: block;
-}
-.popup-card p {
-    margin: 0;
-    font-size: 13px;
-    color: #333;
-}
-</style>
 </body>
 </html>
