@@ -2634,10 +2634,10 @@
   gap: 32px;
 }
 .luxury-dates-card {
-  background: #fff;
+  /* background: #fff; */
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-  padding: 22px 18px 18px 18px;
+  padding: 22px 0px 18px 0px;
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -3307,7 +3307,7 @@
 .terms-tabs-content {
   background: #fff;
   min-height: 180px;
-  padding: 24px 24px 24px 24px;
+  padding: 24px 0px 24px 0px;
   font-size: 15px;
   color: #444;
 }
