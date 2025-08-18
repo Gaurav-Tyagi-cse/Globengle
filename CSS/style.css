@@ -2481,12 +2481,12 @@
 
 
 .tour-wrapper {
-  /* background: #fdf6f3; */
+  background: #fdf6f3;
   border-radius: 12px;
   box-shadow: 0 2px 16px rgba(191,161,106,0.06);
-  padding: 32px 24px 24px 24px;
+  padding: 32px 35px 24px 35px;
   margin: 32px auto 0 auto;
-  max-width: 1200px;
+  max-width: 100%;
 }
 
 .tour-title {
