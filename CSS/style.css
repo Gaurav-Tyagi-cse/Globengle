@@ -103,7 +103,7 @@
     .contact-info {
       font-size: 14px;
       text-align: right;
-      color: white;
+      /* color: white; */
     }
     .navbar.scrolled .contact-info {
       color: #333;
@@ -118,7 +118,7 @@
     .signin {
       font-size: 14px;
       margin-left: 15px;
-      color: white;
+      /* color: white; */
       cursor: pointer;
     }
     .navbar.scrolled .signin {
