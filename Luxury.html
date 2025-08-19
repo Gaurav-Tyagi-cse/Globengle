@@ -157,7 +157,7 @@ body.sticky-secondary-navbar-active {
   background: #f8f9fb;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(35,74,151,0.08);
-  padding: 28px 24px 20px 24px;
+  /* padding: 28px 24px 20px 24px; */
   width: 100%;
   max-width: 370px;
   font-family: 'Montserrat', Arial, sans-serif;
@@ -169,12 +169,12 @@ body.sticky-secondary-navbar-active {
 .luxury-summary-card h4 {
   font-size: 1.18rem;
   font-weight: 700;
-  margin-bottom: 18px;
+  /* margin-bottom: 18px; */
   color: #234a97;
   letter-spacing: 0.5px;
 }
 .luxury-form-row {
-  margin-bottom: 18px;
+  /* margin-bottom: 18px; */
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -183,7 +183,7 @@ body.sticky-secondary-navbar-active {
   font-size: 0.98rem;
   font-weight: 600;
   color: #444;
-  margin-bottom: 2px;
+  /* margin-bottom: 2px; */
 }
 .luxury-radio-group {
   display: flex;
@@ -316,6 +316,119 @@ body.sticky-secondary-navbar-active {
 }
 </style>
  <!-- CSS for Services Section -->
+<!-- Add/replace these styles for horizontal scrollable date list -->
+<style>
+.luxury-date-list {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  scroll-behavior: smooth;
+}
+.luxury-date-box {
+  min-width: 110px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(35,74,151,0.07);
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  position: relative;
+  flex-shrink: 0;
+}
+.luxury-date-box.active {
+  border-color: #234a97;
+  box-shadow: 0 4px 16px rgba(35,74,151,0.13);
+}
+.luxury-date-box.green { border-color: #1a8c5b; }
+.luxury-date-box.red { border-color: #a2595a; }
+.luxury-date-box.gray { border-color: #d1d5db; }
+.luxury-date-box .date-top {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #234a97;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.luxury-date-box .price {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #1a8c5b;
+  margin-bottom: 2px;
+}
+.luxury-date-box .seats {
+  font-size: 0.92rem;
+  color: #a2595a;
+  font-weight: 500;
+}
+.luxury-date-list::-webkit-scrollbar {
+  height: 6px;
+  background: #eee;
+}
+.luxury-date-list::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 6px;
+}
+@media (max-width: 700px) {
+  .luxury-date-list {
+    gap: 8px;
+    padding-bottom: 6px;
+  }
+  .luxury-date-box {
+    min-width: 92px;
+    padding: 8px 6px;
+    font-size: 0.98rem;
+  }
+}
+</style>
+<style>
+/* Hotel section mobile: show table row-wise, not column-wise */
+@media (max-width: 700px) {
+  .hotel-table-card {
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    overflow-x: auto;
+  }
+  .hotel-table-header,
+  .hotel-table-row {
+    display: block;
+    padding: 10px 8px;
+    font-size: 0.98rem;
+    border-radius: 0;
+    background: none;
+    color: #222;
+  }
+  .hotel-table-header > div,
+  .hotel-table-row > div {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+  }
+  .hotel-table-header > div {
+    color: #234a97;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  .hotel-table-row > div {
+    color: #444;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+}
+</style>
 
 </head>
 <body>
@@ -566,31 +679,19 @@ body.sticky-secondary-navbar-active {
       <label><input type="radio" name="category" value="Premium"> Premium</label>
     </div>
   </div>
-  <!-- <div class="luxury-form-row">
-    <label>Room type</label>
-    <div class="luxury-radio-group">
-      <label><input type="radio" name="room" value="Base" checked> Base</label>
-    </div>
-  </div> -->
+  
   <div class="luxury-form-row">
     <label>Departure Date</label>
     <div class="luxury-date" id="selectedDate">01 Dec 2025</div>
   </div>
-  <!-- <div class="luxury-form-row">
-    <label>EMI Available</label>
-    <div class="luxury-emi" id="emiValue">₹2,548/month</div>
-    <a href="#" class="luxury-link">Check eligibility</a>
-  </div> -->
+  
   <div class="luxury-form-row">
     <label>Starts From</label>
     <div class="luxury-price" id="priceValue">₹75,566 <span class="luxury-price-note">per person on twin sharing<br>*Excludes taxes</span></div>
     <a href="#" class="luxury-link">Detailed tour price</a>
     <a href="#" class="luxury-link">Cancellation Policy</a>
   </div>
-  <div class="luxury-form-row luxury-contact-row">
-    <a href="tel:9910405255" class="luxury-link luxury-phone">9910405255</a>
-    <a href="#" class="luxury-link">Locate Branch office</a>
-  </div>
+  
   <button type="button" class="luxury-enquire-btn">Enquire Now</button>
 </div>
 
@@ -721,9 +822,6 @@ document.addEventListener('DOMContentLoaded', function() {
       </div> -->
     </div>
   </div>
-
-
-  
 
   <!-- Hotel Details Card Section: Card Right, Hotel Table Left, Card Centered Vertically -->
 <section class="hotel-enquiry-section hotel-enquiry-row">
@@ -1140,16 +1238,6 @@ document.querySelectorAll('input[name="category"]').forEach(radio => {
     </div>
   </div>
 </section>
-
-<!-- let -->
- <!-- <section class="curate-trip-section">
-  <div class="curate-content">
-    <h2>
-      Let’s <span class="script-text">Curate</span> your trip
-    </h2>
-    <a href="#" class="curate-btn">CONTACT US</a>
-  </div>
-</section> -->
 
 <!-- Partner Section -->
 
@@ -1591,6 +1679,8 @@ document.addEventListener('DOMContentLoaded', function() {
   color: #fff;
 }
 </style>
+
+<!-- Removed duplicate monthDates declaration to fix redeclaration error -->
 
 </body>
 </html>

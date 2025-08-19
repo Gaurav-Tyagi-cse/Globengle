@@ -2485,7 +2485,7 @@
   border-radius: 12px;
   box-shadow: 0 2px 16px rgba(191,161,106,0.06);
   padding: 32px 58px 24px 56px;
-  margin: 32px auto 0 auto;
+  /* margin: 32px auto 0 auto; */
   max-width: 100%;
 }
 
@@ -3231,7 +3231,7 @@
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 16px rgba(191,161,106,0.06);
-  padding: 32px 24px 24px 24px;
+  padding: 32px 0px 24px 0px;
 }
 .tourinfo-tabs {
   display: flex;
