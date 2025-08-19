@@ -220,7 +220,7 @@
          <div class="mega-menu group-menu">
         <div class="mega-left">
           <ul>
-            <li data-target="family">ARGENTINA, BRAZIL, CHILE</li>
+            <li data-target="family">LATIN AMERICA</li>
             <li data-target="friends">AUSTRALIA</li>
             <li data-target="corporate">CANADA</li>
             <li data-target="couples">EUROPE</li>
@@ -230,7 +230,7 @@
             <li data-target="couples">MOROCCO</li>
             <li data-target="family">NEW ZEALAND</li>
             <li data-target="friends">SOUTH AFRICA</li>
-            <li data-target="corporate">UK</li>
+            <li data-target="corporate">UNITED KINGDOM</li>
             <li data-target="couples">USA</li>
             <li data-target="friends">VIETNAM</li>
           </ul>
@@ -343,8 +343,6 @@
 .mega-left {
   width: 200px;
   border-right: 1px solid #444;
-  max-height: 420px;
-  overflow-y: auto;
 }
 .mega-left ul {
   list-style: none;
@@ -391,8 +389,6 @@
   padding: 0 40px;
   display: none;
   width: 395px;
-  max-height: 420px;
-  overflow-y: auto;
 }
 .mega-right.active {
   display: block;
@@ -407,8 +403,29 @@
   display: flex;
   flex-direction: column;
   gap: 18px; /* yahan gap badha diya hai, items ke beech space ke liye */
-  max-height: 380px;
-  overflow-y: auto;
+}
+
+/* Mega menu dropdown background white, content color gray, no bold */
+.mega-menu {
+  background: #fff;
+  color: #444;
+}
+.mega-left li,
+.mega-right .content a {
+  color: #888;
+  font-weight: normal;
+  background: none;
+}
+.mega-right .content a:hover {
+  color: #fa7a2f;
+  background: #f7f7f7;
+  font-weight: normal;
+}
+.mega-left li {
+  font-weight: normal;
+}
+.mega-right .content.active {
+  background: #fff;
 }
 
 /* Mobile Dropdown Styles */
@@ -434,8 +451,6 @@
   flex-direction: column;
   background: #f9f9f9;
   padding-left: 24px;
-  max-height: 320px;
-  overflow-y: auto;
 }
 .mobile-dropdown-content a {
   color: #222;
@@ -465,8 +480,6 @@
   overflow-y: auto;
   box-shadow: 0 0 12px rgba(0,0,0,0.13);
   transition: left 0.3s;
-  max-height: 100vh;
-  overflow-y: auto;
 }
 .overlay {
   position: fixed;
@@ -525,21 +538,46 @@
   transition: background 0.2s, color 0.2s;
 }
 
-/* Hide scroll bar but allow vertical scrolling for overflow */
-.mega-left,
-.mega-right,
-.mega-right .column,
-.mobile-dropdown-content,
-.mobile-menu {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+/* Navbar dropdown and open state: background white, content gray, no bold */
+.mega-menu,
+.navbar-nav .nav-item.dropdown.active > .nav-link {
+  background: #fff !important;
+  color: #888 !important;
+  font-weight: normal !important;
 }
-.mega-left::-webkit-scrollbar,
-.mega-right::-webkit-scrollbar,
-.mega-right .column::-webkit-scrollbar,
-.mobile-dropdown-content::-webkit-scrollbar,
-.mobile-menu::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+
+/* Dropdown links/content color gray, no bold */
+.mega-left li,
+.mega-right .content a {
+  color: #888 !important;
+  font-weight: normal !important;
+  background: none !important;
+}
+
+/* Dropdown hover: orange text, light gray bg, no bold */
+.mega-right .content a:hover {
+  color: #fa7a2f !important;
+  background: #f7f7f7 !important;
+  font-weight: normal !important;
+}
+
+/* Mega menu right panel background white */
+.mega-right .content.active {
+  background: #fff !important;
+}
+
+/* Dropdown links/content hover animation */
+.mega-left li,
+.mega-right .content a {
+  transition: color 0.2s, transform 0.18s;
+  background: none !important;
+}
+
+.mega-right .content a:hover,
+.mega-left li:hover {
+  color: #fa7a2f !important;
+  transform: translateX(6px);
+  background: none !important;
 }
 </style>
 
