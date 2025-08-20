@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>OpenStreetMap with Highlights</title>
+  <title>Clean Map with Moving Ball</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
     body {
@@ -29,9 +29,11 @@
     // Initialize the map
     const map = L.map('map').setView([28.5, 77.5], 7);
 
-    // Add OpenStreetMap tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    // Add CLEAN basemap (Carto Light Positron)
+    L.tileLayer('https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+      subdomains: 'abcd',
+      maxZoom: 19
     }).addTo(map);
 
     // Predefined locations
@@ -41,10 +43,9 @@
       { name: "Agra", coords: [27.1767, 78.0081] }
     ];
 
-    // Use Globengel Orange
     const globengelOrange = "#FF7900";
 
-    // Add markers with numbers 1, 2, 3
+    // Add markers with numbers
     const markers = locations.map((loc, i) => {
       const icon = L.divIcon({
         className: "number-icon",
@@ -56,38 +57,40 @@
         iconAnchor: [15, 15]
       });
 
+      // Use tooltip instead of popup (shows name only on hover)
       return L.marker(loc.coords, { icon })
         .addTo(map)
-        .bindPopup(`<b>${i+1}. ${loc.name}</b>`);
+        .bindTooltip(loc.name, { permanent: false, direction: "top" });
     });
 
-    // Fit map to markers
+    // Fit map to all markers
     const group = new L.featureGroup(markers);
     map.fitBounds(group.getBounds().pad(0.2));
 
     // Coordinates for line
     const lineCoords = locations.map(loc => loc.coords);
 
-    // Add a dotted polyline between cities
+    // Add SOLID line instead of dotted
     L.polyline(lineCoords, {
       color: globengelOrange,
       weight: 3,
-      opacity: 0.8,
-      dashArray: "10, 10"
+      opacity: 0.9
     }).addTo(map);
 
-    // --- Moving animated marker ---
-    let movingMarker = L.circleMarker(lineCoords[0], {
-      radius: 8,
-      color: "#fff",
-      fillColor: globengelOrange,
-      fillOpacity: 1
-    }).addTo(map);
+    // --- Moving orange ball marker ---
+    let ballIcon = L.divIcon({
+      html: `<div style="background:${globengelOrange}; border-radius:50%; width:20px; height:20px;"></div>`,
+      className: "ball-icon",
+      iconSize: [20, 20],
+      iconAnchor: [10, 10]
+    });
+
+    let movingMarker = L.marker(lineCoords[0], { icon: ballIcon }).addTo(map);
 
     let step = 0;
-    function animateMarker() {
+    function animateBall() {
       step += 1;
-      if (step >= lineCoords.length * 200) { // Reset loop
+      if (step >= lineCoords.length * 200) { // loop
         step = 0;
       }
       const t = (step % 200) / 200;
@@ -100,10 +103,10 @@
       const lng = start[1] + (end[1] - start[1]) * t;
 
       movingMarker.setLatLng([lat, lng]);
-      requestAnimationFrame(animateMarker);
+      requestAnimationFrame(animateBall);
     }
 
-    animateMarker();
+    animateBall();
   </script>
 </body>
 </html>
