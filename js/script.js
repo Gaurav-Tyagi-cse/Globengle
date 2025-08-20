@@ -102,3 +102,35 @@ document.addEventListener('DOMContentLoaded', function() {
       },
     },
   });
+
+  
+const submenuItems = document.querySelectorAll(".mega-left li");
+const rightPanel = document.querySelector(".mega-right");
+const contents = document.querySelectorAll(".mega-right .content");
+
+// submenu hover
+submenuItems.forEach(item => {
+  item.addEventListener("mouseenter", function() {
+    rightPanel.classList.add("active");
+    contents.forEach(c => c.classList.remove("active"));
+    const target = document.getElementById(this.dataset.target);
+    if (target) target.classList.add("active");
+  });
+});
+
+// Hide right panel and contents when mouse leaves the whole dropdown
+document.querySelector('.dropdown').addEventListener('mouseleave', () => {
+  rightPanel.classList.remove('active');
+  contents.forEach(c => c.classList.remove('active'));
+});
+
+// Add/remove .active class on dropdown when submenu is open/closed
+document.querySelectorAll('.nav-item.dropdown').forEach(function(drop) {
+  drop.addEventListener('mouseenter', function() {
+    drop.classList.add('active');
+  });
+  drop.addEventListener('mouseleave', function() {
+    drop.classList.remove('active');
+  });
+});
+

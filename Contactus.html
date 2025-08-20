@@ -51,7 +51,7 @@
           </ul>
         </div>
         <!-- Right Side -->
-        <div class="mega-right">
+       <div class="mega-right">
           <div class="content" id="africa">
             <div class="column">
               <a href="#">Ascension Island</a>
@@ -59,6 +59,7 @@
               <a href="#">Ethiopia</a>
               <a href="#">Kenya</a>
               <a href="#">Madagascar</a>
+              <a href="#">Mauritius</a>
               <a href="#">Morocco</a>
               <a href="#">Namibia</a>
               <a href="#">ReUnion Island</a>
@@ -275,325 +276,7 @@
     </div>
   </div>
 </nav>
-<style>
 
-.menu-left {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-.menu-left > li {
-  position: relative;
-}
-.menu-left > li > a {
-  color: #333;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  padding: 10px 0;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  font-size: 28px;
-  font-family: 'Montserrat', Arial, sans-serif;
-  gap: 4px;
-  margin: 0 40px;
-}
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-.call {
-  text-align: right;
-  color: #333;
-  line-height: 1.2;
-}
-.signin {
-  /* color: #333; */
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 15px;
-  margin-left: 10px;
-}
-.signin:hover {
-  color: #f37021;
-}
-
-/* Mega menu styles (same as before, just color update for white bg) */
-.mega-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: flex;
-  background: #111;
-  color: #fff;
-  padding: 20px;
-  display: none;
-  z-index: 10;
-}
-.dropdown:hover .mega-menu {
-  display: flex;
-}
-.mega-left {
-  width: 200px;
-  /* border-right: 1px solid #444; */
-}
-.mega-left ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.mega-left li {
-  padding: 10px 18px 10px 10px; /* right padding for arrow */
-  cursor: pointer;
-  text-transform: uppercase;
-  color: #c1aa7f;
-  font-size: 15px;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* arrow ko right align karega */
-  border: none;
-  background: none;
-}
-.arrow {
-  font-size: 18px;
-  color: #c1aa7f;
-  margin-left: 10px;
-  margin-right: -8px; /* arrow ko border ke pass lane ke liye */
-}
-.mega-right .content {
-  display: none;
-}
-.mega-right .content.active {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-}
-.mega-right .content a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-}
-.mega-right .content a:hover {
-  color: #f5c518;
-}
-.mega-right {
-  flex: 1;
-  padding: 0 40px;
-  display: none;
-  width: 395px;
-}
-.mega-right.active {
-  display: block;
-}
-.content {
-  display: none;
-}
-.content.active {
-  display: block;
-}
-.mega-right .column {
-  display: flex;
-  flex-direction: column;
-  gap: 18px; /* yahan gap badha diya hai, items ke beech space ke liye */
-}
-
-/* Mega menu dropdown background white, content color gray, no bold */
-.mega-menu {
-  background: #fff;
-  color: #444;
-}
-.mega-left li,
-.mega-right .content a {
-  color: #888;
-  font-weight: normal;
-  background: none;
-}
-.mega-right .content a:hover {
-  color: #fa7a2f;
-  background: #f7f7f7;
-  font-weight: normal;
-}
-.mega-left li {
-  font-weight: normal;
-}
-.mega-right .content.active {
-  background: #fff;
-}
-
-/* Mobile Dropdown Styles */
-.mobile-dropdown {
-  border-bottom: 1px solid #eee;
-}
-.mobile-dropdown-btn {
-  width: 100%;
-  background: none;
-  border: none;
-  color: #222;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-align: left;
-  padding: 14px 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-.mobile-dropdown-content {
-  display: none;
-  flex-direction: column;
-  background: #f9f9f9;
-  padding-left: 24px;
-}
-.mobile-dropdown-content a {
-  color: #222;
-  text-decoration: none;
-  padding: 10px 0;
-  font-size: 1rem;
-  font-weight: 500;
-}
-.mobile-dropdown.open .mobile-dropdown-content {
-  display: flex;
-}
-.arrow {
-  font-size: 18px;
-  color: #fa7a2f;
-}
-
-/* Mobile submenu panel styles */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 320px;
-  max-width: 90vw;
-  height: 100vh;
-  background: #fff;
-  z-index: 9999;
-  overflow-y: auto;
-  box-shadow: 0 0 12px rgba(0,0,0,0.13);
-  transition: left 0.3s;
-}
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(40,40,40,0.3);
-  z-index: 9998;
-  display: none;
-}
-.mobile-submenu-panel {
-  position: absolute;
-  top: 56px; /* below menu-header */
-  left: 0;
-  width: 100%;
-  min-height: calc(100vh - 56px);
-  background: #fff;
-  z-index: 10000;
-  box-shadow: 0 0 8px rgba(0,0,0,0.07);
-  padding: 18px 24px 24px 24px;
-  overflow-y: auto;
-  display: none;
-}
-.menu-header {
-  position: sticky;
-  top: 0;
-  background: #fff;
-  z-index: 10001;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 18px;
-  border-bottom: 1px solid #eee;
-}
-.close-btn {
-  font-size: 2rem;
-  color: #fa7a2f;
-  cursor: pointer;
-  font-weight: bold;
-}
-@media (max-width: 900px) {
-  .navbar-nav {
-    display: none !important;
-  }
-  .mobile-menu {
-    display: block;
-  }
-}
-
-/* Navbar dropdown active color when submenu is open */
-.navbar-nav .nav-item.dropdown.active > .nav-link {
-  background: #111;
-  color: #c1aa7f !important;
-  border-radius: 4px 4px 0 0;
-  transition: background 0.2s, color 0.2s;
-}
-
-/* Navbar dropdown and open state: background white, content gray, no bold */
-.mega-menu,
-.navbar-nav .nav-item.dropdown.active > .nav-link {
-  background: #fff !important;
-  color: #888 !important;
-  font-weight: normal !important;
-}
-
-/* Dropdown links/content color gray, no bold */
-.mega-left li,
-.mega-right .content a {
-  color: #888 !important;
-  font-weight: normal !important;
-  background: none !important;
-}
-
-/* Dropdown hover: orange text, light gray bg, no bold */
-.mega-right .content a:hover {
-  color: #fa7a2f !important;
-  background: #f7f7f7 !important;
-  font-weight: normal !important;
-}
-
-/* Mega menu right panel background white */
-.mega-right .content.active {
-  background: #fff !important;
-}
-
-/* Dropdown links/content hover animation */
-.mega-left li,
-.mega-right .content a {
-  transition: color 0.2s, transform 0.18s;
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-.mega-right .content a:hover,
-.mega-left li:hover {
-  color: #fa7a2f !important;
-  transform: translateX(6px);
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-}
-
-/* If you want a subtle background with rounded corners on hover: */
-.mega-right .content a:hover,
-.mega-left li:hover {
-  color: #fa7a2f !important;
-  /* background: #f7f7f7 !important; */
-  transform: translateX(6px);
-  border-radius: 8px !important;
-}
-</style>
 
 <!-- Sliding Mobile Menu -->
 <div class="mobile-menu">
@@ -896,37 +579,7 @@
 }
 </style>
 
-<script>
-const submenuItems = document.querySelectorAll(".mega-left li");
-const rightPanel = document.querySelector(".mega-right");
-const contents = document.querySelectorAll(".mega-right .content");
 
-// submenu hover
-submenuItems.forEach(item => {
-  item.addEventListener("mouseenter", function() {
-    rightPanel.classList.add("active");
-    contents.forEach(c => c.classList.remove("active"));
-    const target = document.getElementById(this.dataset.target);
-    if (target) target.classList.add("active");
-  });
-});
-
-// Hide right panel and contents when mouse leaves the whole dropdown
-document.querySelector('.dropdown').addEventListener('mouseleave', () => {
-  rightPanel.classList.remove('active');
-  contents.forEach(c => c.classList.remove('active'));
-});
-
-// Add/remove .active class on dropdown when submenu is open/closed
-document.querySelectorAll('.nav-item.dropdown').forEach(function(drop) {
-  drop.addEventListener('mouseenter', function() {
-    drop.classList.add('active');
-  });
-  drop.addEventListener('mouseleave', function() {
-    drop.classList.remove('active');
-  });
-});
-</script>
 
 <!-- let -->
  <section class="curate-trip-section">
@@ -1048,8 +701,6 @@ DISCOVER. <br>
       <p>Copyright 2019-2025 GLOBENGEL</p>
     </div>
 </footer>
-
-
 
 <!-- JS -->
  <!-- JavaScript for Services Section -->
