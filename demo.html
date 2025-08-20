@@ -45,7 +45,73 @@
     const markers = locations.map(loc => {
       return L.marker(loc.coords)
         .addTo(map)
-        .bindPopup(<b>${loc.name}</b>);
+        .bindPopup(`<b>${loc.name}</b>`);
+    });
+
+    // Fit map to markers
+    const group = new L.featureGroup(markers);
+    map.fitBounds(group.getBounds().pad(0.2));
+
+    // Coordinates for line
+    const lineCoords = locations.map(loc => loc.coords);
+
+    // Add a dotted polyline between cities
+    L.polyline(lineCoords, {
+      color: "red",
+      weight: 3,
+      opacity: 0.7,
+      dashArray: "10, 10" // dotted line
+    }).addTo(map);
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OpenStreetMap with Highlights</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    #map {
+      width: 100%;
+      height: 100vh;
+    }
+    .leaflet-popup-content {
+      font-size: 16px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map centered roughly between Delhi, Agra, and Modinagar
+    const map = L.map('map').setView([28.5, 77.5], 7);
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Predefined locations
+    const locations = [
+      { name: "Modinagar", coords: [28.8291, 77.5784] },
+      { name: "Delhi", coords: [28.6139, 77.2090] },
+      { name: "Agra", coords: [27.1767, 78.0081] }
+    ];
+
+    // Add markers for each place
+    const markers = locations.map(loc => {
+      return L.marker(loc.coords)
+        .addTo(map)
+        .bindPopup(`<b>${loc.name}</b>`);
     });
 
     // Fit map to markers
