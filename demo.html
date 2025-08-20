@@ -26,7 +26,7 @@
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
-    // Initialize the map centered roughly between Delhi, Agra, and Modinagar
+    // Initialize the map
     const map = L.map('map').setView([28.5, 77.5], 7);
 
     // Add OpenStreetMap tiles
@@ -41,14 +41,14 @@
       { name: "Agra", coords: [27.1767, 78.0081] }
     ];
 
-    // Colors for start (green), middle (blue), end (red)
-    const colors = ["#27ae60", "#3498db", "#e74c3c"];
+    // Use Globengel Orange
+    const globengelOrange = "#FF7900";
 
     // Add markers with numbers 1, 2, 3
     const markers = locations.map((loc, i) => {
       const icon = L.divIcon({
         className: "number-icon",
-        html: `<div style="background:${colors[i]}; color:white; 
+        html: `<div style="background:${globengelOrange}; color:white; 
                   border-radius:50%; width:30px; height:30px; 
                   display:flex; align-items:center; justify-content:center; 
                   font-weight:bold;">${i+1}</div>`,
@@ -70,11 +70,40 @@
 
     // Add a dotted polyline between cities
     L.polyline(lineCoords, {
-      color: "red",
+      color: globengelOrange,
       weight: 3,
-      opacity: 0.7,
-      dashArray: "10, 10" // dotted line
+      opacity: 0.8,
+      dashArray: "10, 10"
     }).addTo(map);
+
+    // --- Moving animated marker ---
+    let movingMarker = L.circleMarker(lineCoords[0], {
+      radius: 8,
+      color: "#fff",
+      fillColor: globengelOrange,
+      fillOpacity: 1
+    }).addTo(map);
+
+    let step = 0;
+    function animateMarker() {
+      step += 1;
+      if (step >= lineCoords.length * 200) { // Reset loop
+        step = 0;
+      }
+      const t = (step % 200) / 200;
+      const idx = Math.floor(step / 200);
+      const start = lineCoords[idx];
+      const end = lineCoords[(idx + 1) % lineCoords.length];
+
+      // Linear interpolation
+      const lat = start[0] + (end[0] - start[0]) * t;
+      const lng = start[1] + (end[1] - start[1]) * t;
+
+      movingMarker.setLatLng([lat, lng]);
+      requestAnimationFrame(animateMarker);
+    }
+
+    animateMarker();
   </script>
 </body>
 </html>
