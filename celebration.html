@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Globengel: Business</title>
+    <title>Globengel: celebration Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./CSS/group-cards.css">
     <style>
         .hero-section {
-            background: url('../images/r5.jpg') no-repeat center center/cover;
+            background: url('../images/celebrationHeroImg.webp') no-repeat center center/cover;
         }
     </style>
     <!-- CSS for Services Section -->
@@ -294,347 +294,501 @@
             transform: rotateY(180deg);
         }
 
-        /* booking services styles */
 
+        /* Penguien section style */
 
-        .hotel-booking-section {
-            padding: 70px 0;
-            background: #fff;
+        .cruise-section {
+            background: #f8f2ec;
+            padding: 60px 0;
+            font-family: 'Montserrat', Arial, sans-serif;
         }
 
-        .hotel-booking-wrapper {
+        .cruise-wrapper {
             display: flex;
             align-items: flex-start;
-            margin: 0 50px;
+            max-width: 1000px;
+            margin: 0 auto;
+            gap: 80px;
         }
 
-        .hotel-booking-img {
-            width: 55%;
-            border-radius: 48px;
+        .cruise-img img {
+            width: 400px;
+            height: 450px;
             /* object-fit: cover; */
             box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-        }
-
-        .hotel-booking-card {
             background: #fff;
-            border-radius: 40px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.60);
-            padding: 32px 36px;
-            margin-left: -125px;
-            z-index: 2;
-            position: relative;
-            font-family: 'Montserrat', Arial, sans-serif;
-            top: 92px;
-        }
-
-        .hotel-booking-card h2 {
-            font-size: 18px;
-            font-weight: 700;
-            color: #333;
-        }
-
-        .instant-text {
-            font-weight: 600;
-        }
-
-        .strike {
-            font-size: 30px;
-            color: #444;
-            margin-right: 4px;
-        }
-
-        .hotel-booking-card p {
-            font-size: 1rem;
-            color: #444;
-            line-height: 1.2;
-        }
-
-        .hotel-booking-card ul {
-            padding-left: 18px;
-            margin: 0;
-        }
-
-        .hotel-booking-card li {
-            font-size: 1rem;
-            color: #333;
-            line-height: 1.4;
-        }
-
-        .hotel-booking-card b {
-            color: #222;
-        }
-
-        @media (max-width: 900px) {
-            .hotel-booking-wrapper {
-                flex-direction: column;
-                gap: 24px;
-                max-width: 98vw;
-            }
-
-            .hotel-booking-img {
-                width: 100%;
-                border-radius: 32px;
-            }
-
-            .hotel-booking-card {
-                margin-left: 0;
-                max-width: 98vw;
-                border-radius: 24px;
-                padding: 24px 16px;
-                position: relative;
-                top: 0;
-                margin-right: 0 !important;
-            }
-        }
-
-        /* Business Steps section */
-
-        .business-steps-section {
-            background: #f8f2ec;
-            padding: 40px 0 0 0;
-            font-family: 'Montserrat', Arial, sans-serif;
-        }
-
-        .steps-wrapper {
-            display: flex;
-            gap: 0;
-            max-width: 1100px;
-            margin: 0 auto;
-            align-items: flex-start;
-            min-height: 480px;
-        }
-
-        .steps-timeline {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            /* Change from flex-end to flex-start */
-            min-width: 240px;
-            margin-top: 30px;
-            margin-right: 0;
-            height: 420px;
-            justify-content: space-between;
-        }
-
-        .timeline-line {
-            position: absolute;
-            left: 22px;
-            /* Adjust so line matches icons */
-            top: 2px;
-            width: 3px;
-            height: 100%;
-            background: #676767;
-            z-index: 1;
-            border-radius: 2px;
-        }
-
-        .step {
-            display: flex;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-            margin-bottom: 0;
-            min-height: 60px;
-            margin-left: 0;
-            /* Ensure all steps start at same left */
-        }
-
-        .step-icon {
-            min-width: 48px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .step-icon img {
-            width: 35px;
-            height: 55px;
             display: block;
         }
 
-        .step-label-btn {
-            background: none;
-            border: none;
-            outline: none;
-            font-family: inherit;
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: #7a6a58;
-            margin-left: 18px;
-            cursor: pointer;
-            padding: 0;
-            transition: color 0.2s;
-            box-shadow: none;
-        }
-
-        .step-label-btn:focus {
-            outline: none;
-        }
-
-        .step-label {
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: #7a6a58;
-            margin-left: 18px;
-            background: none;
-            padding: 0;
-            border: none;
-        }
-
-        .active-label {
-            display: inline-block;
-            position: relative;
-            background: #fa7a2f;
-            color: #fff;
-            padding: 6px 32px 6px 18px;
-            font-weight: 700;
-            margin-left: 18px;
-            font-size: 1.08rem;
-            box-sizing: border-box;
-            min-width: 110px;
-            border-radius: 0 0 0 0;
-            border: none;
-        }
-
-        .active-label::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: -22px;
-            width: 23px;
-            height: 100%;
-            background: transparent;
-            clip-path: polygon(0 0, 100% 50%, 0 100%);
-            background-color: #fa7a2f;
-        }
-
-        .steps-content {
+        .cruise-content {
             flex: 1;
+            margin-top: 12px;
             display: flex;
             flex-direction: column;
-            margin-top: 30px;
-            margin-left: 40px;
+            justify-content: center;
         }
 
-        .steps-images-row {
-            display: flex;
-            gap: 35px;
-            margin-bottom: 10px;
-            justify-content: flex-end;
-        }
-
-        .steps-img {
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-            object-fit: cover;
-            background: #fff;
-        }
-
-        .main-img {
-            width: 320px;
-            height: 180px;
-        }
-
-        .side-img {
-            width: 220px;
-            height: 180px;
-            transform: rotate(-9deg);
-            margin-top: -19px;
-        }
-
-        .steps-desc {
-            /* margin-top: 18px; */
-        }
-
-        .steps-title-row {
+        .cruise-content h2 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: #444;
+            margin-bottom: 18px;
+            letter-spacing: 0.5px;
             display: flex;
             align-items: center;
-            font-size: 2rem;
-            margin-bottom: 8px;
+            gap: 8px;
         }
 
-        .steps-title-script {
-            font-family: 'Shadows Into Light', cursive;
-            font-size: 2.1rem;
-            color: #7a6a58;
-            margin-right: 10px;
-            font-weight: 400;
-        }
-
-        .steps-title-bold {
+        .cruise-script {
+            font-size: 50px;
             font-weight: 700;
-            color: #7a6a58;
-            font-size: 1.25rem;
+            color: #444;
+            margin-left: 4px;
+            vertical-align: middle;
         }
 
-        .steps-divider {
-            width: 100%;
-            height: 5px;
-            background: #7a6a58;
-            margin: 0px 0 18px 0;
-            border-radius: 2px;
-        }
-
-        .steps-text {
-            font-size: 1.08rem;
-            color: #7a6a58;
-            font-weight: 500;
-            line-height: 1.6;
-            margin-bottom: 0;
+        .cruise-content p {
+            font-size: 1.02rem;
+            color: #444;
+            margin-bottom: 12px;
+            line-height: 1.2;
             text-align: justify;
         }
 
-        .steps-panel {
-            display: none;
+        @media (max-width: 900px) {
+
+            .cruise-wrapper {
+                flex-direction: column;
+                gap: 24px;
+                max-width: 98vw;
+                align-items: center;
+            }
+
+            .cruise-img img {
+                width: 98vw;
+                max-width: 340px;
+                height: auto;
+            }
+
+            .cruise-content {
+                margin-top: 0;
+                padding: 0 20px;
+            }
         }
 
-        .steps-panel.active {
-            display: block;
+        /* Curies line partners section */
+        .cruise-partners-section {
+            background: #fff;
+            padding: 40px 0 40px 0;
+            text-align: center;
+        }
+
+        .cruise-partners-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #444;
+            margin-bottom: 28px;
+
+        }
+
+        .cruise-partners-script {
+            font-size: 50px;
+            font-weight: 700;
+            color: #444;
+            margin: 0 2px;
+            vertical-align: middle;
+        }
+
+        .cruise-logos-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 38px 44px;
+            margin: 0 auto;
+            max-width: 1053px;
+        }
+
+        .cruise-logo {
+            height: 80px;
+            max-width: 200px;
+            object-fit: contain;
+            filter: grayscale(0.2) brightness(1.1);
+            background: #fff;
         }
 
         @media (max-width: 900px) {
 
-            .steps-wrapper {
-                flex-direction: column;
-                gap: 24px;
+            .cruise-logos-row {
+                gap: 24px 18px;
                 max-width: 98vw;
-                min-height: unset;
             }
 
-            .steps-timeline {
-                min-width: 0;
-                align-items: flex-start;
-                margin-bottom: 20px;
-                height: auto;
-                justify-content: flex-start;
-            }
-
-            .steps-content {
-                margin-top: 0;
-                margin-left: 0;
-            }
-
-            .steps-images-row {
-                flex-direction: column;
-                gap: 45px;
-            }
-
-            .main-img,
-            .side-img {
-                width: 98vw;
-                max-width: 340px;
-                height: auto;
-                position: relative;
-                left: 20px;
+            .cruise-logo {
+                height: 32px;
+                max-width: 110px;
             }
         }
+
+        .cruise-region-menu {
+            background: #6c6c6c;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cruise-region-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            min-height: 32px;
+        }
+
+        .cruise-region-item {
+            flex: 1;
+            text-align: center;
+            color: #fff;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 15px 0;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .cruise-region-row a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .cruise-region-row a:visited,
+        .cruise-region-row a:active {
+            color: inherit;
+        }
+
+        .cruise-region-row a .cruise-region-item {
+            color: #fff;
+            background: transparent;
+            border: none;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+            padding: 15px 0;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .cruise-region-row a:hover .cruise-region-item {
+            background: #555;
+        }
+
+        /* Responsive for mobile */
+        @media (max-width: 700px) {
+            .cruise-region-row {
+                flex-direction: column;
+                min-height: unset;
+                gap: 0px;
+            }
+
+            .cruise-region-item {
+                padding: 12px 0;
+                font-size: 1rem;
+                /* border-bottom: 1px solid #888; */
+            }
+
+            .cruise-region-item:last-child {
+                border-bottom: none;
+            }
+        }
+
+        /* Cruise booking card styes */
+        .region-cruise-cards {
+            background: #fff;
+            padding: 32px 0 0 0;
+            /* max-width: 1200px; */
+            margin: 0 auto;
+        }
+
+        .region-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #444;
+            margin-bottom: 26px;
+            font-family: 'Montserrat', Arial, sans-serif;
+            text-align: left;
+            margin-left: 95px;
+        }
+
+        .region-cards-row {
+            display: flex;
+            gap: 28px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cruise-card {
+            background: #fff;
+            border: 1.5px solid #e0e0e0;
+            box-shadow: 0 0px 10px rgba(0, 0, 0, 1);
+            width: 320px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 18px;
+        }
+
+        .cruise-card-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            /* border-bottom: 1px solid #e0e0e0; */
+            background: #fff;
+            display: block;
+            padding: 12px;
+        }
+
+        .cruise-card-body {
+            padding: 0px 12px 5px 18px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .cruise-card-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 12px 0;
+            font-size: 10px;
+            color: #444;
+        }
+
+        .cruise-card-list li {
+            /* margin-bottom: 4px; */
+            /* line-height: 1.5; */
+            display: grid;
+            grid-template-columns: 135px auto;
+            /* Left: fixed width for labels */
+            gap: 0px;
+        }
+
+        .cruise-card-list b {
+            color: #222;
+            font-weight: 600;
+        }
+
+        .cruise-card-list span {
+            color: #555;
+        }
+
+        .cruise-card-list .price {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .cruise-card-btn {
+            display: block;
+            /* width: 90%; */
+            margin: 0 auto;
+            background: #fa7a2f;
+            color: #fff;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            /* border-radius: 3px; */
+            padding: 2px 7px;
+            text-decoration: none;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+            transition: background 0.2s;
+        }
+
+        .cruise-card-btn:hover {
+            background: #d85f1d;
+        }
+
+
+        @media (max-width: 1100px) {
+            .region-cards-row {
+                flex-direction: column;
+                gap: 18px;
+                align-items: center;
+            }
+
+            .cruise-card {
+                width: 98vw;
+                max-width: 340px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .region-cards-row {
+                flex-direction: column;
+                gap: 18px;
+                align-items: center;
+            }
+
+            .cruise-card {
+                width: 98vw;
+                max-width: 340px;
+            }
+        }
+
+        /* Contact Form Section */
+
+        .contact-section {
+  background: #f8f2ec;
+  padding: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.contact-wrapper {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 600px;
+}
+.contact-img {
+  flex: 1.1;
+  min-width: 0;
+}
+.contact-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 480px;
+  border: none;
+  display: block;
+}
+.contact-form-area {
+  flex: 1;
+  background: #f8f2ec;
+  padding: 70px 38px 38px 38px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+.contact-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 28px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  text-align : center;
+}
+.contact-script {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #444;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+.contact-form {
+  width: 100%;
+}
+.contact-row {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.contact-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.contact-field-full {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-form label {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+.contact-form label span {
+  color: #fa7a2f;
+  margin-left: 2px;
+  font-size: 1em;
+}
+.contact-form input,
+.contact-form textarea {
+  border: 1.5px solid #fa7a2f;
+  border-radius: 3px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  margin-bottom: 0;
+  background: #fff;
+  color: #444;
+  outline: none;
+  transition: border 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #d85f1d;
+}
+.contact-form textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+.contact-note {
+  font-size: 0.92rem;
+  color: #888;
+  margin-bottom: 18px;
+  margin-top: -8px;
+}
+.contact-submit-btn {
+  background: #fa7a2f;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  padding: 10px 0;
+  width: 140px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 40px;
+  letter-spacing: 1px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-submit-btn:hover {
+  background: #d85f1d;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-wrapper {
+    flex-direction: column;
+    height: unset;
+  }
+  .contact-img img {
+    min-height: 220px;
+    max-height: 260px;
+  }
+  .contact-form-area {
+    padding: 28px 12px 24px 12px;
+  }
+  .contact-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
     </style>
 </head>
 
 <body>
 
     <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
       <ul class="navbar-nav d-none d-lg-flex">
       <li class="nav-item dropdown">
@@ -879,7 +1033,6 @@
     </div>
   </div>
 </nav>
-
     <!-- Sliding Mobile Menu -->
     <div class="mobile-menu">
         <div class="menu-header">
@@ -899,14 +1052,17 @@
 
     <!-- Hero Section -->
     <section class="hero-section" style="justify-content: start; align-items: end;">
-        <div class="hero-content" style="position: relative; bottom: 70px;">
-            <h5 class="hero-title heading_font_family" style="font-size:45px;">Your Business Travel,
+        <div class="hero-content" style="position: relative; bottom: 70px; max-width: 802px;">
+            <h5 class="hero-title heading_font_family" style="font-size:45px; text-align: start; margin-left: 35px;">
+                Curating
                 <span class="hero-subtitle silver-South-family"
-                    style="font-size: 60px; font-weight: 100; font-style: normal;"> Perfected </span>
+                    style="font-size: 60px; font-weight: 100; font-style: normal;"> Celebrations </span>
+                Across The <span class="hero-subtitle silver-South-family"
+                    style="font-size: 60px; font-weight: 100; font-style: normal;"> Globe </span>
             </h5>
             <p class="heading_font_family" style="font-size: 15px; text-align: start; margin-left: 40px;">
-                From urgent boardroom meetings to global conferences - GLOBENGEL delivers corporate travel solutions
-                with instant confirmations worldwide
+                From grand Indian weddings to intimate milestones, we craft experiences that blend tradition with global
+                elegance.
             </p>
             <!-- <div class="search-box">
                 <input type="text" placeholder="Search by destinations, travel theme">
@@ -915,26 +1071,147 @@
         </div>
     </section>
 
+    <!-- Destination  wedding Section -->
 
-    <!-- Why Travel -->
+    <section class="cruise-section">
+        <div class="cruise-wrapper">
+            <div class="cruise-content">
+                <h2>
+                    <span class="cruise-script silver-South-family"> Destination </span>
+                    Weddings
+                </h2>
+                <b class="mb-2">Take Your Big Day Beyond Borders</b>
+                <p class="mb-0">
+                    A wedding is not just the start of a new journey it's the most cherished chapter in your story. We
+                    curate unforgettable destination weddings across the world, designed exclusively for Indian couples
+                    who dream beyond borders. From serene beaches and royal palaces to fairytale castles and luxury
+                    private islands, we help you choose a setting that mirrors your love story.
+                </p>
+                <p class="mb-0">
+                    Every wedding curated by us reflects a fine balance authentic Indian traditions infused with the
+                    elegance of international hospitality. Imagine a mehndi overlooking turquoise waters, pheras framed
+                    by historic architecture, or a grand reception hosted in a vineyard estate. We partner with global
+                    venues and wedding specialists who understand the scale and significance of Indian celebrations
+                    ensuring seamless execution of rituals, catering, décor, entertainment, and guest experiences.
+                </p>
+                <p class="mb-0">
+                    Whether you envision an intimate gathering or a lavish multi-day celebration, our team ensures every
+                    moment is flawlessly orchestrated. From guest logistics and personalized itineraries to luxury
+                    add-ons like chartered yachts and spa retreats, we transform weddings into once-in-a-lifetime
+                    experiences.
+                </p>
+            </div>
+            <div class="cruise-img">
+                <img src="./images/celeweddingImg.jpg" alt="Destination weddings" style="width: 350px;">
+            </div>
+        </div>
+    </section>
 
-    <section class="why-travel" style="background-color: #FFF6F3;">
+
+    <!-- Penguien Section -->
+
+    <section class="cruise-section" style="background-color: white;">
+        <div class="cruise-wrapper">
+            <div class="cruise-img">
+                <img src="./images/penguinImg.jpg" alt="Penguins Antarctica" style="height: 518px;">
+            </div>
+            <div class="cruise-content">
+                <h2>
+                    <span class="cruise-script silver-South-family">Milestone</span>
+                    Moments
+                </h2>
+                <b class="mb-2">Celebrating Life's Milestones, Your Way.</b>
+                <p class="mb-0">
+                    Some moments deserve to be celebrated with grandeur not just remembered. At GLOBENGEL, we design
+                    milestone celebrations across global destinations for individuals, couples, and families who want to
+                    make life's proudest moments unforgettable.
+                </p>
+                <p class="mb-0">
+                    Whether it's a 25th wedding anniversary, a 50th birthday bash, or any landmark achievement, we
+                    curate tailor-made celebrations in destinations that match your personality. Think private island
+                    getaways with curated entertainment, European vineyard dinners with close family, desert safaris
+                    with luxury glamping, or vibrant parties in the world's most cosmopolitan cities.
+                </p>
+                <P class="mb-0">
+                    We go beyond planning we create experiences. Our team adds personalized touches such as theme-based
+                    décor, curated menus with global and Indian cuisines, exclusive entertainment, and bespoke luxury
+                    elements like yacht cruises, helicopter rides, or private villas. Every celebration is designed to
+                    reflect not just the milestone, but also the journey that brought you here.
+                </P>
+                <P class="mb-0">
+                    With seamless arrangements and exceptional attention to detail, we ensure that your milestone
+                    becomes a memory etched in everyone's hearts. Because life's milestones deserve more than just a
+                    gathering -they deserve a celebration that travels the world with you.
+                </P>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social  gathering Section -->
+
+    <section class="cruise-section">
+        <div class="cruise-wrapper">
+            <div class="cruise-content">
+                <h2>
+                    <span class="cruise-script silver-South-family"> Social </span>
+                    Gatherings
+                </h2>
+                <b class="mb-2">Where Togetherness Turns into Timeless Memories</b>
+                <p class="mb-0">
+                    In today's fast-paced world, few things are as precious as reuniting with family and friends. We
+                    craft memorable reunions and group getaways that bring loved ones together across generations and
+                    geographies. Whether it's cousins meeting after years, a festive family holiday, or a friends'
+                    escape, every gathering is designed to feel effortless yet extraordinary.
+                </p>
+                <p class="mb-0">
+                    From luxury villas in Bali, heritage palaces in Rajasthan, Mediterranean cruises, African safaris,
+                    to countryside estates in Europe, our destinations offer the perfect backdrop for togetherness. Each
+                    journey balances relaxation, adventure, and culture-ensuring there's something for everyone.
+                </p>
+                <p class="mb-0">
+                    Children enjoy theme parks, beach activities, and fun cultural experiences. Parents unwind with fine
+                    dining, spa retreats, and nightlife. Grandparents cherish comfortable stays, scenic tours, and
+                    leisurely exploration. And as a group, evenings come alive with laughter, shared meals, and
+                    traditions that strengthen bonds.
+                </p>
+                <p class="mb-0">
+                    From flights and stays to private transfers, curated experiences, and even custom keepsakes like
+                    photo books or videos-we take care of everything. What remains for you is the joy of connection, the
+                    warmth of togetherness, and memories that will last for generations.
+                </p>
+            </div>
+            <div class="cruise-img">
+                <img src="./images/celeweddingImg.jpg" alt="Destination weddings" style="width: 350px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why choose section -->
+
+    <section class="why-travel">
         <div class="container text-center">
             <!-- Section Heading -->
             <h2 class="why-heading heading_font_family" style="font-weight: 700; color: #333;">
                 <span class="silver-South-family"
                     style="font-size: 50px; font-weight: 700; font-style: normal;">Why</span> choose GLOBENGEL
             </h2>
-
+            <p class="mt-4">
+                Planning a once-in-a-lifetime celebration deserves more than just logistics - it needs vision, emotion,
+                and flawless detail. What sets us apart is our ability to blend Indian traditions with world-class
+                global destinations. Whether it's a grand destination wedding in Europe, a milestone anniversary in
+                Dubai, or a luxury family reunion in Bali, we ensure every event reflects your story and unfolds
+                seamlessly.
+            </p>
             <!-- Features Grid -->
             <div class="row justify-content-center mt-5 heading_font_family">
                 <!-- 1 -->
                 <div class="col-12 col-md-6 col-lg-3 why-item">
                     <div class="why-card">
-                        <img src="./images/r3.jpg" class="buss-why-icon" alt="Thoughtful Curation">
-                        <h4 class="why-title">Instant Global Booking</h4>
+                        <img src="./images/celePlanIcon.png" class="buss-why-icon" alt="Thoughtful Curation">
+                        <h4 class="why-title">Personalized Planning</h4>
                         <p class="why-text">
-                            Hotels, cars, and flights confirmed in seconds — no waiting, no uncertainty.
+                            Every wedding, anniversary, or social gathering is designed around your style, traditions,
+                            and dreams.
                         </p>
                     </div>
                 </div>
@@ -942,10 +1219,11 @@
                 <!-- 2 -->
                 <div class="col-12 col-md-6 col-lg-3 why-item">
                     <div class="why-card">
-                        <img src="./images/r1.jpg" class="buss-why-icon" alt="Global Connect">
-                        <h4 class="why-title">Corporate-Only Expertise</h4>
+                        <img src="./images/celesemlessicon.png" class="buss-why-icon" alt="Global Connect">
+                        <h4 class="why-title">Seamless Execution</h4>
                         <p class="why-text">
-                            Tailored travel solutions built exclusively for business travellers and MICE planners.
+                            From flights, hotels, décor, and entertainment to rituals and guest experiences, everything
+                            is managed end-to-end.
                         </p>
                     </div>
                 </div>
@@ -953,10 +1231,11 @@
                 <!-- 3 -->
                 <div class="col-12 col-md-6 col-lg-3 why-item">
                     <div class="why-card">
-                        <img src="./images/r4.jpg" class="buss-why-icon" alt="Trust & Transparency">
-                        <h4 class="why-title">End-to-End Travel Management</h4>
+                        <img src="./images/celeGlobeIcon.png" class="buss-why-icon" alt="Trust & Transparency">
+                        <h4 class="why-title">Global Network</h4>
                         <p class="why-text">
-                            From visas to insurance, from airport pickup to event logistics - everything under one roof.
+                            Access to the finest resorts, royal palaces, luxury cruises, and private venues across the
+                            world.
                         </p>
                     </div>
                 </div>
@@ -964,331 +1243,68 @@
                 <!-- 4 -->
                 <div class="col-12 col-md-6 col-lg-3 why-item">
                     <div class="why-card">
-                        <img src="./images/r2.jpg" class="buss-why-icon" alt="24/7 Dedicated Support">
-                        <h4 class="why-title">24/7 Dedicated Support</h4>
+                        <img src="./images/celeculturalicon.png" class="buss-why-icon" alt="24/7 Dedicated Support">
+                        <h4 class="why-title">Cultural Expertise</h4>
                         <p class="why-text">
-                            Round-the-clock assistance by a corporate travel desk that knows your itinerary inside out.
+                            Deep understanding of Indian rituals, cuisine, and hospitality, seamlessly woven into
+                            international settings.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+     
+    <!-- Contact Form Section -->
 
-    <!-- booking-services 1 -->
-
-    <section class="hotel-booking-section">
-        <div class="text-center mb-5">
-            <h2 class="section-title heading_font_family" style="font-size: 35px; font-weight: 700;"><span
-                    class="silver-South-family" style="font-size: 50px; font-style: normal;">Our</span> core corporate
-                travel services</h2>
-        </div>
-        <div class="hotel-booking-wrapper">
-            <img src="./images/r5.jpg" alt="Cruise Ship" class="hotel-booking-img" style="height: 474px;">
-            <div class="hotel-booking-card">
-                <h2>
-                    Hotel Bookings Worldwide —
-                    <span class="strike silver-South-family">Instant</span>
-                    Confirmation
+    <section class="contact-section">
+        <div class="contact-wrapper">
+            <div class="contact-img">
+                <img src="./images/celeContactImgs.jpg"
+                    alt="Wedding Decor">
+            </div>
+            <div class="contact-form-area">
+                <h2 class="contact-title">
+                    Contact <span class="contact-script">Us</span>
                 </h2>
-                <p>
-                    We secure business-ready stays in <b>4-star, 5-star, and premium boutique hotels</b> across 100+
-                    countries — confirmed instantly.
-                </p>
-                <ul>
-                    <li><b>Corporate Rates:</b> Specially negotiated for short and long stays.</li>
-                    <li><b>Instant Confirmations:</b> No waiting for approvals or manual checks.</li>
-                    <li><b>Business Amenities:</b> High-speed Wi-Fi, conference facilities, early breakfast, express
-                        check-out.</li>
-                    <li><b>Flexible Policies:</b> Early check-in, late check-out, hassle-free modifications.</li>
-                    <li><b>Special Requests:</b> Executive floors, meeting rooms, loyalty programs.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking service 2 -->
-
-    <section class="hotel-booking-section">
-        <div class="hotel-booking-wrapper">
-            <div class="hotel-booking-card" style="margin-right: -125px; margin-left: 0;">
-                <h2>
-                    Car Bookings Worldwide —
-                    <span class="strike silver-South-family">Instant</span>
-                    Access
-                </h2>
-                <p>
-                    Reliable, comfortable, and punctual ground transport - booked and confirmed in seconds.
-                </p>
-                <ul>
-                    <li><b>Instant Booking:</b> Chauffeur and vehicle details sent immediately.</li>
-                    <li><b>Fleet Options:</b> Executive sedans, SUVs, limousines, vans, and luxury coaches.</li>
-                    <li><b>Professional Chauffeurs:</b> English-speaking, trained in corporate etiquette.</li>
-                    <li><b>Airport Meet & Greet:</b> Fast-track arrivals, baggage assistance.</li>
-                    <li><b>City & Intercity Transfers:</b> For multi-meeting schedules and regional travel.</li>
-                </ul>
-            </div>
-            <img src="./images/r5.jpg" alt="Cruise Ship" class="hotel-booking-img" style="height: 474px;">
-        </div>
-    </section>
-
-    <!-- Booking service 3 -->
-
-    <section class="hotel-booking-section">
-        <div class="hotel-booking-wrapper">
-            <img src="./images/r5.jpg" alt="Cruise Ship" class="hotel-booking-img" style="height: 474px;">
-            <div class="hotel-booking-card">
-                <h2>
-                    MICE Travel —
-                    <span class="strike silver-South-family">Solutions</span>
-                    (Meetings, Incentives, Conferences, Exhibitions)
-                </h2>
-                <p>
-                    From <b>venue sourcing to delegate logistics,</b> we manage every detail so you can focus on
-                    business outcomes.
-                </p>
-                <ul>
-                    <li><b>Venue Selection & Negotiation:</b> Hotels, convention centres, unique event spaces.</li>
-                    <li><b>Delegate Travel & Accommodation:</b> Group flights, instant hotel bookings, seamless
-                        transfers.</li>
-                    <li><b>Event Production:</b> AV setup, branding, stage design, gala dinners.</li>
-                    <li><b>Program Management:</b> Business agendas, networking activities, leisure add-ons.</li>
-                    <li><b>Team-Building Experiences:</b> Curated cultural and adventure options.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking service 4 -->
-
-    <section class="hotel-booking-section">
-        <div class="hotel-booking-wrapper">
-            <div class="hotel-booking-card" style="margin-right: -125px; margin-left: 0;">
-                <h2>
-                    Flight Tickets —
-                    <span class="strike silver-South-family">Instant</span>
-                    Ticketing
-                </h2>
-                <p>
-                    Fast, flexible air travel solutions for corporate schedules.
-                </p>
-                <ul>
-                    <li><b>Instant Ticket Issuance:</b> E-tickets delivered within minutes.</li>
-                    <li><b>Corporate Fare Advantages:</b> Extra baggage, preferred seating, flexible date changes.</li>
-                    <li><b>Multi-City Routing:</b> Efficient itineraries for complex travel needs.</li>
-                    <li><b>Priority Access:</b> Last-seat availability and competitive fares.</li>
-                    <li><b>All Travel Classes:</b> Economy to First Class.</li>
-                </ul>
-            </div>
-            <img src="./images/r5.jpg" alt="Cruise Ship" class="hotel-booking-img" style="height: 474px;">
-        </div>
-    </section>
-
-
-    <!-- Booking service 5 -->
-
-    <section class="hotel-booking-section">
-        <div class="hotel-booking-wrapper">
-            <img src="./images/r5.jpg" alt="Cruise Ship" class="hotel-booking-img" style="height: 474px;">
-            <div class="hotel-booking-card">
-                <h2>
-                    Visa & Travel —
-                    <span class="strike silver-South-family">Insurance</span>
-                </h2>
-                <p>
-                    Smooth, compliant, and secure travel documentation.
-                </p>
-                <ul>
-                    <li><b>Business Visa Support:</b> Schengen, US, UK, Canada, and more.</li>
-                    <li><b>Complete Documentation Help:</b> Invitation letters, financial proofs, cover letters.</li>
-                    <li><b>Priority Processing:</b> For urgent departures.</li>
-                    <li><b>Comprehensive Insurance:</b> Medical, cancellation, baggage cover.</li>
-                    <li><b>Group Coverage:</b> Tailored plans for MICE and corporate delegations.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!--  -->
-
-    <!-- business-steps-section -->
-
-    <section class="business-steps-section">
-        <div class="text-center mb-5">
-            <h2>
-                <span class="silver-South-family"> From </span> Brief to Beyond
-            </h2>
-        </div>
-        <div class="steps-wrapper">
-            <!-- Timeline Left -->
-            <div class="steps-timeline">
-                <div class="timeline-line"></div>
-                <div class="step">
-                    <div class="step-icon">
-                        <img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="Balloon" />
-                    </div>
-                    <button class="step-label-btn active-label" data-step="briefing">Briefing</button>
-                </div>
-                <div class="step">
-                    <div class="step-icon">
-                        <img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="Balloon" />
-                    </div>
-                    <button class="step-label-btn step-label" data-step="curated">Curated Options</button>
-                </div>
-                <div class="step">
-                    <div class="step-icon">
-                        <img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="Balloon" />
-                    </div>
-                    <button class="step-label-btn step-label" data-step="booking">Instant Booking</button>
-                </div>
-                <div class="step">
-                    <div class="step-icon">
-                        <img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="Balloon" />
-                    </div>
-                    <button class="step-label-btn step-label" data-step="support">On-Trip Support</button>
-                </div>
-                <div class="step">
-                    <div class="step-icon">
-                        <img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="Balloon" />
-                    </div>
-                    <button class="step-label-btn step-label" data-step="analysis">Post-Trip Analysis</button>
-                </div>
-            </div>
-            <!-- Content Right -->
-            <div class="steps-content">
-                <div class="steps-panel active" id="briefing-panel">
-                    <div class="steps-images-row">
-                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80"
-                            class="steps-img side-img" alt="Business Meeting">
-                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=500&q=80"
-                            class="steps-img main-img" alt="Business Meeting">
-                    </div>
-                    <div class="steps-desc">
-                        <div class="steps-divider"></div>
-                        <div class="steps-title-row">
-                            <span class="steps-title-script">Understanding</span>
-                            <span class="steps-title-bold">Your Business Needs</span>
+                <form class="contact-form">
+                    <div class="contact-row">
+                        <div class="contact-field">
+                            <label for="fname">FIRST NAME<span>*</span></label>
+                            <input type="text" id="fname" name="fname" placeholder="FIRST NAME" required>
                         </div>
-                        <p class="steps-text">
-                            Before we start planning, we start listening. Whether it’s a single executive trip or a
-                            multi-city corporate
-                            delegation, we take time to understand your travel goals, budget parameters, preferred
-                            airlines or hotel
-                            brands, and any unique requirements — from dietary preferences to meeting space needs.
-                        </p>
-                    </div>
-                </div>
-                <div class="steps-panel" id="curated-panel">
-                    <div class="steps-images-row">
-                        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
-                            class="steps-img side-img" alt="Curated Options">
-                        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=500&q=80"
-                            class="steps-img main-img" alt="Curated Options">
-                    </div>
-                    <div class="steps-desc">
-                        <div class="steps-divider"></div>
-                        <div class="steps-title-row">
-                            <span class="steps-title-bold"> Smart Choices, </span>
-                            <span class="steps-title-script"> Handpicked </span>
-                            <span class="steps-title-bold"> for You </span>
+                        <div class="contact-field">
+                            <label for="lname">LAST NAME<span>*</span></label>
+                            <input type="text" id="lname" name="lname" placeholder="LAST NAME" required>
                         </div>
-                        <p class="steps-text">
-                           Our team combines insider knowledge, global supplier access, and corporate-rate contracts to present you with the most relevant and competitive options. Expect multiple choices for flights, hotels, and cars - each carefully selected for location convenience, comfort, and cost-efficiency.
-                        </p>
                     </div>
-                </div>
-                <div class="steps-panel" id="booking-panel">
-                    <div class="steps-images-row">
-                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
-                            class="steps-img side-img" alt="Instant Booking">
-                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80"
-                            class="steps-img main-img" alt="Instant Booking">
-                    </div>
-                    <div class="steps-desc">
-                        <div class="steps-divider"></div>
-                        <div class="steps-title-row">
-                            <span class="steps-title-script">Confirmed</span>
-                            <span class="steps-title-bold">in Minutes</span>
+                    <div class="contact-row">
+                        <div class="contact-field">
+                            <label for="mobile">MOBILE NUMBER<span>*</span></label>
+                            <input type="text" id="mobile" name="mobile" placeholder="MOBILE NUMBER" required>
                         </div>
-                        <p class="steps-text">
-                            With our global booking systems, flights, hotels, and car rentals are confirmed in real-time. No waiting, no uncertainty - your travellers get instant e-tickets, hotel vouchers, and ground transfer details, ensuring a smooth start to every journey.
-                        </p>
-                    </div>
-                </div>
-                <div class="steps-panel" id="support-panel">
-                    <div class="steps-images-row">
-                        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=400&q=80"
-                            class="steps-img side-img" alt="On-Trip Support">
-                        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=500&q=80"
-                            class="steps-img main-img" alt="On-Trip Support">
-                    </div>
-                    <div class="steps-desc">
-                        <div class="steps-divider"></div>
-                        <div class="steps-title-row">
-                            <span class="steps-title-bold">Your 24/7</span>
-                            <span class="steps-title-script">Travel</span>
-                            <span class="steps-title-bold">Desk</span>
+                        <div class="contact-field">
+                            <label for="email">EMAIL<span>*</span></label>
+                            <input type="email" id="email" name="email" placeholder="EMAIL" required>
                         </div>
-                        <p class="steps-text">
-                            Business travel doesn't stop at ticketing - neither do we. Our dedicated support team is available around the clock for any changes, delays, cancellations, or urgent assistance. We handle disruptions so your travellers can stay focused on their work.
-                        </p>
                     </div>
-                </div>
-                <div class="steps-panel" id="analysis-panel">
-                    <div class="steps-images-row">
-                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
-                            class="steps-img side-img" alt="Post-Trip Analysis">
-                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=500&q=80"
-                            class="steps-img main-img" alt="Post-Trip Analysis">
-                    </div>
-                    <div class="steps-desc">
-                        <div class="steps-divider"></div>
-                        <div class="steps-title-row">
-                            <span class="steps-title-script">Smarter </span>
-                            <span class="steps-title-bold"> Every Time You Travel</span>
+                    <div class="contact-row">
+                        <div class="contact-field-full">
+                            <label for="details">TRAVEL DETAILS<span>*</span></label>
+                            <textarea id="details" name="details" placeholder="Type your message here."
+                                required></textarea>
                         </div>
-                        <p class="steps-text">
-                            After your journey, we provide a detailed travel summary with cost breakdowns, traveller feedback, and optimisation suggestions for future trips. Over time, this means leaner budgets, happier travellers, and a more efficient travel programme.
-                        </p>
                     </div>
-                </div>
+                    <div class="contact-note">
+                        *Your details are safe with us. We respect your privacy.
+                    </div>
+                    <button type="submit" class="contact-submit-btn">SUBMIT</button>
+                </form>
             </div>
         </div>
     </section>
-<script>
-     // Steps functionality
-        const steps = document.querySelectorAll(".step-label-btn");
-        const panels = document.querySelectorAll(".steps-panel");
 
-        steps.forEach(step => {
-            step.addEventListener("click", function () {
-                const targetPanel = document.getElementById(this.dataset.step + "-panel");
-
-                // Update active step
-                steps.forEach(s => s.classList.remove("active-label", "step-label"));
-                this.classList.add("active-label");
-
-                // Show corresponding panel
-                panels.forEach(p => p.classList.remove("active"));
-                targetPanel.classList.add("active");
-            });
-        });
-</script>
-
-
-    <!-- Business Travel Section -->
-    <section class="curate-trip-section">
-        <div class="curate-content">
-            <h2 style="margin-bottom: 15px;">
-                Business Travel. <span class="script-text silver-South-family"> Simplified </span>
-            </h2>
-            <P class="mb-5">
-                Whether it's a single city meeting or a global conference, we make it happen - instantly and seamlessly
-            </P>
-            <a href="#" class="curate-btn">CONTACT US</a>
-        </div>
-    </section>
-
-
+   
     <!-- Partner Section -->
 
     <section class="logo-slider-section">

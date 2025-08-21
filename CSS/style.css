@@ -3756,3 +3756,29 @@
   transform: translateX(6px);
   border-radius: 8px !important;
 }
+
+
+/* Remove underline and color change from mega menu links */
+.mega-menu a,
+.mega-menu .column a,
+.mega-menu .content a {
+    text-decoration: none !important;
+    color: inherit !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    transition: none !important;
+}
+
+.mega-menu a:hover,
+.mega-menu .column a:hover,
+.mega-menu .content a:hover {
+    text-decoration: none !important;
+    color: inherit !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
+.region-cruise-cards {
+    scroll-margin-top: 30rem !important; /* secondaryMenu ki height + thoda gap */
+}

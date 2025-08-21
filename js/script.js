@@ -61,9 +61,6 @@ function slideInspired(direction) {
 
 // Optional: Autoplay
 setInterval(() => slideInspired(1), 4000); 
-
-
-
   // Swiper JS
   // Initialize Testimonial Slider
 document.addEventListener('DOMContentLoaded', function() {
@@ -133,4 +130,7 @@ document.querySelectorAll('.nav-item.dropdown').forEach(function(drop) {
     drop.classList.remove('active');
   });
 });
+
+
+// 
 
