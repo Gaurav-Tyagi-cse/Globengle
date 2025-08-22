@@ -1,5 +1,4 @@
-
-  const navbar = document.querySelector('.navbar');
+const navbar = document.querySelector('.navbar');
   const menuBtn = document.querySelector('.navbar-toggler');
   const mobileMenu = document.querySelector('.mobile-menu');
   const overlay = document.querySelector('.overlay');
@@ -61,6 +60,19 @@ function slideInspired(direction) {
 
 // Optional: Autoplay
 setInterval(() => slideInspired(1), 4000); 
+
+// Add left button loop logic
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+if (prevBtn && nextBtn) {
+  prevBtn.addEventListener('click', function() {
+    slideInspired(-1);
+  });
+  nextBtn.addEventListener('click', function() {
+    slideInspired(1);
+  });
+}
+
   // Swiper JS
   // Initialize Testimonial Slider
 document.addEventListener('DOMContentLoaded', function() {
@@ -132,5 +144,5 @@ document.querySelectorAll('.nav-item.dropdown').forEach(function(drop) {
 });
 
 
-// 
+//
 

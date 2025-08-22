@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
-    },    breakpoints: {
+    },    
+    breakpoints: {
       640: {
         slidesPerView: 2,
         spaceBetween: 15,
@@ -28,5 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
       delay: 3000,
       disableOnInteraction: false,
     },
+    loop: true, // Enable infinite loop
+    // Fix for Swiper loop: duplicate slides for seamless loop
+    watchSlidesProgress: true,
+    grabCursor: true,
   });
 });
