@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Globengel: World Page</title>
+    <title>Globengel: Global-Eduction</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./CSS/group-cards.css">
     <style>
         .hero-section {
-            background: url('../images/worldHeroImg.webp') no-repeat center center/cover;
+            background: url('./images/globaleduHeroImg.jpg') no-repeat center center/cover;
         }
     </style>
     <!-- CSS for Services Section -->
@@ -294,272 +294,737 @@
             transform: rotateY(180deg);
         }
 
-       
-        /* Penguien section style */
+        /* booking services styles */
 
-        .cruise-section {
-            background: #f8f2ec;
-            padding: 60px 0;
-            font-family: 'Montserrat', Arial, sans-serif;
+
+        .hotel-booking-section {
+            padding: 70px 0;
+            background: #fff;
         }
 
-        .cruise-wrapper {
+        .hotel-booking-wrapper {
             display: flex;
             align-items: flex-start;
-            max-width: 1000px;
-            margin: 0 auto;
-            gap: 80px;
+            margin: 0 50px;
         }
 
-        .cruise-img img {
-            width: 400px;
-            height: 450px;
+        .hotel-booking-img {
+            width: 55%;
+            border-radius: 48px;
             /* object-fit: cover; */
             box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .hotel-booking-card {
             background: #fff;
-            display: block;
-        }
-
-        .cruise-content {
-            flex: 1;
-            margin-top: 12px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .cruise-content h2 {
-            font-size: 1.45rem;
-            font-weight: 700;
-            color: #444;
-            margin-bottom: 18px;
-            letter-spacing: 0.5px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .cruise-script {
-            font-size: 50px;
-            font-weight: 700;
-            color: #444;
-            margin-left: 4px;
-            vertical-align: middle;
-        }
-
-        .cruise-content p {
-            font-size: 1.02rem;
-            color: #444;
-            margin-bottom: 12px;
-            line-height: 1.7;
-            text-align: justify;
-        }
-
-        @media (max-width: 900px) {
-
-            .cruise-wrapper {
-                flex-direction: column;
-                gap: 24px;
-                max-width: 98vw;
-                align-items: center;
-            }
-
-            .cruise-img img {
-                width: 98vw;
-                max-width: 340px;
-                height: auto;
-            }
-
-            .cruise-content {
-                margin-top: 0;
-            }
-        }
-
-        /* Curies line partners section */
-        .cruise-partners-section {
-            background: #fff;
-            padding: 40px 0 40px 0;
-            text-align: center;
-        }
-
-        .cruise-partners-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #444;
-            margin-bottom: 28px;
-
-        }
-
-        .cruise-partners-script {
-            font-size: 50px;
-            font-weight: 700;
-            color: #444;
-            margin: 0 2px;
-            vertical-align: middle;
-        }
-
-        .cruise-logos-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 38px 44px;
-            margin: 0 auto;
-            max-width: 1053px;
-        }
-
-        .cruise-logo {
-            height: 80px;
-            max-width: 200px;
-            object-fit: contain;
-            filter: grayscale(0.2) brightness(1.1);
-            background: #fff;
-        }
-
-        @media (max-width: 900px) {
-
-            .cruise-logos-row {
-                gap: 24px 18px;
-                max-width: 98vw;
-            }
-
-            .cruise-logo {
-                height: 32px;
-                max-width: 110px;
-            }
-        }
-
-
-        /* Cruise booking card styes */
-        .region-cruise-cards {
-            background: #fff;
-            padding: 32px 0 0 0;
-            /* max-width: 1200px; */
-            margin: 0 auto;
-        }
-
-        .region-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: #444;
-            margin-bottom: 26px;
+            border-radius: 40px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.60);
+            padding: 32px 36px;
+            margin-left: -125px;
+            z-index: 2;
+            position: relative;
             font-family: 'Montserrat', Arial, sans-serif;
-            text-align: left;
-            margin-left: 95px;
+            top: 92px;
         }
 
-        .region-cards-row {
-            display: flex;
-            gap: 28px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cruise-card {
-            background: #fff;
-            border: 1.5px solid #e0e0e0;
-            box-shadow: 0 0px 10px rgba(0, 0, 0, 1);
-            width: 320px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 18px;
-        }
-
-        .cruise-card-img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            /* border-bottom: 1px solid #e0e0e0; */
-            background: #fff;
-            display: block;
-            padding: 12px;
-        }
-
-        .cruise-card-body {
-            padding: 0px 12px 5px 18px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-        }
-
-        .cruise-card-list {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 12px 0;
-            font-size: 10px;
-            color: #444;
-        }
-
-        .cruise-card-list li {
-            /* margin-bottom: 4px; */
-            /* line-height: 1.5; */
-            display: grid;
-            grid-template-columns: 135px auto;
-            /* Left: fixed width for labels */
-            gap: 0px;
-        }
-
-        .cruise-card-list b {
-            color: #222;
-            font-weight: 600;
-        }
-
-        .cruise-card-list span {
-            color: #555;
-        }
-
-        .cruise-card-list .price {
-            font-weight: bold;
+        .hotel-booking-card h2 {
+            font-size: 18px;
+            font-weight: 700;
             color: #333;
         }
 
-        .cruise-card-btn {
-            display: block;
-            /* width: 90%; */
+        .instant-text {
+            font-weight: 600;
+        }
+
+        .strike {
+            font-size: 30px;
+            color: #444;
+            margin-right: 4px;
+        }
+
+        .hotel-booking-card p {
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.2;
+        }
+
+        .hotel-booking-card ul {
+            padding-left: 18px;
+            margin: 0;
+        }
+
+        .hotel-booking-card li {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .hotel-booking-card b {
+            color: #222;
+        }
+
+        @media (max-width: 900px) {
+            .hotel-booking-wrapper {
+                flex-direction: column;
+                gap: 24px;
+                max-width: 98vw;
+            }
+
+            .hotel-booking-img {
+                width: 100%;
+                border-radius: 32px;
+            }
+
+            .hotel-booking-card {
+                margin-left: 0;
+                max-width: 98vw;
+                border-radius: 24px;
+                padding: 24px 16px;
+                position: relative;
+                top: 0;
+                margin-right: 0 !important;
+            }
+        }
+
+        /* years Steps section */
+
+        .business-steps-section {
+            background: white;
+            padding: 40px 0 0 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+
+        .steps-wrapper {
+            display: flex;
+            gap: 0;
+            max-width: 1100px;
             margin: 0 auto;
+            align-items: flex-start;
+            min-height: 480px;
+        }
+
+        .steps-timeline {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            /* Change from flex-end to flex-start */
+            min-width: 240px;
+            margin-top: 30px;
+            margin-right: 0;
+            height: 420px;
+            justify-content: space-between;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 22px;
+            /* Adjust so line matches icons */
+            top: 2px;
+            width: 3px;
+            height: 100%;
+            background: #676767;
+            z-index: 1;
+            border-radius: 2px;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 0;
+            min-height: 60px;
+            margin-left: 0;
+            /* Ensure all steps start at same left */
+        }
+
+        .step-icon {
+            min-width: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .step-icon img {
+            width: 35px;
+            height: 55px;
+            display: block;
+        }
+
+        .step-label-btn {
+            background: none;
+            border: none;
+            outline: none;
+            font-family: inherit;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #7a6a58;
+            margin-left: 18px;
+            cursor: pointer;
+            padding: 0;
+            transition: color 0.2s;
+            box-shadow: none;
+        }
+
+        .step-label-btn:focus {
+            outline: none;
+        }
+
+        .step-label {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #7a6a58;
+            margin-left: 18px;
+            background: none;
+            padding: 0;
+            border: none;
+        }
+
+        .active-label {
+            display: inline-block;
+            position: relative;
             background: #fa7a2f;
             color: #fff;
-            text-align: center;
-            font-weight: 600;
-            font-size: 1rem;
+            padding: 6px 32px 6px 18px;
+            font-weight: 700;
+            margin-left: 18px;
+            font-size: 1.08rem;
+            box-sizing: border-box;
+            min-width: 110px;
+            border-radius: 0 0 0 0;
             border: none;
-            /* border-radius: 3px; */
-            padding: 2px 7px;
-            text-decoration: none;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
-            transition: background 0.2s;
         }
 
-        .cruise-card-btn:hover {
-            background: #d85f1d;
+        .active-label::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -22px;
+            width: 23px;
+            height: 100%;
+            background: transparent;
+            clip-path: polygon(0 0, 100% 50%, 0 100%);
+            background-color: #fa7a2f;
         }
 
+        .steps-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            margin-left: 40px;
+        }
 
-        @media (max-width: 1100px) {
-            .region-cards-row {
+        .steps-images-row {
+            display: flex;
+            gap: 35px;
+            margin-bottom: 10px;
+            justify-content: flex-end;
+        }
+
+        .steps-img {
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            object-fit: cover;
+            background: #fff;
+        }
+
+        .main-img {
+            width: 320px;
+            height: 180px;
+        }
+
+        .side-img {
+            width: 220px;
+            height: 180px;
+            transform: rotate(-9deg);
+            margin-top: -19px;
+        }
+
+        .steps-desc {
+            /* margin-top: 18px; */
+        }
+
+        .steps-title-row {
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .steps-title-script {
+            font-family: 'Shadows Into Light', cursive;
+            font-size: 2.1rem;
+            color: #7a6a58;
+            margin-right: 10px;
+            font-weight: 400;
+        }
+
+        .steps-title-bold {
+            font-weight: 700;
+            color: #7a6a58;
+            font-size: 1.25rem;
+        }
+
+        .steps-divider {
+            width: 100%;
+            height: 5px;
+            background: #7a6a58;
+            margin: 0px 0 18px 0;
+            border-radius: 2px;
+        }
+
+        .steps-text {
+            font-size: 1.08rem;
+            color: #7a6a58;
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: 0;
+            text-align: justify;
+        }
+
+        .steps-panel {
+            display: none;
+        }
+
+        .steps-panel.active {
+            display: block;
+        }
+
+        @media (max-width: 900px) {
+
+            .steps-wrapper {
                 flex-direction: column;
-                gap: 18px;
-                align-items: center;
+                gap: 24px;
+                max-width: 98vw;
+                min-height: unset;
             }
 
-            .cruise-card {
+            .steps-timeline {
+                min-width: 0;
+                align-items: flex-start;
+                margin-bottom: 20px;
+                height: auto;
+                justify-content: flex-start;
+            }
+
+            .steps-content {
+                margin-top: 0;
+                margin-left: 0;
+            }
+
+            .steps-images-row {
+                flex-direction: column;
+                gap: 45px;
+            }
+
+            .main-img,
+            .side-img {
                 width: 98vw;
                 max-width: 340px;
+                height: auto;
+                position: relative;
+                left: 20px;
             }
         }
 
-        @media (max-width: 700px) {
-            .region-cards-row {
+        /* years section styles */
+
+
+        .timeline-history-section {
+            background: #fff;
+            padding: 50px 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+
+        .timeline-history-wrapper {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 480px;
+        }
+
+        .timeline-years {
+            width: 140px;
+            background: #fff;
+            border-right: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 18px 0 18px 0;
+            position: relative;
+            gap: 10px;
+        }
+
+        .timeline-year {
+            background: none;
+            border: none;
+            color: #b7b7b7;
+            font-size: 1rem;
+            font-weight: 600;
+            /* padding: 0 18px 0 0; */
+            margin-bottom: 0;
+            cursor: pointer;
+            text-align: right;
+            transition: color 0.2s;
+            position: relative;
+            min-height: 38px;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+            left: 14px;
+        }
+
+        .timeline-year::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: #f5f3ee;
+            border-radius: 50%;
+            margin-right: 12px;
+            border: none;
+            vertical-align: middle;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-year.active {
+            color: #fa7a2f;
+            font-weight: 700;
+        }
+
+        .timeline-year.active::before {
+            background: #fff;
+            border: 2px solid #fa7a2f;
+            box-shadow: 0 0 0 2px #fff;
+        }
+
+        .timeline-years::after {
+            content: '';
+            position: absolute;
+            left: 18px;
+            top: 24px;
+            width: 3px;
+            height: calc(100% - 48px);
+            background: #f5f3ee;
+            z-index: 0;
+            border-radius: 2px;
+        }
+
+        .timeline-history-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 32px 0 32px 0;
+            position: relative;
+            justify-content: center;
+            min-height: 480px;
+        }
+
+        .timeline-panel {
+            display: none;
+            width: 100%;
+            min-height: 420px;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+        }
+
+        .timeline-panel.active {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .timeline-center {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .timeline-images {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 0;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .timeline-img.main-img {
+            width: 260px;
+            height: 180px;
+            /* object-fit: cover; */
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            background: #fff;
+            /* border-radius: 6px; */
+            transform: rotate(12deg);
+        }
+
+        .timeline-img.side-img {
+            width: 280px;
+            height: 200px;
+            object-fit: cover;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            background: #fff;
+            /* border-radius: 6px; */
+            transform: rotate(-20deg);
+        }
+
+        .timeline-year-big {
+            font-size: 6.5rem;
+            font-weight: 400;
+            color: #fa7a2f;
+            margin: 0 0 70px 0;
+            text-align: center;
+            line-height: 1;
+        }
+
+        .timeline-desc {
+            font-size: 1.08rem;
+            color: #444;
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: 0;
+            text-align: center;
+            max-width: 520px;
+            margin: 0 auto 18px auto;
+        }
+
+        .timeline-nav {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 18px 0 0 0;
+        }
+
+        .timeline-nav button {
+            background: #fff;
+            border: 1.5px solid #fa7a2f;
+            color: #fa7a2f;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .timeline-nav button:hover {
+            background: #fa7a2f;
+            color: #fff;
+        }
+
+        .timeline-steps {
+            flex: 1;
+            padding-left: 32px;
+        }
+
+        .timeline-steps ol {
+            margin: 0;
+            padding: 0 0 0 18px;
+        }
+
+        .timeline-steps li {
+            font-size: 1.08rem;
+            color: #222;
+            font-weight: 500;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .timeline-steps b {
+            font-weight: 700;
+            color: #222;
+        }
+
+        .timeline-steps-row {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            justify-content: flex-end;
+            align-items: flex-start;
+            margin-top: 0;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .timeline-step-item {
+            display: flex;
+            flex-direction: column;
+            max-width: 180px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        .timeline-step-title {
+            font-weight: bold;
+            font-size: 1.08rem;
+            color: #111;
+            margin-bottom: 0;
+            display: inline;
+        }
+
+        .timeline-step-desc {
+            font-size: 1.08rem;
+            color: #111;
+            margin-bottom: 8px;
+            display: inline;
+            font-weight: normal;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .timeline-steps-row {
                 flex-direction: column;
                 gap: 18px;
-                align-items: center;
+                align-items: flex-start;
             }
 
-            .cruise-card {
-                width: 98vw;
-                max-width: 340px;
+            .timeline-step-item {
+                max-width: 100%;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .timeline-history-wrapper {
+                flex-direction: column;
+                min-height: unset;
+            }
+
+            .timeline-years {
+                flex-direction: row;
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #eee;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 18px 0 18px 0;
+                overflow-x: auto;
+                gap: 0;
+            }
+
+            .timeline-year {
+                padding: 0 12px;
+                margin-bottom: 0;
+                font-size: 0.98rem;
+                min-height: 32px;
+            }
+
+            .timeline-years::after {
+                display: none;
+            }
+
+            .timeline-panel.active {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .timeline-steps {
+                padding-left: 0;
+                margin-top: 18px;
+            }
+        }
+
+        /* Program section Styles */
+
+        .programs-section {
+            background: #f8f2ec;
+            padding: 48px 0 32px 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+
+        .programs-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .programs-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 36px;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .programs-script {
+            
+            font-size: 50px;
+            font-weight: 700;
+            color: #444;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 38px 24px;
+            justify-items: center;
+        }
+
+        .program-card {
+            background: none;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .program-icon {
+            width: 54px;
+            height: 54px;
+            margin-bottom: 14px;
+            filter: grayscale(1) brightness(1.1);
+            opacity: 0.7;
+        }
+
+        .program-card h3 {
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #444;
+            margin-bottom: 6px;
+            margin-top: 0;
+        }
+
+        .program-card p {
+            font-size: 1rem;
+            color: #444;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .programs-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 28px 18px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .programs-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .programs-title {
+                font-size: 1.3rem;
             }
         }
     </style>
@@ -568,7 +1033,7 @@
 <body>
 
     <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
       <ul class="navbar-nav d-none d-lg-flex">
       <li class="nav-item dropdown">
@@ -741,13 +1206,13 @@
          <div class="mega-menu itinerary-menu">
         <div class="mega-left">
           <ul>
-  <li data-target="classic"><a href="GroupTours.html">FINLAND</a></li>
-  <li data-target="adventure"><a href="">JAPAN</a></li>
-  <li data-target="luxury"><a href="">KENYA</a></li>
-  <li data-target="classic"><a href="">NORWAY</a></li>
-  <li data-target="adventure"><a href="">SAUDI ARABIA</a></li>
-  <li data-target="luxury"><a href="">TANZANIA</a></li>
-  <li data-target="classic"><a href="">ZANZIBAR</a></li>
+        <li data-target="classic"><a href="GroupTours.html">FINLAND</a></li>
+        <li data-target="adventure"><a href="">JAPAN</a></li>
+        <li data-target="luxury"><a href="">KENYA</a></li>
+        <li data-target="classic"><a href="">NORWAY</a></li>
+        <li data-target="adventure"><a href="">SAUDI ARABIA</a></li>
+        <li data-target="luxury"><a href="">TANZANIA</a></li>
+        <li data-target="classic"><a href="">ZANZIBAR</a></li>
 </ul>
         </div>
         
@@ -833,15 +1298,14 @@
 
     <!-- Hero Section -->
     <section class="hero-section" style="justify-content: start; align-items: end;">
-        <div class="hero-content" style="position: relative; bottom: 70px;">
-            <h5 class="hero-title heading_font_family" style="font-size:45px; text-align: start; margin-left: 35px;">
-                Only The World's Best – For Your Next
+        <div class="hero-content" style="position: relative; bottom: 70px; max-width: 802px;">
+            <h5 class="hero-title heading_font_family" style="font-size:45px;">Your
                 <span class="hero-subtitle silver-South-family"
-                    style="font-size: 60px; font-weight: 100; font-style: normal;"> Voyage </span>
+                    style="font-size: 60px; font-weight: 100; font-style: normal;"> Gateway </span>
+                to Global Education
             </h5>
             <p class="heading_font_family" style="font-size: 15px; text-align: start; margin-left: 40px;">
-                From sun-soaked Mediterranean coasts to the ice-blue edges of Antarctica - discover the world in
-                unparalleled style
+                From application to arrival - GLOBENGEL EduWings guides you every step towards your dream university
             </p>
             <!-- <div class="search-box">
                 <input type="text" placeholder="Search by destinations, travel theme">
@@ -851,393 +1315,281 @@
     </section>
 
 
-    <!-- Penguien Section -->
+    <!-- Why Travel -->
 
-    <section class="cruise-section">
-        <div class="cruise-wrapper">
-            <div class="cruise-img">
-                <img src="./images/penguinImg.jpg" alt="Penguins Antarctica">
-            </div>
-            <div class="cruise-content">
-                <h2>
-                    Journeys Beyond the
-                    <span class="cruise-script silver-South-family">Horizon</span>
-                </h2>
-                <p>
-                    With a curated network of the world’s most distinguished cruise lines, we bring you journeys that
-                    transcend
-                    travel — from the sun-drenched romance of the Mediterranean to the untamed beauty of Alaska, and the
-                    pristine,
-                    icy majesty of Antarctica.
-                </p>
-                <p>
-                    Each cruise line we select is chosen for its commitment to refined service, immersive itineraries,
-                    and
-                    exceptional value. Whether you dream of crossing vast oceans in grandeur or exploring hidden shores
-                    aboard an
-                    intimate yacht, your journey begins here — imagined with precision, elegance, and the art of true
-                    voyaging.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our cruise line partners -->
-
-    <section class="cruise-partners-section">
-        <div class="cruise-partners-wrapper">
-            <h2 class="cruise-partners-title">
-                Our <span class="cruise-partners-script silver-South-family">Cruise</span> line partners
+    <section class="why-travel" style="background-color: #FFF6F3;">
+        <div class="container text-center">
+            <!-- Section Heading -->
+            <h2 class="why-heading heading_font_family" style="font-weight: 700; color: #333;">
+                <span class="silver-South-family"
+                    style="font-size: 50px; font-weight: 700; font-style: normal;">Why</span> choose GLOBENGEL EduWings
             </h2>
-            <div class="cruise-logos-row">
-                <img src="./images/hollandamericalogo.webp" alt="Holland America Line" class="cruise-logo">
-                <img src="./images/royalcaribbeanlogo.png" alt="Royal Caribbean" class="cruise-logo">
-                <img src="./images/ponentlogo.png" alt="Ponant" class="cruise-logo">
-                <img src="./images/silverseacruiseslogo.png" alt="Silversea" class="cruise-logo"><br>
-                <img src="./images/azamaralogo.jpg" alt="Azamara" class="cruise-logo">
-                <img src="./images/seabournlogo.png" alt="Seabourn" class="cruise-logo">
-                <img src="./images/regentlogo.png" alt="Regent" class="cruise-logo">
-                <img src="./images/CelebrityCruisesLogo.jpg" alt="Celebrity Cruises" class="cruise-logo">
-                <img src="./images/MSCruiseslogo.png" alt="MSC Cruises" class="cruise-logo">
-            </div>
-        </div>
-    </section>
 
-    <!-- Secondary Menu Section -->
-<section class="secondary-menu-section" id="secondaryMenu">
-    <div class="container-fluid">
-        <nav class="secondary-menu">
-            <ul class="secondary-nav">
-            <li><a href="#americas">THE AMERICAS & CARIBBEAN</a></li>
-              <li><a href="#europe">EUROPE & MEDITERRANEAN</a></li>
-              <li><a href="#polar">POLAR EXPEDITIONS</a></li>
-              <li><a href="#asia">ASIA & PACIFIC</a></li>
-              <li><a href="#africa">AFRICA & INDIAN OCEAN</a></li>
-              
-               
-            </ul>
-        </nav>
-    </div>
-</section>
+            <!-- Features Grid -->
+            <div class="row justify-content-center mt-5 heading_font_family">
+                <!-- 1 -->
+                <div class="col-12 col-md-6 col-lg-3 why-item">
+                    <div class="why-card">
+                        <img src="./images/globalbookicon.png" class="buss-why-icon" alt="Thoughtful Curation">
+                        <h4 class="why-title">A World of Opportunities</h4>
+                        <p class="why-text">
+                            Tie-ups with leading universities across 30+ countries in Medicine, Engineering, Arts,
+                            Business, and more.
+                        </p>
+                    </div>
+                </div>
 
-    <!-- Cruise Booking Card section 1-->
+                <!-- 2 -->
+                <div class="col-12 col-md-6 col-lg-3 why-item">
+                    <div class="why-card">
+                        <img src="./images/corponlyicon.png" class="buss-why-icon" alt="Global Connect">
+                        <h4 class="why-title">End-to-End Guidance</h4>
+                        <p class="why-text">
+                            From career counselling to travel arrangements - we handle the process so you can focus on
+                            your academic goals.
+                        </p>
+                    </div>
+                </div>
 
-    <section class="region-cruise-cards" id="americas">
-        <h3 class="region-title">The Americas & Caribbean</h3>
-        <div class="region-cards-row">
-            <!-- Card 1 -->
-            <div class="cruise-card">
-                <img src="./images/mapImgWorld.webp" alt="Cruise Map" class="cruise-card-img">
-                <div class="cruise-card-body">
-                    <ul class="cruise-card-list">
-                        <li><b>Cruise Liner:</b> <span>Costa Cruises</span></li>
-                        <li><b>Ship Name:</b> <span>Costa Diadema</span></li>
-                        <li><b>Sailing Name:</b> <span>North Europe Cruise</span></li>
-                        <li><b>Departure Port:</b> <span>Copenhagen, Denmark</span></li>
-                        <li><b>Cruise Duration:</b> <span>7 Nights</span></li>
-                        <li><b>Cabin Prices:</b> <span class="price">Starting From 32,999/-</span></li>
-                        <li><b>Sailing Date(s):</b>
-                            <span>31 May; 12, 21, 28 Jun; 12,19,26 Jul; 02, 09,16,23,30 Aug(2025)</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="cruise-card-btn">Book Now</a>
+                <!-- 3 -->
+                <div class="col-12 col-md-6 col-lg-3 why-item">
+                    <div class="why-card">
+                        <img src="./images/travelmangmenticon.png" class="buss-why-icon" alt="Trust & Transparency">
+                        <h4 class="why-title">Trusted by Families</h4>
+                        <p class="why-text">
+                            Transparent, safe, and personalised - we earn parents' trust at every stage.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="cruise-card">
-                <img src="./images/mapImgWorld.webp" alt="Cruise Map" class="cruise-card-img">
-                <div class="cruise-card-body">
-                    <ul class="cruise-card-list">
-                        <li><b>Cruise Liner:</b> <span>Costa Cruises</span></li>
-                        <li><b>Ship Name:</b> <span>Costa Diadema</span></li>
-                        <li><b>Sailing Name:</b> <span>North Europe Cruise</span></li>
-                        <li><b>Departure Port:</b> <span>Copenhagen, Denmark</span></li>
-                        <li><b>Cruise Duration:</b> <span>7 Nights</span></li>
-                        <li><b>Cabin Prices:</b> <span class="price">Starting From 32,999/-</span></li>
-                        <li><b>Sailing Date(s):</b>
-                            <span>31 May; 12, 21, 28 Jun; 12,19,26 Jul; 02, 09,16,23,30 Aug(2025)</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="cruise-card-btn">Book Now</a>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="cruise-card">
-                <img src="./images/mapImgWorld.webp" alt="Cruise Map" class="cruise-card-img">
-                <div class="cruise-card-body">
-                    <ul class="cruise-card-list">
-                        <li><b>Cruise Liner:</b> <span>Costa Cruises</span></li>
-                        <li><b>Ship Name:</b> <span>Costa Diadema</span></li>
-                        <li><b>Sailing Name:</b> <span>North Europe Cruise</span></li>
-                        <li><b>Departure Port:</b> <span>Copenhagen, Denmark</span></li>
-                        <li><b>Cruise Duration:</b> <span>7 Nights</span></li>
-                        <li><b>Cabin Prices:</b> <span class="price">Starting From 32,999/-</span></li>
-                        <li><b>Sailing Date(s):</b>
-                            <span>31 May; 12, 21, 28 Jun; 12,19,26 Jul; 02, 09,16,23,30 Aug(2025)</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="cruise-card-btn">Book Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-   <!-- Cruise Booking Card section 2-->
-
-    <section class="region-cruise-cards" id="europe" style="background-color: #f8f2ec;">
-        <h3 class="region-title">EUROPE &amp; THE MEDITERRANEAN</h3>
-        <div class="region-cards-row">
-            <!-- Card 1 -->
-            <div class="cruise-card">
-                <img src="./images/mapImgWorld.webp" alt="Cruise Map" class="cruise-card-img">
-                <div class="cruise-card-body">
-                    <ul class="cruise-card-list">
-                        <li><b>Cruise Liner:</b> <span>Costa Cruises</span></li>
-                        <li><b>Ship Name:</b> <span>Costa Diadema</span></li>
-                        <li><b>Sailing Name:</b> <span>North Europe Cruise</span></li>
-                        <li><b>Departure Port:</b> <span>Copenhagen, Denmark</span></li>
-                        <li><b>Cruise Duration:</b> <span>7 Nights</span></li>
-                        <li><b>Cabin Prices:</b> <span class="price">Starting From 32,999/-</span></li>
-                        <li><b>Sailing Date(s):</b>
-                            <span>31 May; 12, 21, 28 Jun; 12,19,26 Jul; 02, 09,16,23,30 Aug(2025)</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="cruise-card-btn">Book Now</a>
-                </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="cruise-card">
-                <img src="./images/mapImgWorld.webp" alt="Cruise Map" class="cruise-card-img">
-                <div class="cruise-card-body">
-                    <ul class="cruise-card-list">
-                        <li><b>Cruise Liner:</b> <span>Costa Cruises</span></li>
-                        <li><b>Ship Name:</b> <span>Costa Diadema</span></li>
-                        <li><b>Sailing Name:</b> <span>North Europe Cruise</span></li>
-                        <li><b>Departure Port:</b> <span>Copenhagen, Denmark</span></li>
-                        <li><b>Cruise Duration:</b> <span>7 Nights</span></li>
-                        <li><b>Cabin Prices:</b> <span class="price">Starting From 32,999/-</span></li>
-                        <li><b>Sailing Date(s):</b>
-                            <span>31 May; 12, 21, 28 Jun; 12,19,26 Jul; 02, 09,16,23,30 Aug(2025)</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="cruise-card-btn">Book Now</a>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="cruise-card">
-                <img src="./images/mapImgWorld.webp" alt="Cruise Map" class="cruise-card-img">
-                <div class="cruise-card-body">
-                    <ul class="cruise-card-list">
-                        <li><b>Cruise Liner:</b> <span>Costa Cruises</span></li>
-                        <li><b>Ship Name:</b> <span>Costa Diadema</span></li>
-                        <li><b>Sailing Name:</b> <span>North Europe Cruise</span></li>
-                        <li><b>Departure Port:</b> <span>Copenhagen, Denmark</span></li>
-                        <li><b>Cruise Duration:</b> <span>7 Nights</span></li>
-                        <li><b>Cabin Prices:</b> <span class="price">Starting From 32,999/-</span></li>
-                        <li><b>Sailing Date(s):</b>
-                            <span>31 May; 12, 21, 28 Jun; 12,19,26 Jul; 02, 09,16,23,30 Aug(2025)</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="cruise-card-btn">Book Now</a>
+                <!-- 4 -->
+                <div class="col-12 col-md-6 col-lg-3 why-item">
+                    <div class="why-card">
+                        <img src="./images/dedicatedsupporticon.png" class="buss-why-icon" alt="24/7 Dedicated Support">
+                        <h4 class="why-title">Career-Centric Approach</h4>
+                        <p class="why-text">
+                            Programs chosen to match future job markets and global career paths.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
 
-     <!-- Cruise Booking Card section 3-->
+    <!-- years-steps-section -->
 
-    <section class="region-cruise-cards" id="polar">
-        <h3 class="region-title">POLAR EXPEDITIONS</h3>
-        <div class="region-cards-row">
-            <!-- Card 1 -->
-            <div class="cruise-card">
-                <img src="./images/mapImgWorld.webp" alt="Cruise Map" class="cruise-card-img">
-                <div class="cruise-card-body">
-                    <ul class="cruise-card-list">
-                        <li><b>Cruise Liner:</b> <span>Costa Cruises</span></li>
-                        <li><b>Ship Name:</b> <span>Costa Diadema</span></li>
-                        <li><b>Sailing Name:</b> <span>North Europe Cruise</span></li>
-                        <li><b>Departure Port:</b> <span>Copenhagen, Denmark</span></li>
-                        <li><b>Cruise Duration:</b> <span>7 Nights</span></li>
-                        <li><b>Cabin Prices:</b> <span class="price">Starting From 32,999/-</span></li>
-                        <li><b>Sailing Date(s):</b>
-                            <span>31 May; 12, 21, 28 Jun; 12,19,26 Jul; 02, 09,16,23,30 Aug(2025)</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="cruise-card-btn">Book Now</a>
+     <section class="business-steps-section">
+        <div class="text-center mb-5">
+            <h2>
+                Your <span class="silver-South-family" style="font-size: 50px; font-weight: 700;"> Flight </span> Plan
+                to Global Education
+            </h2>
+        </div>
+        <div class="steps-wrapper">
+            <!-- Timeline Left -->
+            <div class="steps-timeline">
+                <div class="timeline-line"></div>
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="Balloon" />
+                    </div>
+                    <button class="step-label-btn active-label" data-step="briefing">Boarding Pass to Your Dreams</button>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="Balloon" />
+                    </div>
+                    <button class="step-label-btn step-label" data-step="curated">Choose Your Destination</button>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="Balloon" />
+                    </div>
+                    <button class="step-label-btn step-label" data-step="booking">Clear for Take-off</button>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="Balloon" />
+                    </div>
+                    <button class="step-label-btn step-label" data-step="support">Smooth Landing</button>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="Balloon" />
+                    </div>
+                    <button class="step-label-btn step-label" data-step="analysis">Ready to Soar</button>
                 </div>
             </div>
-            <!-- Card 2 -->
-            <div class="cruise-card">
-                <img src="./images/mapImgWorld.webp" alt="Cruise Map" class="cruise-card-img">
-                <div class="cruise-card-body">
-                    <ul class="cruise-card-list">
-                        <li><b>Cruise Liner:</b> <span>Costa Cruises</span></li>
-                        <li><b>Ship Name:</b> <span>Costa Diadema</span></li>
-                        <li><b>Sailing Name:</b> <span>North Europe Cruise</span></li>
-                        <li><b>Departure Port:</b> <span>Copenhagen, Denmark</span></li>
-                        <li><b>Cruise Duration:</b> <span>7 Nights</span></li>
-                        <li><b>Cabin Prices:</b> <span class="price">Starting From 32,999/-</span></li>
-                        <li><b>Sailing Date(s):</b>
-                            <span>31 May; 12, 21, 28 Jun; 12,19,26 Jul; 02, 09,16,23,30 Aug(2025)</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="cruise-card-btn">Book Now</a>
+            <!-- Content Right -->
+            <div class="steps-content">
+                <div class="steps-panel active" id="briefing-panel">
+                    <div class="steps-images-row">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80"
+                            class="steps-img side-img" alt="Business Meeting">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=500&q=80"
+                            class="steps-img main-img" alt="Business Meeting">
+                    </div>
+                    <div class="steps-desc">
+                        <div class="steps-divider"></div>
+                        <div class="steps-title-row">
+                            <span class="steps-title-script">Boarding</span>
+                            <span class="steps-title-bold">Pass to Your Dreams</span>
+                        </div>
+                        <p class="steps-text">
+                           – Career counselling and goal setting.
+                        </p>
+                    </div>
+                </div>
+                <div class="steps-panel" id="curated-panel">
+                    <div class="steps-images-row">
+                        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+                            class="steps-img side-img" alt="Curated Options">
+                        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=500&q=80"
+                            class="steps-img main-img" alt="Curated Options">
+                    </div>
+                    <div class="steps-desc">
+                        <div class="steps-divider"></div>
+                        <div class="steps-title-row">
+                            <span class="steps-title-bold"> Choose Your </span>
+                            <span class="steps-title-script"> Destination </span>
+                        </div>
+                        <p class="steps-text">
+                           – Country, course, and university selection.
+                        </p>
+                    </div>
+                </div>
+                <div class="steps-panel" id="booking-panel">
+                    <div class="steps-images-row">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+                            class="steps-img side-img" alt="Instant Booking">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80"
+                            class="steps-img main-img" alt="Instant Booking">
+                    </div>
+                    <div class="steps-desc">
+                        <div class="steps-divider"></div>
+                        <div class="steps-title-row">
+                            <span class="steps-title-bold"> Clear for </span>
+                            <span class="steps-title-script">Take-off</span>
+                            
+                        </div>
+                        <p class="steps-text">
+                           – Application submission, test prep, and documentation.
+                        </p>
+                    </div>
+                </div>
+                <div class="steps-panel" id="support-panel">
+                    <div class="steps-images-row">
+                        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=400&q=80"
+                            class="steps-img side-img" alt="On-Trip Support">
+                        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=500&q=80"
+                            class="steps-img main-img" alt="On-Trip Support">
+                    </div>
+                    <div class="steps-desc">
+                        <div class="steps-divider"></div>
+                        <div class="steps-title-row">
+                            <span class="steps-title-bold">Smooth</span>
+                            <span class="steps-title-script">Landing</span>
+                        </div>
+                        <p class="steps-text">
+                            – Visa assistance, travel bookings, and orientation.
+                        </p>
+                    </div>
+                </div>
+                <div class="steps-panel" id="analysis-panel">
+                    <div class="steps-images-row">
+                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+                            class="steps-img side-img" alt="Post-Trip Analysis">
+                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=500&q=80"
+                            class="steps-img main-img" alt="Post-Trip Analysis">
+                    </div>
+                    <div class="steps-desc">
+                        <div class="steps-divider"></div>
+                        <div class="steps-title-row">
+                            <span class="steps-title-script"> Ready </span>
+                            <span class="steps-title-bold"> to Soar</span>
+                        </div>
+                        <p class="steps-text">
+                            – Campus arrival and settling-in support.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <!-- Card 3 -->
-            <div class="cruise-card">
-                <img src="./images/mapImgWorld.webp" alt="Cruise Map" class="cruise-card-img">
-                <div class="cruise-card-body">
-                    <ul class="cruise-card-list">
-                        <li><b>Cruise Liner:</b> <span>Costa Cruises</span></li>
-                        <li><b>Ship Name:</b> <span>Costa Diadema</span></li>
-                        <li><b>Sailing Name:</b> <span>North Europe Cruise</span></li>
-                        <li><b>Departure Port:</b> <span>Copenhagen, Denmark</span></li>
-                        <li><b>Cruise Duration:</b> <span>7 Nights</span></li>
-                        <li><b>Cabin Prices:</b> <span class="price">Starting From 32,999/-</span></li>
-                        <li><b>Sailing Date(s):</b>
-                            <span>31 May; 12, 21, 28 Jun; 12,19,26 Jul; 02, 09,16,23,30 Aug(2025)</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="cruise-card-btn">Book Now</a>
+        </div>
+    </section>
+<script>
+     // Steps functionality
+        const steps = document.querySelectorAll(".step-label-btn");
+        const panels = document.querySelectorAll(".steps-panel");
+
+        steps.forEach(step => {
+            step.addEventListener("click", function () {
+                const targetPanel = document.getElementById(this.dataset.step + "-panel");
+
+                // Update active step
+                steps.forEach(s => s.classList.remove("active-label", "step-label"));
+                this.classList.add("active-label");
+
+                // Show corresponding panel
+                panels.forEach(p => p.classList.remove("active"));
+                targetPanel.classList.add("active");
+            });
+        });
+</script>
+
+
+    <section class="programs-section">
+        <div class="programs-wrapper">
+            <h2 class="programs-title">
+                <span class="programs-script silver-South-family">Programs</span> We Offer
+            </h2>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3135/3135789.png" alt="Undergraduate Degrees"
+                        class="program-icon">
+                    <h3>Undergraduate Degrees</h3>
+                    <p>Build your foundation for a global career</p>
+                </div>
+                <div class="program-card">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3135/3135810.png" alt="Postgraduate & Masters"
+                        class="program-icon">
+                    <h3>Postgraduate &amp; Masters</h3>
+                    <p>Specialise and expand your expertise</p>
+                </div>
+                <div class="program-card">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3135/3135823.png" alt="Doctoral & Research"
+                        class="program-icon">
+                    <h3>Doctoral &amp; Research</h3>
+                    <p>Shape the future with your ideas</p>
+                </div>
+                <div class="program-card">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3135/3135793.png" alt="Postgraduate Diplomas"
+                        class="program-icon">
+                    <h3>Postgraduate Diplomas</h3>
+                    <p>Industry-aligned programs for immediate impact</p>
+                </div>
+                <div class="program-card">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3135/3135807.png" alt="Exchange & Summer Schools"
+                        class="program-icon">
+                    <h3>Exchange &amp; Summer Schools</h3>
+                    <p>Short-term, high-value global exposure</p>
+                </div>
+                <div class="program-card">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3135/3135817.png" alt="Specialised Fields"
+                        class="program-icon">
+                    <h3>Specialised Fields</h3>
+                    <p>Medicine, Engineering, Business, Arts, and more</p>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <!-- Cruise Booking Card section 4-->
-
-    <section class="region-cruise-cards" id="asia" style="background-color: #f8f2ec;">
-        <h3 class="region-title">ASIA &amp; PACIFIC</h3>
-        <div class="region-cards-row">
-            <!-- Card 1 -->
-            <div class="cruise-card">
-                <img src="./images/mapImgWorld.webp" alt="Cruise Map" class="cruise-card-img">
-                <div class="cruise-card-body">
-                    <ul class="cruise-card-list">
-                        <li><b>Cruise Liner:</b> <span>Costa Cruises</span></li>
-                        <li><b>Ship Name:</b> <span>Costa Diadema</span></li>
-                        <li><b>Sailing Name:</b> <span>North Europe Cruise</span></li>
-                        <li><b>Departure Port:</b> <span>Copenhagen, Denmark</span></li>
-                        <li><b>Cruise Duration:</b> <span>7 Nights</span></li>
-                        <li><b>Cabin Prices:</b> <span class="price">Starting From 32,999/-</span></li>
-                        <li><b>Sailing Date(s):</b>
-                            <span>31 May; 12, 21, 28 Jun; 12,19,26 Jul; 02, 09,16,23,30 Aug(2025)</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="cruise-card-btn">Book Now</a>
-                </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="cruise-card">
-                <img src="./images/mapImgWorld.webp" alt="Cruise Map" class="cruise-card-img">
-                <div class="cruise-card-body">
-                    <ul class="cruise-card-list">
-                        <li><b>Cruise Liner:</b> <span>Costa Cruises</span></li>
-                        <li><b>Ship Name:</b> <span>Costa Diadema</span></li>
-                        <li><b>Sailing Name:</b> <span>North Europe Cruise</span></li>
-                        <li><b>Departure Port:</b> <span>Copenhagen, Denmark</span></li>
-                        <li><b>Cruise Duration:</b> <span>7 Nights</span></li>
-                        <li><b>Cabin Prices:</b> <span class="price">Starting From 32,999/-</span></li>
-                        <li><b>Sailing Date(s):</b>
-                            <span>31 May; 12, 21, 28 Jun; 12,19,26 Jul; 02, 09,16,23,30 Aug(2025)</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="cruise-card-btn">Book Now</a>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="cruise-card">
-                <img src="./images/mapImgWorld.webp" alt="Cruise Map" class="cruise-card-img">
-                <div class="cruise-card-body">
-                    <ul class="cruise-card-list">
-                        <li><b>Cruise Liner:</b> <span>Costa Cruises</span></li>
-                        <li><b>Ship Name:</b> <span>Costa Diadema</span></li>
-                        <li><b>Sailing Name:</b> <span>North Europe Cruise</span></li>
-                        <li><b>Departure Port:</b> <span>Copenhagen, Denmark</span></li>
-                        <li><b>Cruise Duration:</b> <span>7 Nights</span></li>
-                        <li><b>Cabin Prices:</b> <span class="price">Starting From 32,999/-</span></li>
-                        <li><b>Sailing Date(s):</b>
-                            <span>31 May; 12, 21, 28 Jun; 12,19,26 Jul; 02, 09,16,23,30 Aug(2025)</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="cruise-card-btn">Book Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-  <!-- Cruise Booking Card section 5-->
-
-    <section class="region-cruise-cards" id="africa">
-        <h3 class="region-title">AFRICA &amp; INDIAN OCEAN</h3>
-        <div class="region-cards-row">
-            <!-- Card 1 -->
-            <div class="cruise-card">
-                <img src="./images/mapImgWorld.webp" alt="Cruise Map" class="cruise-card-img">
-                <div class="cruise-card-body">
-                    <ul class="cruise-card-list">
-                        <li><b>Cruise Liner:</b> <span>Costa Cruises</span></li>
-                        <li><b>Ship Name:</b> <span>Costa Diadema</span></li>
-                        <li><b>Sailing Name:</b> <span>North Europe Cruise</span></li>
-                        <li><b>Departure Port:</b> <span>Copenhagen, Denmark</span></li>
-                        <li><b>Cruise Duration:</b> <span>7 Nights</span></li>
-                        <li><b>Cabin Prices:</b> <span class="price">Starting From 32,999/-</span></li>
-                        <li><b>Sailing Date(s):</b>
-                            <span>31 May; 12, 21, 28 Jun; 12,19,26 Jul; 02, 09,16,23,30 Aug(2025)</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="cruise-card-btn">Book Now</a>
-                </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="cruise-card">
-                <img src="./images/mapImgWorld.webp" alt="Cruise Map" class="cruise-card-img">
-                <div class="cruise-card-body">
-                    <ul class="cruise-card-list">
-                        <li><b>Cruise Liner:</b> <span>Costa Cruises</span></li>
-                        <li><b>Ship Name:</b> <span>Costa Diadema</span></li>
-                        <li><b>Sailing Name:</b> <span>North Europe Cruise</span></li>
-                        <li><b>Departure Port:</b> <span>Copenhagen, Denmark</span></li>
-                        <li><b>Cruise Duration:</b> <span>7 Nights</span></li>
-                        <li><b>Cabin Prices:</b> <span class="price">Starting From 32,999/-</span></li>
-                        <li><b>Sailing Date(s):</b>
-                            <span>31 May; 12, 21, 28 Jun; 12,19,26 Jul; 02, 09,16,23,30 Aug(2025)</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="cruise-card-btn">Book Now</a>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="cruise-card">
-                <img src="./images/mapImgWorld.webp" alt="Cruise Map" class="cruise-card-img">
-                <div class="cruise-card-body">
-                    <ul class="cruise-card-list">
-                        <li><b>Cruise Liner:</b> <span>Costa Cruises</span></li>
-                        <li><b>Ship Name:</b> <span>Costa Diadema</span></li>
-                        <li><b>Sailing Name:</b> <span>North Europe Cruise</span></li>
-                        <li><b>Departure Port:</b> <span>Copenhagen, Denmark</span></li>
-                        <li><b>Cruise Duration:</b> <span>7 Nights</span></li>
-                        <li><b>Cabin Prices:</b> <span class="price">Starting From 32,999/-</span></li>
-                        <li><b>Sailing Date(s):</b>
-                            <span>31 May; 12, 21, 28 Jun; 12,19,26 Jul; 02, 09,16,23,30 Aug(2025)</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="cruise-card-btn">Book Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <!-- World Travel Section -->
+    <!-- Business Travel Section -->
     <section class="curate-trip-section">
         <div class="curate-content">
-            <h2 style="margin-bottom: 15px;">
-                Set <span class="script-text silver-South-family"> Soil </span> with us
+            <h2 style="margin-bottom: 40px;">
+                Your <span class="script-text silver-South-family"> Passport </span> to a brighter future
             </h2>
             <a href="#" class="curate-btn">CONTACT US</a>
         </div>
@@ -1331,10 +1683,9 @@
                 </div>
 
                 <div class="footer-tagline">
-                    <h2 class="heading_font_family">DREAM. <br>
-                        EXPLORE. <br>
-                        DISCOVER. <br>
-                    </h2>
+                    <h2 class="heading_font_family">DREAM.
+                        EXPLORE.
+                        DISCOVER.</h2>
                 </div>
             </div>
 
@@ -1509,107 +1860,9 @@
             }, index * 300); // delay each box animation slightly for a wave effect
         });
     </script>
-    <script>
-// Secondary Menu Sticky Functionality
-window.addEventListener('scroll', function() {
-    const secondaryMenu = document.getElementById('secondaryMenu');
-    const heroSection = document.querySelector('.hero-section, .hero');
-    let heroHeight = 0;
-    if (heroSection) {
-        heroHeight = heroSection.offsetHeight;
-    }
-    // Adjust offset if needed (e.g. -80 for spacing)
-    if (window.scrollY >= heroHeight - 80) {
-        secondaryMenu.classList.add('fixed');
-    } else {
-        secondaryMenu.classList.remove('fixed');
-    }
-});
-</script>
-    <script>
-// Secondary Menu Sticky Functionality
-window.addEventListener('scroll', function() {
-    const secondaryMenu = document.getElementById('secondaryMenu');
-    const scrollPosition = window.scrollY;
-    const heroHeight = document.querySelector('.hero').offsetHeight;
-    
-    if (scrollPosition >= heroHeight - 80) {
-        secondaryMenu.classList.add('fixed');
-    } else {
-        secondaryMenu.classList.remove('fixed');
-    }
-});
-
-// Active menu item on scroll
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.secondary-nav a');
-    const secondaryMenu = document.getElementById('secondaryMenu');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            // Remove active class from all links
-            navLinks.forEach(nav => nav.classList.remove('active'));
-
-            // Add active class to clicked link
-            this.classList.add('active');
-
-            // Smooth scroll to section, offset for sticky secondary menu
-            const targetId = this.getAttribute('href');
-            if (targetId.startsWith('#')) {
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    // Calculate offset: height of secondary menu
-                    const menuHeight = secondaryMenu.offsetHeight;
-                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                    window.scrollTo({
-                        top: elementPosition - menuHeight,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
-});
-</script>
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.secondary-nav a');
-    const secondaryMenu = document.getElementById('secondaryMenu');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            // Remove active class from all links
-            navLinks.forEach(nav => nav.classList.remove('active'));
-
-            // Add active class to clicked link
-            this.classList.add('active');
-
-            // Smooth scroll to section, offset for sticky secondary menu
-            const targetId = this.getAttribute('href');
-            if (targetId.startsWith('#')) {
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    // Calculate offset: height of secondary menu
-                    const menuHeight = secondaryMenu.offsetHeight;
-                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                    window.scrollTo({
-                        top: elementPosition - menuHeight,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
-});
-</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/group-tours.js"></script>
-
 
 
     <!-- Swiper initialization is in script.js -->

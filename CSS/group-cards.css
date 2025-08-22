@@ -9,15 +9,18 @@
 }
 
 .section-title {
-  font-size: 32px;
+  font-size: 20px;
+  font-weight: 700;
   margin-bottom: 15px;
   color: #333;
+  font-family: 'MyCustomHead', sans-serif;
 }
 
 .section-subtitle {
-  font-size: 16px;
-  color: #666;
+  font-size: 15px;
+  color: #333;
   max-width: 700px;
+  font-family: 'MyCustomBody', sans-serif;
   margin: 0 auto;
 }
 
@@ -55,13 +58,15 @@
 .gt-travel-content h3 {
   font-size: 18px;
   font-weight: 600;
+  font-family: 'MyCustomHead', sans-serif;
   margin-bottom: 12px;
   color: #333;
 }
 
 .gt-travel-content p {
-  font-size: 14px;
-  color: #555;
+  font-size: 15px;
+  color: #333;
+  font-family: 'MyCustomBody', sans-serif;
   margin-bottom: 8px;
 }
 

@@ -49,7 +49,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'MyCustomFontHe', sans-serif;
     }
 
     /* Navbar */
@@ -192,7 +192,7 @@
     .hero-subtitle {
       font-size: 1.5rem;
       margin-top: 20px;
-      font-style: italic;
+      font-style: normal;
     }
     .search-box {
       margin-top: 30px;
@@ -586,19 +586,23 @@
 
 /* Section Header */
 .section-header h3 {
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 700;
   color: #222;
   margin-bottom: 10px;
+  font-family: 'MyCustomHead', sans-serif;
+
 }
 .section-header h3 span {
-  font-style: italic;
+  font-style: normal;
   font-weight: 500;
+  font-size: 50px;
 }
 .section-header p {
-  color: #666;
-  font-size: 1rem;
+  color: #333;
+  font-size: 15px;
   margin-top: 10px;
+  font-family: 'MyCustomBody', sans-serif;
 }
 
 /* Grid Layout */
@@ -708,13 +712,15 @@
 }
 
 .why-heading {
-  font-size: 2.2rem;
-  font-weight: 400;
-  color: #222;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  font-family: 'MyCustomHead', sans-serif;
 }
 .why-heading span {
-  font-style: italic;
+  font-style: normal;
   font-weight: 500;
+  font-size: 50px;
 }
 
 /* Card Styles */
@@ -750,16 +756,18 @@
 }
 
 .why-title {
-  font-size: 1.2rem;
+  font-size: 18px;
   font-weight: 600;
   color: #333;
   margin-bottom: 10px;
+  font-family: 'MyCustomHead', sans-serif;
 }
 
 .why-text {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.6;
+  font-size: 15px;
+  color: #333;
+  font-family: 'MyCustomBody', sans-serif;
+  line-height: 1.4;
   max-width: 250px;
   margin: 0 auto;
   flex-grow: 1; /* Ensures text fills the card evenly */
@@ -918,21 +926,23 @@
 }
 
 .beyond-heading {
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: 400;
-  color: #222;
+  color: #333;
+  font-family: 'MyCustomHead', sans-serif;
 }
 .beyond-heading span {
-  font-family: 'Brush Script MT', cursive;
-  font-weight: 500;
-  font-size: 2.2rem;
+   font-family: 'MyCustomSliverSouth', sans-serif;
+  font-weight: 400;
+  font-size: 50px;
 }
 
 .beyond-subtitle {
-  font-size: 0.95rem;
-  color: #555;
-  max-width: 700px;
+  font-size: 15px;
+  color: #333;
+  /* max-width: 400px; */
   margin: 10px auto 0;
+  font-family: 'MyCustomBody', sans-serif;
 }
 
 /* Card Style */
@@ -970,14 +980,16 @@
 }
 
 .beyond-overlay h4 {
-  font-size: 1.05rem;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: 'MyCustomHead', sans-serif;
   margin-bottom: 4px;
 }
 
 .beyond-overlay p {
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: 'MyCustomBody', sans-serif;
 }
 
 /* White Border */
@@ -1035,15 +1047,17 @@
 }
 
 .inspired-header h2 {
-  font-size: 32px;
+  font-size: 20px;
+  font-family: 'MyCustomHead', sans-serif;
   margin-bottom: 10px;
 }
 
 .inspired-header p {
-  max-width: 650px;
+  max-width: 1150px;
   margin: 0 auto 40px;
-  font-size: 16px;
-  color: #555;
+  font-family: 'MyCustomBody', sans-serif;
+  font-size: 15px;
+  color: #333;
   line-height: 1.6;
 }
 
@@ -1090,7 +1104,7 @@
 }
 
 .card-content h3 {
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 5px;
   text-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
@@ -1133,25 +1147,28 @@
 }
 
 .testimonial-heading {
-  font-size: 2.5rem;
+  font-size: 20px;
   font-weight: 400;
   margin-bottom: 15px;
   color: #333;
-  font-family: 'Times New Roman', serif;
+  font-family: 'MyCustomHead', sans-serif;
 }
 
 .testimonial-heading span {
-  font-style: italic;
-  font-weight: 500;
-  color: #555;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  color: #333;
+
 }
 
 .testimonial-subtitle {
-  font-size: 1.1rem;
-  color: #666;
-  max-width: 700px;
+  font-size: 15px;
+  color: #333;
+  /* max-width: 700px; */
   margin: 0 auto 40px;
   line-height: 1.6;
+  font-family: 'MyCustomBody', sans-serif;
 }
 
 .testimonial-grid {
@@ -1206,21 +1223,24 @@
 
 .testimonial-name {
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 5px;
   color: #333;
+  font-family: 'MyCustomHead', sans-serif;
 }
 
 .testimonial-role {
   font-size: 0.9rem;
   color: #888;
   margin-bottom: 20px;
+  font-family: 'MyCustomHead', sans-serif;
 }
 
 .testimonial-text {
-  font-size: 0.95rem;
-  color: #666;
+  font-size: 15px;
+  color: #333;
   line-height: 1.6;
+  font-family: 'MyCustomBody', sans-serif;
 }
 
 /* Swiper custom styling */
@@ -1286,17 +1306,17 @@
 }
 
 .curate-content h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: #5c5c5c;
-  font-size: 28px;
-  margin-bottom: 30px;
+  font-family: 'MyCustomHead', sans-serif;
+  font-weight: 400;
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 40px;
 }
 
 .curate-content .script-text {
-  font-family: 'Shadows Into Light', cursive;
-  font-size: 36px;
-  color: #5c5c5c;
+  font-size: 50px;
+  font-weight: 400;
+  color: #333;
 }
 
 .curate-btn {
@@ -1824,7 +1844,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 15px;
-    height: 320px;
+    height: 350px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     transition: all 0.4s ease;

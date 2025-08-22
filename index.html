@@ -193,8 +193,8 @@
 
     /* Text style */    .glob-service-text {
         color: white;
-        font-size: 16px;
-        font-weight: bold;
+        font-size: 20px;
+        font-weight: 400;
         text-transform: uppercase;
         line-height: 1.3;
         z-index: 2;
@@ -204,6 +204,7 @@
         letter-spacing: 1px;
         padding-bottom: 8px;
         word-break: break-word;
+        font-family: 'MyCustomHead', sans-serif;
     }
     
     .glob-service-item:hover .glob-service-text { transform: translateY(-10px); }
@@ -448,13 +449,13 @@
          <div class="mega-menu itinerary-menu">
         <div class="mega-left">
           <ul>
-  <li data-target="classic"><a href="GroupTours.html">FINLAND</a></li>
-  <li data-target="adventure"><a href="">JAPAN</a></li>
-  <li data-target="luxury"><a href="">KENYA</a></li>
-  <li data-target="classic"><a href="">NORWAY</a></li>
-  <li data-target="adventure"><a href="">SAUDI ARABIA</a></li>
-  <li data-target="luxury"><a href="">TANZANIA</a></li>
-  <li data-target="classic"><a href="">ZANZIBAR</a></li>
+        <li data-target="classic"><a href="GroupTours.html">FINLAND</a></li>
+        <li data-target="adventure"><a href="">JAPAN</a></li>
+        <li data-target="luxury"><a href="">KENYA</a></li>
+        <li data-target="classic"><a href="">NORWAY</a></li>
+        <li data-target="adventure"><a href="">SAUDI ARABIA</a></li>
+        <li data-target="luxury"><a href="">TANZANIA</a></li>
+        <li data-target="classic"><a href="">ZANZIBAR</a></li>
 </ul>
         </div>
         
@@ -491,7 +492,7 @@
         <div class="mega-left">
           <ul>
             <li data-target="family"><a href="business.html">BUSINESS TRAVEL</a></li>
-            <li data-target="friends"><a href="">EDUWINGS (STUDY ABROAD)</a></li>
+            <li data-target="friends"><a href="Eduwings.html">EDUWINGS (STUDY ABROAD)</a></li>
             <li data-target="corporate"><a href="celebration.html">DESTINATION CELEBRATIONS</a></li>
             <li data-target="couples"><a href="sky.html">PRIVATE CHARTER</a></li>
 
@@ -541,8 +542,8 @@
 <!-- Hero Section -->
 <section class="hero-section">
   <div class="hero-content">
-    <h1 class="hero-title heading_font_family" style="font-size:38px;" >DREAM. EXPLORE. DISCOVER.</h1>
-    <p class="hero-subtitle silver-South-family" style="font-size: 38px;">Begin your journey</p>
+    <h1 class="hero-title heading_font_family" style="font-size:40px;" >DREAM. EXPLORE. DISCOVER.</h1>
+    <p class="hero-subtitle silver-South-family" style="font-size: 72px; line-height: 1;">Begin your journey</p>
     <div class="search-box">
       <input type="text" placeholder="Search by destinations, travel theme">
       <i class="fa fa-search"></i>
@@ -652,7 +653,7 @@
     <!-- Features Grid -->
     <div class="row justify-content-center mt-5 heading_font_family">
       <!-- 1 -->
-      <div class="col-12 col-md-6 col-lg-3 mb-5 why-item">
+      <div class="col-12 col-md-6 col-lg-3 mb-0 why-item">
         <div class="why-card">
           <img src="./images/bw1.jpeg" class="why-icon" alt="Thoughtful Curation">
           <h4 class="why-title">Thoughtful Curation</h4>
@@ -665,7 +666,7 @@
       </div>
 
       <!-- 2 -->
-      <div class="col-12 col-md-6 col-lg-3 mb-5 why-item">
+      <div class="col-12 col-md-6 col-lg-3 mb-0 why-item">
         <div class="why-card">
           <img src="./images/pw2.jpeg" class="why-icon" alt="Global Connect">
           <h4 class="why-title">Global Connect, Local Expertise</h4>
@@ -678,7 +679,7 @@
       </div>
 
       <!-- 3 -->
-      <div class="col-12 col-md-6 col-lg-3 mb-5 why-item">
+      <div class="col-12 col-md-6 col-lg-3 mb-0 why-item">
         <div class="why-card">
           <img src="./images/pw3.png" class="why-icon" alt="Trust & Transparency">
           <h4 class="why-title">Trust & Transparency</h4>
@@ -690,7 +691,7 @@
       </div>
 
       <!-- 4 -->
-      <div class="col-12 col-md-6 col-lg-3 mb-5 why-item">
+      <div class="col-12 col-md-6 col-lg-3 mb-0 why-item">
         <div class="why-card">
           <img src="./images/pw4.jpeg" class="why-icon" alt="End-to-End Care">
           <h4 class="why-title">End-to-End Care</h4>
@@ -709,92 +710,93 @@
 <section class="group-departures py-5">
   <div class="container">
     <div class="text-center mb-5">
-      <h2 class="section-title"><span class="silver-South-family">Handcrafted</span> Group Departures</h2>
+      <h2 class="section-title"><span class="silver-South-family" style="font-size: 50px; font-weight: 400;">Handcrafted</span> Group Departures</h2>
       <p class="section-subtitle">Explore curated group itineraries with seamless planning, trusted guides, and value-packed pricing.</p>
     </div>
-      <!-- Swiper -->
-    <div class="swiper mySwiper">
+    <!-- Swiper -->
+    <div class="swiper mySwiper position-relative">
       <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <!-- <div class="gt-trip-tag-corner">Timeless Europe</div> -->
-          <img src="./images/banner.webp" alt="Timeless Europe Journey">
-          <div class="gt-travel-content">
-            <h3>TIMELESS EUROPE JOURNEY</h3>
-            <p>9 Days | 3 Countries | 4 Cities</p>
-            <p>Departures- Oct | Nov | Dec</p>
-            <div class="gt-travel-price">INR 1,19,000/- <span>(Per Person)</span></div>
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="gt-travel-card">
+            <img src="./images/banner.webp" alt="Timeless Europe Journey">
+            <div class="gt-travel-content">
+              <h3>TIMELESS EUROPE JOURNEY</h3>
+              <p>9 Days | 3 Countries | 4 Cities</p>
+              <p>Departures- Oct | Nov | Dec</p>
+              <div class="gt-travel-price">INR 1,19,000/- <span>(Per Person)</span></div>
+            </div>
           </div>
         </div>
-      </div>
         <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <!-- <div class="gt-trip-tag-corner">Amazing Dubai</div> -->
-          <img src="./images/trip1.jpeg" alt="Amazing Dubai">
-          <div class="gt-travel-content">
-            <h3>AMAZING DUBAI</h3>
-            <p>7 Days | 1 Country | 3 Cities</p>
-            <p>Departures- Sep | Oct | Nov</p>
-            <div class="gt-travel-price">INR 89,000/- <span>(Per Person)</span></div>
+        <div class="swiper-slide">
+          <div class="gt-travel-card">
+            <img src="./images/trip1.jpeg" alt="Amazing Dubai">
+            <div class="gt-travel-content">
+              <h3>AMAZING DUBAI</h3>
+              <p>7 Days | 1 Country | 3 Cities</p>
+              <p>Departures- Sep | Oct | Nov</p>
+              <div class="gt-travel-price">INR 89,000/- <span>(Per Person)</span></div>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <!-- <div class="gt-trip-tag-corner">Bali Paradise</div> -->
-          <img src="./images/trip2.avif" alt="Bali Paradise">
-          <div class="gt-travel-content">
-            <h3>BALI PARADISE</h3>
-            <p>8 Days | 1 Country | 4 Cities</p>
-            <p>Departures- Oct | Dec | Jan</p>
-            <div class="gt-travel-price">INR 95,000/- <span>(Per Person)</span></div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="gt-travel-card">
+            <img src="./images/trip2.avif" alt="Bali Paradise">
+            <div class="gt-travel-content">
+              <h3>BALI PARADISE</h3>
+              <p>8 Days | 1 Country | 4 Cities</p>
+              <p>Departures- Oct | Dec | Jan</p>
+              <div class="gt-travel-price">INR 95,000/- <span>(Per Person)</span></div>
+            </div>
           </div>
         </div>
-      </div>
         <!-- Slide 4 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <!-- <div class="gt-trip-tag-corner">Asian Explorer</div> -->
-          <img src="./images/banner.webp" alt="Asian Explorer">
-          <div class="gt-travel-content">
-            <h3>ASIAN EXPLORER</h3>
-            <p>12 Days | 3 Countries | 6 Cities</p>
-            <p>Departures- Sep | Oct | Nov</p>
-            <div class="gt-travel-price">INR 1,45,000/- <span>(Per Person)</span></div>
+        <div class="swiper-slide">
+          <div class="gt-travel-card">
+            <img src="./images/banner.webp" alt="Asian Explorer">
+            <div class="gt-travel-content">
+              <h3>ASIAN EXPLORER</h3>
+              <p>12 Days | 3 Countries | 6 Cities</p>
+              <p>Departures- Sep | Oct | Nov</p>
+              <div class="gt-travel-price">INR 1,45,000/- <span>(Per Person)</span></div>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <!-- Slide 5 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <!-- <div class="gt-trip-tag-corner">Majestic Turkey</div> -->
-          <img src="./images/trip1.jpeg" alt="Majestic Turkey">
-          <div class="gt-travel-content">
-            <h3>MAJESTIC TURKEY</h3>
-            <p>10 Days | 1 Country | 5 Cities</p>
-            <p>Departures- Sep | Oct | Nov</p>
-            <div class="gt-travel-price">INR 1,05,000/- <span>(Per Person)</span></div>
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="gt-travel-card">
+            <img src="./images/trip1.jpeg" alt="Majestic Turkey">
+            <div class="gt-travel-content">
+              <h3>MAJESTIC TURKEY</h3>
+              <p>10 Days | 1 Country | 5 Cities</p>
+              <p>Departures- Sep | Oct | Nov</p>
+              <div class="gt-travel-price">INR 1,05,000/- <span>(Per Person)</span></div>
+            </div>
           </div>
         </div>
-      </div>
         <!-- Slide 6 -->
-      <div class="swiper-slide">
-        <div class="gt-travel-card">
-          <!-- <div class="gt-trip-tag-corner">Egypt Wonder</div> -->
-          <img src="./images/trip2.avif" alt="Egypt Wonder">
-          <div class="gt-travel-content">
-            <h3>EGYPT WONDER</h3>
-            <p>9 Days | 1 Country | 4 Cities</p>
-            <p>Departures- Oct | Nov | Dec</p>
-            <div class="gt-travel-price">INR 1,25,000/- <span>(Per Person)</span></div>
+        <div class="swiper-slide">
+          <div class="gt-travel-card">
+            <img src="./images/trip2.avif" alt="Egypt Wonder">
+            <div class="gt-travel-content">
+              <h3>EGYPT WONDER</h3>
+              <p>9 Days | 1 Country | 4 Cities</p>
+              <p>Departures- Oct | Nov | Dec</p>
+              <div class="gt-travel-price">INR 1,25,000/- <span>(Per Person)</span></div>
+            </div>
           </div>
-        </div>      </div>
+        </div>
+      </div>
+      <!-- Manual navigation buttons (make sure they are inside swiper container) -->
+      <div class="swiper-button-prev" style="z-index:10;"></div>
+      <div class="swiper-button-next" style="z-index:10;"></div>
       <div class="swiper-pagination"></div>
+    </div>
+    <!-- Explore More button below carousel -->
+    <div class="d-flex justify-content-center mt-4">
+      <a href="tourpakages.html" class="btn btn-lg btn-primary" style="border-radius:30px; font-size:1.2rem; padding:10px 38px; background:linear-gradient(90deg, #f5764b, #e55d17); border:none; color:#fff; font-weight:600; box-shadow:0 2px 12px rgba(191,161,106,0.12);">Explore More</a>
     </div>
   </div>
 </section>
@@ -805,7 +807,7 @@
   <div class="container text-center">
     <!-- Section Heading -->
     <h2 class="beyond-heading">
-      <span>Beyond</span> Leisure
+      <span>Beyond</span> Holiday
     </h2>
     <p class="beyond-subtitle">
       Not all journeys are for leisure. Some build futures, close deals, or mark life’s milestones. 
@@ -859,10 +861,9 @@
 <!-- Get inspired -->
 <section class="get-inspired">
   <div class="inspired-header">
-    <h2>Get inspired</h2>
+    <h2>Hassle Free <span class="silver-South-family" style="font-size: 50px; font-weight: 400;" > Escapes </span></h2>
     <p>
-      Let your imagination take flight and dream of incredible destinations,
-      meaningful experiences and the memories you'll make. The world is waiting.
+      Planning a trip shouldn't be complicated. These destinations allow Indian travellers to visit with minimal paperwork from visa-free to e-Visa or visa-on-arrival countries. Focus on exploring, relaxing, and making memories, not embassy visits.
     </p>
   </div>
 
@@ -956,7 +957,7 @@
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="testimonial-heading">
-        <span>Trusted</span> by travellers like you
+        <span class="silver-South-family" >Trusted</span> by travellers like you
       </h2>
       <p class="testimonial-subtitle">
         From seamless honeymoons to global conferences — see why our clients keep coming back.
@@ -1064,7 +1065,7 @@
  <section class="curate-trip-section">
   <div class="curate-content">
     <h2>
-      Let’s <span class="script-text">Curate</span> your trip
+      Let’s <span class="script-text silver-South-family">Curate</span> your trip
     </h2>
     <a href="#" class="curate-btn">CONTACT US</a>
   </div>
@@ -1135,7 +1136,7 @@
           <li><a href="beyond-leisure.html">Beyond Leisure</a></li>
           <li><a href="inspiration.html">Inspiration</a></li>
           <li><a href="about-us.html">About Us</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <!-- <li><a href="careers.html">Careers</a></li> -->
           <li><a href="contact.html"></a>Contact Us</li>
 
           
