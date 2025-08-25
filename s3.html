@@ -48,7 +48,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     margin: 0 auto;
     margin-left: 5vw;            /* Add some left margin for spacing */
     margin-right: 0;
-    padding: 20px;
+    /* padding: 20px; */
     position: relative;
     text-align: left;
     align-items: flex-start;
@@ -98,8 +98,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     color: #8a2be2;
 }
 .experience {
-    font-family: 'Pacifico', 'Brush Script MT', cursive;
-    font-size: 2.5rem;
+    font-size: 60px;
     margin-top: 40px;
     margin-bottom: 0;
     font-weight: 400;
@@ -110,13 +109,14 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     gap: 10px;
 }
 .experience span {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: bold;
-    font-size: 2.5rem;
+    font-family: 'MyCustomFontHe', sans-serif;
+    font-weight: 500;
+    font-size: 60px;
     margin-left: 10px;
 }
 .hero-content > p:not(.subheading):not(.experience) {
-    font-size: 1.1rem;
+  font-family: 'MyCustomHead', sans-serif;
+    font-size: 20px;
     margin-top: 10px;
     margin-bottom: 30px;
     font-weight: 400;
@@ -125,11 +125,11 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     display: flex;
     justify-content: center;
     align-items: stretch;
-    padding: 18px 0 45px 0;
+    padding: 0px 0px 30px 0;
     position: absolute;
     bottom: 0;
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.1rem;
     z-index: 2;
     gap: 0;
     background: none !important;
@@ -137,7 +137,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
 .info-col {
     text-align: left;
     min-width: 120px;
-    padding: 0px 104px 0px 18px;
+    padding: 0px 77px 0px 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -559,29 +559,29 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
 <!-- Hero Section -->
 <section class="hero">
     <div class="hero-overlay"></div>
-    <div class="hero-content">
+    <div class="hero-content" style="margin-top: 200px;">
         
-        <p class="experience">Experience <span>Japan</span></p>
-        <p>Where every step is a story, and every moment is art.</p>
+        <p class="experience silver-South-family">Explore <span> Australia </span></p>
+        <p>From Sun-Kissed Beaches to the Outback Adventures</p>
     </div>
     <div class="info-bar">
         <div class="info-col">
             <strong>Best time to visit</strong>
-            <span class="info-value">March to May</span>
+            <span class="info-value">December to February</span>
         </div>
         <div class="bar-sep"></div>
         <div class="info-col">
             <strong>Capital</strong>
-            <span class="info-value">Tokyo</span>
+            <span class="info-value">Canberra</span>
         </div>
         <div class="bar-sep"></div>
         <div class="info-col">
             <strong>Currency</strong>
-            <span class="info-value">Japanese Yen</span>
+            <span class="info-value">Australian Dollar</span>
         </div>
         <div class="bar-sep"></div>        <div class="info-col">
             <strong>Time zone</strong>
-            <span class="info-value">+3.5 Hours from IST</span>
+            <span class="info-value">+4.3 Hours from IST</span>
         </div>
         <div class="bar-sep"></div>
         <div class="info-col">
@@ -609,49 +609,52 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
 </section>
 
 <!-- Overview Features Section -->
-<section class="japan-features-section p-3" id="overview">
+<section class="japan-features-section" id="overview">
   <div class="japan-features-row">
     <div class="japan-feature-box">
       <img src="./images/ov1.jpeg" alt="Mount Fuji">
-      <h4>Mount Fuji Majesty</h4>
-      <p>Japan’s most iconic natural landmark: scenic, powerful, unforgettable.</p>
+      <h4>Sydney Icons & Urban Vibes</h4>
+      <p>The Opera House, Harbour Bridge, Bondi Beach-one city, many moods.</p>
     </div>
     <div class="japan-feature-box">
       <img src="./images/ov2.jpeg" alt="Temples">
-      <h4>Timeless Temples & Shrines</h4>
-      <p>Walk through history under ancient gates and temple roofs.</p>
+      <h4>Great Barrier Reef Adventures</h4>
+      <p>Dive into the world's largest coral reef with vibrant marine life and island escapes.</p>
     </div>
     <div class="japan-feature-box">
       <img src="./images/ov4.jpeg" alt="Cuisine">
-      <h4>Culinary Adventures</h4>
-      <p>Savour flavours shaped by tradition Savour flavours shaped by tradition.</p>
+      <h4>Gold Coast & Theme Park Fun</h4>
+      <p>Beaches, roller coasters, and sunshine - perfect for families and thrill-seekers.</p>
     </div>
     <div class="japan-feature-box">
       <img src="./images/ov3.jpeg" alt="Festivals">
-      <h4>Festivals & Cherry Blossoms</h4>
-      <p>Celebrate life in full bloom with cultural pride and pink petals.</p>
+      <h4>The Red Centre & Outback Wonders</h4>
+      <p>Witness the majestic Uluru and Aboriginal heritage in Australia's desert heart.</p>
     </div>
     <div class="japan-feature-box">
       <img src="./images/ov5.jpeg" alt="Cities">
-      <h4>Futuristic Cities</h4>
-      <p>Neon lights, bullet trains & innovation meets modern marvels.</p>
+      <h4>Wine Valleys, Wildlife & Road Trips</h4>
+      <p>Kangaroos, koalas, and vineyards await-best explored on a classic Aussie drive.</p>
     </div>
   </div>
 
   <div class="japan-overview-flex">
     <div class="japan-overview-text">
-      <h3>Overview</h3>
+      <h3 class="silver-South-family">Overview</h3>
       <p>
-Japan is a dream destination for Indian travellers seeking a mix of culture, cuisine, traditions, and modern experiences. It blends centuries-old traditions with cutting-edge innovation where ancient temples and castles nestle in towns, and bullet trains glide past scenic backdrops.
+Australia continues to be a dream destination for indian travellers -combining natural wonders, modern cities, wildlife, and wide-open road trip freedom. Whether you're planning a honeymoon, a family holiday, or a once-in-a-lifetime solo adventure, Australia has something for every kind of explorer.
 </p>
 <p>
-For families and first-time explorers, Japan offers a seamless experience with world-class hospitality, spotless cities, and excellent public transport. From Hokkaido’s snowy fields to Okinawa’s tropical beaches, the landscape is as varied as the friendly faces you’ll meet.
+Indian tourists are drawn to its safety, cleanliness, and diverse experiences from beach-hopping in Queensland, to food trails in Melbourne, or star-gazing in the Northern Territory. Major cities like Sydney, Brisbane, Melbourne, and Perth offer vibrant nightlife, luxury shopping, and easy public transport.
 </p>
 <p>
-Spring brings cherry blossoms, autumn glows with fiery maple leaves, and summer festivals abound. Discover snow-covered fairytale Hokkaido, Kyoto’s religious spirit, Tokyo’s futuristic skyline, and the white sands of Okinawa — Japan caters to all.
+Australia is also highly Indian-friendly: you'll find plenty of Indian restaurants, tour guides, and local communities. The Australia-India air connectivity has improved, and visa processes are becoming more streamlined for leisure travellers.
 </p>
 <p>
-It’s also one of the safest countries in the world, with polite locals, reliable transport, and a familiar safe order — making it ideal for solo travellers, couples, and families alike.
+Nature and wildlife are a huge draw from spotting kangaroos and koalas, to snorkeling at Great Barrier Reef, or exploring Tasmania's wilderness. It's also home to world-class theme parks, wine regions, and stunning coastal drives like the Great Ocean Road.
+      </p>
+      <P>
+        Perfect for family groups, honeymooners, students visiting universities, or even sports and cricket fans, Australia delivers memorable journeys at every turn and GLOBENGEL is here to curate them with care.
       </p>
     </div>
     <div class="japan-overview-image">
@@ -666,7 +669,7 @@ It’s also one of the safest countries in the world, with polite locals, reliab
 
 <!-- Curated Journeys Section -->
 <section class="cj-section" id="curated-journeys">
-    <h2 class="cj-title">Curated Journeys</h2>
+    <h2 class="cj-title silver-South-family">Curated Journeys</h2>
     <div class="cj-container">
 
         <!-- Card 1 -->
@@ -917,10 +920,10 @@ It’s also one of the safest countries in the world, with polite locals, reliab
 </section>
 
 <!-- Grouup Departures -->
-<section class="group-departures py-5" id="group-tours" style="background-color: #f9ebe9;">
+<section class="group-departures" id="group-tours" style="background-color: #FEF7F3;">
   <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="section-title"><span class="silver-South-family">Group</span> Tours</h2>
+    <div class="text-center mb-4">
+      <h2 class="section-title"><span class="silver-South-family" style="font-size: 50px; font-weight: 400;"> Group </span> Tours</h2>
       <!-- <p class="section-subtitle">Explore curated group itineraries with seamless planning, trusted guides, and value-packed pricing.</p> -->
     </div>
       <!-- Swiper -->
@@ -1013,20 +1016,20 @@ It’s also one of the safest countries in the world, with polite locals, reliab
 
 <!-- Get Inspired -->
 <section class="inspired-section" id="get-inspired">
-    <h2 class="inspired-title">Get <span>Inspired</span></h2>
+    <h2 class="inspired-title">Get <span class="silver-South-family"> Inspired </span></h2>
     
     <!-- Row 1 -->
     <div class="inspired-row inspired-row-1">
         <div class="inspired-card">
             <img src="./images/bm1.webp" alt="Cherry Blossoms">
             <div class="inspired-overlay">
-                Cherry blossoms, inspiring Japanese cities in pastel colours every spring
+                Melbourne's Laneways & Café Culture
             </div>
         </div>
         <div class="inspired-card">
             <img src="./images/bm2.webp" alt="Nara Heritage">
             <div class="inspired-overlay">
-                World Heritage-listed wonders in Nara, the ancient capital of Japan
+                Blue Mountains & Scenic Railway
             </div>
         </div>
     </div>
@@ -1036,13 +1039,13 @@ It’s also one of the safest countries in the world, with polite locals, reliab
         <div class="inspired-card">
             <img src="./images/bm3.webp" alt="Mount Fuji">
             <div class="inspired-overlay">
-                Mount Fuji, eternity, the country's tallest peak
+                Great Ocean Road Drive
             </div>
         </div>
         <div class="inspired-card">
             <img src="./images/bm1.webp" alt="Tokyo Nightlife">
             <div class="inspired-overlay">
-                Towering, neon-lit streets packed with bars in Tokyo, Japan's space-age capital
+                Tasmania's Wilderness & Wine Tours
             </div>
         </div>
     </div>
@@ -1057,7 +1060,7 @@ It’s also one of the safest countries in the world, with polite locals, reliab
 </section>
 
 <!-- Travel Tips Section -->
-<section style="background:#f1e6e4; padding:48px 10px;" id="travel-tips">
+<section style="background:#FEF7F3; padding:60px 10px;" id="travel-tips">
   <div style="max-width:1050px; margin:0 auto; display:flex; gap:48px; align-items:flex-start; font-family:'Montserrat', Arial, sans-serif; color:#4a3d36;">
     <!-- Left: Image -->
     <div style="flex:0 0 340px; max-width:340px;">
@@ -1065,58 +1068,58 @@ It’s also one of the safest countries in the world, with polite locals, reliab
     </div>
     <!-- Right: Tips -->
     <div style="flex:1;">
-      <h2 style="font-family:'Pacifico', cursive; font-size:2rem; color:#444; margin-bottom:30px; letter-spacing:1px;">
-        <span style="font-family:'Shadows Into Light', cursive; font-size:2.1rem; font-weight:400;">Travel</span> Tips
+      <h2 style="font-family: 'MyCustomHead', sans-serif; font-size: 20px; color:#444; margin-bottom:0px; letter-spacing:1px;">
+        <span class="silver-South-family" style="font-size:50px; font-weight:400;">Travel</span> Tips
       </h2>
       <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:22px;">
         <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -14rem;">
           <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
-            <span style="font-weight:700; color:#222;">Visa</span><br>
-            <span style="font-size:1.04rem;">Japan offers an e-Visa for Indian passport holders (for short-term tourism). Ensure hotel bookings and return tickets are in place for smoother approval. GLOBENGEL assists with documentation.</span>
+            <span style="font-family: 'MyCustomHead', sans-serif; font-weight:400; color:#333; font-size: 18px;">Visa</span><br>
+            <span style="font-size: 15px;  font-family: 'MyCustomBody', sans-serif;">Indian citizens require an Australian Visitor Visa (Subclass 600) for tourism. The process is fully online, and biometrics are required. Processing time can range from 2 to 4 weeks, so apply early.</span>
           </div>
         </li>
         <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -9rem;">
           <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
 
           <div>
-            <span style="font-weight:700; color:#222;">Best time to visit</span><br>
-            <span style="font-size:1.04rem;">March to May (for cherry blossoms) and October to November (for autumn colours). Winters (Dec–Feb) offer snow experiences in Hokkaido and onsens.</span>
+            <span style="font-family: 'MyCustomHead', sans-serif; font-weight:400; color:#333; font-size: 18px;">Best time to visit</span><br>
+            <span style="font-size: 15px;  font-family: 'MyCustomBody', sans-serif;">September to April offers the best weather across most parts of Australia. Summer (Dec-Feb) is great for beaches, while spring and autumn are ideal for road trips and city exploration.</span>
           </div>
         </li>
         <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -3rem;">
                 <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
-            <span style="font-weight:700; color:#222;">Currency</span><br>
-            <span style="font-size:1.04rem;">Japanese Yen (JPY). Currency exchange available at airports, city kiosks, and post offices. Cards are accepted in most hotels and stores, but cash is still widely used, especially in rural areas.</span>
+            <span style="font-family: 'MyCustomHead', sans-serif; font-weight:400; color:#333; font-size: 18px;">Currency</span><br>
+            <span style="font-size: 15px;  font-family: 'MyCustomBody', sans-serif;">Australian Dollar (AUD). Forex cards or international credit/debit cards are widely accepted.</span>
           </div>
         </li>
         <li style="display:flex; align-items:flex-start; gap:14px; margin-left: 2rem;">
               <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
-            <span style="font-weight:700; color:#222;">Language</span><br>
-            <span style="font-size:1.04rem;">Japanese is spoken widely; English signage is available in major cities and tourist hubs. Learning basic greetings helps!</span>
+            <span style="font-family: 'MyCustomHead', sans-serif; font-weight:400; color:#333; font-size: 18px;">Language</span><br>
+            <span style="font-size: 15px;  font-family: 'MyCustomBody', sans-serif;">English is the official language and spoken everywhere.</span>
           </div>
         </li>
         <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -3rem;">
                 <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
-            <span style="font-weight:700; color:#222;">Food options</span><br>
-            <span style="font-size:1.04rem;">Indian restaurants are common in Tokyo, Kyoto, and Osaka. Vegetarians can find options like rice bowls, vegetable tempura, miso soup, udon, and tofu-based dishes.</span>
+            <span style="font-family: 'MyCustomHead', sans-serif; font-weight:400; color:#333; font-size: 18px;">Food options</span><br>
+            <span style="font-size: 15px;  font-family: 'MyCustomBody', sans-serif;">Australia is multicultural - vegetarian, vegan, Jain, and Indian food is widely available in cities. Plenty of Indian restaurants in Sydney, Melbourne, and Brisbane.</span>
           </div>
         </li>
         <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -9rem;">
               <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
-            <span style="font-weight:700; color:#222;">Connectivity</span><br>
-            <span style="font-size:1.04rem;">Tourist SIMs or pocket Wi-Fi routers are easily available at airports.</span>
+            <span style="font-family: 'MyCustomHead', sans-serif; font-weight:400; color:#333; font-size: 18px;">Connectivity</span><br>
+            <span style="font-size: 15px;  font-family: 'MyCustomBody', sans-serif;">Stay connected effortlessly - local SIMs from Telstra, Optus, or Vodafone offer reliable data across cities and popular tourist spots.</span>
           </div>
         </li>
         <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -14rem;">
               <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
-            <span style="font-weight:700; color:#222;">Cultural Etiquette</span><br>
-            <span style="font-size:1.04rem;">Bowing is customary. Always remove shoes when entering homes or traditional stays. Avoid loud conversations on public transport.</span>
+            <span style="font-family: 'MyCustomHead', sans-serif; font-weight:400; color:#333; font-size: 18px;">Cultural Etiquette</span><br>
+            <span style="font-size: 15px;  font-family: 'MyCustomBody', sans-serif;">Domestic flights, long-distance trains, road trips, and city metros/trams make internal travel easy. Self-drives are popular (note: left-hand driving like India).</span>
           </div>
         </li>
       </ul>
@@ -1125,90 +1128,110 @@ It’s also one of the safest countries in the world, with polite locals, reliab
 </section>
 
 <!-- FAQ Section: With + - toggle -->
-<section style="background:#fff; padding:40px 10px;" id="faqs">
+<section style="background:#fff; padding:60px 10px;" id="faqs">
   <div style="max-width:900px; margin:0 auto; font-family:'Montserrat', Arial, sans-serif; color:#333;">
-    <h2 style="text-align:center; font-family:'Pacifico', cursive; font-size:2rem; color:#444; margin-bottom:32px; letter-spacing:1px;">
-      Frequently Asked <span style="font-family:'Shadows Into Light', cursive; font-size:2.1rem; font-weight:400;">Questions</span>
+    <h2 style="text-align:center; font-family: 'MyCustomHead', sans-serif; font-size: 20px; color:#444; margin-bottom:32px; letter-spacing:1px;">
+      Frequently Asked <span class="silver-South-family" style="font-size: 50px; font-weight:400;">Questions</span>
     </h2>
     <div class="faq-list" style="display:flex; flex-direction:column; gap:18px;">
       <!-- FAQ 1 -->
       <div class="faq-item">
         <div class="faq-question">
-          <span style="font-weight:700; color:#222;">Do Indian travellers need a visa for Japan?</span>
+          <span style="font-weight:700; color:#222;">Is Australia a family-friendly destination for Indian travellers?</span>
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer" style="display:none;">
-          <span style="font-weight:600; color:#a2595a;">Answer:</span> Yes. Indian passport holders require an e-Visa for tourism. GLOBENGEL provides full assistance for the application process.
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> Yes, absolutely. With theme parks, wildlife sanctuaries, beaches, and great infrastructure, Australia is perfect for families, couples, and solo travellers alike.
         </div>
       </div>
       <!-- FAQ 2 -->
       <div class="faq-item">
         <div class="faq-question">
-          <span style="font-weight:700; color:#222;">Is Japan vegetarian-friendly for Indian travellers?</span>
+          <span style="font-weight:700; color:#222;">How long is the flight from India to Australia?</span>
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer" style="display:none;">
-          <span style="font-weight:600; color:#a2595a;">Answer:</span> While Japan is largely a seafood- and meat-heavy cuisine, major cities offer vegetarian and Indian food. You’ll also find local dishes like vegetable sushi, tempura and udon.
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> Direct flights from India (Delhi/Mumbai) to Sydney or Melbourne take around 12-13 hours. Connecting options are also available via Southeast Asia.
         </div>
       </div>
       <!-- FAQ 3 -->
       <div class="faq-item">
         <div class="faq-question">
-          <span style="font-weight:700; color:#222;">What’s the ideal trip duration to explore Japan?</span>
+          <span style="font-weight:700; color:#222;">What are some must-have experiences in Australia?</span>
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer" style="display:none;">
-          <span style="font-weight:600; color:#a2595a;">Answer:</span> 7 to 10 days is ideal to cover Tokyo, Mt. Fuji, Kyoto, and Osaka. You can add Hiroshima or Hokkaido for extended trips.
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> Snorkelling at the Great Barrier Reef, sunset at Uluru, city views from the Sydney Tower Eye, and driving the Great Ocean Road are top favourites.
         </div>
       </div>
       <!-- FAQ 4 -->
       <div class="faq-item">
         <div class="faq-question">
-          <span style="font-weight:700; color:#222;">Is Japan safe for solo or female Indian travellers?</span>
+          <span style="font-weight:700; color:#222;">Do I need travel insurance?</span>
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer" style="display:none;">
-          <span style="font-weight:600; color:#a2595a;">Answer:</span> Yes, Japan is one of the safest countries for solo and female travellers. Clean cities, courteous locals, and efficient public transport make navigation easy.
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> Yes, travel insurance is highly recommended, especially to cover medical care, trip delays, or cancellations.
         </div>
       </div>
       <!-- FAQ 5 -->
       <div class="faq-item">
         <div class="faq-question">
-          <span style="font-weight:700; color:#222;">What should I pack for a Japan trip?</span>
+          <span style="font-weight:700; color:#222;">Can I drive in Australia with an Indian license?</span>
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer" style="display:none;">
-          <span style="font-weight:600; color:#a2595a;">Answer:</span> Comfortable shoes (lots of walking!), a light jacket, power adapters (Type A/B plugs), and socks (shoes are often removed indoors).
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> Yes, you can rent a car with a valid Indian license if it's in English. An International Driving Permit (IDP) is recommended for longer stays or non-English licenses.
         </div>
       </div>
       <!-- FAQ 6 -->
       <div class="faq-item">
         <div class="faq-question">
-          <span style="font-weight:700; color:#222;">Are public transport and intercity travel easy?</span>
+          <span style="font-weight:700; color:#222;">Is tipping expected in restaurants?</span>
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer" style="display:none;">
-          <span style="font-weight:600; color:#a2595a;">Answer:</span> Extremely! The Japan Rail Pass is popular for foreign tourists and allows unlimited access to high-speed trains (Shinkansen).
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> Tipping is optional in Australia. However, rounding up or tipping 5-10% is appreciated for good service.
         </div>
       </div>
       <!-- FAQ 7 -->
       <div class="faq-item">
         <div class="faq-question">
-          <span style="font-weight:700; color:#222;">When is cherry blossom season in Japan?</span>
+          <span style="font-weight:700; color:#222;">Are Indian debit/credit cards accepted?</span>
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer" style="display:none;">
-          <span style="font-weight:600; color:#a2595a;">Answer:</span> Late March to early April in most parts of Japan, but it can vary by region.
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> Yes, most major cards are accepted. Inform your bank before travel to avoid international blocking.
         </div>
       </div>
       <!-- FAQ 8 -->
       <div class="faq-item">
         <div class="faq-question">
-          <span style="font-weight:700; color:#222;">Is tipping common in Japan?</span>
+          <span style="font-weight:700; color:#222;">Can I include New Zealand in the same trip?</span>
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer" style="display:none;">
-          <span style="font-weight:600; color:#a2595a;">Answer:</span> No. Tipping is not expected and can even be considered rude. Exceptional service is already built into their culture.
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> Yes! Many Indian travellers combine Australia and New Zealand as part of a longer Oceania trip. GLOBENGEL offers combo itineraries with visa and flight support.
+        </div>
+      </div>
+      <!-- FAQ 9 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <span style="font-weight:700; color:#222;"> How much should I budget for a 10-day trip?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer" style="display:none;">
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> Depending on your style of travel, budget around INR 2.5-4.5 lakhs per person including flights, stays, sightseeing, and meals.
+        </div>
+      </div>
+      <!-- FAQ 10 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <span style="font-weight:700; color:#222;">What wildlife experiences are available?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer" style="display:none;">
+          <span style="font-weight:600; color:#a2595a;">Answer:</span>  You can spot kangaroos, koalas, wombats, and even platypuses at national parks, Kangaroo Island, and wildlife sanctuaries. Australia is a paradise for nature lovers.
         </div>
       </div>
     </div>
@@ -1231,7 +1254,12 @@ It’s also one of the safest countries in the world, with polite locals, reliab
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  font-size: 1.08rem;
+  font-size: 18px;
+}
+
+.faq-question span {
+  font-size: 18px;
+  font-family: 'MyCustomHead', sans-serif !important;
 }
 .faq-toggle {
   font-size: 1.6rem;
@@ -1246,9 +1274,15 @@ It’s also one of the safest countries in the world, with polite locals, reliab
 }
 .faq-answer {
   margin-top: 12px;
-  font-size: 1.04rem;
+  font-size: 15px;
   color: #444;
   transition: all 0.2s;
+   font-family: 'MyCustomBody', sans-serif !important;
+}
+
+.faq-answer span {
+  font-size: 15px;
+   font-family: 'MyCustomBody', sans-serif !important;
 }
 </style>
 
@@ -1278,7 +1312,7 @@ document.querySelectorAll('.faq-question').forEach(function(q){
  <section class="curate-trip-section">
   <div class="curate-content">
     <h2>
-      Let’s <span class="script-text">Curate</span> your trip
+      Let’s <span class="script-text silver-South-family">Curate</span> your trip
     </h2>
     <a href="#" class="curate-btn">CONTACT US</a>
   </div>
@@ -1490,7 +1524,7 @@ L.marker([33.8416, 132.7654]).addTo(map)
     height: 420px;
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    margin: 40px 0 30px 0;
+    margin: 0px 0 10px 0;
     border: 1.5px solid #e5e5e5;
     overflow: hidden;
 }

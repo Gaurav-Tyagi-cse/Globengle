@@ -19,7 +19,7 @@
 .section-subtitle {
   font-size: 15px;
   color: #333;
-  max-width: 700px;
+  /* max-width: 700px; */
   font-family: 'MyCustomBody', sans-serif;
   margin: 0 auto;
 }

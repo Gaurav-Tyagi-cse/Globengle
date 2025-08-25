@@ -48,7 +48,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     margin: 0 auto;
     margin-left: 5vw;            /* Add some left margin for spacing */
     margin-right: 0;
-    padding: 20px;
+    /* padding: 20px; */
     position: relative;
     text-align: left;
     align-items: flex-start;
@@ -98,8 +98,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     color: #8a2be2;
 }
 .experience {
-    font-family: 'Pacifico', 'Brush Script MT', cursive;
-    font-size: 2.5rem;
+    font-size: 60px;
     margin-top: 40px;
     margin-bottom: 0;
     font-weight: 400;
@@ -110,13 +109,14 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     gap: 10px;
 }
 .experience span {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: bold;
-    font-size: 2.5rem;
+    font-family: 'MyCustomFontHe', sans-serif;
+    font-weight: 500;
+    font-size: 60px;
     margin-left: 10px;
 }
 .hero-content > p:not(.subheading):not(.experience) {
-    font-size: 1.1rem;
+  font-family: 'MyCustomHead', sans-serif;
+    font-size: 20px;
     margin-top: 10px;
     margin-bottom: 30px;
     font-weight: 400;
@@ -125,11 +125,11 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     display: flex;
     justify-content: center;
     align-items: stretch;
-    padding: 18px 0 45px 0;
+    padding: 0px 0px 30px 0;
     position: absolute;
     bottom: 0;
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.1rem;
     z-index: 2;
     gap: 0;
     background: none !important;
@@ -298,7 +298,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
   <div class="container-fluid">
       <ul class="navbar-nav d-none d-lg-flex">
       <li class="nav-item dropdown">
-        <a  class="nav-link" href="Destination.html">DESTINATIONS</a>
+        <a  class="nav-link" href="#">DESTINATIONS</a>
          <div class="mega-menu destinations-menu">
         <!-- Left Side -->
         <div class="mega-left">
@@ -322,7 +322,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
               <a href="#">Ethiopia</a>
               <a href="#">Kenya</a>
               <a href="#">Madagascar</a>
-              <a href="#">Mauritius</a>
+              <a href="s10.html">Mauritius</a>
               <a href="#">Morocco</a>
               <a href="#">Namibia</a>
               <a href="#">ReUnion Island</a>
@@ -344,8 +344,8 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
               <a href="#">Cambodia</a>
               <a href="#">Georgia</a>
               <a href="#">Hong Kong & Macau</a>
-              <a href="#">Indonesia</a>
-              <a href="#">Japan</a>
+              <a href="s9.html">Indonesia</a>
+              <a href="Destination.html">Japan</a>
               <a href="#">Kazakhstan</a>
               <a href="#">Laos</a>
               <a href="#">Malaysia</a>
@@ -358,9 +358,9 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
               <a href="#">Singapore</a>
               <a href="#">Taiwan</a>
               <a href="#">South Korea</a>
-              <a href="#">Thailand</a>
+              <a href="s6.html">Thailand</a>
               <a href="#">Uzbekistan</a>
-              <a href="#">Vietnam</a>
+              <a href="s1.html">Vietnam</a>
             </div>
           </div>
           <div class="content" id="australasia">
@@ -389,7 +389,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
               <a href="#">Cyprus</a>
               <a href="#">Czechia</a>
               <a href="#">Denmark</a>
-              <a href="#">Finland</a>
+              <a href="s2.html">Finland</a>
               <a href="#">France</a>
               <a href="#">Germany</a>
               <a href="#">Greece</a>
@@ -417,21 +417,21 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
             <div class="column">
               <a href="#">India</a>
               <a href="#">Nepal</a>
-              <a href="#">Sri Lanka</a>
+              <a href="s8.html">Sri Lanka</a>
             </div>
             <div class="column">
-              <a href="#">Bhutan</a>
-              <a href="#">Maldives</a>
+              <a href="s5.html">Bhutan</a>
+              <a href="s7.html">Maldives</a>
             </div>
           </div>
           <div class="content" id="latin">
             <div class="column">
-              <a href="#">Australia</a>
+              <a href="s3.html">Australia</a>
               <a href="#">Fiji</a>
             </div>
             <div class="column">
               <a href="#">French Polynesia</a>
-              <a href="#">New Zealand</a>
+              <a href="s4.html">New Zealand</a>
             </div>
           </div>
           <div class="content" id="middleeast">
@@ -439,7 +439,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
               <a href="#">Bahrain</a>
               <a href="#">Egypt</a>
               <a href="#">Jordan</a>
-              <a href="#">Oman</a>
+              <a href="s11.html">Oman</a>
             </div>
             <div class="column">
               <a href="#">Qatar</a>
@@ -463,24 +463,24 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
       </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link" href="Luxury.html">LUXURY</a>
+        <a class="nav-link" href="#">LUXURY</a>
          <div class="mega-menu itinerary-menu">
         <div class="mega-left">
           <ul>
-            <li data-target="classic">FINLAND</li>
-            <li data-target="adventure">JAPAN </li>
-            <li data-target="luxury">KENYA </li>
-            <li data-target="classic">NORWAY</li>
-            <li data-target="adventure">SAUDI ARABIA</li>
-            <li data-target="luxury">TANZANIA</li>
-            <li data-target="classic">ZANZIBAR</li>
-          </ul>
+  <li data-target="classic"><a href="GroupTours.html">FINLAND</a></li>
+  <li data-target="adventure"><a href="">JAPAN</a></li>
+  <li data-target="luxury"><a href="">KENYA</a></li>
+  <li data-target="classic"><a href="">NORWAY</a></li>
+  <li data-target="adventure"><a href="">SAUDI ARABIA</a></li>
+  <li data-target="luxury"><a href="">TANZANIA</a></li>
+  <li data-target="classic"><a href="">ZANZIBAR</a></li>
+</ul>
         </div>
         
       </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link" href="GroupTours.html">GROUP TOURS</a>
+        <a class="nav-link" href="tourpakages.html">GROUP TOURS</a>
          <!-- <div class="mega-menu group-menu">
         <div class="mega-left">
           <ul>
@@ -502,17 +502,17 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
       </div> -->
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link" href="sky.html">VOYAGES</a>
+        <a class="nav-link" href="Voyages.html">VOYAGES</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link" href="#">BEYOND HOLIDAYS</a>
          <div class="mega-menu group-menu">
         <div class="mega-left">
           <ul>
-            <li data-target="family">BUSINESS TRAVEL</li>
-            <li data-target="friends">EDUWINGS (STUDY ABROAD)</li>
-            <li data-target="corporate">DESTINATION CELEBRATIONS</li>
-            <li data-target="couples">PRIVATE CHARTER</li>
+            <li data-target="family"><a href="business.html">BUSINESS TRAVEL</a></li>
+            <li data-target="friends"><a href="Eduwings.html">EDUWINGS (STUDY ABROAD)</a></li>
+            <li data-target="corporate"><a href="celebration.html">DESTINATION CELEBRATIONS</a></li>
+            <li data-target="couples"><a href="sky.html">PRIVATE CHARTER</a></li>
 
           </ul>
         </div>
@@ -537,7 +537,6 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
-    
   </div>
 </nav>
 <!-- Sliding Mobile Menu -->
@@ -560,29 +559,29 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
 <!-- Hero Section -->
 <section class="hero">
     <div class="hero-overlay"></div>
-    <div class="hero-content">
+    <div class="hero-content" style="margin-top: 200px; max-width: 1030px;">
         
-        <p class="experience">Experience <span>Japan</span></p>
-        <p>Where every step is a story, and every moment is art.</p>
+        <p class="experience silver-South-family">Finland <span>-Land of Northern Wonders</span></p>
+        <p>Experience the Magic of Midnight Sun, Northern Lights & Scandinavian Serenity</p>
     </div>
-    <div class="info-bar">
+    <div class="info-bar" style="padding-right: 25px;">
         <div class="info-col">
             <strong>Best time to visit</strong>
-            <span class="info-value">March to May</span>
+            <span class="info-value">June to August</span>
         </div>
         <div class="bar-sep"></div>
         <div class="info-col">
             <strong>Capital</strong>
-            <span class="info-value">Tokyo</span>
+            <span class="info-value">Helsinki</span>
         </div>
         <div class="bar-sep"></div>
         <div class="info-col">
             <strong>Currency</strong>
-            <span class="info-value">Japanese Yen</span>
+            <span class="info-value">Euro</span>
         </div>
         <div class="bar-sep"></div>        <div class="info-col">
             <strong>Time zone</strong>
-            <span class="info-value">+3.5 Hours from IST</span>
+            <span class="info-value">-2.5 Hours from IST</span>
         </div>
         <div class="bar-sep"></div>
         <div class="info-col">
@@ -610,50 +609,42 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
 </section>
 
 <!-- Overview Features Section -->
-<section class="japan-features-section p-3" id="overview">
+<section class="japan-features-section" id="overview">
   <div class="japan-features-row">
     <div class="japan-feature-box">
       <img src="./images/ov1.jpeg" alt="Mount Fuji">
-      <h4>Mount Fuji Majesty</h4>
-      <p>Japan’s most iconic natural landmark: scenic, powerful, unforgettable.</p>
+      <h4>Northern Lights in Lapland</h4>
+      <p>Catch the magical aurora borealis lighting up the Arctic sky</p>
     </div>
     <div class="japan-feature-box">
       <img src="./images/ov2.jpeg" alt="Temples">
-      <h4>Timeless Temples & Shrines</h4>
-      <p>Walk through history under ancient gates and temple roofs.</p>
+      <h4>Santa Claus Village</h4>
+      <p>Visit the official hometown of Santa in Rovaniemi, a dreamlike experience for families and children</p>
     </div>
     <div class="japan-feature-box">
       <img src="./images/ov4.jpeg" alt="Cuisine">
-      <h4>Culinary Adventures</h4>
-      <p>Savour flavours shaped by tradition Savour flavours shaped by tradition.</p>
+      <h4>Scenic Saunas & Lakes</h4>
+      <p>Unwind the Finnish way-with traditional saunas by serene lakes and quiet countryside retreats</p>
     </div>
     <div class="japan-feature-box">
       <img src="./images/ov3.jpeg" alt="Festivals">
-      <h4>Festivals & Cherry Blossoms</h4>
-      <p>Celebrate life in full bloom with cultural pride and pink petals.</p>
+      <h4>Design & Architecture</h4>
+      <p>Explore Helsinki's bold mix of Nordic minimalism, art deco streets, and cutting-edge design galleries</p>
     </div>
     <div class="japan-feature-box">
       <img src="./images/ov5.jpeg" alt="Cities">
-      <h4>Futuristic Cities</h4>
-      <p>Neon lights, bullet trains & innovation meets modern marvels.</p>
+      <h4>Midnight Sun & Snowy Adventures</h4>
+      <p>Experience 24-hour daylight in summer and snow safaris, husky rides, and snowmobiling in winter</p>
     </div>
   </div>
 
   <div class="japan-overview-flex">
     <div class="japan-overview-text">
-      <h3>Overview</h3>
+      <h3 class="silver-South-family">Overview</h3>
       <p>
-Japan is a dream destination for Indian travellers seeking a mix of culture, cuisine, traditions, and modern experiences. It blends centuries-old traditions with cutting-edge innovation where ancient temples and castles nestle in towns, and bullet trains glide past scenic backdrops.
+  Finland offers a rare blend of serene beauty, unique Arctic experiences, and quiet luxury perfect for Indian travellers seeking something different from mainstream Europe. It's a land of reindeer, northern lights, and pure air with warm hospitality and world-class infrastructure. Whether you're chasing the auroras in Lapland, exploring Helsinki's cultural scene, or relaxing in a lakeside sauna Finland delivers peaceful charm with adventure at every turn. It's also ideal for honeymooners, families, and winter sports lovers alike.
 </p>
-<p>
-For families and first-time explorers, Japan offers a seamless experience with world-class hospitality, spotless cities, and excellent public transport. From Hokkaido’s snowy fields to Okinawa’s tropical beaches, the landscape is as varied as the friendly faces you’ll meet.
-</p>
-<p>
-Spring brings cherry blossoms, autumn glows with fiery maple leaves, and summer festivals abound. Discover snow-covered fairytale Hokkaido, Kyoto’s religious spirit, Tokyo’s futuristic skyline, and the white sands of Okinawa — Japan caters to all.
-</p>
-<p>
-It’s also one of the safest countries in the world, with polite locals, reliable transport, and a familiar safe order — making it ideal for solo travellers, couples, and families alike.
-      </p>
+
     </div>
     <div class="japan-overview-image">
       <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Japan">
@@ -667,7 +658,7 @@ It’s also one of the safest countries in the world, with polite locals, reliab
 
 <!-- Curated Journeys Section -->
 <section class="cj-section" id="curated-journeys">
-    <h2 class="cj-title">Curated Journeys</h2>
+    <h2 class="cj-title silver-South-family">Curated Journeys</h2>
     <div class="cj-container">
 
         <!-- Card 1 -->
@@ -918,10 +909,10 @@ It’s also one of the safest countries in the world, with polite locals, reliab
 </section>
 
 <!-- Grouup Departures -->
-<section class="group-departures py-5" id="group-tours" style="background-color: #f9ebe9;">
+<section class="group-departures" id="group-tours" style="background-color: #FEF7F3;">
   <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="section-title"><span class="silver-South-family">Group</span> Tours</h2>
+    <div class="text-center mb-4">
+      <h2 class="section-title"><span class="silver-South-family" style="font-size: 50px; font-weight: 400;"> Group </span> Tours</h2>
       <!-- <p class="section-subtitle">Explore curated group itineraries with seamless planning, trusted guides, and value-packed pricing.</p> -->
     </div>
       <!-- Swiper -->
@@ -1014,20 +1005,20 @@ It’s also one of the safest countries in the world, with polite locals, reliab
 
 <!-- Get Inspired -->
 <section class="inspired-section" id="get-inspired">
-    <h2 class="inspired-title">Get <span>Inspired</span></h2>
+    <h2 class="inspired-title">Get <span class="silver-South-family"> Inspired </span></h2>
     
     <!-- Row 1 -->
     <div class="inspired-row inspired-row-1">
         <div class="inspired-card">
             <img src="./images/bm1.webp" alt="Cherry Blossoms">
             <div class="inspired-overlay">
-                Cherry blossoms, inspiring Japanese cities in pastel colours every spring
+                Northern Lights, Lapland
             </div>
         </div>
         <div class="inspired-card">
             <img src="./images/bm2.webp" alt="Nara Heritage">
             <div class="inspired-overlay">
-                World Heritage-listed wonders in Nara, the ancient capital of Japan
+               Helsinki Cathedral & Market Square
             </div>
         </div>
     </div>
@@ -1037,13 +1028,13 @@ It’s also one of the safest countries in the world, with polite locals, reliab
         <div class="inspired-card">
             <img src="./images/bm3.webp" alt="Mount Fuji">
             <div class="inspired-overlay">
-                Mount Fuji, eternity, the country's tallest peak
+                Lake Saimaa & Lakeland region
             </div>
         </div>
         <div class="inspired-card">
             <img src="./images/bm1.webp" alt="Tokyo Nightlife">
             <div class="inspired-overlay">
-                Towering, neon-lit streets packed with bars in Tokyo, Japan's space-age capital
+                Arctic Circle crossing
             </div>
         </div>
     </div>
@@ -1058,7 +1049,7 @@ It’s also one of the safest countries in the world, with polite locals, reliab
 </section>
 
 <!-- Travel Tips Section -->
-<section style="background:#f1e6e4; padding:48px 10px;" id="travel-tips">
+<section style="background:#FEF7F3; padding:60px 10px;" id="travel-tips">
   <div style="max-width:1050px; margin:0 auto; display:flex; gap:48px; align-items:flex-start; font-family:'Montserrat', Arial, sans-serif; color:#4a3d36;">
     <!-- Left: Image -->
     <div style="flex:0 0 340px; max-width:340px;">
@@ -1066,58 +1057,58 @@ It’s also one of the safest countries in the world, with polite locals, reliab
     </div>
     <!-- Right: Tips -->
     <div style="flex:1;">
-      <h2 style="font-family:'Pacifico', cursive; font-size:2rem; color:#444; margin-bottom:30px; letter-spacing:1px;">
-        <span style="font-family:'Shadows Into Light', cursive; font-size:2.1rem; font-weight:400;">Travel</span> Tips
+      <h2 style="font-family: 'MyCustomHead', sans-serif; font-size: 20px; color:#444; margin-bottom:0px; letter-spacing:1px;">
+        <span class="silver-South-family" style="font-size:50px; font-weight:400;">Travel</span> Tips
       </h2>
       <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:22px;">
         <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -14rem;">
           <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
-            <span style="font-weight:700; color:#222;">Visa</span><br>
-            <span style="font-size:1.04rem;">Japan offers an e-Visa for Indian passport holders (for short-term tourism). Ensure hotel bookings and return tickets are in place for smoother approval. GLOBENGEL assists with documentation.</span>
+            <span style="font-family: 'MyCustomHead', sans-serif; font-weight:400; color:#333; font-size: 18px;">Visa</span><br>
+            <span style="font-size: 15px;  font-family: 'MyCustomBody', sans-serif;">Finland is part of the Schengen Zone, so Indian travelers require a Schengen Visa. Apply via VFS Global with complete documentation.</span>
           </div>
         </li>
         <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -9rem;">
           <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
 
           <div>
-            <span style="font-weight:700; color:#222;">Best time to visit</span><br>
-            <span style="font-size:1.04rem;">March to May (for cherry blossoms) and October to November (for autumn colours). Winters (Dec–Feb) offer snow experiences in Hokkaido and onsens.</span>
+            <span style="font-family: 'MyCustomHead', sans-serif; font-weight:400; color:#333; font-size: 18px;">Best time to visit</span><br>
+            <span style="font-size: 15px;  font-family: 'MyCustomBody', sans-serif;">Winter (Dec-March) for Northern Lights, snow activities, Santa Claus Village. Summer (May-Aug) for Midnight Sun, lake regions, city sightseeing.</span>
           </div>
         </li>
         <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -3rem;">
                 <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
-            <span style="font-weight:700; color:#222;">Currency</span><br>
-            <span style="font-size:1.04rem;">Japanese Yen (JPY). Currency exchange available at airports, city kiosks, and post offices. Cards are accepted in most hotels and stores, but cash is still widely used, especially in rural areas.</span>
+            <span style="font-family: 'MyCustomHead', sans-serif; font-weight:400; color:#333; font-size: 18px;">Currency</span><br>
+            <span style="font-size: 15px;  font-family: 'MyCustomBody', sans-serif;">Euro (EUR). Cards are widely accepted. ATMs are easy to find.</span>
           </div>
         </li>
         <li style="display:flex; align-items:flex-start; gap:14px; margin-left: 2rem;">
               <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
-            <span style="font-weight:700; color:#222;">Language</span><br>
-            <span style="font-size:1.04rem;">Japanese is spoken widely; English signage is available in major cities and tourist hubs. Learning basic greetings helps!</span>
+            <span style="font-family: 'MyCustomHead', sans-serif; font-weight:400; color:#333; font-size: 18px;">Language</span><br>
+            <span style="font-size: 15px;  font-family: 'MyCustomBody', sans-serif;">Finnish & Swedish are official. English is widely spoken in cities and tourist areas.</span>
           </div>
         </li>
         <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -3rem;">
                 <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
-            <span style="font-weight:700; color:#222;">Food options</span><br>
-            <span style="font-size:1.04rem;">Indian restaurants are common in Tokyo, Kyoto, and Osaka. Vegetarians can find options like rice bowls, vegetable tempura, miso soup, udon, and tofu-based dishes.</span>
+            <span style="font-family: 'MyCustomHead', sans-serif; font-weight:400; color:#333; font-size: 18px;">Food options</span><br>
+            <span style="font-size: 15px;  font-family: 'MyCustomBody', sans-serif;">While Indian food isn't very common, vegetarian options and international cuisines are easily found in major cities. Local cuisine includes salmon, rye bread, berries, and reindeer meat (optional for adventurous eaters).</span>
           </div>
         </li>
         <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -9rem;">
               <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
-            <span style="font-weight:700; color:#222;">Connectivity</span><br>
-            <span style="font-size:1.04rem;">Tourist SIMs or pocket Wi-Fi routers are easily available at airports.</span>
+            <span style="font-family: 'MyCustomHead', sans-serif; font-weight:400; color:#333; font-size: 18px;">Connectivity</span><br>
+            <span style="font-size: 15px;  font-family: 'MyCustomBody', sans-serif;">Pick up a local SIM from Elisa, Telia, or DNA at the airport. Reliable Wi-Fi is available in hotels, cafés, and even on trains, keeping you online wherever you go.</span>
           </div>
         </li>
         <li style="display:flex; align-items:flex-start; gap:14px; margin-left: -14rem;">
               <span style="font-size:1.3rem; margin-top:2px;"><img src="./GLOBENGEL/GLOBENGEL Pinpoint Logo.png" alt="" style="height: 40px; width: 30px;"></span>
           <div>
-            <span style="font-weight:700; color:#222;">Cultural Etiquette</span><br>
-            <span style="font-size:1.04rem;">Bowing is customary. Always remove shoes when entering homes or traditional stays. Avoid loud conversations on public transport.</span>
+            <span style="font-family: 'MyCustomHead', sans-serif; font-weight:400; color:#333; font-size: 18px;">Cultural Etiquette</span><br>
+            <span style="font-size: 15px;  font-family: 'MyCustomBody', sans-serif;">Efficient rail and bus systems, and internal flights to Lapland. City transport passes are useful in Helsinki.</span>
           </div>
         </li>
       </ul>
@@ -1126,90 +1117,100 @@ It’s also one of the safest countries in the world, with polite locals, reliab
 </section>
 
 <!-- FAQ Section: With + - toggle -->
-<section style="background:#fff; padding:40px 10px;" id="faqs">
+<section style="background:#fff; padding:60px 10px;" id="faqs">
   <div style="max-width:900px; margin:0 auto; font-family:'Montserrat', Arial, sans-serif; color:#333;">
-    <h2 style="text-align:center; font-family:'Pacifico', cursive; font-size:2rem; color:#444; margin-bottom:32px; letter-spacing:1px;">
-      Frequently Asked <span style="font-family:'Shadows Into Light', cursive; font-size:2.1rem; font-weight:400;">Questions</span>
+    <h2 style="text-align:center; font-family: 'MyCustomHead', sans-serif; font-size: 20px; color:#444; margin-bottom:32px; letter-spacing:1px;">
+      Frequently Asked <span class="silver-South-family" style="font-size: 50px; font-weight:400;">Questions</span>
     </h2>
     <div class="faq-list" style="display:flex; flex-direction:column; gap:18px;">
       <!-- FAQ 1 -->
       <div class="faq-item">
         <div class="faq-question">
-          <span style="font-weight:700; color:#222;">Do Indian travellers need a visa for Japan?</span>
+          <span style="font-weight:700; color:#222;">Is Finland good for family trips from India?</span>
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer" style="display:none;">
-          <span style="font-weight:600; color:#a2595a;">Answer:</span> Yes. Indian passport holders require an e-Visa for tourism. GLOBENGEL provides full assistance for the application process.
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> Yes! Santa Claus Village, Northern Lights, and snow experiences make it a magical destination for all ages.
         </div>
       </div>
       <!-- FAQ 2 -->
       <div class="faq-item">
         <div class="faq-question">
-          <span style="font-weight:700; color:#222;">Is Japan vegetarian-friendly for Indian travellers?</span>
+          <span style="font-weight:700; color:#222;">How many days are ideal for a Finland trip?</span>
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer" style="display:none;">
-          <span style="font-weight:600; color:#a2595a;">Answer:</span> While Japan is largely a seafood- and meat-heavy cuisine, major cities offer vegetarian and Indian food. You’ll also find local dishes like vegetable sushi, tempura and udon.
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> 7-9 days is ideal to cover Helsinki, Rovaniemi (Lapland), and an optional lake region or igloo stay.
         </div>
       </div>
       <!-- FAQ 3 -->
       <div class="faq-item">
         <div class="faq-question">
-          <span style="font-weight:700; color:#222;">What’s the ideal trip duration to explore Japan?</span>
+          <span style="font-weight:700; color:#222;">Do I need to pre-book Northern Lights tours?</span>
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer" style="display:none;">
-          <span style="font-weight:600; color:#a2595a;">Answer:</span> 7 to 10 days is ideal to cover Tokyo, Mt. Fuji, Kyoto, and Osaka. You can add Hiroshima or Hokkaido for extended trips.
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> Yes, it's highly recommended to book aurora safaris and stays in advance during peak season (Nov-Mar).
         </div>
       </div>
       <!-- FAQ 4 -->
       <div class="faq-item">
         <div class="faq-question">
-          <span style="font-weight:700; color:#222;">Is Japan safe for solo or female Indian travellers?</span>
+          <span style="font-weight:700; color:#222;">Can I see Northern Lights in summer?</span>
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer" style="display:none;">
-          <span style="font-weight:600; color:#a2595a;">Answer:</span> Yes, Japan is one of the safest countries for solo and female travellers. Clean cities, courteous locals, and efficient public transport make navigation easy.
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> No, the Northern Lights are visible in winter only (typically late September to early April).
         </div>
       </div>
       <!-- FAQ 5 -->
       <div class="faq-item">
         <div class="faq-question">
-          <span style="font-weight:700; color:#222;">What should I pack for a Japan trip?</span>
+          <span style="font-weight:700; color:#222;">What is the best place to stay to see the aurora?</span>
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer" style="display:none;">
-          <span style="font-weight:600; color:#a2595a;">Answer:</span> Comfortable shoes (lots of walking!), a light jacket, power adapters (Type A/B plugs), and socks (shoes are often removed indoors).
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> Rovaniemi, Levi, Saariselkä, and Kakslauttanen are great spots, especially with glass igloo stays.
         </div>
       </div>
       <!-- FAQ 6 -->
       <div class="faq-item">
         <div class="faq-question">
-          <span style="font-weight:700; color:#222;">Are public transport and intercity travel easy?</span>
+          <span style="font-weight:700; color:#222;">Are there Indian restaurants in Finland?</span>
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer" style="display:none;">
-          <span style="font-weight:600; color:#a2595a;">Answer:</span> Extremely! The Japan Rail Pass is popular for foreign tourists and allows unlimited access to high-speed trains (Shinkansen).
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> Limited but available in Helsinki and Rovaniemi. We suggest carrying ready meals if you need comfort options.
         </div>
       </div>
       <!-- FAQ 7 -->
       <div class="faq-item">
         <div class="faq-question">
-          <span style="font-weight:700; color:#222;">When is cherry blossom season in Japan?</span>
+          <span style="font-weight:700; color:#222;">Is Finland expensive for Indian travellers?</span>
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer" style="display:none;">
-          <span style="font-weight:600; color:#a2595a;">Answer:</span> Late March to early April in most parts of Japan, but it can vary by region.
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> Yes, Finland is a premium destination - but GLOBENGEL curates affordable packages with great value experiences.
         </div>
       </div>
       <!-- FAQ 8 -->
       <div class="faq-item">
         <div class="faq-question">
-          <span style="font-weight:700; color:#222;">Is tipping common in Japan?</span>
+          <span style="font-weight:700; color:#222;">What kind of clothes should I pack for winter?</span>
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer" style="display:none;">
-          <span style="font-weight:600; color:#a2595a;">Answer:</span> No. Tipping is not expected and can even be considered rude. Exceptional service is already built into their culture.
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> Thermal layers, snow jackets, gloves, beanies, and waterproof shoes. Many winter packages provide rental gear.
+        </div>
+      </div>
+      <!-- FAQ 9 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <span style="font-weight:700; color:#222;">Can Finland be clubbed with other destinations?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer" style="display:none;">
+          <span style="font-weight:600; color:#a2595a;">Answer:</span> Yes, it can be combined with Estonia, Sweden, Norway, or a larger Scandinavian/Europe itinerary.
         </div>
       </div>
     </div>
@@ -1232,7 +1233,12 @@ It’s also one of the safest countries in the world, with polite locals, reliab
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  font-size: 1.08rem;
+  font-size: 18px;
+}
+
+.faq-question span {
+  font-size: 18px;
+  font-family: 'MyCustomHead', sans-serif !important;
 }
 .faq-toggle {
   font-size: 1.6rem;
@@ -1247,9 +1253,15 @@ It’s also one of the safest countries in the world, with polite locals, reliab
 }
 .faq-answer {
   margin-top: 12px;
-  font-size: 1.04rem;
+  font-size: 15px;
   color: #444;
   transition: all 0.2s;
+   font-family: 'MyCustomBody', sans-serif !important;
+}
+
+.faq-answer span {
+  font-size: 15px;
+   font-family: 'MyCustomBody', sans-serif !important;
 }
 </style>
 
@@ -1279,7 +1291,7 @@ document.querySelectorAll('.faq-question').forEach(function(q){
  <section class="curate-trip-section">
   <div class="curate-content">
     <h2>
-      Let’s <span class="script-text">Curate</span> your trip
+      Let’s <span class="script-text silver-South-family">Curate</span> your trip
     </h2>
     <a href="#" class="curate-btn">CONTACT US</a>
   </div>
@@ -1491,7 +1503,7 @@ L.marker([33.8416, 132.7654]).addTo(map)
     height: 420px;
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    margin: 40px 0 30px 0;
+    margin: 0px 0 10px 0;
     border: 1.5px solid #e5e5e5;
     overflow: hidden;
 }

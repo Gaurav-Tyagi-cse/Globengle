@@ -47,7 +47,8 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    /* position: relative; */
+    position: absolute;
+    left: 40px;
 }
 .hero h1 {
     font-size: 3rem;
@@ -109,7 +110,8 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     margin-left: 10px;
 }
 .hero-content > p:not(.subheading):not(.experience) {
-    font-size: 1.1rem;
+    font-size: 20px;
+    font-family: 'MyCustomHead', sans-serif;
     margin-top: 10px;
     margin-bottom: 30px;
     font-weight: 400;
@@ -289,7 +291,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
   align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 48px 0 32px 0;
+  padding: 60px 0;
   gap: 0;
 }
 .signature-left {
@@ -304,22 +306,21 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
   padding-right: 18px;
 }
 .signature-script {
-  font-family: 'Shadows Into Light', 'Pacifico', cursive;
-  font-size: 38px;
-  color: #888;
-  font-weight: 600;
+  font-size: 50px;
+  color: #444;
+  font-weight: 400;
   margin-bottom: 0;
   letter-spacing: 1px;
   text-align: center;
 }
 .signature-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #888;
+  font-size: 20px;
+  font-weight: 400;
+  color: #444;
   margin-top: 10px;
   text-align: center;
   letter-spacing: 0.5px;
-  font-family: 'Montserrat', Arial, sans-serif;
+   font-family: 'MyCustomHead', sans-serif;
 }
 .signature-grid {
   flex: 1 1 0;
@@ -364,14 +365,17 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
 }
 .signature-card-title {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 6px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+   font-family: 'MyCustomHead', sans-serif;
 }
 .signature-card-desc {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  font-family: 'MyCustomBody', sans-serif;
+
 }
 @media (max-width: 1100px) {
   .signature-experiences-wrapper {
@@ -725,7 +729,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     <div class="hero-overlay"></div>
     <div class="hero-content hero-banner-text">
         <h1>
-            <span class="hero-script">Finland</span> <span class="hero-bold">for the few</span>
+            <span class="hero-script silver-South-family">Finland</span> <span class="hero-bold">for the few</span>
         </h1>
         <p class="hero-subtext">
             Glass igloos, private saunas, and snow-laced serenity — a world reserved for the privileged.
@@ -738,7 +742,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
   <div class="signature-experiences-wrapper">
     <!-- Left: Title -->
     <div class="signature-left">
-      <div class="signature-script">Signature</div>
+      <div class="signature-script silver-South-family">Signature</div>
       <div class="signature-title">Luxury Experiences</div>
     </div>
     <!-- Right: Grid -->
@@ -825,7 +829,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     </div>
     <!-- Right: Title -->
     <div class="handpicked-resorts-title">
-      <div class="handpicked-script">Handpicked</div>
+      <div class="handpicked-script silver-South-family">Handpicked</div>
       <div class="handpicked-main-title">Luxury Resorts</div>
     </div>
   </div>
@@ -844,7 +848,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 48px 0 32px 0;
+  padding: 60px 0 20px 0;
   gap: 0;
 }
 .handpicked-resorts-grid {
@@ -908,15 +912,18 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
 }
 .resort-card-title {
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 4px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+   font-family: 'MyCustomHead', sans-serif;
 }
 .resort-card-desc {
   font-size: 13px;
   font-weight: 400;
   text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  font-family: 'MyCustomBody', sans-serif;
 }
+
 .handpicked-resorts-title {
   flex: 0 0 320px;
   min-width: 220px;
@@ -928,22 +935,21 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
   padding-left: 48px;
 }
 .handpicked-script {
-  font-family: 'Shadows Into Light', 'Pacifico', cursive;
-  font-size: 38px;
-  color: #888;
-  font-weight: 600;
+  font-size: 50px;
+  color: #444;
+  font-weight: 400;
   margin-bottom: 0;
   letter-spacing: 1px;
   text-align: left;
 }
 .handpicked-main-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #888;
+  font-size: 20px;
+  font-weight: 400;
+  color: #444;
   margin-top: 10px;
   text-align: left;
   letter-spacing: 0.5px;
-  font-family: 'Montserrat', Arial, sans-serif;
+   font-family: 'MyCustomHead', sans-serif;
 }
 @media (max-width: 1100px) {
   .handpicked-resorts-wrapper {
@@ -1099,7 +1105,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
 
 <!-- Curated Journeys Section -->
 <section class="cj-section" id="curated-journeys">
-    <h2 class="cj-title">Trip Inspiration</h2>
+    <h2 class="cj-title"><span class="silver-South-family" style="font-size: 50px; font-weight:400;" >Trip</span> Inspiration</h2>
     <div class="cj-container">
 
         <!-- Card 1 -->
@@ -1253,7 +1259,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
     <!-- Left: Info List -->
     <div class="best-time-left">
       <div class="best-time-title">
-        <span class="best-script">Best</span> time to visit
+        <span class="best-script silver-South-family">Best</span> time to visit
       </div>
       <div class="best-time-list">
         <div class="best-time-row">
@@ -1314,7 +1320,7 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 48px 0 32px 0;
+  padding: 60px 0;
   gap: 0;
 }
 .best-time-left {
@@ -1327,20 +1333,19 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
   padding-right: 40px;
 }
 .best-time-title {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 400;
   color: #444;
   margin-bottom: 32px;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'MyCustomHead', sans-serif;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 .best-script {
-  font-family: 'Shadows Into Light', 'Pacifico', cursive;
-  font-size: 2.1rem;
-  color: #888;
-  font-weight: 600;
+  font-size: 50px;
+  color: #444;
+  font-weight: 400;
   margin-right: 8px;
   letter-spacing: 1px;
 }
@@ -1373,16 +1378,16 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
   gap: 2px;
 }
 .best-time-main {
-  font-size: 1.08rem;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 400;
   color: #444;
-  font-family: 'Montserrat', Arial, sans-serif;
+   font-family: 'MyCustomHead', sans-serif;
 }
 .best-time-sub {
-  font-size: 1rem;
-  color: #888;
+  font-size: 15px;
+  color: #444;
   font-weight: 500;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'MyCustomBody', sans-serif;
 }
 .best-time-right {
   flex: 0 0 370px;
@@ -1453,9 +1458,9 @@ body { font-family: 'Montserrat', Arial, sans-serif; }
  <section class="curate-trip-section">
   <div class="curate-content">
     <h2>
-      Let’s <span class="script-text">Curate</span> your trip
+      Let’s <span class="script-text silver-South-family">Curate</span> your trip
     </h2>
-    <a href="#" class="curate-btn">CONTACT US</a>
+    <a href="Contactus.html" class="curate-btn">CONTACT US</a>
   </div>
 </section>
 
